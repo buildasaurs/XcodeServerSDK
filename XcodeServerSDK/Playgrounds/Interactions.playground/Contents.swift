@@ -2,35 +2,18 @@
 
 import UIKit
 
-func generateHost(var host: String) {
-    
-    guard let url = NSURL(string: host) else {
-        print("Not a valid URL")
-        return
+//let url = NSURL(string: "http://jsonplaceholder.typicode.com/posts")!
+let url = NSURL(string: "http://google.com")!
+let data = NSData(contentsOfURL: url)!
+
+func parseData(data: NSData) throws -> AnyObject? {
+    do {
+        let parsed = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+        return parsed
+    } catch {
+        print(error as NSError)
+        return nil
     }
-    
-    if url.scheme.isEmpty {
-       host.extend("https://")
-    } else if url.scheme != "https" {
-        print("Xcode Server generally uses https, please double check your hostname")
-    }
-    
-    print(url)
-    
-//    if let url = NSURL(string: host) {
-//        if let scheme = url.scheme {
-//            if scheme != "https" {
-//                //show a popup that it should be https!
-//                Log.error("Xcode Server generally uses https, please double check your hostname")
-//            }
-//        } else {
-//            //no scheme, add https://
-//            host = "https://" + host
-//        }
-//        print(url, appendNewline: false)
-//    }
-    
-    print(host, appendNewline: false)
 }
 
-generateHost("http://127.0.0.1")
+let obj = try parseData(data)

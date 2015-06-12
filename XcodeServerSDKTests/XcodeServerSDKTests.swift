@@ -19,18 +19,10 @@ class XcodeServerSDKTests: XCTestCase {
             apiVersion: XcodeServerConfig.APIVersion.Xcode7,
             user: "ICanCreateBots",
             password: "superSecr3t")
+        
         let server = XcodeServerFactory.server(config)
         
-        //we have a setup server now
-//        server.getBots { (bots, error) -> () in
-//            if let error = error {
-//                Log.error("Oh no! \(error.description)")
-//                return
-//            }
-//            
-//            //go crazy with bots
-//            use bots...
-//        }
+        XCTAssertNotNil(server)
     }
     
 }

@@ -41,19 +41,16 @@ public class XcodeServerConfig : JSONSerializable {
         return dict
     }
     
-    public init(var host: String, apiVersion: APIVersion, user: String? = nil, password: String? = nil) {
+    public init(var host: String, apiVersion: APIVersion, user: String?, password: String?) {
         
         // validate if host is a valid URL
-        guard let url = NSURL(string: host) else {
-            print("Not a valid URL")
-            return
-        }
-        
-        if url.scheme.isEmpty {
-            // exted host with https scheme
-            host.extend("https://")
-        } else if url.scheme != "https" {
-            Log.error("Xcode Server generally uses https, please double check your hostname")
+        if let url = NSURL(string: host) {
+            if url.scheme.isEmpty {
+                // exted host with https scheme
+                host.extend("https://")
+            } else if url.scheme != "https" {
+                Log.error("Xcode Server generally uses https, please double check your hostname")
+            }
         }
         
         self.host = host
@@ -120,7 +117,7 @@ extension XcodeServer : NSURLSessionDelegate {
         return nil
     }
     
-    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential!) -> Void) {
+    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         
         var disposition: NSURLSessionAuthChallengeDisposition = .PerformDefaultHandling
         var credential: NSURLCredential?
@@ -129,12 +126,12 @@ extension XcodeServer : NSURLSessionDelegate {
             disposition = .CancelAuthenticationChallenge
         } else {
             
-            switch challenge.protectionSpace.authenticationMethod! {
+            switch challenge.protectionSpace.authenticationMethod {
                 
-            case NSURLAuthenticationMethodServerTrust:
-                credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust)
-            default:
-                credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
+                case NSURLAuthenticationMethodServerTrust:
+                    credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
+                default:
+                    credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
             }
             
             if credential != nil {
