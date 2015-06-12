@@ -33,7 +33,7 @@ public class XcodeServerConfig : JSONSerializable {
 
     public func jsonify() -> NSDictionary {
         
-        var dict = NSMutableDictionary()
+        let dict = NSMutableDictionary()
         dict["host"] = self.host
         dict["api_version"] = self.apiVersion.rawValue
         dict.optionallyAddValueForKey(self.user, key: "user")
@@ -43,17 +43,17 @@ public class XcodeServerConfig : JSONSerializable {
     
     public init(var host: String, apiVersion: APIVersion, user: String? = nil, password: String? = nil) {
         
-        //validate host by running through URL and seeing the scheme
-        if let url = NSURL(string: host) {
-            if let scheme = url.scheme {
-                if scheme != "https" {
-                    //show a popup that it should be https!
-                    Log.error("Xcode Server generally uses https, please double check your hostname")
-                }
-            } else {
-                //no scheme, add https://
-                host = "https://" + host
-            }
+        // validate if host is a valid URL
+        guard let url = NSURL(string: host) else {
+            print("Not a valid URL")
+            return
+        }
+        
+        if url.scheme.isEmpty {
+            // exted host with https scheme
+            host.extend("https://")
+        } else if url.scheme != "https" {
+            Log.error("Xcode Server generally uses https, please double check your hostname")
         }
         
         self.host = host
@@ -158,7 +158,7 @@ public extension XcodeServer {
         
         //merge the two params
         if let params = params {
-            for (let key, let value) in params {
+            for (key, value) in params {
                 allParams[key] = value
             }
         }

@@ -134,7 +134,7 @@ public class BotConfiguration : XcodeServerEntity {
     
     public override func dictionarify() -> NSDictionary {
         
-        var dictionary = NSMutableDictionary()
+        let dictionary = NSMutableDictionary()
         
         //blueprint
         dictionary["sourceControlBlueprint"] = self.sourceControlBlueprint.dictionarify()
@@ -150,7 +150,7 @@ public class BotConfiguration : XcodeServerEntity {
         dictionary["testingDestinationType"] = self.testingDestinationType?.rawValue //TODO: figure out if we need this
         
         let botScheduleDict = self.schedule.dictionarify() //needs to be merged into the main bot config dict
-        dictionary.addEntriesFromDictionary(botScheduleDict as! [NSObject : AnyObject])
+        dictionary.addEntriesFromDictionary(botScheduleDict as [NSObject : AnyObject])
         
         return dictionary
     }
@@ -175,7 +175,7 @@ public class EmailConfiguration : XcodeServerEntity {
     
     public override func dictionarify() -> NSDictionary {
         
-        var dict = NSMutableDictionary()
+        let dict = NSMutableDictionary()
         
         dict["emailCommitters"] = self.emailCommitters
         dict["includeCommitMessages"] = self.includeCommitMessages
@@ -219,7 +219,7 @@ public class TriggerConditions : XcodeServerEntity {
     
     public override func dictionarify() -> NSDictionary {
         
-        var dict = NSMutableDictionary()
+        let dict = NSMutableDictionary()
         
         dict["onAnalyzerWarnings"] = self.onAnalyzerWarnings
         dict["onBuildErrors"] = self.onBuildErrors
@@ -313,7 +313,7 @@ public class Trigger : XcodeServerEntity {
     
     public override func dictionarify() -> NSDictionary {
         
-        var dict = NSMutableDictionary()
+        let dict = NSMutableDictionary()
         
         dict["phase"] = self.phase.rawValue
         dict["type"] = self.kind.rawValue
@@ -457,7 +457,7 @@ public class BotSchedule : XcodeServerEntity {
     
     public override func dictionarify() -> NSDictionary {
         
-        var dictionary = NSMutableDictionary()
+        let dictionary = NSMutableDictionary()
         
         dictionary["scheduleType"] = self.schedule.rawValue
         dictionary["periodicScheduleInterval"] = self.period?.rawValue ?? 0

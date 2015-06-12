@@ -13,6 +13,10 @@ public protocol JSONSerializable {
     func jsonify() -> NSDictionary
 }
 
+enum JSONError: ErrorType {
+    case ParsingError
+}
+
 public class JSON {
 
     private class func parseDictionary(data: NSData) -> ([String: AnyObject]!, NSError!) {
@@ -36,14 +40,21 @@ public class JSON {
         return (nil, error)
     }
     
-    public class func parse(data: NSData) -> (AnyObject!, NSError!) {
+    public class func parse(data: NSData) throws -> AnyObject? {
+//        var parsingError: NSError?
         
-        var parsingError: NSError?
-        if let obj: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) {
-            return (obj as AnyObject!, nil)
-        } else {
-            return (nil, parsingError)
+        do {
+            let obj: AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options:.AllowFragments)
+            return obj as AnyObject
+        } catch {
+            throw JSONError.ParsingError
         }
+        
+//        if let obj: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) {
+//            return (obj as AnyObject!, nil)
+//        } else {
+//            return (nil, parsingError)
+//        }
     }
 }
 
