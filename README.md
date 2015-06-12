@@ -27,6 +27,9 @@ server.getBots { (bots, error) -> () in
 }
 ```
 
+Need inspiration? Watch [this WWDC 2015 session](https://developer.apple.com/videos/wwdc/2015/?id=410) on Xcode Server!
+Using hardware buttons to start integrations? Why not! The sky is the limit.
+
 # Features
 
 - createBot
