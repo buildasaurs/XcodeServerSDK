@@ -7,13 +7,13 @@ Supports both Xcode Server with Xcode 6 and 7!
 # Usage
 
 Create the server config object with the server's URL, username and password.
-```
+```swift
 let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
 let server = XcodeServerFactory.server(config)
 ```
 
 Go wild!
-```
+```swift
 server.getBots { (bots, error) -> () in
     if let error = error {
         Log.error("Oh no! \(error.description)")
