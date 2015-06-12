@@ -24,7 +24,6 @@
 		3A7B48ED1B2A5B3C0077ABEA /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48EC1B2A5B3C0077ABEA /* Server.swift */; };
 		3A7B48EF1B2A5B520077ABEA /* HTTPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48EE1B2A5B520077ABEA /* HTTPUtils.swift */; };
 		3A7B48F11B2A5B7B0077ABEA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F01B2A5B7B0077ABEA /* JSON.swift */; };
-		3A7B48F31B2A5BA80077ABEA /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F21B2A5BA80077ABEA /* UIUtils.swift */; };
 		3A7B48F51B2A5BC60077ABEA /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F41B2A5BC60077ABEA /* Logging.swift */; };
 		3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F61B2A5BDA0077ABEA /* Errors.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +59,6 @@
 		3A7B48EC1B2A5B3C0077ABEA /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		3A7B48EE1B2A5B520077ABEA /* HTTPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtils.swift; sourceTree = "<group>"; };
 		3A7B48F01B2A5B7B0077ABEA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		3A7B48F21B2A5BA80077ABEA /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		3A7B48F41B2A5BC60077ABEA /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		3A7B48F61B2A5BDA0077ABEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +115,6 @@
 				3A7B48F41B2A5BC60077ABEA /* Logging.swift */,
 				3A7B48EC1B2A5B3C0077ABEA /* Server.swift */,
 				3A7B48DB1B2A5ADE0077ABEA /* SourceControlBlueprint.swift */,
-				3A7B48F21B2A5BA80077ABEA /* UIUtils.swift */,
 				3A7B48DC1B2A5ADE0077ABEA /* XcodeServer.swift */,
 				3A7B48DD1B2A5ADE0077ABEA /* XcodeServerConstants.swift */,
 				3A7B48DE1B2A5ADE0077ABEA /* XcodeServerEndpoints.swift */,
@@ -260,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A7B48F31B2A5BA80077ABEA /* UIUtils.swift in Sources */,
 				3A7B48E61B2A5ADE0077ABEA /* SourceControlBlueprint.swift in Sources */,
 				3A7B48F11B2A5B7B0077ABEA /* JSON.swift in Sources */,
 				3A7B48EF1B2A5B520077ABEA /* HTTPUtils.swift in Sources */,

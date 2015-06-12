@@ -8,6 +8,13 @@
 
 import Foundation
 
+public enum AvailabilityCheckState {
+    case Unchecked
+    case Checking
+    case Failed(NSError?)
+    case Succeeded
+}
+
 public class XcodeServerConfig : JSONSerializable {
     
     public enum APIVersion: String {
