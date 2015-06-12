@@ -48,7 +48,7 @@ public class XcodeServerConfig : JSONSerializable {
             if let scheme = url.scheme {
                 if scheme != "https" {
                     //show a popup that it should be https!
-                    UIUtils.showAlertWithText("Xcode Server generally uses https, please double check your hostname")
+                    Log.error("Xcode Server generally uses https, please double check your hostname")
                 }
             } else {
                 //no scheme, add https://
