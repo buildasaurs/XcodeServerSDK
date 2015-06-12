@@ -10,18 +10,24 @@ import Cocoa
 import XCTest
 import XcodeServerSDK
 
-class XcodeServerSDKTests: XCTestCase {
+class XcodeServerTests: XCTestCase {
     
-    func testServerCreation() {
+    var config: XcodeServerConfig?
+    var server: XcodeServer?
+    
+    override func setUp() {
+        super.setUp()
         
-        let config = XcodeServerConfig(
+        config = XcodeServerConfig(
             host: "https://127.0.0.1",
             apiVersion: XcodeServerConfig.APIVersion.Xcode7,
             user: "ICanCreateBots",
             password: "superSecr3t")
         
-        let server = XcodeServerFactory.server(config)
-        
+        server = XcodeServerFactory.server(config!)
+    }
+    
+    func testServerCreation() {
         XCTAssertNotNil(server)
     }
     
