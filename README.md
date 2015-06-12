@@ -2,7 +2,7 @@
 
 Use Xcode Server's API with ease. First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
 
-Supports both Xcode Server with Xcode 6 and 7!
+**Supports both Xcode Server with Xcode 6 and 7!**
 
 # Usage
 
