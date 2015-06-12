@@ -53,5 +53,5 @@ This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Build
 
 # Author
 Honza Dvorsky
-honzadvorsky.com
-@czechboy0
+[honzadvorsky.com](http://honzadvorsky.com)
+[@czechboy0](https://twitter.com/czechboy0)
