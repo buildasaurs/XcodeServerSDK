@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XcodeServerSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Access Xcode Server API with native Swift objects."
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
-  s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "0.0.2" }
 
   s.source_files  = "XcodeServerSDK/**/*.{swift}"
   s.requires_arc = true
