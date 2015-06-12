@@ -8,7 +8,7 @@ Supports both Xcode Server with Xcode 6 and 7!
 
 Create the server config object with the server's URL, username and password.
 ```swift
-let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
+let config = XcodeServerConfig(host: "https://127.0.0.1", apiVersion: .Xcode6, user: "IRuleBots", password: "superSecr3t")
 let server = XcodeServerFactory.server(config)
 ```
 
