@@ -61,7 +61,7 @@
 		3A7B48F01B2A5B7B0077ABEA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3A7B48F41B2A5BC60077ABEA /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		3A7B48F61B2A5BDA0077ABEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		70F463361B2B3F4600C3F963 /* Interactions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Interactions.playground; path = Playgrounds/Interactions.playground; sourceTree = "<group>"; };
+		70F463361B2B3F4600C3F963 /* Interactions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Interactions.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +88,7 @@
 			children = (
 				3A7B48BC1B2A5AC40077ABEA /* XcodeServerSDK */,
 				3A7B48C91B2A5AC40077ABEA /* XcodeServerSDKTests */,
+				70F463351B2B3EF800C3F963 /* Playgrounds */,
 				3A7B48BB1B2A5AC40077ABEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +122,6 @@
 				3A7B48DE1B2A5ADE0077ABEA /* XcodeServerEndpoints.swift */,
 				3A7B48DF1B2A5ADE0077ABEA /* XcodeServerEntity.swift */,
 				3A7B48E01B2A5ADE0077ABEA /* XcodeServerFactory.swift */,
-				70F463351B2B3EF800C3F963 /* Playgrounds */,
 				3A7B48BD1B2A5AC40077ABEA /* Supporting Files */,
 			);
 			path = XcodeServerSDK;
@@ -157,7 +157,7 @@
 			children = (
 				70F463361B2B3F4600C3F963 /* Interactions.playground */,
 			);
-			name = Playgrounds;
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
