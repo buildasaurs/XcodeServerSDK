@@ -1,15 +1,15 @@
-# Created by https://www.gitignore.io
+# Xcode
 
-### OSX ###
-.DS_Store
+## Build generated
+build/
 .AppleDouble
-.LSOverride
+DerivedData
 
 # Icon must end with two \r
 Icon
 
 
-# Thumbnails
+## Various settings
 ._*
 
 # Files that might appear in the root of a volume
@@ -39,20 +39,29 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+
+## Other
 *.xccheckout
 *.moved-aside
 DerivedData
 *.xcuserstate
 
+## Obj-C/Swift specific
+*.hmap
+*.ipa
 
-### SublimeText ###
-# cache files for sublime text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+Pods/
 
-# workspace files are user-specific
-*.sublime-workspace
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
 
 # project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using SublimeText
@@ -68,7 +77,7 @@ sftp-config.json
 *.iml
 
 ## Directory-based project format:
-.idea/
+Carthage/Build
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
