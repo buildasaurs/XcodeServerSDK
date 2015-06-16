@@ -13,7 +13,7 @@ When it comes to branches, [`master`](https://github.com/czechboy0/XcodeServerSD
 
 Create the server config object with the server's URL, username and password.
 ```swift
-let config = XcodeServerConfig(host: "https://127.0.0.1", apiVersion: .Xcode6, user: "IRuleBots", password: "superSecr3t")
+let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
 let server = XcodeServerFactory.server(config)
 ```
 
