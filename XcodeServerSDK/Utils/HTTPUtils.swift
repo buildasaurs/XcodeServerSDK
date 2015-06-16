@@ -88,6 +88,7 @@ public class HTTP {
                 completion(response: nil, body: nil, error: e)
             }
         }) else {
+            completion(response: nil, body:nil, error:Error.withInfo("Could't create request"))
             return
         }
         
