@@ -25,20 +25,17 @@ public class HTTP {
 
     public func sendRequest(request: NSURLRequest, completion: Completion) {
         
-        self.session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-            
+        guard let task = self.session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             //try to cast into HTTP response
             if let httpResponse = response as? NSHTTPURLResponse {
                 
-                if error != nil {
-                    
+                guard error == nil else {
                     //error in the networking stack
                     completion(response: httpResponse, body: nil, error: error)
                     return
                 }
                 
-                if data == nil {
-                    
+                guard let data = data else {
                     //no body, but a valid response
                     completion(response: httpResponse, body: nil, error: nil)
                     return
@@ -53,8 +50,8 @@ public class HTTP {
                         
                     case let s where s.rangeOfString("application/json") != nil:
                         
-                        let (json: AnyObject!, error) = JSON.parse(data)
-                        let headers = httpResponse.allHeaderFields
+                        let (json, error) = JSON.parse(data)
+                        // let headers = httpResponse.allHeaderFields
                         completion(response: httpResponse, body: json, error: error)
                         
                     default:
@@ -90,9 +87,12 @@ public class HTTP {
                 let e = error ?? Error.withInfo("Response is nil")
                 completion(response: nil, body: nil, error: e)
             }
-            
-            
-        }).resume()
+        }) else {
+            completion(response: nil, body:nil, error:Error.withInfo("Could't create request"))
+            return
+        }
+        
+        task.resume()
     }
 
 }
