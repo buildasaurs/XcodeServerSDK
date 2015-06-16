@@ -464,6 +464,7 @@
 				3A7B48D21B2A5AC40077ABEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +473,7 @@
 				3A7B48D51B2A5AC40077ABEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
