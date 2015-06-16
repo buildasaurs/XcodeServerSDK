@@ -27,19 +27,9 @@ public class XcodeServerEndPoints {
         self.serverConfig = serverConfig
     }
     
-    private func endpointBase() -> String {
-        
-        switch self.serverConfig.apiVersion {
-        case .Xcode6:
-            return "/xcode/api"
-        case .Xcode7:
-            return "/api"
-        }
-    }
-    
     private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
-        let base = self.endpointBase()
+        let base = "/api" // This might be moved somewhere else to avoid string...
         
         switch endpoint {
             
