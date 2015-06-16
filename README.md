@@ -20,9 +20,9 @@ server.getBots { (bots, error) -> () in
         return
     }
     
-    //go crazy with bots
+    // go crazy with bots
     if let firstBot = bots?.first {
-        //use the first bot...
+        // use the first bot...
     }
 }
 ```
@@ -43,7 +43,7 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 - getUserCanCreateBots
 
 # License
-MIT
+[MIT](https://github.com/czechboy0/XcodeServerSDK/blob/master/LICENSE)
 
 # Contributing
 Create an issue or (preferably) send a pull request.
