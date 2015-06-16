@@ -30,15 +30,13 @@ public class HTTP {
             //try to cast into HTTP response
             if let httpResponse = response as? NSHTTPURLResponse {
                 
-                if error != nil {
-                    
+                guard error != nil else {
                     //error in the networking stack
                     completion(response: httpResponse, body: nil, error: error)
                     return
                 }
                 
-                if data == nil {
-                    
+                guard data == nil else {
                     //no body, but a valid response
                     completion(response: httpResponse, body: nil, error: nil)
                     return
