@@ -55,11 +55,7 @@ public class XcodeServerConfig : JSONSerializable {
         
         self.availabilityState = .Unchecked
         
-        if
-            let host = json.optionalStringForKey("host"),
-            let apiVersionString = json.optionalStringForKey("api_version")
-        {
-            
+        if let host = json.optionalStringForKey("host") {
             self.host = host
             self.user = json.optionalStringForKey("user")
             self.password = json.optionalStringForKey("password")
