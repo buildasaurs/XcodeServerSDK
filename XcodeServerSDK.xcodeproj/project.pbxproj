@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		3A058A901B31596A0077FD47 /* bot_mac_xcode6.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */; };
+		3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
 		3A7B48C01B2A5AC40077ABEA /* XcodeServerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A7B48C61B2A5AC40077ABEA /* XcodeServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */; };
-		3A7B48CD1B2A5AC40077ABEA /* XcodeServerSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerSDKTests.swift */; };
+		3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */; };
 		3A7B48E11B2A5ADE0077ABEA /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48D61B2A5ADE0077ABEA /* Bot.swift */; };
 		3A7B48E21B2A5ADE0077ABEA /* BotConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48D71B2A5ADE0077ABEA /* BotConfiguration.swift */; };
 		3A7B48E31B2A5ADE0077ABEA /* CIServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48D81B2A5ADE0077ABEA /* CIServer.swift */; };
@@ -43,12 +44,13 @@
 /* Begin PBXFileReference section */
 		3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotParsingTests.swift; sourceTree = "<group>"; };
 		3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6.json; path = Data/bot_mac_xcode6.json; sourceTree = "<group>"; };
+		3A058A921B315BB50077FD47 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48BE1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeServerSDK.h; sourceTree = "<group>"; };
 		3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48CB1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A7B48CC1B2A5AC40077ABEA /* XcodeServerSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeServerSDKTests.swift; sourceTree = "<group>"; };
+		3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeServerTests.swift; sourceTree = "<group>"; };
 		3A7B48D61B2A5ADE0077ABEA /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
 		3A7B48D71B2A5ADE0077ABEA /* BotConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotConfiguration.swift; sourceTree = "<group>"; };
 		3A7B48D81B2A5ADE0077ABEA /* CIServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIServer.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				3A058A911B31596E0077FD47 /* Data */,
 				3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */,
 				3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */,
+				3A058A921B315BB50077FD47 /* TestUtils.swift */,
 				3A7B48CA1B2A5AC40077ABEA /* Supporting Files */,
 			);
 			path = XcodeServerSDKTests;
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */,
+				3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */,
 				3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

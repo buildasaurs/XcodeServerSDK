@@ -16,7 +16,6 @@ class XcodeServerSDKTests: XCTestCase {
         
         let config = XcodeServerConfig(
             host: "https://127.0.0.1",
-            apiVersion: XcodeServerConfig.APIVersion.Xcode7,
             user: "ICanCreateBots",
             password: "superSecr3t")
         let server = XcodeServerFactory.server(config)

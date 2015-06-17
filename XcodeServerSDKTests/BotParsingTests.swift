@@ -12,26 +12,17 @@ import XcodeServerSDK
 
 class BotParsingTests: XCTestCase {
 
-    func loadJSONWithName(name: String) -> NSDictionary {
-        
-        var error: NSError?
-        if
-            let bundle = NSBundle(forClass: BotParsingTests.classForCoder()),
-            let url = bundle.URLForResource(name, withExtension: "json"),
-            let data = NSData(contentsOfURL: url, options: NSDataReadingOptions.allZeros, error: &error),
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary
-        {
-            return json
-        } else {
-            XCTFail("Error reading file with name \(name), error: \(error?.description)")
-        }
-    }
-
-    func testMac() {
+    func testCommonProperties() {
         
         let json = self.loadJSONWithName("bot_mac_xcode6")
         let bot = Bot(json: json)
         
+        XCTAssertEqual(bot.id, "6b3de48352a8126ce7e08ecf85093613")
+        XCTAssertEqual(bot.rev, "16-d1e9e3d7e76a09381ca909d47ac6c18d")
+        XCTAssertEqual(bot.tinyID, "2CA4EA9")
+        
+        XCTAssertEqual(bot.name, "Builda Archiver")
+        //...
     }
 
 }
