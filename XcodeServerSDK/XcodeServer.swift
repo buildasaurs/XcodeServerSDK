@@ -8,74 +8,7 @@
 
 import Foundation
 
-public enum AvailabilityCheckState {
-    case Unchecked
-    case Checking
-    case Failed(NSError?)
-    case Succeeded
-}
-
-public class XcodeServerConfig : JSONSerializable {
-    
-    public let host: String
-    public let user: String?
-    public let password: String?
-    public let port: Int = 20343
-
-    public var availabilityState: AvailabilityCheckState
-
-    public func jsonify() -> NSDictionary {
-        
-        var dict = NSMutableDictionary()
-        dict["host"] = self.host
-        dict.optionallyAddValueForKey(self.user, key: "user")
-        dict.optionallyAddValueForKey(self.password, key: "password")
-        return dict
-    }
-    
-    public init(var host: String, user: String? = nil, password: String? = nil) {
-        
-        //validate host by running through URL and seeing the scheme
-        if let url = NSURL(string: host) {
-            if let scheme = url.scheme {
-                if scheme != "https" {
-                    //show a popup that it should be https!
-                    Log.error("Xcode Server generally uses https, please double check your hostname")
-                }
-            } else {
-                //no scheme, add https://
-                host = "https://" + host
-            }
-        }
-        
-        self.host = host
-        self.user = user
-        self.password = password
-        self.availabilityState = .Unchecked
-    }
-    
-    public required init?(json: NSDictionary) {
-        
-        self.availabilityState = .Unchecked
-
-        if
-            let host = json.optionalStringForKey("host"),
-            let apiVersionString = json.optionalStringForKey("api_version")
-        {
-                
-            self.host = host
-            self.user = json.optionalStringForKey("user")
-            self.password = json.optionalStringForKey("password")
-            
-        } else {
-            self.host = ""
-            self.user = nil
-            self.password = nil
-            return nil
-        }
-    }
-}
-
+// MARK: XcodeServer Class
 public class XcodeServer : CIServer {
     
     public let config: XcodeServerConfig
@@ -97,6 +30,7 @@ public class XcodeServer : CIServer {
     
 }
 
+// MARK: NSURLSession delegate implementation
 extension XcodeServer : NSURLSessionDelegate {
     
     var credential: NSURLCredential? {
@@ -109,7 +43,7 @@ extension XcodeServer : NSURLSessionDelegate {
         return nil
     }
     
-    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential!) -> Void) {
+    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         
         var disposition: NSURLSessionAuthChallengeDisposition = .PerformDefaultHandling
         var credential: NSURLCredential?
@@ -118,12 +52,12 @@ extension XcodeServer : NSURLSessionDelegate {
             disposition = .CancelAuthenticationChallenge
         } else {
             
-            switch challenge.protectionSpace.authenticationMethod! {
+            switch challenge.protectionSpace.authenticationMethod {
                 
-            case NSURLAuthenticationMethodServerTrust:
-                credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust)
-            default:
-                credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
+                case NSURLAuthenticationMethodServerTrust:
+                    credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
+                default:
+                    credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
             }
             
             if credential != nil {
@@ -135,6 +69,7 @@ extension XcodeServer : NSURLSessionDelegate {
     }
 }
 
+// MARK: XcodeServer API methods
 public extension XcodeServer {
     
     //API functionality
@@ -147,7 +82,7 @@ public extension XcodeServer {
         
         //merge the two params
         if let params = params {
-            for (let key, let value) in params {
+            for (key, value) in params {
                 allParams[key] = value
             }
         }
