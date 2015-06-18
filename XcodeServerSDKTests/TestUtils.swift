@@ -8,22 +8,52 @@
 
 import Foundation
 import XCTest
+import XcodeServerSDK
+
+struct StringError: ErrorType {
+    
+    let description: String
+    let _domain: String = ""
+    let _code: Int = 0
+    
+    init(_ description: String) {
+        self.description = description
+    }
+}
 
 extension XCTestCase {
     
     func loadJSONWithName(name: String) -> NSDictionary {
         
         let bundle = NSBundle(forClass: BotParsingTests.classForCoder())
-        var error: NSError?
-        if
-            let url = bundle.URLForResource(name, withExtension: "json"),
-            let data = NSData(contentsOfURL: url, options: NSDataReadingOptions.allZeros, error: &error),
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &error) as? NSDictionary
-        {
-            return json
-        } else {
-            XCTFail("Error reading file with name \(name), error: \(error?.description)")
-            return NSDictionary()
+        do {
+            
+            if let url = bundle.URLForResource(name, withExtension: "json") {
+                
+                let data = try NSData(contentsOfURL: url, options: NSDataReadingOptions())                
+                if let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as? NSDictionary {
+                    return json
+                }
+                
+            } else {
+                throw StringError("File with name \(name) not found in the bundle")
+            }
+            
+        } catch {
+            XCTFail("Error reading file with name \(name), error: \(error)")
         }
+        return NSDictionary()
+    }
+    
+    func botInFileWithName(name: String) -> Bot {
+        let json = self.loadJSONWithName(name)
+        let bot = Bot(json: json)
+        return bot
+    }
+    
+    func configurationFromBotWithName(name: String) -> BotConfiguration {
+        let bot = self.botInFileWithName(name)
+        let configuration = bot.configuration
+        return configuration
     }
 }
