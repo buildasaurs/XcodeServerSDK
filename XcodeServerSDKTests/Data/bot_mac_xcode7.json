@@ -1,0 +1,156 @@
+{
+  "_id": "ef18f96409a205451df8a5b9c402d36f",
+  "_rev": "5-ba18e0a7b78aea3dfc125fe541340df7",
+  "group": {
+    "name": "F28A6883-FBF6-41AA-BF65-58E916906E96"
+  },
+  "configuration": {
+    "builtFromClean": 0,
+    "periodicScheduleInterval": 1,
+    "codeCoveragePreference": 2,
+    "performsTestAction": true,
+    "triggers": [
+      {
+        "phase": 1,
+        "scriptBody": "Before",
+        "type": 1,
+        "name": "Run Script"
+      },
+      {
+        "phase": 2,
+        "scriptBody": "After",
+        "type": 1,
+        "name": "Run Script",
+        "conditions": {
+          "status": 2,
+          "onWarnings": true,
+          "onBuildErrors": true,
+          "onInternalErrors": true,
+          "onAnalyzerWarnings": true,
+          "onFailingTests": true,
+          "onSuccess": true
+        }
+      },
+      {
+        "phase": 2,
+        "scriptBody": "",
+        "type": 2,
+        "name": "Send Email Notification",
+        "conditions": {
+          "status": 2,
+          "onWarnings": true,
+          "onBuildErrors": true,
+          "onInternalErrors": true,
+          "onAnalyzerWarnings": true,
+          "onFailingTests": true,
+          "onSuccess": true
+        },
+        "emailConfiguration": {
+          "includeCommitMessages": true,
+          "additionalRecipients": [
+            "email@me.com",
+            "hello@world.com"
+          ],
+          "emailCommitters": true,
+          "scmOptions": {
+            "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": true
+          },
+          "includeIssueDetails": true
+        }
+      }
+    ],
+    "performsAnalyzeAction": true,
+    "schemeName": "XcodeServerSDK",
+    "exportsProductFromArchive": true,
+    "testingDeviceIDs": [],
+    "deviceSpecification": {
+      "filters": [
+        {
+          "platform": {
+            "buildNumber": "15A178w",
+            "_id": "a85553a5b26a7c1a4998f3b237000b18",
+            "_rev": "6-ec2620829704318e5207916618d5101b",
+            "displayName": "OS X",
+            "identifier": "com.apple.platform.macosx",
+            "version": "1.1"
+          },
+          "filterType": 0,
+          "architectureType": 1
+        }
+      ],
+      "deviceIdentifiers": []
+    },
+    "weeklyScheduleDay": 0,
+    "minutesAfterHourToIntegrate": 0,
+    "scheduleType": 1,
+    "hourOfIntegration": 0,
+    "performsArchiveAction": true,
+    "testingDestinationType": 7,
+    "sourceControlBlueprint": {
+      "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+        "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+          "DVTSourceControlBranchIdentifierKey": "swift-2",
+          "DVTSourceControlBranchOptionsKey": 214,
+          "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey": {},
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+        "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+        "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": 0
+      },
+      "DVTSourceControlWorkspaceBlueprintIdentifierKey": "68B5DED7-3FEF-4D55-A6F7-973537EC51FD",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+        "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK/"
+      },
+      "DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+      "DVTSourceControlWorkspaceBlueprintVersion": 203,
+      "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+        {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/XcodeServerSDK.git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true
+        }
+      ]
+    }
+  },
+  "requiresUpgrade": false,
+  "name": "TESTBOT",
+  "type": 1,
+  "integration_counter": 2,
+  "doc_type": "bot",
+  "tinyID": "A851ED5",
+  "lastRevisionBlueprint": {
+    "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+      "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+        "DVTSourceControlBranchIdentifierKey": "swift-2",
+        "DVTSourceControlLocationRevisionKey": "991da08565c38ea9ea7e6bd7db1acce49e4ae701",
+        "DVTSourceControlBranchOptionsKey": 50,
+        "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+      }
+    },
+    "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+    "DVTSourceControlWorkspaceBlueprintIdentifierKey": "CD185E3B-5B34-4E15-9CFA-9DFB1D715DB5",
+    "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+      "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK"
+    },
+    "DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+    "DVTSourceControlWorkspaceBlueprintVersion": 203,
+    "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+    "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+      {
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/XcodeServerSDK.git",
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"
+      }
+    ]
+  }
+}

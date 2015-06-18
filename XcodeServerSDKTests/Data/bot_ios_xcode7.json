@@ -1,0 +1,87 @@
+{
+  "_id": "ef18f96409a205451df8a5b9c4031ad5",
+  "_rev": "4-820c802765bb118721d8ca48e925e977",
+  "group": {
+    "name": "F05D9D16-FAE3-4066-9909-08FAE0C69018"
+  },
+  "configuration": {
+    "builtFromClean": 0,
+    "periodicScheduleInterval": 1,
+    "codeCoveragePreference": 2,
+    "performsTestAction": true,
+    "triggers": [],
+    "performsAnalyzeAction": true,
+    "schemeName": "HelloApp",
+    "exportsProductFromArchive": true,
+    "testingDeviceIDs": [],
+    "deviceSpecification": {
+      "filters": [
+        {
+          "platform": {
+            "_id": "a85553a5b26a7c1a4998f3b237000da9",
+            "displayName": "iOS",
+            "_rev": "6-6628873592bccc61307b32bd7ea8dd83",
+            "simulatorIdentifier": "com.apple.platform.iphonesimulator",
+            "identifier": "com.apple.platform.iphoneos",
+            "buildNumber": "13A4254u",
+            "version": "9.0"
+          },
+          "filterType": 3,
+          "architectureType": 0
+        }
+      ],
+      "deviceIdentifiers": [
+        "a85553a5b26a7c1a4998f3b237001c0e",
+        "a85553a5b26a7c1a4998f3b2370033f2",
+        "a85553a5b26a7c1a4998f3b237004afd"
+      ]
+    },
+    "weeklyScheduleDay": 0,
+    "minutesAfterHourToIntegrate": 0,
+    "scheduleType": 1,
+    "hourOfIntegration": 0,
+    "performsArchiveAction": true,
+    "sourceControlBlueprint": {
+      "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+        "33B8ADDFBC86145BD26937EED8BB5679306D7042": {
+          "DVTSourceControlBranchIdentifierKey": "master",
+          "DVTSourceControlBranchOptionsKey": 214,
+          "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "33B8ADDFBC86145BD26937EED8BB5679306D7042",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey": {},
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+        "33B8ADDFBC86145BD26937EED8BB5679306D7042": {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+        "33B8ADDFBC86145BD26937EED8BB5679306D7042": 0
+      },
+      "DVTSourceControlWorkspaceBlueprintIdentifierKey": "3275CCE1-A749-432A-83B5-CA57220827A0",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+        "33B8ADDFBC86145BD26937EED8BB5679306D7042": "HelloApp-iOS/"
+      },
+      "DVTSourceControlWorkspaceBlueprintNameKey": "HelloApp",
+      "DVTSourceControlWorkspaceBlueprintVersion": 203,
+      "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "HelloApp.xcworkspace",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+        {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/HelloApp-iOS.git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "33B8ADDFBC86145BD26937EED8BB5679306D7042",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true
+        }
+      ]
+    },
+    "testingDestinationType": 0
+  },
+  "requiresUpgrade": false,
+  "name": "TESTBOT",
+  "type": 1,
+  "integration_counter": 2,
+  "doc_type": "bot",
+  "tinyID": "C4A26D6"
+}
