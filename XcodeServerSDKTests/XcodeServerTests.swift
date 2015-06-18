@@ -1,5 +1,5 @@
 //
-//  XcodeServerSDKTests.swift
+//  XcodeServerTests.swift
 //  XcodeServerSDKTests
 //
 //  Created by Honza Dvorsky on 11/06/2015.
@@ -12,22 +12,19 @@ import XcodeServerSDK
 
 class XcodeServerTests: XCTestCase {
     
-    var config: XcodeServerConfig?
-    var server: XcodeServer?
+    var server: XcodeServer!
     
     override func setUp() {
         super.setUp()
         
-        config = XcodeServerConfig(
+        let config = XcodeServerConfig(
             host: "https://127.0.0.1",
             user: "ICanCreateBots",
             password: "superSecr3t")
-        
-        server = XcodeServerFactory.server(config!)
+        self.server = XcodeServerFactory.server(config)
     }
     
     func testServerCreation() {
-        XCTAssertNotNil(server)
+        XCTAssertNotNil(self.server)
     }
-    
 }

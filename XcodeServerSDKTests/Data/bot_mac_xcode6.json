@@ -1,0 +1,86 @@
+{
+  "_id": "6b3de48352a8126ce7e08ecf85093613",
+  "_rev": "16-d1e9e3d7e76a09381ca909d47ac6c18d",
+  "configuration": {
+    "builtFromClean": 1,
+    "periodicScheduleInterval": 0,
+    "performsTestAction": true,
+    "triggers": [],
+    "performsAnalyzeAction": true,
+    "schemeName": "Buildasaur",
+    "weeklyScheduleDay": 0,
+    "testingDeviceIDs": [],
+    "minutesAfterHourToIntegrate": 0,
+    "hourOfIntegration": 0,
+    "scheduleType": 3,
+    "performsArchiveAction": true,
+    "testingDestinationType": 7,
+    "sourceControlBlueprint": {
+      "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+        "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": {
+          "DVTSourceControlBranchIdentifierKey": "master",
+          "DVTSourceControlBranchOptionsKey": 214,
+          "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "1C5C2A17EEADA6DBF6678501245487A71FBE28BB",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey": {},
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+        "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy"
+        }
+      },
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+        "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": 0
+      },
+      "DVTSourceControlWorkspaceBlueprintIdentifierKey": "B47BC98B-D5DC-4932-ADA1-E8F6DDC0D214",
+      "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+        "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": "Buildasaur/"
+      },
+      "DVTSourceControlWorkspaceBlueprintNameKey": "Buildasaur",
+      "DVTSourceControlWorkspaceBlueprintVersion": 203,
+      "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "Buildasaur.xcworkspace",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+        {
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/Buildasaur.git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+          "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "1C5C2A17EEADA6DBF6678501245487A71FBE28BB"
+        }
+      ]
+    }
+  },
+  "group": {
+    "name": "52C4BAE5-7A0E-40FB-BF7A-6A3B6BCCC9BE"
+  },
+  "requiresUpgrade": false,
+  "name": "Builda Archiver",
+  "type": 1,
+  "integration_counter": 7,
+  "doc_type": "bot",
+  "tinyID": "2CA4EA9",
+  "lastRevisionBlueprint": {
+    "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+      "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": {
+        "DVTSourceControlBranchIdentifierKey": "master",
+        "DVTSourceControlLocationRevisionKey": "709439d626342e8ec85f744e3b5ef761feeefa85",
+        "DVTSourceControlBranchOptionsKey": 50,
+        "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+      }
+    },
+    "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "1C5C2A17EEADA6DBF6678501245487A71FBE28BB",
+    "DVTSourceControlWorkspaceBlueprintIdentifierKey": "14B834DA-0A39-4CBC-98B5-D0E98FAFA3E4",
+    "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+      "1C5C2A17EEADA6DBF6678501245487A71FBE28BB": "Buildasaur"
+    },
+    "DVTSourceControlWorkspaceBlueprintNameKey": "Buildasaur",
+    "DVTSourceControlWorkspaceBlueprintVersion": 203,
+    "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "Buildasaur.xcworkspace",
+    "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+      {
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "github.com:czechboy0/Buildasaur.git",
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+        "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "1C5C2A17EEADA6DBF6678501245487A71FBE28BB"
+      }
+    ]
+  }
+}

@@ -12,13 +12,13 @@ public enum BuildaError: String {
     case UnknownError = "Unknown error"
 }
 
-public class Error {
+public struct Error {
     
-    public class func fromType(type: BuildaError) -> NSError {
+    public static func fromType(type: BuildaError) -> NSError {
         return self.withInfo(type.rawValue)
     }
     
-    public class func withInfo(info: String?, internalError: NSError? = nil, userInfo: NSDictionary? = nil) -> NSError {
+    public static func withInfo(info: String?, internalError: NSError? = nil, userInfo: NSDictionary? = nil) -> NSError {
         let finalInfo = NSMutableDictionary()
         
         if let info = info {
@@ -35,5 +35,15 @@ public class Error {
         
         return NSError(domain: "com.honzadvorsky.Buildasaur", code: 0, userInfo: finalInfo as [NSObject : AnyObject])
     }
+}
+
+struct StringError: ErrorType {
     
+    let description: String
+    let _domain: String = ""
+    let _code: Int = 0
+    
+    init(_ description: String) {
+        self.description = description
+    }
 }
