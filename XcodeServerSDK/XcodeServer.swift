@@ -27,7 +27,6 @@ public class XcodeServer : CIServer {
         let session = NSURLSession(configuration: sessionConfig, delegate: delegate, delegateQueue: queue)
         self.http.session = session
     }
-    
 }
 
 // MARK: NSURLSession delegate implementation
@@ -69,11 +68,44 @@ extension XcodeServer : NSURLSessionDelegate {
     }
 }
 
+// MARK: Header constants
+let Headers_APIVersion = "X-XCSAPIVersion"
+let SupportedAPIVersion: Int = 3 //will change with time, this codebase supports this version
+
 // MARK: XcodeServer API methods
 public extension XcodeServer {
     
-    //API functionality
+    private func verifyAPIVersion(response: NSHTTPURLResponse) -> NSError? {
+        
+        guard let headers = response.allHeaderFields as? [String: AnyObject] else {
+            return Error.withInfo("No headers provided in response")
+        }
+        
+        guard let apiVersionString = headers[Headers_APIVersion] as? String else {
+            return Error.withInfo("Couldn't find API version Int in headers")
+        }
+        
+        guard let apiVersion = Int(apiVersionString) else {
+            return Error.withInfo("Couldn't find API version Int in headers")
+        }
+        
+        if SupportedAPIVersion != apiVersion {
+            var common = "Version mismatch: response from API version \(apiVersion), but we support version \(SupportedAPIVersion). "
+            
+            if apiVersion > SupportedAPIVersion {
+                common += "You're using a newer Xcode Server than we support. Please visit https://github.com/czechboy0/XcodeServerSDK to check whether there's a new version of the SDK for it."
+            } else {
+                common += "You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https://github.com/czechboy0/XcodeServerSDK or consider upgrading your Xcode Server to the current version."
+            }
+            
+            return Error.withInfo(common)
+        }
+        
+        //all good
+        return nil
+    }
     
+    //API functionality
     private func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndPoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
         
         var allParams = [
@@ -91,9 +123,17 @@ public extension XcodeServer {
             
             self.http.sendRequest(request, completion: { (response, body, error) -> () in
                 
-                if response == nil {
+                //TODO: fix hack, make completion always return optionals
+                let resp: NSHTTPURLResponse? = response
+                
+                guard let r = resp else {
                     let e = error ?? Error.withInfo("Nil response")
                     completion(response: nil, body: body, error: e)
+                    return
+                }
+                
+                if let versionError = self.verifyAPIVersion(r) {
+                    completion(response: response, body: body, error: versionError)
                     return
                 }
                 
