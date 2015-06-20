@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11FB71911B34AE7F00D57A52"
-               BuildableName = "XcodeServerSDK - iOSTests.xctest"
-               BlueprintName = "XcodeServerSDK - iOSTests"
+               BuildableName = "XcodeServerSDK - iOS Tests.xctest"
+               BlueprintName = "XcodeServerSDK - iOS Tests"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
          </TestableReference>

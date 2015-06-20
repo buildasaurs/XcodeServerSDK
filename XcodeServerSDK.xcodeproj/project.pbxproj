@@ -96,8 +96,7 @@
 
 /* Begin PBXFileReference section */
 		11FB71891B34AE7F00D57A52 /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11FB71921B34AE7F00D57A52 /* XcodeServerSDK - iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XcodeServerSDK - iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11FB71A01B34AEC700D57A52 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		11FB71921B34AE7F00D57A52 /* XcodeServerSDKTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotParsingTests.swift; sourceTree = "<group>"; };
 		3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6.json; path = Data/bot_mac_xcode6.json; sourceTree = "<group>"; };
 		3A058A921B315BB50077FD47 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
@@ -109,7 +108,7 @@
 		3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48BE1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeServerSDK.h; sourceTree = "<group>"; };
-		3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48CB1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeServerTests.swift; sourceTree = "<group>"; };
 		3A7B48D61B2A5ADE0077ABEA /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
@@ -201,9 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */,
-				3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTests.xctest */,
+				3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTest.xctest */,
 				11FB71891B34AE7F00D57A52 /* XcodeServerSDK.framework */,
-				11FB71921B34AE7F00D57A52 /* XcodeServerSDK - iOSTests.xctest */,
+				11FB71921B34AE7F00D57A52 /* XcodeServerSDKTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,7 +227,6 @@
 		3A7B48BD1B2A5AC40077ABEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				11FB71A01B34AEC700D57A52 /* Info-iOS.plist */,
 				3A7B48BE1B2A5AC40077ABEA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -339,9 +337,9 @@
 			productReference = 11FB71891B34AE7F00D57A52 /* XcodeServerSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		11FB71911B34AE7F00D57A52 /* XcodeServerSDK - iOSTests */ = {
+		11FB71911B34AE7F00D57A52 /* XcodeServerSDK - iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11FB719F1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOSTests" */;
+			buildConfigurationList = 11FB719F1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOS Tests" */;
 			buildPhases = (
 				11FB718E1B34AE7F00D57A52 /* Sources */,
 				11FB718F1B34AE7F00D57A52 /* Frameworks */,
@@ -352,14 +350,14 @@
 			dependencies = (
 				11FB71951B34AE7F00D57A52 /* PBXTargetDependency */,
 			);
-			name = "XcodeServerSDK - iOSTests";
+			name = "XcodeServerSDK - iOS Tests";
 			productName = "XcodeServerSDK iOSTests";
-			productReference = 11FB71921B34AE7F00D57A52 /* XcodeServerSDK - iOSTests.xctest */;
+			productReference = 11FB71921B34AE7F00D57A52 /* XcodeServerSDKTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK */ = {
+		3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK - OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A7B48D01B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK" */;
+			buildConfigurationList = 3A7B48D01B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK - OS X" */;
 			buildPhases = (
 				3A7B48B51B2A5AC40077ABEA /* Sources */,
 				3A7B48B61B2A5AC40077ABEA /* Frameworks */,
@@ -370,14 +368,14 @@
 			);
 			dependencies = (
 			);
-			name = XcodeServerSDK;
+			name = "XcodeServerSDK - OS X";
 			productName = XcodeServerSDK;
 			productReference = 3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3A7B48C41B2A5AC40077ABEA /* XcodeServerSDKTests */ = {
+		3A7B48C41B2A5AC40077ABEA /* XcodeServerSDK - OS X Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDKTests" */;
+			buildConfigurationList = 3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK - OS X Tests" */;
 			buildPhases = (
 				3A7B48C11B2A5AC40077ABEA /* Sources */,
 				3A7B48C21B2A5AC40077ABEA /* Frameworks */,
@@ -388,9 +386,9 @@
 			dependencies = (
 				3A7B48C81B2A5AC40077ABEA /* PBXTargetDependency */,
 			);
-			name = XcodeServerSDKTests;
+			name = "XcodeServerSDK - OS X Tests";
 			productName = XcodeServerSDKTests;
-			productReference = 3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTests.xctest */;
+			productReference = 3A7B48C51B2A5AC40077ABEA /* XcodeServerSDKTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -429,10 +427,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK */,
-				3A7B48C41B2A5AC40077ABEA /* XcodeServerSDKTests */,
+				3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK - OS X */,
+				3A7B48C41B2A5AC40077ABEA /* XcodeServerSDK - OS X Tests */,
 				11FB71881B34AE7F00D57A52 /* XcodeServerSDK - iOS */,
-				11FB71911B34AE7F00D57A52 /* XcodeServerSDK - iOSTests */,
+				11FB71911B34AE7F00D57A52 /* XcodeServerSDK - iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -571,7 +569,7 @@
 		};
 		3A7B48C81B2A5AC40077ABEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK */;
+			target = 3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK - OS X */;
 			targetProxy = 3A7B48C71B2A5AC40077ABEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -585,10 +583,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/XcodeServerSDK/Info-iOS.plist";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/XcodeServerSDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.XcodeServerSDK-iOS";
 				PRODUCT_NAME = XcodeServerSDK;
@@ -606,10 +605,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/XcodeServerSDK/Info-iOS.plist";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/XcodeServerSDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.XcodeServerSDK-iOS";
 				PRODUCT_NAME = XcodeServerSDK;
@@ -627,8 +627,8 @@
 				INFOPLIST_FILE = XcodeServerSDKTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.honzadvorsky.XcodeServerSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = XcodeServerSDKTest;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -640,8 +640,8 @@
 				INFOPLIST_FILE = XcodeServerSDKTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.honzadvorsky.XcodeServerSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = XcodeServerSDKTest;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -746,7 +746,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XcodeServerSDK;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -765,7 +765,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XcodeServerSDK;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -786,7 +786,7 @@
 				INFOPLIST_FILE = XcodeServerSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XcodeServerSDKTest;
 			};
 			name = Debug;
 		};
@@ -802,7 +802,7 @@
 				INFOPLIST_FILE = XcodeServerSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.honzadvorsky.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XcodeServerSDKTest;
 			};
 			name = Release;
 		};
@@ -816,14 +816,16 @@
 				11FB719B1B34AE7F00D57A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		11FB719F1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOSTests" */ = {
+		11FB719F1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11FB719C1B34AE7F00D57A52 /* Debug */,
 				11FB719D1B34AE7F00D57A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A7B48B41B2A5AC40077ABEA /* Build configuration list for PBXProject "XcodeServerSDK" */ = {
 			isa = XCConfigurationList;
@@ -834,7 +836,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A7B48D01B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK" */ = {
+		3A7B48D01B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK - OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A7B48D11B2A5AC40077ABEA /* Debug */,
@@ -843,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDKTests" */ = {
+		3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK - OS X Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A7B48D41B2A5AC40077ABEA /* Debug */,
