@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Honza Dvorsky. All rights reserved.
 //
 
+#if os(iOS)
+import Foundation
+#else
 import Cocoa
+#endif
 import XCTest
 import XcodeServerSDK
 
