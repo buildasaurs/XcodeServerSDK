@@ -105,6 +105,8 @@
 		3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_daily941_clean_always.json; path = Data/bot_mac_xcode6_schedule_periodical_daily941_clean_always.json; sourceTree = "<group>"; };
 		3A236F6A1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json; path = Data/bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json; sourceTree = "<group>"; };
 		3A236F6B1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_weeklytuesday941.json; path = Data/bot_mac_xcode6_schedule_periodical_weeklytuesday941.json; sourceTree = "<group>"; };
+		3A25FBBA1B36E2BF00897D11 /* TestiOS_Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestiOS_Playground.playground; sourceTree = "<group>"; };
+		3A25FBBB1B36E2C700897D11 /* TestOSX_Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestOSX_Playground.playground; sourceTree = "<group>"; };
 		3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48BE1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeServerSDK.h; sourceTree = "<group>"; };
@@ -292,6 +294,8 @@
 		70F463351B2B3EF800C3F963 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				3A25FBBB1B36E2C700897D11 /* TestOSX_Playground.playground */,
+				3A25FBBA1B36E2BF00897D11 /* TestiOS_Playground.playground */,
 				70F463361B2B3F4600C3F963 /* Interactions.playground */,
 			);
 			path = Playgrounds;
