@@ -8,11 +8,7 @@
 
 #import "TargetConditionals.h"
 
-#if TARGET_OS_IPHONE
 @import Foundation;
-#elif TARGET_OS_MAC
-#import <Cocoa/Cocoa.h>
-#endif
 
 //! Project version number for XcodeServerSDK.
 FOUNDATION_EXPORT double XcodeServerSDKVersionNumber;
