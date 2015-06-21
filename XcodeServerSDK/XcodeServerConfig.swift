@@ -39,7 +39,7 @@ public class XcodeServerConfig : JSONSerializable {
         if let url = NSURL(string: host) {
             if url.scheme.isEmpty {
                 // exted host with https scheme
-                host.extend("https://")
+                host = "https://" + host
             } else if url.scheme != "https" {
                 Log.error("Xcode Server generally uses https, please double check your hostname")
             }
