@@ -15,9 +15,13 @@ public enum AvailabilityCheckState {
     case Succeeded
 }
 
+/// Posible errors thrown by `XcodeServerConfig`
 public enum ConfigurationErrors : ErrorType {
+    /// Thrown when no host was provided
     case NoHostProvided
+    /// Thrown when an invalid host is provided (host is returned)
     case InvalidHostProvided(String)
+    /// Thrown when a host is provided with an invalid scheme (explanation message returned)
     case InvalidSchemeProvided(String)
 }
 
@@ -28,7 +32,7 @@ public class XcodeServerConfig : JSONSerializable {
     public let password: String?
     public let port: Int = 20343
     
-    public var availabilityState: AvailabilityCheckState
+    public var availabilityState: AvailabilityCheckState = .Unchecked
     
     public func jsonify() -> NSDictionary {
         let dict = NSMutableDictionary()
@@ -40,12 +44,26 @@ public class XcodeServerConfig : JSONSerializable {
     
     public required init(var host: String, user: String?, password: String?) throws {
         guard let url = NSURL(string: host) else {
+            /*******************************************************************
+             **   Had to be added to silence the compiler ¯\_(ツ)_/¯
+             **   Radar: http://openradar.me/21514477
+             **   Reply: https://twitter.com/jckarter/status/613491369311535104
+             ******************************************************************/
+            self.host = ""; self.user = nil; self.password = nil
+            
             throw ConfigurationErrors.InvalidHostProvided(host)
         }
         
         guard url.scheme.isEmpty || url.scheme == "https" else {
             let errMsg = "Xcode Server generally uses https, please double check your hostname"
             Log.error(errMsg)
+            
+            /*******************************************************************
+            **   Had to be added to silence the compiler ¯\_(ツ)_/¯
+            **   Radar: http://openradar.me/21514477
+            **   Reply: https://twitter.com/jckarter/status/613491369311535104
+            ******************************************************************/
+            self.host = ""; self.user = nil; self.password = nil
             
             throw ConfigurationErrors.InvalidSchemeProvided(errMsg)
         }
