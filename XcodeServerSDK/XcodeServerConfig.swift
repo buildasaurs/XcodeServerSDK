@@ -15,6 +15,12 @@ public enum AvailabilityCheckState {
     case Succeeded
 }
 
+public enum ConfigurationErrors : ErrorType {
+    case NoHostProvided
+    case InvalidHostProvided(String)
+    case InvalidSchemeProvided(String)
+}
+
 public class XcodeServerConfig : JSONSerializable {
     
     public let host: String
@@ -25,7 +31,6 @@ public class XcodeServerConfig : JSONSerializable {
     public var availabilityState: AvailabilityCheckState
     
     public func jsonify() -> NSDictionary {
-        
         let dict = NSMutableDictionary()
         dict["host"] = self.host
         dict.optionallyAddValueForKey(self.user, key: "user")
@@ -33,16 +38,22 @@ public class XcodeServerConfig : JSONSerializable {
         return dict
     }
     
-    public init(var host: String, user: String?, password: String?) {
+    public required init(var host: String, user: String?, password: String?) throws {
+        guard let url = NSURL(string: host) else {
+            throw ConfigurationErrors.InvalidHostProvided(host)
+        }
+        
+        guard url.scheme.isEmpty || url.scheme == "https" else {
+            let errMsg = "Xcode Server generally uses https, please double check your hostname"
+            Log.error(errMsg)
+            
+            throw ConfigurationErrors.InvalidSchemeProvided(errMsg)
+        }
         
         // validate if host is a valid URL
-        if let url = NSURL(string: host) {
-            if url.scheme.isEmpty {
-                // exted host with https scheme
-                host = "https://" + host
-            } else if url.scheme != "https" {
-                Log.error("Xcode Server generally uses https, please double check your hostname")
-            }
+        if url.scheme.isEmpty {
+            // exted host with https scheme
+            host = "https://" + host
         }
         
         self.host = host
@@ -51,20 +62,11 @@ public class XcodeServerConfig : JSONSerializable {
         self.availabilityState = .Unchecked
     }
     
-    public required init?(json: NSDictionary) {
-        
-        self.availabilityState = .Unchecked
-        
-        if let host = json.optionalStringForKey("host") {
-            self.host = host
-            self.user = json.optionalStringForKey("user")
-            self.password = json.optionalStringForKey("password")
-            
-        } else {
-            self.host = ""
-            self.user = nil
-            self.password = nil
-            return nil
+    public required convenience init?(json: NSDictionary) throws {
+        guard let host = json.optionalStringForKey("host") else {
+            throw ConfigurationErrors.NoHostProvided
         }
+
+        try self.init(host: host, user: json.optionalStringForKey("user"), password: json.optionalStringForKey("password"))
     }
 }
