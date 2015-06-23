@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A7B48C41B2A5AC40077ABEA"
-               BuildableName = "XcodeServerSDK - OS X Tests.xctest"
+               BuildableName = "XcodeServerSDKTest.xctest"
                BlueprintName = "XcodeServerSDK - OS X Tests"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A7B48C41B2A5AC40077ABEA"
-               BuildableName = "XcodeServerSDK - OS X Tests.xctest"
+               BuildableName = "XcodeServerSDKTest.xctest"
                BlueprintName = "XcodeServerSDK - OS X Tests"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
