@@ -21,6 +21,19 @@ public class DeviceSpecification : XcodeServerEntity {
         super.init(json: json)
     }
     
+    //
+    /**
+    Initializes a new DeviceSpecification object with only a list of tested device ids.
+    This is a convenience initializer for compatibility with old Xcode 6 bots that are still hanging around on old servers.
+    */
+    public init(testingDeviceIDs: [String]) {
+        
+        self.deviceIdentifiers = testingDeviceIDs
+        self.filters = []
+        
+        super.init()
+    }
+    
     public override func dictionarify() -> NSDictionary {
         
         return [

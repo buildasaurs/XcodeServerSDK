@@ -135,9 +135,15 @@ public class BotConfiguration : XcodeServerEntity {
         self.sourceControlBlueprint = SourceControlBlueprint(json: json.dictionaryForKey("sourceControlBlueprint"))
         
         //old bots (xcode 6) only have testingDeviceIds, try to parse those into the new format of DeviceSpecification (xcode 7)
-        let deviceSpec = DeviceSpecification(json: json.dictionaryForKey("deviceSpecification"))
-        
-        self.deviceSpecification = deviceSpe
+        if let deviceSpecJSON = json.optionalDictionaryForKey("deviceSpecification") {
+            self.deviceSpecification = DeviceSpecification(json: deviceSpecJSON)
+        } else {
+            if let testingDeviceIds = json.optionalArrayForKey("testingDeviceIDs") as? [String] {
+                self.deviceSpecification = DeviceSpecification(testingDeviceIDs: testingDeviceIds)
+            } else {
+                self.deviceSpecification = DeviceSpecification(testingDeviceIDs: [])
+            }
+        }
         
         super.init(json: json)
     }
