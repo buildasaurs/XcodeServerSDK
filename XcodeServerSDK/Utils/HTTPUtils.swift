@@ -106,7 +106,13 @@ extension HTTP {
         case DELETE = "DELETE"
         case PUT = "PUT"
     }
+
+    /**
+    Class method for generating query String based on input Dictionary.
     
+    - Parameter query: Optional Dictionary of type [String: String]
+    - Returns: Query or empty String
+    */
     public class func stringForQuery(query: [String : String]?) -> String {
         
         if let query = query {
