@@ -16,13 +16,28 @@ public class DeviceSpecification : XcodeServerEntity {
             
             let displayName: String
             let version: String
-            let identifier: String
+            
+            public enum PlatformType: String {
+                case Unknown = "unknown"
+                case iOS = "com.apple.platform.iphoneos"
+                case OSX = "com.apple.platform.macosx"
+                case watchOS = "com.apple.platform.watchos"
+            }
+            
+            public enum SimulatorType: String {
+                case iPhone = "com.apple.platform.iphonesimulator"
+                case Watch = "com.apple.platform.watchsimulator"
+            }
+            
+            let type: PlatformType
+            let simulatorType: SimulatorType?
             
             public required init(json: NSDictionary) {
                 
                 self.displayName = json.stringForKey("displayName")
                 self.version = json.stringForKey("version")
-                self.identifier = json.stringForKey("identifier")
+                self.type = PlatformType(rawValue: json.optionalStringForKey("identifier") ?? "") ?? .Unknown
+                self.simulatorType = SimulatorType(rawValue: json.optionalStringForKey("simulatorIdentifier") ?? "")
                 
                 super.init(json: json)
             }
@@ -32,13 +47,20 @@ public class DeviceSpecification : XcodeServerEntity {
         
         let platform: Platform
         let filterType: Int //TODO: find out what the values mean by trial and error
-        let architectureType: Int //TODO: ditto, find out more
+        
+        public enum ArchitectureType: Int {
+            case Unknown = -1
+            case iOS_Like = 0
+            case OSX_Like = 1
+        }
+        
+        let architectureType: ArchitectureType //TODO: ditto, find out more.
         
         public required init(json: NSDictionary) {
             
             self.platform = Platform(json: json.dictionaryForKey("platform"))
             self.filterType = json.intForKey("filterType")
-            self.architectureType = json.intForKey("architectureType")
+            self.architectureType = ArchitectureType(rawValue: json.optionalIntForKey("architectureType") ?? -1) ?? .Unknown
             
             super.init(json: json)
         }
