@@ -70,9 +70,9 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 - getDevices
 - getUserCanCreateBots
 
-# Support
+# Supported Platforms
 
-Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following infraestructures:
+Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following platforms:
 
 - OS X
 - iOS
