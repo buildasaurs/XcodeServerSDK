@@ -68,6 +68,10 @@
 		3A7B48F11B2A5B7B0077ABEA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F01B2A5B7B0077ABEA /* JSON.swift */; };
 		3A7B48F51B2A5BC60077ABEA /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F41B2A5BC60077ABEA /* Logging.swift */; };
 		3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F61B2A5BDA0077ABEA /* Errors.swift */; };
+		3A80C8011B3B48A00065C1C6 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
+		3A80C8021B3B48A40065C1C6 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
+		3A80C8031B3B48AF0065C1C6 /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
+		3A80C8041B3B48B30065C1C6 /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3AC786761B33626000BBA482 /* bot_ios_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786741B33626000BBA482 /* bot_ios_xcode7.json */; };
@@ -533,7 +537,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FB71B81B34B00000D57A52 /* XcodeServerTests.swift in Sources */,
+				3A80C8021B3B48A40065C1C6 /* XcodeServerEntityTests.swift in Sources */,
+				3A80C8031B3B48AF0065C1C6 /* BotConfigurationTests.swift in Sources */,
+				3A80C8041B3B48B30065C1C6 /* HTTPUtilsTests.swift in Sources */,
 				11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */,
+				3A80C8011B3B48A00065C1C6 /* XcodeServerConfigTests.swift in Sources */,
 				11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
