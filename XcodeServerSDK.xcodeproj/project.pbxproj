@@ -703,6 +703,7 @@
 		11376BD51B3A2F910005A681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -723,6 +724,7 @@
 		11376BD61B3A2F910005A681 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -982,6 +984,7 @@
 				11376BD61B3A2F910005A681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11FB719E1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOS" */ = {
 			isa = XCConfigurationList;
