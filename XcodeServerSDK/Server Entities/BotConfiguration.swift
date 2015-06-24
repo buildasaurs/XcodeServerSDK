@@ -10,71 +10,103 @@ import Foundation
 
 public class BotConfiguration : XcodeServerEntity {
     
+    /**
+    Enum with values describing when Bots history
+    should be cleaned.
+    
+    - Never:       Never clean
+    - Always:      Clean always project is opened
+    - Once_a_Day:  Clean once a day on first build
+    - Once_a_Week: Clean once a week on first build
+    */
     public enum CleaningPolicy : Int {
         case Never = 0
         case Always
         case Once_a_Day
         case Once_a_Week
         
+        /**
+        Method for preinting in human readable Bots
+        cleaning policy
+        
+        - returns: String with cleaning policy description
+        */
         public func toString() -> String {
             switch self {
-            case .Never:
-                return "Never"
-            case .Always:
-                return "Always"
-            case .Once_a_Day:
-                return "Once a day (first build)"
-            case .Once_a_Week:
-                return "Once a week (first build)"
+                case .Never:
+                    return "Never"
+                case .Always:
+                    return "Always"
+                case .Once_a_Day:
+                    return "Once a day (first build)"
+                case .Once_a_Week:
+                    return "Once a week (first build)"
             }
         }
     }
     
+    /**
+    Enum which describes type of available devices.
+    
+    - Simulator: iOS simulator (can be any device running iOS)
+    - Mac:       Mac with installed OS X
+    - iPhone:    iOS device (includes iPhone, iPad and iPod Touch)
+    */
     public enum DeviceType : String {
         case Simulator = "com.apple.iphone-simulator"
         case Mac = "com.apple.mac"
-        case iPhone = "com.apple.iphone" //also includes iPad and iPod Touch
+        case iPhone = "com.apple.iphone"
     }
     
+    /**
+    Enum which describes identifiers of devices on which test should be run.
+    
+    - iOS_AllDevicesAndSimulators:      iOS default - for build only
+    - iOS_AllDevices:                   All iOS devices
+    - iOS_AllSimulators:                All iOS simulators
+    - iOS_SelectedDevicesAndSimulators: Manually selected devices/simulators
+    - Mac:                              Mac default (probably, crashes when saving in Xcode) - for build only
+    - AllCompatible:                    All Compatible (default) - for build only
+    */
     public enum TestingDestinationIdentifier : Int {
-        case iOS_AllDevicesAndSimulators = 0 //iOS default - for build only
+        case iOS_AllDevicesAndSimulators = 0
         case iOS_AllDevices = 1
         case iOS_AllSimulators = 2
         case iOS_SelectedDevicesAndSimulators = 3
-        case Mac = 7 //Mac default (probably, crashes when saving in Xcode) - for build only
-        case AllCompatible = 8 //All Compatible default - for build only
+        case Mac = 7
+        case AllCompatible = 8
         
         public func toString() -> String {
             switch self {
-            case .iOS_AllDevicesAndSimulators:
-                return "iOS: All Devices and Simulators"
-            case .iOS_AllDevices:
-                return "iOS: All Devices"
-            case .iOS_AllSimulators:
-                return "iOS: All Simulators"
-            case .iOS_SelectedDevicesAndSimulators:
-                return "iOS: Selected Devices and Simulators"
-            case .Mac:
-                return "Mac"
-            case .AllCompatible:
-                return "All Compatible (Mac + iOS)"
+                case .iOS_AllDevicesAndSimulators:
+                    return "iOS: All Devices and Simulators"
+                case .iOS_AllDevices:
+                    return "iOS: All Devices"
+                case .iOS_AllSimulators:
+                    return "iOS: All Simulators"
+                case .iOS_SelectedDevicesAndSimulators:
+                    return "iOS: Selected Devices and Simulators"
+                case .Mac:
+                    return "Mac"
+                case .AllCompatible:
+                    return "All Compatible (Mac + iOS)"
             }
         }
         
         public func allowedDeviceTypes() -> [DeviceType] {
             switch self {
-            case .iOS_AllDevicesAndSimulators:
-                return [.iPhone, .Simulator]
-            case .iOS_AllDevices:
-                return [.iPhone]
-            case .iOS_AllSimulators:
-                return [.Simulator]
-            case .iOS_SelectedDevicesAndSimulators:
-                return [.iPhone, .Simulator]
-            case .Mac:
-                return [.Mac]
-            case .AllCompatible:
-                return [.iPhone, .Simulator, .Mac]
+                case .iOS_AllDevicesAndSimulators:
+                    return [.iPhone, .Simulator]
+                case .iOS_AllDevices:
+                    return [.iPhone]
+                case .iOS_AllSimulators:
+                    return [.Simulator]
+                case .iOS_SelectedDevicesAndSimulators:
+                    return [.iPhone, .Simulator]
+                case .Mac:
+                    return [.Mac]
+                case .AllCompatible:
+                    return [.iPhone, .Simulator, .Mac]
             }
         }
     }
