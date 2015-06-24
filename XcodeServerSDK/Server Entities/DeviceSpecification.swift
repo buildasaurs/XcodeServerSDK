@@ -10,13 +10,49 @@ import Foundation
 
 public class DeviceSpecification : XcodeServerEntity {
     
+    public class Filter : XcodeServerEntity {
+        
+        public class Platform : XcodeServerEntity {
+            
+            let displayName: String
+            let version: String
+            let identifier: String
+            
+            public required init(json: NSDictionary) {
+                
+                self.displayName = json.stringForKey("displayName")
+                self.version = json.stringForKey("version")
+                self.identifier = json.stringForKey("identifier")
+                
+                super.init(json: json)
+            }
+            
+            //TODO: dictionarify and an initializer to create from data for creating bots
+        }
+        
+        let platform: Platform
+        let filterType: Int //TODO: find out what the values mean by trial and error
+        let architectureType: Int //TODO: ditto, find out more
+        
+        public required init(json: NSDictionary) {
+            
+            self.platform = Platform(json: json.dictionaryForKey("platform"))
+            self.filterType = json.intForKey("filterType")
+            self.architectureType = json.intForKey("architectureType")
+            
+            super.init(json: json)
+        }
+        
+        //TODO: dictionarify and an initializer to create from data for creating bots
+    }
+    
     public let deviceIdentifiers: [String]
-    public let filters: [NSDictionary] //TODO: parse more and get more understanding of what they're for
+    public let filters: [Filter]
     
     public required init(json: NSDictionary) {
         
         self.deviceIdentifiers = json.arrayForKey("deviceIdentifiers")
-        self.filters = json.arrayForKey("filters")
+        self.filters = XcodeServerArray(json.arrayForKey("filters"))
         
         super.init(json: json)
     }
