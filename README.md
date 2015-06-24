@@ -74,9 +74,11 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 
 Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following platforms:
 
-- OS X
-- iOS
-- ᴡᴀᴛᴄʜ
+| Platform | Minimum Version | Carthage | CocoaPods |
+|:--:|:--:|:--:|:--:|
+|OS X | 10.10| √ | √ |
+|iOS | 8.0| √ | √ |
+|ᴡᴀᴛᴄʜ | 2.0 | √ | √ |
 
 # Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
