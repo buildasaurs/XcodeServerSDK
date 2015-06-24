@@ -42,21 +42,21 @@ public class XcodeServerConfig : JSONSerializable {
         return dict
     }
     
-    ///
-    /// Initializes a server configuration with the provided host.
-    /// - parameter host: `Xcode` server host.
-    /// - paramater user: Username that will be used to authenticate against the `host` provided.
-    /// Can be `nil`.
-    ///
-    /// - parameter password: Password that will be used to authenticate against the `host` provided.
-    /// Can be `nil`.
-    ///
-    /// - returns: A fully initialized `XcodeServerConfig` instance.
-    ///
-    /// - throws:
-    ///     - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
-    ///     - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
-    ///
+    /**
+    Initializes a server configuration with the provided host.
+    - parameter host: `Xcode` server host.
+    - paramater user: Username that will be used to authenticate against the `host` provided.
+    Can be `nil`.
+    
+    - parameter password: Password that will be used to authenticate against the `host` provided.
+    Can be `nil`.
+    
+    - returns: A fully initialized `XcodeServerConfig` instance.
+    
+    - throws:
+        - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
+        - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
+    */
     public required init(var host: String, user: String?, password: String?) throws {
         guard let url = NSURL(string: host) else {
             /*******************************************************************
@@ -95,17 +95,17 @@ public class XcodeServerConfig : JSONSerializable {
         self.availabilityState = .Unchecked
     }
     
-    ///
-    /// Initializes a server configuration with the provided `json`.
-    /// - parameter json: `NSDictionary` containing the `XcodeServerConfig` «configuration».
-    ///
-    /// - returns: A fully initialized `XcodeServerConfig` instance.
-    ///
-    /// - throws:
-    ///     - `NoHostProvided`: When no `host` key was found on the provided `json` dictionary.
-    ///     - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
-    ///     - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
-    ///
+    /**
+    Initializes a server configuration with the provided `json`.
+    - parameter json: `NSDictionary` containing the `XcodeServerConfig` «configuration».
+    
+    - returns: A fully initialized `XcodeServerConfig` instance.
+    
+    - throws:
+        - `NoHostProvided`: When no `host` key was found on the provided `json` dictionary.
+        - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
+        - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
+    */
     public required convenience init?(json: NSDictionary) throws {
         guard let host = json.optionalStringForKey("host") else {
             throw ConfigurationErrors.NoHostProvided
