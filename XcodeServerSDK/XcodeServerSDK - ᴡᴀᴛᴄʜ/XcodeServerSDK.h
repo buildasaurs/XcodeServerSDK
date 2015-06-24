@@ -2,13 +2,11 @@
 //  XcodeServerSDK.h
 //  XcodeServerSDK
 //
-//  Created by Honza Dvorsky on 11/06/2015.
-//  Copyright (c) 2015 Honza Dvorsky. All rights reserved.
+//  Created by Esteban Torres on 23/6/15.
+//  Copyright © 2015 Honza Dvorsky. All rights reserved.
 //
 
-#import "TargetConditionals.h"
-
-@import Foundation;
+#import <WatchKit/WatchKit.h>
 
 //! Project version number for XcodeServerSDK.
 FOUNDATION_EXPORT double XcodeServerSDKVersionNumber;
