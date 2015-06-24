@@ -19,7 +19,7 @@ class HTTPUtilsTests: XCTestCase {
             "Key3": "Value3"
         ]
         
-        XCTAssertEqual(HTTP.stringForQuery(query), "?Key3=Value3&Key1=Value1&Key2=Value2")
+        XCTAssertEqual(HTTP.stringForQuery(query), "?Key1=Value1&Key2=Value2&Key3=Value3")
     }
     
     func testOptionalStringForQuery() {
