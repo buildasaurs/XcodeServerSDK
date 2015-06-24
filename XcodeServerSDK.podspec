@@ -12,6 +12,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
+  s.watchos.deployment_target = "2.0"
+  
   s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "0.0.4" }
 
   s.source_files  = "XcodeServerSDK/**/*.{swift}"
