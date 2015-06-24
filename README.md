@@ -76,9 +76,12 @@ Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the followi
 
 | Platform | Minimum Version | Carthage | CocoaPods |
 |:--:|:--:|:--:|:--:|
-|OS X | 10.10| √ | √ |
-|iOS | 8.0| √ | √ |
-|ᴡᴀᴛᴄʜ | 2.0 | √ | √ |
+|OS X | 10.10| :white_check_mark: | :white_check_mark: |
+|iOS | 8.0| :white_check_mark: | :white_check_mark: |
+|ᴡᴀᴛᴄʜ | 2.0 | :white_check_mark: | :no_entry: * |
+
+*: _CocoaPods still doesn't support watchOS, but its working on it. You can check progress of the issue [here][cocoapodswatchos]_
+[cocoapodswatchos]:https://github.com/CocoaPods/CocoaPods/pull/3681
 
 # Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
