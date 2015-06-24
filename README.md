@@ -70,6 +70,14 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 - getDevices
 - getUserCanCreateBots
 
+# Support
+
+Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following infraestructures:
+
+- OS X
+- iOS
+- ᴡᴀᴛᴄʜ
+
 # Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
 - (using XcodeServerSDK too? Send a PR with a link to your project added here!)
@@ -90,3 +98,5 @@ This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Build
 Honza Dvorsky
 [honzadvorsky.com](http://honzadvorsky.com)
 [@czechboy0](https://twitter.com/czechboy0)
+
+[xcodeserversdk]:https://github.com/czechboy0/XcodeServerSDK
