@@ -1,4 +1,4 @@
-# (unofficial) Xcode Server SDK
+# Xcode Server SDK
 
 [![Stars](https://img.shields.io/github/stars/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/stargazers)
 [![Forks](https://img.shields.io/github/forks/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/network/members)
@@ -9,9 +9,13 @@
 [![Blog](https://img.shields.io/badge/blog-honzadvorsky.com-green.svg)](http://honzadvorsky.com)
 [![Twitter Czechboy0](https://img.shields.io/badge/twitter-czechboy0-green.svg)](http://twitter.com/czechboy0)
 
-Use Xcode Server's API with native Swift objects. First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
+> Use Xcode Server's API with native Swift objects.
 
-**Supports both Xcode Server with Xcode 6 and 7!**
+First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
+This is an unofficial, community-maintained project and is not associated with Apple.
+
+# Xcode Server Versions
+The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions *only* support the new, first publicly documented Xcode 7 version of the API. **Xcode 7 API support is still work in progress.**
 
 # Swift Versions
 The latest Swift 1.2 compatible version is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4), so put this exact version in your Podfile if you're targetting Swift 1.2. All newer releases will be targetting Swift 2, because we're all just so forward-thinking.
@@ -52,9 +56,6 @@ server.getBots { (bots, error) -> () in
 
 We're providing a Plaground in which you can easily interact with `XcodeServerSDK` and test it's functionalities without any need to create a new app. Playground target is set to be OS X (so don't use `UIKit` inside).
 
-Need inspiration? Watch [this WWDC 2015 session](https://developer.apple.com/videos/wwdc/2015/?id=410) on Xcode Server!
-Using hardware buttons to start integrations? Why not! The sky is the limit.
-
 # Features
 
 - createBot
@@ -66,6 +67,13 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 - cancelIntegration
 - getDevices
 - getUserCanCreateBots
+
+# Projects using XcodeServerSDK
+- [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
+- (using XcodeServerSDK too? Send a PR with a link to your project added here!)
+
+Want to create yours but need some inspiration? Watch [this WWDC 2015 session](https://developer.apple.com/videos/wwdc/2015/?id=410) on Xcode Server!
+Using hardware buttons to start integrations? Why not! The sky is the limit.
 
 # License
 [MIT](https://github.com/czechboy0/XcodeServerSDK/blob/master/LICENSE)
