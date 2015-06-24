@@ -48,6 +48,10 @@ server.getBots { (bots, error) -> () in
 }
 ```
 
+## Play with Playground
+
+We're providing a Plaground in which you can easily interact with `XcodeServerSDK` and test it's functionalities without any need to create a new app. Playground target is set to be OS X (so don't use `UIKit` inside).
+
 Need inspiration? Watch [this WWDC 2015 session](https://developer.apple.com/videos/wwdc/2015/?id=410) on Xcode Server!
 Using hardware buttons to start integrations? Why not! The sky is the limit.
 
