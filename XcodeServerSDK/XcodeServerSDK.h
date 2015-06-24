@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Honza Dvorsky. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "TargetConditionals.h"
+
+@import Foundation;
 
 //! Project version number for XcodeServerSDK.
 FOUNDATION_EXPORT double XcodeServerSDKVersionNumber;

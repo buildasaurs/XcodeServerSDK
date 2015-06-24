@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
+               BlueprintIdentifier = "11FB71881B34AE7F00D57A52"
                BuildableName = "XcodeServerSDK.framework"
-               BlueprintName = "XcodeServerSDK"
-               ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7B48C41B2A5AC40077ABEA"
-               BuildableName = "XcodeServerSDKTests.xctest"
-               BlueprintName = "XcodeServerSDKTests"
+               BlueprintName = "XcodeServerSDK - iOS"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7B48C41B2A5AC40077ABEA"
-               BuildableName = "XcodeServerSDKTests.xctest"
-               BlueprintName = "XcodeServerSDKTests"
+               BlueprintIdentifier = "11FB71911B34AE7F00D57A52"
+               BuildableName = "XcodeServerSDKTest.xctest"
+               BlueprintName = "XcodeServerSDK - iOS Tests"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
+            BlueprintIdentifier = "11FB71881B34AE7F00D57A52"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK"
+            BlueprintName = "XcodeServerSDK - iOS"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
+            BlueprintIdentifier = "11FB71881B34AE7F00D57A52"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK"
+            BlueprintName = "XcodeServerSDK - iOS"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
+            BlueprintIdentifier = "11FB71881B34AE7F00D57A52"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK"
+            BlueprintName = "XcodeServerSDK - iOS"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
