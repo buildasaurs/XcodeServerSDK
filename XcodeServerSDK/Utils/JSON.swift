@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol JSONSerializable {
-    init?(json: NSDictionary)
+    init?(json: NSDictionary) throws
     func jsonify() -> NSDictionary
 }
 
