@@ -119,7 +119,7 @@ public class BotConfiguration : XcodeServerEntity {
     public let schedule: BotSchedule
     public let triggers: [Trigger]
     public let testingDestinationType: TestingDestinationIdentifier?
-    public let testingDeviceIDs: [String]
+    public let deviceSpecification: DeviceSpecification
     public let sourceControlBlueprint: SourceControlBlueprint
     
     public required init(json: NSDictionary) {
@@ -132,8 +132,12 @@ public class BotConfiguration : XcodeServerEntity {
         self.schedule = BotSchedule(json: json)
         self.triggers = XcodeServerArray(json.arrayForKey("triggers"))
         self.testingDestinationType = TestingDestinationIdentifier(rawValue: json.intForKey("testingDestinationType"))
-        self.testingDeviceIDs = json.arrayForKey("testingDeviceIDs")
         self.sourceControlBlueprint = SourceControlBlueprint(json: json.dictionaryForKey("sourceControlBlueprint"))
+        
+        //old bots (xcode 6) only have testingDeviceIds, try to parse those into the new format of DeviceSpecification (xcode 7)
+        let deviceSpec = DeviceSpecification(json: json.dictionaryForKey("deviceSpecification"))
+        
+        self.deviceSpecification = deviceSpe
         
         super.init(json: json)
     }
@@ -146,7 +150,7 @@ public class BotConfiguration : XcodeServerEntity {
         schemeName: String,
         schedule: BotSchedule,
         triggers: [Trigger],
-        testingDeviceIDs: [String],
+        deviceSpecification: DeviceSpecification,
         testingDestinationType: TestingDestinationIdentifier,
         sourceControlBlueprint: SourceControlBlueprint) {
             
@@ -157,7 +161,7 @@ public class BotConfiguration : XcodeServerEntity {
             self.schemeName = schemeName
             self.schedule = schedule
             self.triggers = triggers
-            self.testingDeviceIDs = testingDeviceIDs
+            self.deviceSpecification = deviceSpecification
             self.sourceControlBlueprint = sourceControlBlueprint
             self.testingDestinationType = testingDestinationType
             
@@ -177,7 +181,7 @@ public class BotConfiguration : XcodeServerEntity {
         dictionary["triggers"] = self.triggers.map { $0.dictionarify() }
         dictionary["performsAnalyzeAction"] = self.analyze
         dictionary["schemeName"] = self.schemeName
-        dictionary["testingDeviceIDs"] = self.testingDeviceIDs
+        dictionary["deviceSpecification"] = self.deviceSpecification.dictionarify()
         dictionary["performsArchiveAction"] = self.archive
         dictionary["testingDestinationType"] = self.testingDestinationType?.rawValue //TODO: figure out if we need this
         

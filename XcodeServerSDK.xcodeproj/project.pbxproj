@@ -68,6 +68,8 @@
 		3A7B48F11B2A5B7B0077ABEA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F01B2A5B7B0077ABEA /* JSON.swift */; };
 		3A7B48F51B2A5BC60077ABEA /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F41B2A5BC60077ABEA /* Logging.swift */; };
 		3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F61B2A5BDA0077ABEA /* Errors.swift */; };
+		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
+		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3AC786761B33626000BBA482 /* bot_ios_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786741B33626000BBA482 /* bot_ios_xcode7.json */; };
 		3AC786771B33626000BBA482 /* bot_mac_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786751B33626000BBA482 /* bot_mac_xcode7.json */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
@@ -132,6 +134,7 @@
 		3A7B48F01B2A5B7B0077ABEA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3A7B48F41B2A5BC60077ABEA /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		3A7B48F61B2A5BDA0077ABEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
 		3AC786741B33626000BBA482 /* bot_ios_xcode7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_ios_xcode7.json; path = Data/bot_ios_xcode7.json; sourceTree = "<group>"; };
 		3AC786751B33626000BBA482 /* bot_mac_xcode7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode7.json; path = Data/bot_mac_xcode7.json; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
@@ -269,13 +272,14 @@
 			children = (
 				3A7B48D61B2A5ADE0077ABEA /* Bot.swift */,
 				3A7B48D71B2A5ADE0077ABEA /* BotConfiguration.swift */,
-				707D08971B2C6954003900F3 /* EmailConfiguration.swift */,
 				707D08991B2C6986003900F3 /* BotSchedule.swift */,
+				3A7B48D91B2A5ADE0077ABEA /* Device.swift */,
+				3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */,
+				707D08971B2C6954003900F3 /* EmailConfiguration.swift */,
+				3A7B48DA1B2A5ADE0077ABEA /* Integration.swift */,
+				3A7B48DB1B2A5ADE0077ABEA /* SourceControlBlueprint.swift */,
 				707D089B1B2C69C4003900F3 /* Trigger.swift */,
 				707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */,
-				3A7B48D91B2A5ADE0077ABEA /* Device.swift */,
-				3A7B48DB1B2A5ADE0077ABEA /* SourceControlBlueprint.swift */,
-				3A7B48DA1B2A5ADE0077ABEA /* Integration.swift */,
 			);
 			path = "Server Entities";
 			sourceTree = "<group>";
@@ -510,6 +514,7 @@
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
 				11FB71AA1B34AF2400D57A52 /* BotSchedule.swift in Sources */,
+				3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				11FB71AB1B34AF2400D57A52 /* Trigger.swift in Sources */,
 				11FB71AC1B34AF2400D57A52 /* TriggerConditions.swift in Sources */,
 				11FB71AD1B34AF2400D57A52 /* Device.swift in Sources */,
@@ -548,6 +553,7 @@
 				707D089C1B2C69C4003900F3 /* Trigger.swift in Sources */,
 				3A7B48E21B2A5ADE0077ABEA /* BotConfiguration.swift in Sources */,
 				3A7B48EA1B2A5ADE0077ABEA /* XcodeServerEntity.swift in Sources */,
+				3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */,
 				3A7B48EB1B2A5ADE0077ABEA /* XcodeServerFactory.swift in Sources */,
 				707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */,
