@@ -50,6 +50,8 @@ class XcodeServerConfigTests: XCTestCase {
         
         do {
             _ = try XcodeServerConfig(json: json)
+            
+            XCTFail("`XcodeServerConfig` init did not throw `ConfigurationErrors.NoHostProvided` when an invalid dictionary was passed.")
         } catch ConfigurationErrors.NoHostProvided {
             print("• `ConfigurationErrors.NoHostProvided` was thrown as expected.")
         } catch {
