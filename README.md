@@ -1,7 +1,7 @@
 # Xcode Server SDK
 
 [![Latest XcodeServerSDK Release](https://img.shields.io/github/release/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/releases/latest)
-[![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK)<br>
+[![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)<br />
 
 [![Stars](https://img.shields.io/github/stars/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/stargazers)
 [![Forks](https://img.shields.io/github/forks/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/network/members)
@@ -21,6 +21,12 @@ The easiest way to integrate `XcodeServerSDK` into your project is with Cocoapod
 
 ```
 pod 'XcodeServerSDK', '0.0.4'
+```
+
+If you're using Carthage you have to create a _Cartfile_ and run `carthage update` to fetch and build dependencies
+
+```
+github "czechboy0/XcodeServerSDK"
 ```
 
 # Usage
@@ -60,15 +66,26 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 
 # Features
 
-- createBot
-- getBot
-- deleteBot
-- getBots
-- getIntegrations
-- postIntegration
-- cancelIntegration
-- getDevices
-- getUserCanCreateBots
+| Name | Official  support | `XcodeServerSDK` |
+| :-- | :--: | :--: |
+| Check if user can create bots | :no_entry: | :white_check_mark: |
+| _List bots on server_ | :white_check_mark: | :white_check_mark: |
+| _Create a new bot_ | :white_check_mark: | :white_check_mark: |
+| _Retrieve a bot_ | :white_check_mark: | :white_check_mark: |
+| _Update a bot’s configuration_ | :white_check_mark: | :no_entry: |
+| Delete a bot | :no_entry: | :white_check_mark: |
+| _Get bot's most recent integrations_ | :white_check_mark: | :no_entry: |
+| _Enqueue a new integration_ | :white_check_mark: | :white_check_mark: |
+| _List integrations on server_ | :white_check_mark: | :white_check_mark: |
+| _Retrieve an integration by ID_ | :white_check_mark: | :white_check_mark: |
+| Cancel integration | :no_entry: | :white_check_mark: |
+| _List the commits included in an integration_ | :white_check_mark: | :no_entry: |
+| _List the build issues produced by an integration_ | :white_check_mark: | :no_entry: |
+| _List devices connected to server_ | :white_check_mark: | :white_check_mark: |
+| _List hosted repositories on server_ | :white_check_mark: | :no_entry: |
+| _Create a new hosted repository_ | :white_check_mark: | :no_entry: |
+
+Opertions listed in table above in _italics_ are those provided by  in Xcode. Rest of operations are just a product of reverse engineering.
 
 # Supported Platforms
 
