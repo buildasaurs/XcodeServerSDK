@@ -8,42 +8,42 @@
 
 import Foundation
 
+public class Platform : XcodeServerEntity {
+    
+    let displayName: String
+    let version: String
+    
+    public enum PlatformType: String {
+        case Unknown = "unknown"
+        case iOS = "com.apple.platform.iphoneos"
+        case OSX = "com.apple.platform.macosx"
+        case watchOS = "com.apple.platform.watchos"
+    }
+    
+    public enum SimulatorType: String {
+        case iPhone = "com.apple.platform.iphonesimulator"
+        case Watch = "com.apple.platform.watchsimulator"
+    }
+    
+    let type: PlatformType
+    let simulatorType: SimulatorType?
+    
+    public required init(json: NSDictionary) {
+        
+        self.displayName = json.stringForKey("displayName")
+        self.version = json.stringForKey("version")
+        self.type = PlatformType(rawValue: json.optionalStringForKey("identifier") ?? "") ?? .Unknown
+        self.simulatorType = SimulatorType(rawValue: json.optionalStringForKey("simulatorIdentifier") ?? "")
+        
+        super.init(json: json)
+    }
+    
+    //TODO: dictionarify and an initializer to create from data for creating bots
+}
+
 public class DeviceSpecification : XcodeServerEntity {
     
     public class Filter : XcodeServerEntity {
-        
-        public class Platform : XcodeServerEntity {
-            
-            let displayName: String
-            let version: String
-            
-            public enum PlatformType: String {
-                case Unknown = "unknown"
-                case iOS = "com.apple.platform.iphoneos"
-                case OSX = "com.apple.platform.macosx"
-                case watchOS = "com.apple.platform.watchos"
-            }
-            
-            public enum SimulatorType: String {
-                case iPhone = "com.apple.platform.iphonesimulator"
-                case Watch = "com.apple.platform.watchsimulator"
-            }
-            
-            let type: PlatformType
-            let simulatorType: SimulatorType?
-            
-            public required init(json: NSDictionary) {
-                
-                self.displayName = json.stringForKey("displayName")
-                self.version = json.stringForKey("version")
-                self.type = PlatformType(rawValue: json.optionalStringForKey("identifier") ?? "") ?? .Unknown
-                self.simulatorType = SimulatorType(rawValue: json.optionalStringForKey("simulatorIdentifier") ?? "")
-                
-                super.init(json: json)
-            }
-            
-            //TODO: dictionarify and an initializer to create from data for creating bots
-        }
         
         let platform: Platform
         let filterType: Int //TODO: find out what the values mean by trial and error

@@ -18,6 +18,7 @@ public class XcodeServerEndPoints {
         case Devices
         case Login
         case Logout
+        case Platforms
     }
     
     let serverConfig: XcodeServerConfig
@@ -39,61 +40,66 @@ public class XcodeServerEndPoints {
         
         switch endpoint {
             
-            case .Bots:
-                
-                let bots = "\(base)/bots"
-                if let bot = params?["bot"] {
-                    let bot = "\(bots)/\(bot)"
-                    if let rev = params?["rev"] {
-                        let rev = "\(bot)/\(rev)"
-                        return rev
-                    }
-                    return bot
+        case .Bots:
+            
+            let bots = "\(base)/bots"
+            if let bot = params?["bot"] {
+                let bot = "\(bots)/\(bot)"
+                if let rev = params?["rev"] {
+                    let rev = "\(bot)/\(rev)"
+                    return rev
                 }
-                return bots
+                return bot
+            }
+            return bots
+            
+        case .Integrations:
+            
+            if let _ = params?["bot"] {
+                //gets a list of integrations for this bot
+                let bots = self.endpointURL(.Bots, params: params)
+                return "\(bots)/integrations"
+            }
+            
+            let integrations = "\(base)/integrations"
+            if let integration = params?["integration"] {
                 
-            case .Integrations:
-                
-                if let _ = params?["bot"] {
-                    //gets a list of integrations for this bot
-                    let bots = self.endpointURL(.Bots, params: params)
-                    return "\(bots)/integrations"
-                }
-                
-                let integrations = "\(base)/integrations"
-                if let integration = params?["integration"] {
-                    
-                    let oneIntegration = "\(integrations)/\(integration)"
-                    return oneIntegration
-                }
-                return integrations
-                
-            case .CancelIntegration:
-                
-                let integration = self.endpointURL(.Integrations, params: params)
-                let cancel = "\(integration)/cancel"
-                return cancel
-                
-            case .Devices:
-                
-                let devices = "\(base)/devices"
-                return devices
-                
-            case .UserCanCreateBots:
-                
-                let users = "\(base)/auth/isBotCreator"
-                return users
-                
-            case .Login:
-                
-                let login = "\(base)/auth/login"
-                return login
-                
-            case .Logout:
-                
-                let logout = "\(base)/auth/logout"
-                return logout
-                
+                let oneIntegration = "\(integrations)/\(integration)"
+                return oneIntegration
+            }
+            return integrations
+            
+        case .CancelIntegration:
+            
+            let integration = self.endpointURL(.Integrations, params: params)
+            let cancel = "\(integration)/cancel"
+            return cancel
+            
+        case .Devices:
+            
+            let devices = "\(base)/devices"
+            return devices
+            
+        case .UserCanCreateBots:
+            
+            let users = "\(base)/auth/isBotCreator"
+            return users
+            
+        case .Login:
+            
+            let login = "\(base)/auth/login"
+            return login
+            
+        case .Logout:
+            
+            let logout = "\(base)/auth/logout"
+            return logout
+            
+        case .Platforms:
+            
+            let platforms = "\(base)/platforms"
+            return platforms
+            
         }
     }
     

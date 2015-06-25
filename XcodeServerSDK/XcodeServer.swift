@@ -378,6 +378,25 @@ public extension XcodeServer {
         }
     }
     
+    public func getPlatforms(completion: (platforms: [Platform]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Platforms, params: nil, query: nil, body: nil) { (response, body, error) -> () in
+            
+            if error != nil {
+                completion(platforms: nil, error: error)
+                return
+            }
+            
+            if let array = (body as? NSDictionary)?["results"] as? NSArray {
+                let platforms: [Platform] = XcodeServerArray(array)
+                completion(platforms: platforms, error: error)
+            } else {
+                completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
+            }
+        }
+    }
+
+    
 //    public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
     
     //TODO: we need to call getIntegrations() -> filter pending and running Integrations -> get unique bots of these integrations -> query for the average integration time of each bot -> estimate, based on the pending/running integrations, how long it will take for the passed in integration to finish
