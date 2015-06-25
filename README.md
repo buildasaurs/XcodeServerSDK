@@ -74,10 +74,10 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 | _Retrieve a bot_ | :white_check_mark: | :white_check_mark: |
 | _Update a bot’s configuration_ | :white_check_mark: | :no_entry: |
 | Delete a bot | :no_entry: | :white_check_mark: |
-| _Get bot's most recent integrations_ | :white_check_mark: | :no_entry: |
+| _Get bot's most recent integrations_ | :white_check_mark: | :white_check_mark: |
 | _Enqueue a new integration_ | :white_check_mark: | :white_check_mark: |
-| _List integrations on server_ | :white_check_mark: | :white_check_mark: |
-| _Retrieve an integration by ID_ | :white_check_mark: | :white_check_mark: |
+| _List integrations on server_ | :white_check_mark: | :no_entry: |
+| _Retrieve an integration by ID_ | :white_check_mark: | :no_entry: |
 | Cancel integration | :no_entry: | :white_check_mark: |
 | _List the commits included in an integration_ | :white_check_mark: | :no_entry: |
 | _List the build issues produced by an integration_ | :white_check_mark: | :no_entry: |
