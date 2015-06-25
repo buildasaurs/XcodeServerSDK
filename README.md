@@ -1,7 +1,7 @@
 # Xcode Server SDK
 
 [![Latest XcodeServerSDK Release](https://img.shields.io/github/release/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/releases/latest)
-[![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK)<br>
+[![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)<br />
 
 [![Stars](https://img.shields.io/github/stars/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/stargazers)
 [![Forks](https://img.shields.io/github/forks/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/network/members)
@@ -21,6 +21,12 @@ The easiest way to integrate `XcodeServerSDK` into your project is with Cocoapod
 
 ```
 pod 'XcodeServerSDK', '0.0.4'
+```
+
+If you're using Carthage you have to create a _Cartfile_ and run `carthage update` to fetch and build dependencies
+
+```
+github "czechboy0/XcodeServerSDK"
 ```
 
 # Usage
