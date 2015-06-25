@@ -48,20 +48,14 @@ class XcodeServerConfigTests: XCTestCase {
             "password": "superSecr3t"
         ]
         
-        do {
-            _ = try XcodeServerConfig(json: json)
-            
-            XCTFail("`XcodeServerConfig` init did not throw `ConfigurationErrors.NoHostProvided` when an invalid dictionary was passed.")
-        } catch ConfigurationErrors.NoHostProvided {
-            print("• `ConfigurationErrors.NoHostProvided` was thrown as expected.")
-        } catch {
-            XCTFail("`XcodeServerConfig` init failed with an unexpected error: \(error).")
+        XCTempAssertThrowsSpecificError(ConfigurationErrors.NoHostProvided) {
+            try XcodeServerConfig(json: json)
         }
     }
     
     // MARK: Returning JSON
     func testJsonify() {
-        do {
+        XCTempAssertNoThrowError("Failed to initialize the server configuration") {
             let config = try XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
             let expected = [
                 "host": "https://127.0.0.1",
@@ -70,8 +64,6 @@ class XcodeServerConfigTests: XCTestCase {
             ]
             
             XCTAssertEqual(config.jsonify(), expected)
-        } catch {
-            XCTFail("Failed to initialize the server configuration: \(error)")
         }
     }
 
