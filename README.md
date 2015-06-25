@@ -112,6 +112,7 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 
 # Contributing
 Create an issue or (preferably) send a pull request.
+Do you just want to get involved and help out? See the issues marked as [up-for-grabs](https://github.com/czechboy0/XcodeServerSDK/labels/up-for-grabs). These are the ones just waiting for some beautiful soul like you to build/fix it. We just don't have enough bandwidth and any help is welcome :) (You'll be in the contributors list of the release if you send a PR! :fireworks:)
 
 # Origin Story
 This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Buildasaur), bringing you integration of GitHub Pull Requests to Xcode Bots.
