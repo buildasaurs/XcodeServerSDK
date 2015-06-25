@@ -6,6 +6,8 @@
 
 **Closed issues:**
 
+- Add `throw` method to TestUtils [\#36](https://github.com/czechboy0/XcodeServerSDK/issues/36)
+
 - Support for ᴡᴀᴛᴄʜ [\#33](https://github.com/czechboy0/XcodeServerSDK/issues/33)
 
 - Carthage support [\#30](https://github.com/czechboy0/XcodeServerSDK/issues/30)
