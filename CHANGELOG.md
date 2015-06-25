@@ -6,7 +6,11 @@
 
 **Closed issues:**
 
+- Add `throw` method to TestUtils [\#36](https://github.com/czechboy0/XcodeServerSDK/issues/36)
+
 - Support for ᴡᴀᴛᴄʜ [\#33](https://github.com/czechboy0/XcodeServerSDK/issues/33)
+
+- Carthage support [\#30](https://github.com/czechboy0/XcodeServerSDK/issues/30)
 
 - XcodeServerConfig refactoring [\#28](https://github.com/czechboy0/XcodeServerSDK/issues/28)
 
@@ -33,6 +37,12 @@
 - Dependency management support [\#1](https://github.com/czechboy0/XcodeServerSDK/issues/1)
 
 **Merged pull requests:**
+
+- Test Assertions for throwing methods [\#41](https://github.com/czechboy0/XcodeServerSDK/pull/41) ([cojoj](https://github.com/cojoj))
+
+- Add Carthage shield to README [\#39](https://github.com/czechboy0/XcodeServerSDK/pull/39) ([cojoj](https://github.com/cojoj))
+
+- Update README.md [\#38](https://github.com/czechboy0/XcodeServerSDK/pull/38) ([esttorhe](https://github.com/esttorhe))
 
 - API version checking [\#37](https://github.com/czechboy0/XcodeServerSDK/pull/37) ([czechboy0](https://github.com/czechboy0))
 
