@@ -66,6 +66,10 @@
 		3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		3A058A901B31596A0077FD47 /* bot_mac_xcode6.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */; };
 		3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
+		3A06D5FD1B3C184400F0A6C5 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
+		3A06D5FE1B3C184700F0A6C5 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
+		3A06D5FF1B3C184D00F0A6C5 /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
+		3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
 		3A236F6C1B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F671B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json */; };
 		3A236F6D1B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F681B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json */; };
 		3A236F6E1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */; };
@@ -637,8 +641,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FB71B81B34B00000D57A52 /* XcodeServerTests.swift in Sources */,
+				3A06D5FF1B3C184D00F0A6C5 /* HTTPUtilsTests.swift in Sources */,
+				3A06D5FD1B3C184400F0A6C5 /* XcodeServerEntityTests.swift in Sources */,
 				11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */,
 				11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */,
+				3A06D5FE1B3C184700F0A6C5 /* XcodeServerConfigTests.swift in Sources */,
+				3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
