@@ -127,7 +127,7 @@ public class SourceControlBlueprint : XcodeServerEntity {
             repoId: [
                 XcodeRepoAuthenticationTypeKey: XcodeRepoSSHKeysAuthenticationStrategy,
                 XcodeRepoUsernameKey: "git", //TODO: see how to add https support?
-                XcodeRepoPasswordKey: sshPassphrase, //this is where the passphrase goes
+                XcodeRepoPasswordKey: sshPassphrase,
                 XcodeRepoAuthenticationStrategiesKey: sshPrivateKey,
                 XcodeRepoPublicKeyDataKey: sshPublicKey
             ]
