@@ -93,8 +93,8 @@ public class SourceControlBlueprint : XcodeServerEntity {
 
         let repoId = self.projectWCCIdentifier
         let remoteUrl = self.projectURL
-        let sshPublicKey = self.publicSSHKey!//?.base64Encoded ?? ""
-        let sshPrivateKey = self.privateSSHKey!//?.base64Encoded ?? ""
+        let sshPublicKey = self.publicSSHKey?.base64Encoded ?? ""
+        let sshPrivateKey = self.privateSSHKey?.base64Encoded ?? ""
         let sshPassphrase = self.sshPassphrase ?? ""
         let certificateFingerprint = self.certificateFingerprint ?? ""
 
