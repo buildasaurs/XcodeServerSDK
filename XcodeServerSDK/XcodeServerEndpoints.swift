@@ -19,6 +19,7 @@ public class XcodeServerEndPoints {
         case Login
         case Logout
         case Platforms
+        case SCM_Branches
     }
     
     let serverConfig: XcodeServerConfig
@@ -99,6 +100,11 @@ public class XcodeServerEndPoints {
             
             let platforms = "\(base)/platforms"
             return platforms
+            
+        case .SCM_Branches:
+            
+            let branches = "\(base)/scm/branches"
+            return branches
             
         }
     }

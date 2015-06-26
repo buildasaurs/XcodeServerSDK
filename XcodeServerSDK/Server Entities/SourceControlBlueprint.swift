@@ -27,6 +27,7 @@ public class SourceControlBlueprint : XcodeServerEntity {
     public let privateSSHKey: String?
     public let publicSSHKey: String?
     public let sshPassphrase: String?
+    public var certificateFingerprint: String?
     
     public required init(json: NSDictionary) {
         
@@ -57,12 +58,13 @@ public class SourceControlBlueprint : XcodeServerEntity {
         self.privateSSHKey = nil
         self.publicSSHKey = nil
         self.sshPassphrase = nil
+        self.certificateFingerprint = nil //TODO: verify that it's not being passed in
         
         super.init(json: json)
     }
     
     public init(branch: String, projectWCCIdentifier: String, wCCName: String, projectName: String,
-        projectURL: String, projectPath: String, publicSSHKey: String?, privateSSHKey: String?, sshPassphrase: String?)
+        projectURL: String, projectPath: String, publicSSHKey: String?, privateSSHKey: String?, sshPassphrase: String?, certificateFingerprint: String? = nil)
     {
         self.branch = branch
         self.projectWCCIdentifier = projectWCCIdentifier
@@ -74,78 +76,53 @@ public class SourceControlBlueprint : XcodeServerEntity {
         self.publicSSHKey = publicSSHKey
         self.privateSSHKey = privateSSHKey
         self.sshPassphrase = sshPassphrase
+        self.certificateFingerprint = certificateFingerprint
         
         super.init()
     }
     
     //for credentials verification only
-    public convenience init(projectWCCIdentifier: String, projectURL: String, publicSSHKey: String?, privateSSHKey: String?, sshPassphrase: String?) {
+    public convenience init(projectURL: String, publicSSHKey: String?, privateSSHKey: String?, sshPassphrase: String?) {
         
-        self.init(branch: "", projectWCCIdentifier: projectWCCIdentifier, wCCName: "", projectName: "", projectURL: projectURL, projectPath: "", publicSSHKey: publicSSHKey, privateSSHKey: privateSSHKey, sshPassphrase: sshPassphrase)
+        self.init(branch: "", projectWCCIdentifier: "", wCCName: "", projectName: "", projectURL: projectURL, projectPath: "", publicSSHKey: publicSSHKey, privateSSHKey: privateSSHKey, sshPassphrase: sshPassphrase, certificateFingerprint: nil)
     }
     
-    public override func dictionarify() -> NSDictionary {
+    public func dictionarifyRemoteAndCredentials() -> NSDictionary {
         
         let dictionary = NSMutableDictionary()
-        
+
         let repoId = self.projectWCCIdentifier
         let remoteUrl = self.projectURL
-        var workingCopyPath = self.projectName
-        //ensure a trailing slash
-        if !workingCopyPath.hasSuffix("/") {
-            workingCopyPath = workingCopyPath + "/"
-        }
-        let relativePathToProject = self.projectPath
-        let blueprintName = self.wCCName
-        let branch = self.branch
-        let sshPublicKey = self.publicSSHKey?.base64Encoded ?? ""
-        let sshPrivateKey = self.privateSSHKey?.base64Encoded ?? ""
+        let sshPublicKey = self.publicSSHKey!//?.base64Encoded ?? ""
+        let sshPrivateKey = self.privateSSHKey!//?.base64Encoded ?? ""
         let sshPassphrase = self.sshPassphrase ?? ""
-        
-        //locations on the branch
-        dictionary[XcodeBlueprintLocationsKey] = [
-            repoId: [
-                XcodeBranchIdentifierKey: branch,
-                XcodeBranchOptionsKey: 156, //super magic number
-                XcodeBlueprintLocationTypeKey: "DVTSourceControlBranch" //TODO: add more types?
-            ]
-        ]
+        let certificateFingerprint = self.certificateFingerprint ?? ""
 
-        //primary remote repo
-        dictionary[XcodeBlueprintPrimaryRemoteRepositoryKey] = repoId
+        //blueprint is not valid without this magic version
+        dictionary[XcodeBlueprintVersion] = 203
         
-        //working copy states?
-        dictionary[XcodeBlueprintWorkingCopyStatesKey] = [
-            repoId: 0
-        ]
-        
-        //blueprint identifier
-        dictionary[XcodeBlueprintIdentifierKey] = NSUUID().UUIDString
-        
-        //all remote repos
+        //now, a repo is defined by its server location. so let's throw that in.
         dictionary[XcodeBlueprintRemoteRepositoriesKey] = [
             [
                 XcodeBlueprintRemoteRepositoryURLKey: remoteUrl,
                 XcodeBlueprintRemoteRepositorySystemKey: "com.apple.dt.Xcode.sourcecontrol.Git", //TODO: add more SCMs
-                XcodeBlueprintRemoteRepositoryIdentifierKey: repoId
+                XcodeBlueprintRemoteRepositoryIdentifierKey: repoId,
+                
+                //new - certificate fingerprint
+                XcodeBlueprintRemoteRepositoryCertFingerprintKey: certificateFingerprint,
+                XcodeBlueprintRemoteRepositoryTrustSelfSignedCertKey: true
             ]
         ]
         
-        //working copy paths
-        dictionary[XcodeBlueprintWorkingCopyPathsKey] = [
-            repoId: workingCopyPath
-        ]
+        //but since there might be multiple repos (think git submodules), we need to declare
+        //the primary one.
+        dictionary[XcodeBlueprintPrimaryRemoteRepositoryKey] = repoId
         
-        //blueprint name
-        dictionary[XcodeBlueprintNameKey] = blueprintName
-        
-        //blueprint version
-        dictionary[XcodeBlueprintVersion] = 203 //magic number again
-        
-        //path from working copy to project
-        dictionary[XcodeBlueprintRelativePathToProjectKey] = relativePathToProject
+        //now, this is enough for a valid blueprint. it might not be too useful, but it's valid.
+        //to make our supported (git) repos work, we also need some credentials.
         
         //repo authentication
+        //again, since we can provide information for multiple repos, keep the repo's id close.
         dictionary[XcodeRepositoryAuthenticationStrategiesKey] = [
             repoId: [
                 XcodeRepoAuthenticationTypeKey: XcodeRepoSSHKeysAuthenticationStrategy,
@@ -156,8 +133,79 @@ public class SourceControlBlueprint : XcodeServerEntity {
             ]
         ]
         
+        //up to this is all we need to verify credentials and fingerprint during preflight
+        //which is now under /api/scm/branches. all the stuff below is useful for actually *creating*
+        //a bot.
+        
         return dictionary
+    }
+    
+    private func dictionarifyForBotCreation() -> NSDictionary {
+        
+        let dictionary = self.dictionarifyRemoteAndCredentials().mutableCopy() as! NSMutableDictionary
 
+        let repoId = self.projectWCCIdentifier
+        var workingCopyPath = self.projectName
+        //ensure a trailing slash
+        if !workingCopyPath.hasSuffix("/") {
+            workingCopyPath = workingCopyPath + "/"
+        }
+        let relativePathToProject = self.projectPath
+        let blueprintName = self.wCCName
+        let branch = self.branch
+        
+        //we're creating a bot now.
+        
+        //our bot has to know which code to check out - we declare that by giving it a branch to track.
+        //in our case it can be "master", for instance.
+        dictionary[XcodeBlueprintLocationsKey] = [
+            repoId: [
+                XcodeBranchIdentifierKey: branch,
+                XcodeBranchOptionsKey: 156, //super magic number
+                XcodeBlueprintLocationTypeKey: "DVTSourceControlBranch" //TODO: add more types?
+            ]
+        ]
+        
+        //once XCS checks out your repo, it also needs to know how to get to your working copy, in case
+        //you have a complicated multiple-folder repo setup. coming from the repo's root, for us it's
+        //something like "XcodeServerSDK/"
+        dictionary[XcodeBlueprintWorkingCopyPathsKey] = [
+            repoId: workingCopyPath
+        ]
+        
+        //once we're in our working copy, we need to know which Xcode project/workspace to use!
+        //this is relative to the working copy above. all coming together, huh? here
+        //it would be "XcodeServerSDK.xcworkspace"
+        dictionary[XcodeBlueprintRelativePathToProjectKey] = relativePathToProject
+        
+        //now we've given it all we knew. what else?
+        
+        //turns out there are a couple more keys that XCS needs to be happy. so let's feed the beast.
+        
+        //every nice data structure needs a name. so give the blueprint one as well. this is usually
+        //the same as the name of your project, "XcodeServerSDK" in our case here
+        dictionary[XcodeBlueprintNameKey] = blueprintName
+        
+        //just feed the beast, ok? this has probably something to do with working copy state, git magic.
+        //we pass 0. don't ask.
+        dictionary[XcodeBlueprintWorkingCopyStatesKey] = [
+            repoId: 0
+        ]
+        
+        //and to uniquely identify this beauty, we also need to give it a UUID. well, technically I think
+        //Xcode generates a hash from the data somehow, but passing in a random UUID works as well, so what the hell.
+        //if someone figures out how to generate the same ID as Xcode does, I'm all yours.
+        //TODO: give this a good investigation.
+        dictionary[XcodeBlueprintIdentifierKey] = NSUUID().UUIDString
+        
+        //and this is the end of our journey to create a new Blueprint. I hope you enjoyed the ride, please return the 3D glasses to the green bucket on your way out.
+        
+        return dictionary
+    }
+    
+    public override func dictionarify() -> NSDictionary {
+        
+        return self.dictionarifyForBotCreation()
     }
 }
 

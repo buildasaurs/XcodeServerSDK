@@ -29,4 +29,17 @@ extension SequenceType {
         }
         return out
     }
+    
+    /**
+    Basically `filter` that stops when it finds the first one.
+    */
+    func findFirst(@noescape test: (Self.Generator.Element) -> Bool) -> Self.Generator.Element? {
+        
+        for i in self {
+            if test(i) {
+                return i
+            }
+        }
+        return nil
+    }
 }

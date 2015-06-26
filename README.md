@@ -85,6 +85,8 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 | _List hosted repositories on server_ | :white_check_mark: | :no_entry: |
 | _Create a new hosted repository_ | :white_check_mark: | :no_entry: |
 | Get supported platforms | :no_entry: | :white_check_mark: |
+| Get SCM branches from Blueprint | :no_entry: | :white_check_mark: |
+| Verify user can manage server | :no_entry: | :white_check_mark: |
 
 Opertions listed in table above in _italics_ are those provided by  in Xcode. Rest of operations are just a product of reverse engineering.
 
