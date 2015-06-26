@@ -187,22 +187,54 @@ public extension XcodeServer {
         }
     }
     
-    public func createBot(botOrder: Bot, completion: (bot: Bot?, error: NSError?) -> ()) {
+    public enum CreateBotResponse {
+        case Success(bot: Bot)
+        case BlueprintNeedsFixing(fixedBlueprint: SourceControlBlueprint)
+        case Error(error: ErrorType)
+    }
+    
+    /**
+    Creates a new Bot from the passed in information. First validates Bot's Blueprint to make sure
+    that the credentials are sufficient to access the repository and that the communication between
+    the client and XCS will work fine. This might take a couple of seconds, depending on your proximity
+    to your XCS.
+    */
+    public func createBot(botOrder: Bot, completion: (response: CreateBotResponse) -> ()) {
         
-        let body: NSDictionary = botOrder.dictionarify()
-        
-        self.sendRequestWithMethod(.POST, endpoint: .Bots, params: nil, query: nil, body: body) { (response, body, error) -> () in
+        //first validate Blueprint
+        let blueprint = botOrder.configuration.sourceControlBlueprint
+        self.verifyGitCredentialsFromBlueprint(blueprint) { (response) -> () in
             
-            if error != nil {
-                completion(bot: nil, error: error)
+            switch response {
+            case .Error(let error):
+                completion(response: XcodeServer.CreateBotResponse.Error(error: error))
                 return
+            case .SSHFingerprintFailedToVerify(let fingerprint, _):
+                blueprint.certificateFingerprint = fingerprint
+                completion(response: XcodeServer.CreateBotResponse.BlueprintNeedsFixing(fixedBlueprint: blueprint))
+                return
+            case .Success(_, _): break
             }
+
+            //blueprint verified, continue creating our new bot
             
-            if let body = body as? NSDictionary {
-                let bot = Bot(json: body as NSDictionary)
-                completion(bot: bot, error: nil)
-            } else {
-                completion(bot: nil, error: Error.withInfo("Wrong body \(body)"))
+            let body: NSDictionary = botOrder.dictionarify()
+            
+            self.sendRequestWithMethod(.POST, endpoint: .Bots, params: nil, query: nil, body: body) { (response, body, error) -> () in
+                
+                if let error = error {
+                    completion(response: XcodeServer.CreateBotResponse.Error(error: error))
+                    return
+                }
+                
+                guard let dictBody = body as? NSDictionary else {
+                    let e = Error.withInfo("Wrong body \(body)")
+                    completion(response: XcodeServer.CreateBotResponse.Error(error: e))
+                    return
+                }
+                
+                let bot = Bot(json: dictBody)
+                completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
             }
         }
     }
