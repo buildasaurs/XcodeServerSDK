@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import XcodeServerSDK
+import DVR
 
 class XcodeServerTests: XCTestCase {
     

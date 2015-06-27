@@ -113,6 +113,9 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 # License
 [MIT](https://github.com/czechboy0/XcodeServerSDK/blob/master/LICENSE)
 
+# Building & Testing
+We use [Carthage](https://github.com/Carthage/Carthage) to pull in some dependencies for tests. If you clone this repo and want to run tests, first you have to run `carthage update --no-build` to download the necessary dependencies.
+
 # Contributing
 Create an issue or (preferably) send a pull request.
 
