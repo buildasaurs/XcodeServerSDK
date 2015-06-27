@@ -49,16 +49,18 @@ public class SourceControlBlueprint : XcodeServerEntity {
 
         let repo = primarys.first!
         self.projectURL = repo.stringForKey(XcodeBlueprintRemoteRepositoryURLKey)
+        self.certificateFingerprint = repo.optionalStringForKey(XcodeBlueprintRemoteRepositoryCertFingerprintKey)
         
         let locations = json.dictionaryForKey(XcodeBlueprintLocationsKey)
         let location = locations.dictionaryForKey(primaryRepoId)
         self.branch = location.optionalStringForKey(XcodeBranchIdentifierKey) ?? ""
         self.commitSHA = location.optionalStringForKey(XcodeLocationRevisionKey)
         
-        self.privateSSHKey = nil
-        self.publicSSHKey = nil
-        self.sshPassphrase = nil
-        self.certificateFingerprint = nil //TODO: verify that it's not being passed in
+        let authenticationStrategy = json.optionalDictionaryForKey(XcodeRepositoryAuthenticationStrategiesKey)?.optionalDictionaryForKey(primaryRepoId)
+        
+        self.privateSSHKey = authenticationStrategy?.optionalStringForKey(XcodeRepoAuthenticationStrategiesKey)
+        self.publicSSHKey = authenticationStrategy?.optionalStringForKey(XcodeRepoPublicKeyDataKey)
+        self.sshPassphrase = authenticationStrategy?.optionalStringForKey(XcodeRepoPasswordKey)
         
         super.init(json: json)
     }
@@ -93,8 +95,8 @@ public class SourceControlBlueprint : XcodeServerEntity {
 
         let repoId = self.projectWCCIdentifier
         let remoteUrl = self.projectURL
-        let sshPublicKey = self.publicSSHKey?.base64Encoded ?? ""
-        let sshPrivateKey = self.privateSSHKey?.base64Encoded ?? ""
+        let sshPublicKey = self.publicSSHKey!//?.base64Encoded ?? ""
+        let sshPrivateKey = self.privateSSHKey!//?.base64Encoded ?? ""
         let sshPassphrase = self.sshPassphrase ?? ""
         let certificateFingerprint = self.certificateFingerprint ?? ""
 

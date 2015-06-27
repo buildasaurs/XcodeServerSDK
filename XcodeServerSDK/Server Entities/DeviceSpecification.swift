@@ -38,7 +38,17 @@ public class Platform : XcodeServerEntity {
         super.init(json: json)
     }
     
-    //TODO: dictionarify and an initializer to create from data for creating bots
+    public override func dictionarify() -> NSDictionary {
+        
+        let dictionary = NSMutableDictionary()
+        
+        dictionary["displayName"] = self.displayName
+        dictionary["version"] = self.version
+        dictionary["identifier"] = self.type.rawValue
+        dictionary.optionallyAddValueForKey(self.simulatorType?.rawValue, key: "simulatorIdentifier")
+        
+        return dictionary
+    }
 }
 
 public class DeviceSpecification : XcodeServerEntity {
@@ -65,7 +75,14 @@ public class DeviceSpecification : XcodeServerEntity {
             super.init(json: json)
         }
         
-        //TODO: dictionarify and an initializer to create from data for creating bots
+        public override func dictionarify() -> NSDictionary {
+            
+            return [
+                "filterType": self.filterType,
+                "architectureType": self.architectureType.rawValue,
+                "platform": self.platform.dictionarify()
+            ]
+        }
     }
     
     public let deviceIdentifiers: [String]
@@ -96,7 +113,7 @@ public class DeviceSpecification : XcodeServerEntity {
         
         return [
             "deviceIdentifiers": self.deviceIdentifiers,
-            "filters": self.filters
+            "filters": self.filters.map({ $0.dictionarify() })
         ]
     }
     

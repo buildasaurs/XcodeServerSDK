@@ -12,13 +12,13 @@ public class Bot : XcodeServerEntity {
     
     public let name: String
     public let configuration: BotConfiguration
-    public let integrationsCount: Int!
+    public let integrationsCount: Int
 
     public required init(json: NSDictionary) {
         
         self.name = json.stringForKey("name")
         self.configuration = BotConfiguration(json: json.dictionaryForKey("configuration"))
-        self.integrationsCount = json.intForKey("integration_counter")
+        self.integrationsCount = json.optionalIntForKey("integration_counter") ?? 0
         
         super.init(json: json)
     }
@@ -30,7 +30,7 @@ public class Bot : XcodeServerEntity {
         
         self.name = name
         self.configuration = configuration
-        self.integrationsCount = nil
+        self.integrationsCount = 0
         
         super.init()
     }
