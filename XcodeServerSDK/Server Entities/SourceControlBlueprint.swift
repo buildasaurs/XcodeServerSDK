@@ -27,7 +27,7 @@ public class SourceControlBlueprint : XcodeServerEntity {
     public let privateSSHKey: String?
     public let publicSSHKey: String?
     public let sshPassphrase: String?
-    public var certificateFingerprint: String?
+    public var certificateFingerprint: String? = nil
     
     public required init(json: NSDictionary) {
         
@@ -84,7 +84,7 @@ public class SourceControlBlueprint : XcodeServerEntity {
     //for credentials verification only
     public convenience init(projectURL: String, publicSSHKey: String?, privateSSHKey: String?, sshPassphrase: String?) {
         
-        self.init(branch: "", projectWCCIdentifier: "", wCCName: "", projectName: "", projectURL: projectURL, projectPath: "", publicSSHKey: publicSSHKey, privateSSHKey: privateSSHKey, sshPassphrase: sshPassphrase, certificateFingerprint: nil)
+        self.init(branch: "", projectWCCIdentifier: "", wCCName: "", projectName: "", projectURL: projectURL, projectPath: "", publicSSHKey: publicSSHKey, privateSSHKey: privateSSHKey, sshPassphrase: sshPassphrase)
     }
     
     public func dictionarifyRemoteAndCredentials() -> NSDictionary {
