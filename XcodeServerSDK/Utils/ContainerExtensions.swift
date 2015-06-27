@@ -10,7 +10,7 @@ import Foundation
 
 extension SequenceType {
     
-    func mapThrows<T>(@noescape transform: (Self.Generator.Element) throws -> T) throws -> [T] {
+    func mapThrows<T>(@noescape transform: (Self.Generator.Element) throws -> T) rethrows -> [T] {
         
         var out: [T] = []
         for i in self {
@@ -19,7 +19,7 @@ extension SequenceType {
         return out
     }
     
-    func filterThrows(@noescape includeElement: (Self.Generator.Element) throws -> Bool) throws -> [Self.Generator.Element] {
+    func filterThrows(@noescape includeElement: (Self.Generator.Element) throws -> Bool) rethrows -> [Self.Generator.Element] {
         
         var out: [Self.Generator.Element] = []
         for i in self {
