@@ -55,26 +55,12 @@
 		11FB71B81B34B00000D57A52 /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */; };
 		11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
-		11FB71BB1B34B01000D57A52 /* bot_ios_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786741B33626000BBA482 /* bot_ios_xcode7.json */; };
-		11FB71BC1B34B01000D57A52 /* bot_mac_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786751B33626000BBA482 /* bot_mac_xcode7.json */; };
-		11FB71BD1B34B01000D57A52 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F671B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json */; };
-		11FB71BE1B34B01000D57A52 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F681B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json */; };
-		11FB71BF1B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */; };
-		11FB71C01B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F6A1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json */; };
-		11FB71C11B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F6B1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json */; };
-		11FB71C21B34B01000D57A52 /* bot_mac_xcode6.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */; };
 		3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
-		3A058A901B31596A0077FD47 /* bot_mac_xcode6.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */; };
 		3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
 		3A06D5FD1B3C184400F0A6C5 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
 		3A06D5FE1B3C184700F0A6C5 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
 		3A06D5FF1B3C184D00F0A6C5 /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
-		3A236F6C1B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F671B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json */; };
-		3A236F6D1B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F681B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json */; };
-		3A236F6E1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */; };
-		3A236F6F1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F6A1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json */; };
-		3A236F701B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A236F6B1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json */; };
 		3A7B48C01B2A5AC40077ABEA /* XcodeServerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A7B48C61B2A5AC40077ABEA /* XcodeServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */; };
 		3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */; };
@@ -98,20 +84,16 @@
 		3A80C8071B3B62390065C1C6 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */; };
 		3A80C8081B3B63790065C1C6 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */; };
 		3A80C8091B3B639D0065C1C6 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
-		3AA9224B1B3F0E38005A0F73 /* blueprint_unverified.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA922391B3F0E2C005A0F73 /* blueprint_unverified.json */; };
-		3AA9224C1B3F0E38005A0F73 /* blueprint_verified.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* blueprint_verified.json */; };
-		3AA9224D1B3F0E38005A0F73 /* create_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223B1B3F0E2C005A0F73 /* create_bot.json */; };
-		3AA9224E1B3F0E38005A0F73 /* scm_branches_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_success.json */; };
-		3AA9224F1B3F0E38005A0F73 /* ssh_fingerprint_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* ssh_fingerprint_error.json */; };
-		3AA922501B3F0E39005A0F73 /* blueprint_unverified.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA922391B3F0E2C005A0F73 /* blueprint_unverified.json */; };
-		3AA922511B3F0E39005A0F73 /* blueprint_verified.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* blueprint_verified.json */; };
-		3AA922521B3F0E39005A0F73 /* create_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223B1B3F0E2C005A0F73 /* create_bot.json */; };
-		3AA922531B3F0E39005A0F73 /* scm_branches_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_success.json */; };
-		3AA922541B3F0E39005A0F73 /* ssh_fingerprint_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* ssh_fingerprint_error.json */; };
+		3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */; };
+		3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */; };
+		3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */; };
+		3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */; };
+		3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */; };
+		3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */; };
+		3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */; };
+		3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
-		3AC786761B33626000BBA482 /* bot_ios_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786741B33626000BBA482 /* bot_ios_xcode7.json */; };
-		3AC786771B33626000BBA482 /* bot_mac_xcode7.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC786751B33626000BBA482 /* bot_mac_xcode7.json */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08951B2C684C003900F3 /* XcodeServerConfig.swift */; };
 		707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08971B2C6954003900F3 /* EmailConfiguration.swift */; };
@@ -147,13 +129,7 @@
 		11FB71891B34AE7F00D57A52 /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FB71921B34AE7F00D57A52 /* XcodeServerSDKTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotParsingTests.swift; sourceTree = "<group>"; };
-		3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6.json; path = Data/bot_mac_xcode6.json; sourceTree = "<group>"; };
 		3A058A921B315BB50077FD47 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
-		3A236F671B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json; path = Data/bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json; sourceTree = "<group>"; };
-		3A236F681B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json; path = Data/bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json; sourceTree = "<group>"; };
-		3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_daily941_clean_always.json; path = Data/bot_mac_xcode6_schedule_periodical_daily941_clean_always.json; sourceTree = "<group>"; };
-		3A236F6A1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json; path = Data/bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json; sourceTree = "<group>"; };
-		3A236F6B1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode6_schedule_periodical_weeklytuesday941.json; path = Data/bot_mac_xcode6_schedule_periodical_weeklytuesday941.json; sourceTree = "<group>"; };
 		3A25FBBB1B36E2C700897D11 /* XcodeServerSDK.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = XcodeServerSDK.playground; sourceTree = "<group>"; };
 		3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7B48BE1B2A5AC40077ABEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,14 +154,11 @@
 		3A7B48F41B2A5BC60077ABEA /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		3A7B48F61B2A5BDA0077ABEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerExtensions.swift; sourceTree = "<group>"; };
-		3AA922391B3F0E2C005A0F73 /* blueprint_unverified.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blueprint_unverified.json; path = Data/blueprint_unverified.json; sourceTree = "<group>"; };
-		3AA9223A1B3F0E2C005A0F73 /* blueprint_verified.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blueprint_verified.json; path = Data/blueprint_verified.json; sourceTree = "<group>"; };
-		3AA9223B1B3F0E2C005A0F73 /* create_bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = create_bot.json; path = Data/create_bot.json; sourceTree = "<group>"; };
-		3AA9223C1B3F0E2C005A0F73 /* scm_branches_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_success.json; path = Data/scm_branches_success.json; sourceTree = "<group>"; };
-		3AA9223D1B3F0E2C005A0F73 /* ssh_fingerprint_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ssh_fingerprint_error.json; path = Data/ssh_fingerprint_error.json; sourceTree = "<group>"; };
+		3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_request_no_fingerprint.json; path = Data/scm_branches_request_no_fingerprint.json; sourceTree = "<group>"; };
+		3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_request_with_fingerprint.json; path = Data/scm_branches_request_with_fingerprint.json; sourceTree = "<group>"; };
+		3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_success.json; path = Data/scm_branches_response_success.json; sourceTree = "<group>"; };
+		3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_error.json; path = Data/scm_branches_response_error.json; sourceTree = "<group>"; };
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
-		3AC786741B33626000BBA482 /* bot_ios_xcode7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_ios_xcode7.json; path = Data/bot_ios_xcode7.json; sourceTree = "<group>"; };
-		3AC786751B33626000BBA482 /* bot_mac_xcode7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bot_mac_xcode7.json; path = Data/bot_mac_xcode7.json; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
 		707D08951B2C684C003900F3 /* XcodeServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfig.swift; sourceTree = "<group>"; };
 		707D08971B2C6954003900F3 /* EmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfiguration.swift; sourceTree = "<group>"; };
@@ -251,19 +224,10 @@
 		3A058A911B31596E0077FD47 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3AA922391B3F0E2C005A0F73 /* blueprint_unverified.json */,
-				3AA9223A1B3F0E2C005A0F73 /* blueprint_verified.json */,
-				3AA9223B1B3F0E2C005A0F73 /* create_bot.json */,
-				3AA9223C1B3F0E2C005A0F73 /* scm_branches_success.json */,
-				3AA9223D1B3F0E2C005A0F73 /* ssh_fingerprint_error.json */,
-				3AC786741B33626000BBA482 /* bot_ios_xcode7.json */,
-				3AC786751B33626000BBA482 /* bot_mac_xcode7.json */,
-				3A236F671B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json */,
-				3A236F681B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json */,
-				3A236F691B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json */,
-				3A236F6A1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json */,
-				3A236F6B1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json */,
-				3A058A8F1B31596A0077FD47 /* bot_mac_xcode6.json */,
+				3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */,
+				3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */,
+				3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */,
+				3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -574,19 +538,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FB71BB1B34B01000D57A52 /* bot_ios_xcode7.json in Resources */,
-				3AA922511B3F0E39005A0F73 /* blueprint_verified.json in Resources */,
-				11FB71BC1B34B01000D57A52 /* bot_mac_xcode7.json in Resources */,
-				11FB71BD1B34B01000D57A52 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json in Resources */,
-				3AA922541B3F0E39005A0F73 /* ssh_fingerprint_error.json in Resources */,
-				11FB71BE1B34B01000D57A52 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json in Resources */,
-				11FB71BF1B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json in Resources */,
-				3AA922501B3F0E39005A0F73 /* blueprint_unverified.json in Resources */,
-				11FB71C01B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json in Resources */,
-				3AA922521B3F0E39005A0F73 /* create_bot.json in Resources */,
-				3AA922531B3F0E39005A0F73 /* scm_branches_success.json in Resources */,
-				11FB71C11B34B01000D57A52 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json in Resources */,
-				11FB71C21B34B01000D57A52 /* bot_mac_xcode6.json in Resources */,
+				3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
+				3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */,
+				3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
+				3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,19 +556,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A236F6C1B335E170042A9B1 /* bot_mac_xcode6_schedule_manual_no_actions_clean_never_all_triggers.json in Resources */,
-				3AA9224C1B3F0E38005A0F73 /* blueprint_verified.json in Resources */,
-				3AC786771B33626000BBA482 /* bot_mac_xcode7.json in Resources */,
-				3AC786761B33626000BBA482 /* bot_ios_xcode7.json in Resources */,
-				3AA9224F1B3F0E38005A0F73 /* ssh_fingerprint_error.json in Resources */,
-				3A058A901B31596A0077FD47 /* bot_mac_xcode6.json in Resources */,
-				3A236F6F1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_onhour15minsafter_clean_onceaday.json in Resources */,
-				3AA9224B1B3F0E38005A0F73 /* blueprint_unverified.json in Resources */,
-				3A236F701B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_weeklytuesday941.json in Resources */,
-				3AA9224D1B3F0E38005A0F73 /* create_bot.json in Resources */,
-				3AA9224E1B3F0E38005A0F73 /* scm_branches_success.json in Resources */,
-				3A236F6D1B335E170042A9B1 /* bot_mac_xcode6_schedule_oncommit_all_actions_clean_onceaweek.json in Resources */,
-				3A236F6E1B335E170042A9B1 /* bot_mac_xcode6_schedule_periodical_daily941_clean_always.json in Resources */,
+				3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
+				3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */,
+				3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
+				3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
