@@ -53,17 +53,17 @@ extension XcodeServer : NSURLSessionDelegate {
             
             switch challenge.protectionSpace.authenticationMethod {
                 
-                case NSURLAuthenticationMethodServerTrust:
-                    credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
-                default:
-                    credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
+            case NSURLAuthenticationMethodServerTrust:
+                credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
+            default:
+                credential = self.credential ?? session.configuration.URLCredentialStorage?.defaultCredentialForProtectionSpace(challenge.protectionSpace)
             }
             
             if credential != nil {
                 disposition = .UseCredential
             }
         }
-
+        
         completionHandler(disposition, credential)
     }
 }
@@ -137,7 +137,18 @@ public extension XcodeServer {
                     return
                 }
                 
-                completion(response: response, body: body, error: error)
+                if case (200...299) = r.statusCode {
+                    //pass on
+                    completion(response: response, body: body, error: error)
+                } else {
+                    //see if we haven't received a XCS failure in headers
+                    if let xcsStatusMessage = r.allHeaderFields["X-XCSResponse-Status-Message"] as? String {
+                        let e = Error.withInfo(xcsStatusMessage)
+                        completion(response: response, body: body, error: e)
+                    } else {
+                        completion(response: response, body: body, error: error)
+                    }
+                }
             })
             
         } else {
@@ -186,24 +197,89 @@ public extension XcodeServer {
             completion(success: false, error: Error.withInfo("Nil response"))
         }
     }
+    
+    public enum CreateBotResponse {
+        case Success(bot: Bot)
+        case BlueprintNeedsFixing(fixedBlueprint: SourceControlBlueprint)
+        case Error(error: ErrorType)
+    }
+    
+    private func replacePlaceholderPlatformInBot(bot: Bot, platforms: [DevicePlatform]) {
+        
+        if let filter = bot.configuration.deviceSpecification.filters.first {
+            let intendedPlatform = filter.platform
+            if let platform = platforms.findFirst({ $0.type == intendedPlatform.type }) {
+                //replace
+                filter.platform = platform
+            } else {
+                fatalError("Couldn't find intended platform in list of platforms: \(platforms)!")
+            }
+        } else {
+            fatalError("Couldn't find device filter!")
+        }
+    }
+    
+    /**
+    Creates a new Bot from the passed in information. First validates Bot's Blueprint to make sure
+    that the credentials are sufficient to access the repository and that the communication between
+    the client and XCS will work fine. This might take a couple of seconds, depending on your proximity
+    to your XCS.
+    */
+    public func createBot(botOrder: Bot, completion: (response: CreateBotResponse) -> ()) {
+        
+        //first validate Blueprint
+        let blueprint = botOrder.configuration.sourceControlBlueprint
+        self.verifyGitCredentialsFromBlueprint(blueprint) { (response) -> () in
+            
+            switch response {
+            case .Error(let error):
+                completion(response: XcodeServer.CreateBotResponse.Error(error: error))
+                return
+            case .SSHFingerprintFailedToVerify(let fingerprint, _):
+                blueprint.certificateFingerprint = fingerprint
+                completion(response: XcodeServer.CreateBotResponse.BlueprintNeedsFixing(fixedBlueprint: blueprint))
+                return
+            case .Success(_, _): break
+            }
 
-    public func createBot(botOrder: Bot, completion: (bot: Bot?, error: NSError?) -> ()) {
+            //blueprint verified, continue creating our new bot
+            
+            //next, we need to fetch all the available platforms and pull out the one intended for this bot. (TODO: this could probably be sped up by smart caching)
+            self.getPlatforms({ (platforms, error) -> () in
+                
+                if let error = error {
+                    completion(response: XcodeServer.CreateBotResponse.Error(error: error))
+                    return
+                }
+                
+                //we have platforms, find the one in the bot config and replace it
+                self.replacePlaceholderPlatformInBot(botOrder, platforms: platforms!)
+                
+                //cool, let's do it.
+                self.createBotNoValidation(botOrder, completion: completion)
+            })
+        }
+    }
+    
+    private func createBotNoValidation(botOrder: Bot, completion: (response: CreateBotResponse) -> ()) {
         
         let body: NSDictionary = botOrder.dictionarify()
         
         self.sendRequestWithMethod(.POST, endpoint: .Bots, params: nil, query: nil, body: body) { (response, body, error) -> () in
-
-            if error != nil {
-                completion(bot: nil, error: error)
+            
+            if let error = error {
+                completion(response: XcodeServer.CreateBotResponse.Error(error: error))
                 return
             }
             
-            if let body = body as? NSDictionary {
-                let bot = Bot(json: body as NSDictionary)
-                completion(bot: bot, error: nil)
-            } else {
-                completion(bot: nil, error: Error.withInfo("Wrong body \(body)"))
+            guard let dictBody = body as? NSDictionary else {
+                let e = Error.withInfo("Wrong body \(body)")
+                completion(response: XcodeServer.CreateBotResponse.Error(error: e))
+                return
             }
+            
+            let bot = Bot(json: dictBody)
+            completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
         }
     }
     
@@ -237,7 +313,7 @@ public extension XcodeServer {
         ]
         
         self.sendRequestWithMethod(.DELETE, endpoint: .Bots, params: params, query: nil, body: nil) { (response, body, error) -> () in
-
+            
             if error != nil {
                 completion(success: false, error: error)
                 return
@@ -280,7 +356,7 @@ public extension XcodeServer {
         ]
         
         self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: params, query: query, body: nil) { (response, body, error) -> () in
-
+            
             if error != nil {
                 completion(integrations: nil, error: error)
                 return
@@ -296,7 +372,7 @@ public extension XcodeServer {
     }
     
     /**
-            AKA "Integrate this bot now"
+    AKA "Integrate this bot now"
     
     :param: botId      MUST BE the full bot.id, cannot be bot.tinyId!
     */
@@ -360,7 +436,7 @@ public extension XcodeServer {
     public func getUserCanCreateBots(completion: (canCreateBots: Bool, error: NSError?) -> ()) {
         
         self.sendRequestWithMethod(.GET, endpoint: .UserCanCreateBots, params: nil, query: nil, body: nil) { (response, body, error) -> () in
-
+            
             if let error = error {
                 completion(canCreateBots: false, error: error)
                 return
@@ -378,9 +454,154 @@ public extension XcodeServer {
         }
     }
     
-//    public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
+    public func getPlatforms(completion: (platforms: [DevicePlatform]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Platforms, params: nil, query: nil, body: nil) { (response, body, error) -> () in
+            
+            if error != nil {
+                completion(platforms: nil, error: error)
+                return
+            }
+            
+            if let array = (body as? NSDictionary)?["results"] as? NSArray {
+                let platforms: [DevicePlatform] = XcodeServerArray(array)
+                completion(platforms: platforms, error: error)
+            } else {
+                completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
+            }
+        }
+    }
+    
+    //more advanced
+    
+    /**
+    Checks whether the current user has the rights to create bots and perform other similar "write" actions.
+    Xcode Server offers two tiers of users, ones for reading only ("viewers") and others for management.
+    Here we check the current user can manage XCS, which is useful for projects like Buildasaur.
+    */
+    public func verifyXCSUserCanCreateBots(completion: (success: Bool, error: NSError?) -> ()) {
+        
+        //the way we check availability is first by logging out (does nothing if not logged in) and then
+        //calling getUserCanCreateBots, which, if necessary, automatically authenticates with Basic auth before resolving to true or false in JSON.
+        
+        self.logout { (success, error) -> () in
+            
+            if let error = error {
+                completion(success: false, error: error)
+                return
+            }
+            
+            self.getUserCanCreateBots { (canCreateBots, error) -> () in
+                
+                if let error = error {
+                    completion(success: false, error: error)
+                    return
+                }
+                
+                completion(success: canCreateBots, error: nil)
+            }
+        }
+    }
+    
+    /**
+    Verifies that the blueprint contains valid Git credentials and that the blueprint contains a valid
+    server certificate fingerprint for client <-> XCS communication.
+    */
+    public func verifyGitCredentialsFromBlueprint(blueprint: SourceControlBlueprint, completion: (response: SCMBranchesResponse) -> ()) {
+        
+        //just a proxy with a more explicit name
+        self.postSCMBranchesWithBlueprint(blueprint, completion: completion)
+    }
+    
+    public enum SCMBranchesResponse {
+        case Error(ErrorType)
+        case SSHFingerprintFailedToVerify(fingerprint: String, repository: String)
+        
+        //the valid blueprint will have the right certificateFingerprint
+        case Success(branches: [(name: String, isPrimary: Bool)], validBlueprint: SourceControlBlueprint)
+    }
+    
+    public func postSCMBranchesWithBlueprint(blueprint: SourceControlBlueprint, completion: (response: SCMBranchesResponse) -> ()) {
+        
+        let blueprintDict = blueprint.dictionarifyRemoteAndCredentials()
+        
+        self.sendRequestWithMethod(.POST, endpoint: .SCM_Branches, params: nil, query: nil, body: blueprintDict) { (response, body, error) -> () in
+            
+            if let error = error {
+                completion(response: XcodeServer.SCMBranchesResponse.Error(error))
+                return
+            }
+            
+            guard let responseObject = body as? NSDictionary else {
+                let e = Error.withInfo("Wrong body: \(body)")
+                completion(response: XcodeServer.SCMBranchesResponse.Error(e))
+                return
+            }
+            
+            //take the primary repository's key. XCS officially supports multiple checkouts (submodules)
+            let primaryRepoId = blueprint.projectWCCIdentifier
+            
+            //communication worked, now let's see what we got
+            //check for errors first
+            if
+                let repoErrors = responseObject["repositoryErrors"] as? [NSDictionary],
+                let repoErrorWrap = repoErrors.findFirst({ $0["repository"] as? String == primaryRepoId }),
+                let repoError = repoErrorWrap["error"] as? NSDictionary
+                where repoErrors.count > 0 {
+                    
+                    if let code = repoError["code"] as? Int {
+                        
+                        //ok, we got an error. do we recognize it?
+                        switch code {
+                        case -1004:
+                            //ok, this is failed fingerprint validation
+                            //pull out the new fingerprint and complete.
+                            if let fingerprint = repoError["fingerprint"] as? String {
+                                
+                                //optionally offer to resolve this issue by adopting the new fingerprint
+                                if self.config.automaticallyTrustSelfSignedCertificates {
+                                    
+                                    blueprint.certificateFingerprint = fingerprint
+                                    self.postSCMBranchesWithBlueprint(blueprint, completion: completion)
+                                    return
+                                    
+                                } else {
+                                    completion(response: XcodeServer.SCMBranchesResponse.SSHFingerprintFailedToVerify(fingerprint: fingerprint, repository: primaryRepoId))
+                                }
+                                
+                            } else {
+                                completion(response: XcodeServer.SCMBranchesResponse.Error(Error.withInfo("No fingerprint provided in error \(repoError)")))
+                            }
+                            
+                        default:
+                            completion(response: XcodeServer.SCMBranchesResponse.Error(Error.withInfo("Unrecognized error: \(repoError)")))
+                        }
+                    } else {
+                        completion(response: XcodeServer.SCMBranchesResponse.Error(Error.withInfo("No code provided in error \(repoError)")))
+                    }
+                    return
+            }
+            
+            //cool, no errors. now try to parse branches!
+            guard
+                let branchesAllRepos = responseObject["branches"] as? NSDictionary,
+                let branches = branchesAllRepos[primaryRepoId] as? NSArray else {
+                    
+                    completion(response: XcodeServer.SCMBranchesResponse.Error(Error.withInfo("No branches provided for our primary repo id: \(primaryRepoId).")))
+                    return
+            }
+            
+            //cool, we gots ourselves some branches, let's parse 'em
+            let parsedBranches = branches.map({ (name: $0["name"] as! String, isPrimary: $0["primary"] as! Bool) })
+            completion(response: XcodeServer.SCMBranchesResponse.Success(branches: parsedBranches, validBlueprint: blueprint))
+        }
+    }
+    
+    
+    
+    //    public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
     
     //TODO: we need to call getIntegrations() -> filter pending and running Integrations -> get unique bots of these integrations -> query for the average integration time of each bot -> estimate, based on the pending/running integrations, how long it will take for the passed in integration to finish
-//    }
+    //    }
     
 }

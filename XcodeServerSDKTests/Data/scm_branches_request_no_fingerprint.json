@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintLocationsKey": {
+    "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+      "DVTSourceControlBranchIdentifierKey": "hd/tested_devices_xcode_7",
+      "DVTSourceControlBranchOptionsKey": 220,
+      "DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey": {},
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+    "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryUsernameKey": "git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": "THIS_IS_MY_SECRET_PRIVATE_KEY_MUHAHA",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryPublicKeyDataKey": "c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFETUlyMHIyK3pt\r\nZ2JIajhBcnczRDQzZ0N5WURMc3p6ZWtIdTZZK0FKd29xZC8venFXU1FqamxlMkRt\r\nSmFueXNORnRhbFU3U005M2dtYXEzYTI4YjM3aWZnRmMrMXlhSDRNOC9EUk1yaHRR\r\ndk9JSEhYcWNzeUpwU0RWRkl3YjVxRm5LblNGaW96NGdSTkV0R1VOWWdCVTNYNHRs\r\nQzNMQkV1RmZhdS9RVXZZOEY5NmdMS3BGMTF0ZHdaanlDREN5ZWtIT2JaeWU2RS9R\r\nelRKZXppWjF5RXdHcXdvS3Q1NlpoZ1JHNG5yRHMwaEU2dDYxUG90WkdiMEpSbVRm\r\nYThFM05Mckp5ZklreS9DK2hpQ2tsSmZRelZndGk2MWtwMDJuZFN1ODlHK3dBY0xJ\r\nUjJ2Qzk2TndWRW9pZG1MTnN0bXlrMlhEbG1jVzB2Z0ZHVmptNWx2ZkljWVYgaG9u\r\nemFAc3dpZnRrZXkubmV0Cg==",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryPasswordKey": ""
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+    "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey": "9520BFD3-FFF2-455B-B838-00306AAE916A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+    "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion": 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "git@github.com:czechboy0/XcodeServerSDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"
+    }
+  ]
+}

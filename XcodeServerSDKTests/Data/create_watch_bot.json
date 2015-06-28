@@ -1,0 +1,81 @@
+{
+	"group": {
+		"name": "77F7F792-7D3B-499E-9D3B-FE10858AF8E3"
+	},
+	"configuration": {
+		"builtFromClean": 0,
+		"periodicScheduleInterval": 1,
+		"codeCoveragePreference": 2,
+		"performsTestAction": false,
+		"triggers": [],
+		"performsAnalyzeAction": true,
+		"schemeName": "XcodeServerSDK - ᴡᴀᴛᴄʜ",
+		"exportsProductFromArchive": true,
+		"testingDeviceIDs": [],
+		"deviceSpecification": {
+			"filters": [
+				{
+					"platform": {
+						"_id": "a85553a5b26a7c1a4998f3b237000c7d",
+						"displayName": "watchOS",
+						"_rev": "12-58b9b255374d71f362f830256dfa65e4",
+						"simulatorIdentifier": "com.apple.platform.watchsimulator",
+						"identifier": "com.apple.platform.watchos",
+						"buildNumber": "13S5255c",
+						"version": "2.0"
+					},
+					"filterType": 0,
+					"architectureType": 0
+				}
+			],
+			"deviceIdentifiers": []
+		},
+		"weeklyScheduleDay": 0,
+		"minutesAfterHourToIntegrate": 0,
+		"scheduleType": 1,
+		"hourOfIntegration": 0,
+		"performsArchiveAction": true,
+		"sourceControlBlueprint": {
+			"DVTSourceControlWorkspaceBlueprintLocationsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlBranchIdentifierKey": "hd/tested_devices_xcode_7",
+					"DVTSourceControlBranchOptionsKey": 156,
+					"DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryUsernameKey": "git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": "MY_PRIVATE_KEY",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPublicKeyDataKey": "c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFETUlyMHIyK3pt\r\nZ2JIajhBcnczRDQzZ0N5WURMc3p6ZWtIdTZZK0FKd29xZC8venFXU1FqamxlMkRt\r\nSmFueXNORnRhbFU3U005M2dtYXEzYTI4YjM3aWZnRmMrMXlhSDRNOC9EUk1yaHRR\r\ndk9JSEhYcWNzeUpwU0RWRkl3YjVxRm5LblNGaW96NGdSTkV0R1VOWWdCVTNYNHRs\r\nQzNMQkV1RmZhdS9RVXZZOEY5NmdMS3BGMTF0ZHdaanlDREN5ZWtIT2JaeWU2RS9R\r\nelRKZXppWjF5RXdHcXdvS3Q1NlpoZ1JHNG5yRHMwaEU2dDYxUG90WkdiMEpSbVRm\r\nYThFM05Mckp5ZklreS9DK2hpQ2tsSmZRelZndGk2MWtwMDJuZFN1ODlHK3dBY0xJ\r\nUjJ2Qzk2TndWRW9pZG1MTnN0bXlrMlhEbG1jVzB2Z0ZHVmptNWx2ZkljWVYgaG9u\r\nemFAc3dpZnRrZXkubmV0Cg==",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPasswordKey": ""
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": 0
+			},
+			"DVTSourceControlWorkspaceBlueprintIdentifierKey": "D11746DF-6E40-49FF-9AAB-8FF4BFCF0082",
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK/"
+			},
+			"DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+			"DVTSourceControlWorkspaceBlueprintVersion": 203,
+			"DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+				{
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "git@github.com:czechboy0/XcodeServerSDK.git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true
+				}
+			]
+		},
+		"testingDestinationType": 0
+	},
+	"requiresUpgrade": false,
+	"name": "Default Watch Bot",
+	"type": 1
+}

@@ -61,7 +61,7 @@ Pods/
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+Carthage/Checkouts
 
 # project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using SublimeText

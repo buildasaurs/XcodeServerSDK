@@ -1,0 +1,81 @@
+{
+	"group": {
+		"name": "E4F21264-9C46-4B10-8613-244E48958233"
+	},
+	"configuration": {
+		"builtFromClean": 0,
+		"periodicScheduleInterval": 1,
+		"codeCoveragePreference": 2,
+		"performsTestAction": true,
+		"triggers": [],
+		"performsAnalyzeAction": true,
+		"schemeName": "XcodeServerSDK - iOS",
+		"exportsProductFromArchive": true,
+		"testingDeviceIDs": [],
+		"deviceSpecification": {
+			"filters": [
+				{
+					"platform": {
+						"_id": "a85553a5b26a7c1a4998f3b237000da9",
+						"displayName": "iOS",
+						"_rev": "12-162b2b9d57b73b66724426eea53bfcaf",
+						"simulatorIdentifier": "com.apple.platform.iphonesimulator",
+						"identifier": "com.apple.platform.iphoneos",
+						"buildNumber": "13A4280e",
+						"version": "9.0"
+					},
+					"filterType": 0,
+					"architectureType": 0
+				}
+			],
+			"deviceIdentifiers": []
+		},
+		"weeklyScheduleDay": 0,
+		"minutesAfterHourToIntegrate": 0,
+		"scheduleType": 1,
+		"hourOfIntegration": 0,
+		"performsArchiveAction": true,
+		"sourceControlBlueprint": {
+			"DVTSourceControlWorkspaceBlueprintLocationsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlBranchIdentifierKey": "hd/tested_devices_xcode_7",
+					"DVTSourceControlBranchOptionsKey": 156,
+					"DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryUsernameKey": "git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": "MY_PRIVATE_KEY",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPublicKeyDataKey": "c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFETUlyMHIyK3pt\r\nZ2JIajhBcnczRDQzZ0N5WURMc3p6ZWtIdTZZK0FKd29xZC8venFXU1FqamxlMkRt\r\nSmFueXNORnRhbFU3U005M2dtYXEzYTI4YjM3aWZnRmMrMXlhSDRNOC9EUk1yaHRR\r\ndk9JSEhYcWNzeUpwU0RWRkl3YjVxRm5LblNGaW96NGdSTkV0R1VOWWdCVTNYNHRs\r\nQzNMQkV1RmZhdS9RVXZZOEY5NmdMS3BGMTF0ZHdaanlDREN5ZWtIT2JaeWU2RS9R\r\nelRKZXppWjF5RXdHcXdvS3Q1NlpoZ1JHNG5yRHMwaEU2dDYxUG90WkdiMEpSbVRm\r\nYThFM05Mckp5ZklreS9DK2hpQ2tsSmZRelZndGk2MWtwMDJuZFN1ODlHK3dBY0xJ\r\nUjJ2Qzk2TndWRW9pZG1MTnN0bXlrMlhEbG1jVzB2Z0ZHVmptNWx2ZkljWVYgaG9u\r\nemFAc3dpZnRrZXkubmV0Cg==",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPasswordKey": ""
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": 0
+			},
+			"DVTSourceControlWorkspaceBlueprintIdentifierKey": "B67842EF-128D-4AB7-A3C7-7E560085550A",
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK/"
+			},
+			"DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+			"DVTSourceControlWorkspaceBlueprintVersion": 203,
+			"DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+				{
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "git@github.com:czechboy0/XcodeServerSDK.git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true
+				}
+			]
+		},
+		"testingDestinationType": 0
+	},
+	"requiresUpgrade": false,
+	"name": "Default iOS Bot",
+	"type": 1
+}

@@ -1,0 +1,37 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "_id": "a85553a5b26a7c1a4998f3b237000b18",
+      "_rev": "12-b005bffe3337cfe101fd597c300b0208",
+      "buildNumber": "15A204f",
+      "displayName": "OS X",
+      "identifier": "com.apple.platform.macosx",
+      "version": "1.1",
+      "doc_type": "platform",
+      "tinyID": "0224D30"
+    },
+    {
+      "_id": "a85553a5b26a7c1a4998f3b237000c7d",
+      "_rev": "12-58b9b255374d71f362f830256dfa65e4",
+      "buildNumber": "13S5255c",
+      "simulatorIdentifier": "com.apple.platform.watchsimulator",
+      "displayName": "watchOS",
+      "identifier": "com.apple.platform.watchos",
+      "version": "2.0",
+      "doc_type": "platform",
+      "tinyID": "BA84EFD"
+    },
+    {
+      "_id": "a85553a5b26a7c1a4998f3b237000da9",
+      "_rev": "12-162b2b9d57b73b66724426eea53bfcaf",
+      "buildNumber": "13A4280e",
+      "simulatorIdentifier": "com.apple.platform.iphonesimulator",
+      "displayName": "iOS",
+      "identifier": "com.apple.platform.iphoneos",
+      "version": "9.0",
+      "doc_type": "platform",
+      "tinyID": "0273BAD"
+    }
+  ]
+}
