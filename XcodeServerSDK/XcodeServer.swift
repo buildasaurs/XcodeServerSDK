@@ -371,6 +371,32 @@ public extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for retrievieng all available integrations on server.
+    
+    - parameter integrations:   Optional array of integrations.
+    - parameter error:          Optional error.
+    */
+    public func getIntegrations(completion: (integrations: [Integration]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: nil, query: nil, body: nil) {
+            (response, body, error) -> () in
+            
+            guard error == nil else {
+                completion(integrations: nil, error: error)
+                return
+            }
+            
+            guard let integrationsBody = (body as? NSDictionary)?["results"] as? NSArray else {
+                completion(integrations: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let integrations: [Integration] = XcodeServerArray(integrationsBody)
+            completion(integrations: integrations, error: nil)
+        }
+    }
+    
     public func getDevices(completion: (devices: [Device]?, error: NSError?) -> ()) {
         
         self.sendRequestWithMethod(.GET, endpoint: .Devices, params: nil, query: nil, body: nil) { (response, body, error) -> () in
