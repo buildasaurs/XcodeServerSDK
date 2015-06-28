@@ -137,7 +137,18 @@ public extension XcodeServer {
                     return
                 }
                 
-                completion(response: response, body: body, error: error)
+                if case (200...299) = r.statusCode {
+                    //pass on
+                    completion(response: response, body: body, error: error)
+                } else {
+                    //see if we haven't received a XCS failure in headers
+                    if let xcsStatusMessage = r.allHeaderFields["X-XCSResponse-Status-Message"] as? String {
+                        let e = Error.withInfo(xcsStatusMessage)
+                        completion(response: response, body: body, error: e)
+                    } else {
+                        completion(response: response, body: body, error: error)
+                    }
+                }
             })
             
         } else {
@@ -193,6 +204,21 @@ public extension XcodeServer {
         case Error(error: ErrorType)
     }
     
+    private func replacePlaceholderPlatformInBot(bot: Bot, platforms: [DevicePlatform]) {
+        
+        if let filter = bot.configuration.deviceSpecification.filters.first {
+            let intendedPlatform = filter.platform
+            if let platform = platforms.findFirst({ $0.type == intendedPlatform.type }) {
+                //replace
+                filter.platform = platform
+            } else {
+                fatalError("Couldn't find intended platform in list of platforms: \(platforms)!")
+            }
+        } else {
+            fatalError("Couldn't find device filter!")
+        }
+    }
+    
     /**
     Creates a new Bot from the passed in information. First validates Bot's Blueprint to make sure
     that the credentials are sufficient to access the repository and that the communication between
@@ -218,24 +244,42 @@ public extension XcodeServer {
 
             //blueprint verified, continue creating our new bot
             
-            let body: NSDictionary = botOrder.dictionarify()
-            
-            self.sendRequestWithMethod(.POST, endpoint: .Bots, params: nil, query: nil, body: body) { (response, body, error) -> () in
+            //next, we need to fetch all the available platforms and pull out the one intended for this bot. (TODO: this could probably be sped up by smart caching)
+            self.getPlatforms({ (platforms, error) -> () in
                 
                 if let error = error {
                     completion(response: XcodeServer.CreateBotResponse.Error(error: error))
                     return
                 }
                 
-                guard let dictBody = body as? NSDictionary else {
-                    let e = Error.withInfo("Wrong body \(body)")
-                    completion(response: XcodeServer.CreateBotResponse.Error(error: e))
-                    return
-                }
+                //we have platforms, find the one in the bot config and replace it
+                self.replacePlaceholderPlatformInBot(botOrder, platforms: platforms!)
                 
-                let bot = Bot(json: dictBody)
-                completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
+                //cool, let's do it.
+                self.createBotNoValidation(botOrder, completion: completion)
+            })
+        }
+    }
+    
+    private func createBotNoValidation(botOrder: Bot, completion: (response: CreateBotResponse) -> ()) {
+        
+        let body: NSDictionary = botOrder.dictionarify()
+        
+        self.sendRequestWithMethod(.POST, endpoint: .Bots, params: nil, query: nil, body: body) { (response, body, error) -> () in
+            
+            if let error = error {
+                completion(response: XcodeServer.CreateBotResponse.Error(error: error))
+                return
             }
+            
+            guard let dictBody = body as? NSDictionary else {
+                let e = Error.withInfo("Wrong body \(body)")
+                completion(response: XcodeServer.CreateBotResponse.Error(error: e))
+                return
+            }
+            
+            let bot = Bot(json: dictBody)
+            completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
         }
     }
     

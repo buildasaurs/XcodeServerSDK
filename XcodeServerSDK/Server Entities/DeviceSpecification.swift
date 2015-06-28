@@ -38,42 +38,26 @@ public class DevicePlatform : XcodeServerEntity {
         super.init(json: json)
     }
     
-    public class func OSX() -> DevicePlatform {
+    //for just informing the intention - iOS or WatchOS or OS X - and we'll fetch the real ones and replace this placeholder with a fetched one.
+    public init(type: PlatformType) {
+        self.type = type
+        self.displayName = ""
+        self.version = ""
+        self.simulatorType = nil
         
-        let dict = [
-            "buildNumber": "15A204f",
-            "displayName": "OS X",
-            "identifier": "com.apple.platform.macosx",
-            "version": "1.1",
-            "doc_type": "platform",
-        ]
-        return DevicePlatform(json: dict)
+        super.init()
+    }
+    
+    public class func OSX() -> DevicePlatform {
+        return DevicePlatform(type: DevicePlatform.PlatformType.OSX)
     }
     
     public class func iOS() -> DevicePlatform {
-        
-        let dict = [
-            "buildNumber": "13A4280e",
-            "simulatorIdentifier": "com.apple.platform.iphonesimulator",
-            "displayName": "iOS",
-            "identifier": "com.apple.platform.iphoneos",
-            "version": "9.0",
-            "doc_type": "platform",
-        ]
-        return DevicePlatform(json: dict)
+        return DevicePlatform(type: DevicePlatform.PlatformType.iOS)
     }
     
     public class func watchOS() -> DevicePlatform {
-        
-        let dict = [
-            "buildNumber": "13S5255c",
-            "simulatorIdentifier": "com.apple.platform.watchsimulator",
-            "displayName": "watchOS",
-            "identifier": "com.apple.platform.watchos",
-            "version": "2.0",
-            "doc_type": "platform",
-        ]
-        return DevicePlatform(json: dict)
+        return DevicePlatform(type: DevicePlatform.PlatformType.watchOS)
     }
     
     public override func dictionarify() -> NSDictionary {
@@ -96,12 +80,20 @@ public class DevicePlatform : XcodeServerEntity {
 
 public class DeviceFilter : XcodeServerEntity {
     
-    let platform: DevicePlatform
-    let filterType: Int //TODO: find out what the values mean by trial and error
+    var platform: DevicePlatform
+    
+    public enum FilterType: Int {
+        case AllAvailableDevicesAndSimulators = 0
+        case AllDevices = 1
+        case AllSimulators = 2
+        case SelectedDevicesAndSimulators = 3
+    }
+    
+    let filterType: FilterType
     
     public enum ArchitectureType: Int {
         case Unknown = -1
-        case iOS_Like = 0
+        case iOS_Like = 0 //also watchOS
         case OSX_Like = 1
     }
     
@@ -110,13 +102,13 @@ public class DeviceFilter : XcodeServerEntity {
     public required init(json: NSDictionary) {
         
         self.platform = DevicePlatform(json: json.dictionaryForKey("platform"))
-        self.filterType = json.intForKey("filterType")
+        self.filterType = FilterType(rawValue: json.intForKey("filterType")) ?? .AllAvailableDevicesAndSimulators
         self.architectureType = ArchitectureType(rawValue: json.optionalIntForKey("architectureType") ?? -1) ?? .Unknown
         
         super.init(json: json)
     }
     
-    public init(platform: DevicePlatform, filterType: Int, architectureType: ArchitectureType) {
+    public init(platform: DevicePlatform, filterType: FilterType, architectureType: ArchitectureType) {
         self.platform = platform
         self.filterType = filterType
         self.architectureType = architectureType
@@ -127,7 +119,7 @@ public class DeviceFilter : XcodeServerEntity {
     public override func dictionarify() -> NSDictionary {
         
         return [
-            "filterType": self.filterType,
+            "filterType": self.filterType.rawValue,
             "architectureType": self.architectureType.rawValue,
             "platform": self.platform.dictionarify()
         ]
@@ -154,7 +146,6 @@ public class DeviceSpecification : XcodeServerEntity {
         super.init()
     }
     
-    //
     /**
     Initializes a new DeviceSpecification object with only a list of tested device ids.
     This is a convenience initializer for compatibility with old Xcode 6 bots that are still hanging around on old servers.
@@ -175,5 +166,27 @@ public class DeviceSpecification : XcodeServerEntity {
         ]
     }
     
+    // MARK: Convenience methods
+    
+    public class func OSX() -> DeviceSpecification {
+        let platform = DevicePlatform.OSX()
+        let filter = DeviceFilter(platform: platform, filterType: .AllAvailableDevicesAndSimulators, architectureType: .OSX_Like)
+        let spec = DeviceSpecification(filters: [filter], deviceIdentifiers: [])
+        return spec
+    }
+    
+    public class func iOS(filterType: DeviceFilter.FilterType, deviceIdentifiers: [String]) -> DeviceSpecification {
+        let platform = DevicePlatform.iOS()
+        let filter = DeviceFilter(platform: platform, filterType: filterType, architectureType: .iOS_Like)
+        let spec = DeviceSpecification(filters: [filter], deviceIdentifiers: deviceIdentifiers)
+        return spec
+    }
+    
+    public class func watchOS() -> DeviceSpecification {
+        let platform = DevicePlatform.watchOS()
+        let filter = DeviceFilter(platform: platform, filterType: .AllAvailableDevicesAndSimulators, architectureType: .iOS_Like)
+        let spec = DeviceSpecification(filters: [filter], deviceIdentifiers: [])
+        return spec
+    }
 }
 

@@ -69,46 +69,8 @@ public class BotConfiguration : XcodeServerEntity {
     - AllCompatible:                    All Compatible (default) - for build only
     */
     public enum TestingDestinationIdentifier : Int {
-        case iOS_AllDevicesAndSimulators = 0
-        case iOS_AllDevices = 1
-        case iOS_AllSimulators = 2
-        case iOS_SelectedDevicesAndSimulators = 3
+        case iOSAndWatch = 0
         case Mac = 7
-        case AllCompatible = 8
-        
-        public func toString() -> String {
-            switch self {
-                case .iOS_AllDevicesAndSimulators:
-                    return "iOS: All Devices and Simulators"
-                case .iOS_AllDevices:
-                    return "iOS: All Devices"
-                case .iOS_AllSimulators:
-                    return "iOS: All Simulators"
-                case .iOS_SelectedDevicesAndSimulators:
-                    return "iOS: Selected Devices and Simulators"
-                case .Mac:
-                    return "Mac"
-                case .AllCompatible:
-                    return "All Compatible (Mac + iOS)"
-            }
-        }
-        
-        public func allowedDeviceTypes() -> [DeviceType] {
-            switch self {
-                case .iOS_AllDevicesAndSimulators:
-                    return [.iPhone, .Simulator]
-                case .iOS_AllDevices:
-                    return [.iPhone]
-                case .iOS_AllSimulators:
-                    return [.Simulator]
-                case .iOS_SelectedDevicesAndSimulators:
-                    return [.iPhone, .Simulator]
-                case .Mac:
-                    return [.Mac]
-                case .AllCompatible:
-                    return [.iPhone, .Simulator, .Mac]
-            }
-        }
     }
     
     public let builtFromClean: CleaningPolicy!
@@ -118,7 +80,16 @@ public class BotConfiguration : XcodeServerEntity {
     public let schemeName: String
     public let schedule: BotSchedule
     public let triggers: [Trigger]
-    public let testingDestinationType: TestingDestinationIdentifier?
+    public var testingDestinationType: TestingDestinationIdentifier {
+        get {
+            if let firstFilter = self.deviceSpecification.filters.first {
+                if case .OSX = firstFilter.platform.type {
+                    return .Mac
+                }
+            }
+            return .iOSAndWatch
+        }
+    }
     public let deviceSpecification: DeviceSpecification
     public let sourceControlBlueprint: SourceControlBlueprint
     
@@ -131,7 +102,6 @@ public class BotConfiguration : XcodeServerEntity {
         self.schemeName = json.stringForKey("schemeName")
         self.schedule = BotSchedule(json: json)
         self.triggers = XcodeServerArray(json.arrayForKey("triggers"))
-        self.testingDestinationType = TestingDestinationIdentifier(rawValue: json.intForKey("testingDestinationType"))
         self.sourceControlBlueprint = SourceControlBlueprint(json: json.dictionaryForKey("sourceControlBlueprint"))
         
         //old bots (xcode 6) only have testingDeviceIds, try to parse those into the new format of DeviceSpecification (xcode 7)
@@ -157,7 +127,6 @@ public class BotConfiguration : XcodeServerEntity {
         schedule: BotSchedule,
         triggers: [Trigger],
         deviceSpecification: DeviceSpecification,
-        testingDestinationType: TestingDestinationIdentifier,
         sourceControlBlueprint: SourceControlBlueprint) {
             
             self.builtFromClean = builtFromClean
@@ -169,7 +138,6 @@ public class BotConfiguration : XcodeServerEntity {
             self.triggers = triggers
             self.deviceSpecification = deviceSpecification
             self.sourceControlBlueprint = sourceControlBlueprint
-            self.testingDestinationType = testingDestinationType
             
             super.init()
     }
@@ -189,7 +157,7 @@ public class BotConfiguration : XcodeServerEntity {
         dictionary["schemeName"] = self.schemeName
         dictionary["deviceSpecification"] = self.deviceSpecification.dictionarify()
         dictionary["performsArchiveAction"] = self.archive
-        dictionary["testingDestinationType"] = self.testingDestinationType?.rawValue //TODO: figure out if we need this
+        dictionary["testingDestinationType"] = self.testingDestinationType.rawValue //TODO: figure out if we still need this in Xcode 7
         
         let botScheduleDict = self.schedule.dictionarify() //needs to be merged into the main bot config dict
         dictionary.addEntriesFromDictionary(botScheduleDict as [NSObject : AnyObject])
