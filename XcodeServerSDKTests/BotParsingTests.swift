@@ -7,12 +7,48 @@
 //
 
 import Foundation
-import XCTest
 import XcodeServerSDK
+import DVR
+import XCTest
 
 class BotParsingTests: XCTestCase {
     
     //MARK: shared stuff
+    func testAsyncShared() {
+        
+        let exp = self.expectationWithDescription("")
+        
+        let config = try! XcodeServerConfig(
+            host: "https://127.0.0.1",
+            user: "ICanCreateBots",
+            password: "superSecr3t")
+        let server = XcodeServerFactory.server(config)
+        let backingSession = server.http.session
+        
+        let session = DVR.Session(cassetteName: "basic_bot", testBundle: NSBundle(forClass: self.classForCoder), backingSession: backingSession)
+        
+        server.http.session = session
+        
+//        
+//        
+//        let req = NSURLRequest(URL: NSURL(string: "https://127.0.0.1")!)
+//        
+//        let task = session.dataTaskWithRequest(req) {
+//            (data, response, error) in
+//            print()
+//        }
+//        task!.resume()
+        
+        
+        server.getBots { (bots, error) in
+            print()
+            exp.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(100, handler: nil)
+        print()
+    }
+    
     func testShared() {
         
         let bot = self.botInFileWithName("bot_mac_xcode6")

@@ -96,6 +96,8 @@
 		3AA922BA1B3F4666005A0F73 /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA922AC1B3F4630005A0F73 /* DVR.framework */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
+		3AD14B7C1B3F71EF00BFDEAA /* basic_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD14B7B1B3F71EF00BFDEAA /* basic_bot.json */; };
+		3AD14B7D1B3F71EF00BFDEAA /* basic_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD14B7B1B3F71EF00BFDEAA /* basic_bot.json */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08951B2C684C003900F3 /* XcodeServerConfig.swift */; };
 		707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08971B2C6954003900F3 /* EmailConfiguration.swift */; };
@@ -211,6 +213,7 @@
 		3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_error.json; path = Data/scm_branches_response_error.json; sourceTree = "<group>"; };
 		3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DVR.xcodeproj; path = Carthage/Checkouts/DVR/DVR.xcodeproj; sourceTree = "<group>"; };
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
+		3AD14B7B1B3F71EF00BFDEAA /* basic_bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basic_bot.json; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
 		707D08951B2C684C003900F3 /* XcodeServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfig.swift; sourceTree = "<group>"; };
 		707D08971B2C6954003900F3 /* EmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfiguration.swift; sourceTree = "<group>"; };
@@ -338,6 +341,7 @@
 		3A7B48C91B2A5AC40077ABEA /* XcodeServerSDKTests */ = {
 			isa = PBXGroup;
 			children = (
+				3AD14B771B3F71C600BFDEAA /* Casettes */,
 				3A058A911B31596E0077FD47 /* Data */,
 				3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */,
 				709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */,
@@ -378,6 +382,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		3AD14B771B3F71C600BFDEAA /* Casettes */ = {
+			isa = PBXGroup;
+			children = (
+				3AD14B7B1B3F71EF00BFDEAA /* basic_bot.json */,
+			);
+			name = Casettes;
+			path = XcodeServerSDKTests/Casettes;
+			sourceTree = SOURCE_ROOT;
 		};
 		707D089F1B2C6AA1003900F3 /* Server Entities */ = {
 			isa = PBXGroup;
@@ -662,6 +675,7 @@
 				3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */,
 				3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
+				3AD14B7D1B3F71EF00BFDEAA /* basic_bot.json in Resources */,
 				3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +694,7 @@
 				3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */,
 				3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
+				3AD14B7C1B3F71EF00BFDEAA /* basic_bot.json in Resources */,
 				3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
