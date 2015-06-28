@@ -59,24 +59,42 @@ public class BotConfiguration : XcodeServerEntity {
     }
     
     /**
-    Enum which describes identifiers of devices on which test should be run.
-    
-    - iOS_AllDevicesAndSimulators:      iOS default - for build only
-    - iOS_AllDevices:                   All iOS devices
-    - iOS_AllSimulators:                All iOS simulators
-    - iOS_SelectedDevicesAndSimulators: Manually selected devices/simulators
-    - Mac:                              Mac default (probably, crashes when saving in Xcode) - for build only
-    - AllCompatible:                    All Compatible (default) - for build only
+    Legacy property of what devices should be tested on. Now moved to `DeviceSpecification`, but
+    sending 0 or 7 still required. Sigh.
     */
     public enum TestingDestinationIdentifier : Int {
         case iOSAndWatch = 0
         case Mac = 7
     }
     
-    public let builtFromClean: CleaningPolicy!
+    /**
+    Enum which describes whether code coverage data should be collected during tests.
+    
+    - Disabled:             Turned off
+    - Enabled:              Turned on, regardless of the preference in Scheme
+    - UseSchemeSettings:    Respects the preference in Scheme
+    */
+    public enum CodeCoveragePreference: Int {
+        case Disabled = 0
+        case Enabled = 1
+        case UseSchemeSetting = 2
+    }
+    
+    /**
+    Enum describing build config preference. Xcode 7 API allows for overriding a config setup in the scheme for a specific one. UseSchemeSetting is the default.
+    */
+    public enum BuildConfiguration {
+        case OverrideWithSpecific(String)
+        case UseSchemeSetting
+    }
+    
+    public let builtFromClean: CleaningPolicy
+    public let codeCoveragePreference: CodeCoveragePreference
+    public let buildConfiguration: BuildConfiguration
     public let analyze: Bool
     public let test: Bool
     public let archive: Bool
+    public let exportsProductFromArchive: Bool
     public let schemeName: String
     public let schedule: BotSchedule
     public let triggers: [Trigger]
@@ -95,9 +113,17 @@ public class BotConfiguration : XcodeServerEntity {
     
     public required init(json: NSDictionary) {
         
-        self.builtFromClean = CleaningPolicy(rawValue: json.intForKey("builtFromClean"))
+        self.builtFromClean = CleaningPolicy(rawValue: json.intForKey("builtFromClean")) ?? .Never
+        self.codeCoveragePreference = CodeCoveragePreference(rawValue: json.optionalIntForKey("codeCoveragePreference") ?? 0) ?? .UseSchemeSetting
+        
+        if let buildConfigOverride = json.optionalStringForKey("buildConfiguration") {
+            self.buildConfiguration = BuildConfiguration.OverrideWithSpecific(buildConfigOverride)
+        } else {
+            self.buildConfiguration = .UseSchemeSetting
+        }
         self.analyze = json.boolForKey("performsAnalyzeAction")
         self.archive = json.boolForKey("performsArchiveAction")
+        self.exportsProductFromArchive = json.optionalBoolForKey("exportsProductFromArchive") ?? false
         self.test = json.boolForKey("performsTestAction")
         self.schemeName = json.stringForKey("schemeName")
         self.schedule = BotSchedule(json: json)
@@ -120,9 +146,12 @@ public class BotConfiguration : XcodeServerEntity {
     
     public init(
         builtFromClean: CleaningPolicy,
+        codeCoveragePreference: CodeCoveragePreference = .UseSchemeSetting,
+        buildConfiguration: BuildConfiguration = .UseSchemeSetting,
         analyze: Bool,
         test: Bool,
         archive: Bool,
+        exportsProductFromArchive: Bool = true,
         schemeName: String,
         schedule: BotSchedule,
         triggers: [Trigger],
@@ -130,9 +159,12 @@ public class BotConfiguration : XcodeServerEntity {
         sourceControlBlueprint: SourceControlBlueprint) {
             
             self.builtFromClean = builtFromClean
+            self.codeCoveragePreference = codeCoveragePreference
+            self.buildConfiguration = buildConfiguration
             self.analyze = analyze
             self.test = test
             self.archive = archive
+            self.exportsProductFromArchive = exportsProductFromArchive
             self.schemeName = schemeName
             self.schedule = schedule
             self.triggers = triggers
@@ -151,13 +183,19 @@ public class BotConfiguration : XcodeServerEntity {
         
         //others
         dictionary["builtFromClean"] = self.builtFromClean.rawValue
+        dictionary["codeCoveragePreference"] = self.codeCoveragePreference.rawValue
         dictionary["performsTestAction"] = self.test
         dictionary["triggers"] = self.triggers.map { $0.dictionarify() }
         dictionary["performsAnalyzeAction"] = self.analyze
         dictionary["schemeName"] = self.schemeName
         dictionary["deviceSpecification"] = self.deviceSpecification.dictionarify()
         dictionary["performsArchiveAction"] = self.archive
+        dictionary["exportsProductFromArchive"] = self.exportsProductFromArchive
         dictionary["testingDestinationType"] = self.testingDestinationType.rawValue //TODO: figure out if we still need this in Xcode 7
+        
+        if case .OverrideWithSpecific(let buildConfig) = self.buildConfiguration {
+            dictionary["buildConfiguration"] = buildConfig
+        }
         
         let botScheduleDict = self.schedule.dictionarify() //needs to be merged into the main bot config dict
         dictionary.addEntriesFromDictionary(botScheduleDict as [NSObject : AnyObject])
