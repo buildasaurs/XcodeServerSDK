@@ -330,7 +330,7 @@ public extension XcodeServer {
     - Optional retrieved integration.
     - Optional operation error.
     */
-    public func retrieveIntegration(integrationId: String, completion: (integration: Integration?, error: NSError?) -> ()) {
+    public func getIntegration(integrationId: String, completion: (integration: Integration?, error: NSError?) -> ()) {
         
         let params = [
             "integration": integrationId
