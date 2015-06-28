@@ -32,6 +32,9 @@ public class XcodeServerConfig : JSONSerializable {
     public let password: String?
     public let port: Int = 20343
     
+    //if set to false, fails if server certificate is not trusted yet
+    public let automaticallyTrustSelfSignedCertificates: Bool = true
+    
     public var availabilityState: AvailabilityCheckState = .Unchecked
     
     public func jsonify() -> NSDictionary {

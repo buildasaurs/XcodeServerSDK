@@ -1,0 +1,192 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1435487010.432587,
+      "response" : {
+        "body" : {
+          "_id" : "963bc95f1c1a56f69f3392b4aa03302f",
+          "tinyID" : "4807518",
+          "_rev" : "10-117b73f201ea103229a2e8cd26a01845",
+          "requiresUpgrade" : false,
+          "integration_counter" : 4,
+          "lastRevisionBlueprint" : {
+            "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+              "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : {
+                "DVTSourceControlBranchIdentifierKey" : "hd\/tested_devices_xcode_7",
+                "DVTSourceControlLocationRevisionKey" : "f33492a458777330edcac4c77adbb18d3ba7f1f8",
+                "DVTSourceControlBranchOptionsKey" : 50,
+                "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+              }
+            },
+            "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+            "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "71FFDDA2-4586-4EE9-AEF2-C798E9E45028",
+            "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+              "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : "XcodeServerSDK\/"
+            },
+            "DVTSourceControlWorkspaceBlueprintNameKey" : "XcodeServerSDK",
+            "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+            "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XcodeServerSDK.xcworkspace",
+            "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+              {
+                "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:czechboy0\/XcodeServerSDK.git",
+                "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"
+              }
+            ]
+          },
+          "configuration" : {
+            "builtFromClean" : 0,
+            "periodicScheduleInterval" : 1,
+            "codeCoveragePreference" : 2,
+            "performsTestAction" : true,
+            "triggers" : [
+              {
+                "phase" : 1,
+                "scriptBody" : "echo \"Run before\"\ncarthage update --no-build",
+                "type" : 1,
+                "name" : "Run Script"
+              },
+              {
+                "phase" : 2,
+                "scriptBody" : "echo \"Run after\"",
+                "type" : 1,
+                "name" : "Run Script",
+                "conditions" : {
+                  "status" : 2,
+                  "onWarnings" : true,
+                  "onBuildErrors" : true,
+                  "onInternalErrors" : true,
+                  "onAnalyzerWarnings" : true,
+                  "onFailingTests" : true,
+                  "onSuccess" : true
+                }
+              },
+              {
+                "phase" : 2,
+                "scriptBody" : "",
+                "emailConfiguration" : {
+                  "includeCommitMessages" : true,
+                  "additionalRecipients" : [
+                    "email@committers.yo"
+                  ],
+                  "emailCommitters" : true,
+                  "scmOptions" : {
+                    "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : true
+                  },
+                  "includeIssueDetails" : true
+                },
+                "type" : 2,
+                "name" : "Send Email Notification",
+                "conditions" : {
+                  "status" : 2,
+                  "onWarnings" : true,
+                  "onBuildErrors" : true,
+                  "onInternalErrors" : true,
+                  "onAnalyzerWarnings" : true,
+                  "onFailingTests" : true,
+                  "onSuccess" : false
+                }
+              }
+            ],
+            "performsAnalyzeAction" : true,
+            "schemeName" : "XcodeServerSDK - OS X",
+            "exportsProductFromArchive" : true,
+            "testingDeviceIDs" : [
+
+            ],
+            "deviceSpecification" : {
+              "filters" : [
+                {
+                  "platform" : {
+                    "buildNumber" : "15A204f",
+                    "_id" : "a85553a5b26a7c1a4998f3b237000b18",
+                    "_rev" : "12-b005bffe3337cfe101fd597c300b0208",
+                    "displayName" : "OS X",
+                    "identifier" : "com.apple.platform.macosx",
+                    "version" : "1.1"
+                  },
+                  "filterType" : 0,
+                  "architectureType" : 1
+                }
+              ],
+              "deviceIdentifiers" : [
+
+              ]
+            },
+            "weeklyScheduleDay" : 0,
+            "minutesAfterHourToIntegrate" : 0,
+            "scheduleType" : 1,
+            "hourOfIntegration" : 0,
+            "performsArchiveAction" : true,
+            "sourceControlBlueprint" : {
+              "DVTSourceControlWorkspaceBlueprintLocationsKey" : {
+                "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : {
+                  "DVTSourceControlBranchIdentifierKey" : "hd\/tested_devices_xcode_7",
+                  "DVTSourceControlBranchOptionsKey" : 214,
+                  "DVTSourceControlWorkspaceBlueprintLocationTypeKey" : "DVTSourceControlBranch"
+                }
+              },
+              "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+              "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+              },
+              "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey" : {
+                "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : {
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey" : "DVTSourceControlAuthenticationStrategy"
+                }
+              },
+              "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+                "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : 0
+              },
+              "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "92561A51-010F-495B-8ED4-93087A6A8F5B",
+              "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+                "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97" : "XcodeServerSDK\/"
+              },
+              "DVTSourceControlWorkspaceBlueprintNameKey" : "XcodeServerSDK",
+              "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+              "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XcodeServerSDK.xcworkspace",
+              "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+                {
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey" : true,
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:czechboy0\/XcodeServerSDK.git",
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey" : "1627ACA576282D36631B564DEBDFA648",
+                  "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"
+                }
+              ]
+            },
+            "testingDestinationType" : 7
+          },
+          "group" : {
+            "name" : "2FDD3BEB-D750-47EE-B386-07EA9BABA98B"
+          },
+          "type" : 1,
+          "name" : "Default OS X Bot",
+          "doc_type" : "bot"
+        },
+        "body_format" : "json",
+        "status" : 200,
+        "url" : "https:\/\/127.0.0.1:20343\/api\/bots\/963bc95f1c1a56f69f3392b4aa03302f",
+        "headers" : {
+          "Connection" : "keep-alive",
+          "Content-Type" : "application\/json",
+          "Transfer-Encoding" : "Identity",
+          "Date" : "Sun, 28 Jun 2015 10:23:30 GMT",
+          "Content-Encoding" : "gzip",
+          "X-XCSResponse-Status-Title" : "OK",
+          "Keep-Alive" : "timeout=5; max=100",
+          "X-XCSAPIVersion" : "3",
+          "Vary" : "Accept-Encoding"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/127.0.0.1:20343\/api\/bots\/963bc95f1c1a56f69f3392b4aa03302f",
+        "headers" : {
+          "Authorization" : "Basic SUNhbkNyZWF0ZUJvdHM6c3VwZXJTZWNyM3Q="
+        }
+      }
+    }
+  ],
+  "name" : "osx_bot"
+}

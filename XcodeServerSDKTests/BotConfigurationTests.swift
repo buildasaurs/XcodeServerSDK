@@ -40,48 +40,49 @@ class BotConfigurationTests: XCTestCase {
     
     // MARK: Testing destination tests
     func testTestingDestinationToString() {
-        var destination: BotConfiguration.TestingDestinationIdentifier
+//        var destination: BotConfiguration.TestingDestinationIdentifier
         
-        destination = .iOS_AllDevicesAndSimulators
-        XCTAssertEqual(destination.toString(), "iOS: All Devices and Simulators")
-        
-        destination = .iOS_AllDevices
-        XCTAssertEqual(destination.toString(), "iOS: All Devices")
-        
-        destination = .iOS_AllSimulators
-        XCTAssertEqual(destination.toString(), "iOS: All Simulators")
-        
-        destination = .iOS_SelectedDevicesAndSimulators
-        XCTAssertEqual(destination.toString(), "iOS: Selected Devices and Simulators")
-        
-        destination = .Mac
-        XCTAssertEqual(destination.toString(), "Mac")
-        
-        destination = .AllCompatible
-        XCTAssertEqual(destination.toString(), "All Compatible (Mac + iOS)")
+        //TODO: being moved to DeviceSpecification
+//        destination = .iOS_AllDevicesAndSimulators
+//        XCTAssertEqual(destination.toString(), "iOS: All Devices and Simulators")
+//        
+//        destination = .iOS_AllDevices
+//        XCTAssertEqual(destination.toString(), "iOS: All Devices")
+//        
+//        destination = .iOS_AllSimulators
+//        XCTAssertEqual(destination.toString(), "iOS: All Simulators")
+//        
+//        destination = .iOS_SelectedDevicesAndSimulators
+//        XCTAssertEqual(destination.toString(), "iOS: Selected Devices and Simulators")
+//        
+//        destination = .Mac
+//        XCTAssertEqual(destination.toString(), "Mac")
+//        
+//        destination = .AllCompatible
+//        XCTAssertEqual(destination.toString(), "All Compatible (Mac + iOS)")
     }
     
     func testAllowedDevicesTypes() {
-        let allCompatible = BotConfiguration.TestingDestinationIdentifier.AllCompatible
-        let selected = BotConfiguration.TestingDestinationIdentifier.iOS_SelectedDevicesAndSimulators
-        let allDevicesAndSimulators = BotConfiguration.TestingDestinationIdentifier.iOS_AllDevicesAndSimulators
-        let allDevices = BotConfiguration.TestingDestinationIdentifier.iOS_AllDevices
-        let allSimulators = BotConfiguration.TestingDestinationIdentifier.iOS_AllSimulators
-        let mac = BotConfiguration.TestingDestinationIdentifier.Mac
+//        let allCompatible = BotConfiguration.TestingDestinationIdentifier.AllCompatible
+//        let selected = BotConfiguration.TestingDestinationIdentifier.iOS_SelectedDevicesAndSimulators
+//        let allDevicesAndSimulators = BotConfiguration.TestingDestinationIdentifier.iOS_AllDevicesAndSimulators
+//        let allDevices = BotConfiguration.TestingDestinationIdentifier.iOS_AllDevices
+//        let allSimulators = BotConfiguration.TestingDestinationIdentifier.iOS_AllSimulators
+//        let mac = BotConfiguration.TestingDestinationIdentifier.Mac
         
-        let allCompatibleExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator, .Mac]
-        let selectedExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator]
-        let allDevicesAndSimulatorsExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator]
-        let allDevicesExpected: [BotConfiguration.DeviceType] = [.iPhone]
-        let allSimulatorsExpected: [BotConfiguration.DeviceType] = [.Simulator]
-        let macExpected: [BotConfiguration.DeviceType] = [.Mac]
+//        let allCompatibleExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator, .Mac]
+//        let selectedExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator]
+//        let allDevicesAndSimulatorsExpected: [BotConfiguration.DeviceType] = [.iPhone, .Simulator]
+//        let allDevicesExpected: [BotConfiguration.DeviceType] = [.iPhone]
+//        let allSimulatorsExpected: [BotConfiguration.DeviceType] = [.Simulator]
+//        let macExpected: [BotConfiguration.DeviceType] = [.Mac]
         
-        XCTAssertEqual(allCompatible.allowedDeviceTypes(), allCompatibleExpected)
-        XCTAssertEqual(selected.allowedDeviceTypes(), selectedExpected)
-        XCTAssertEqual(allDevices.allowedDeviceTypes(), allDevicesExpected)
-        XCTAssertEqual(allSimulators.allowedDeviceTypes(), allSimulatorsExpected)
-        XCTAssertEqual(allDevicesAndSimulators.allowedDeviceTypes(), allDevicesAndSimulatorsExpected)
-        XCTAssertEqual(mac.allowedDeviceTypes(), macExpected)
+//        XCTAssertEqual(allCompatible.allowedDeviceTypes(), allCompatibleExpected)
+//        XCTAssertEqual(selected.allowedDeviceTypes(), selectedExpected)
+//        XCTAssertEqual(allDevices.allowedDeviceTypes(), allDevicesExpected)
+//        XCTAssertEqual(allSimulators.allowedDeviceTypes(), allSimulatorsExpected)
+//        XCTAssertEqual(allDevicesAndSimulators.allowedDeviceTypes(), allDevicesAndSimulatorsExpected)
+//        XCTAssertEqual(mac.allowedDeviceTypes(), macExpected)
     }
 
 }

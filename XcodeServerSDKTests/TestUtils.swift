@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import XcodeServerSDK
+import DVR
 
 struct StringError: ErrorType {
     
@@ -21,9 +22,50 @@ struct StringError: ErrorType {
     }
 }
 
+extension XCTestCase {
+    
+    func getRecordingXcodeServer(cassetteName: String) -> XcodeServer {
+        
+        let config = try! XcodeServerConfig(
+            host: "https://127.0.0.1",
+            user: "ICanCreateBots",
+            password: "superSecr3t")
+        return self.getRecordingXcodeServerWithConfig(config, cassetteName: cassetteName)
+    }
+    
+    func getRecordingXcodeServerWithConfig(config: XcodeServerConfig, cassetteName: String) -> XcodeServer
+    {
+        let server = XcodeServerFactory.server(config)
+        let backingSession = server.http.session
+        
+        let session = DVR.Session(cassetteName: cassetteName, testBundle: NSBundle(forClass: self.classForCoder), backingSession: backingSession)
+        server.http.session = session
+        
+        return server
+    }
+}
 
 // MARK: Mock JSON helper methods
 extension XCTestCase {
+    
+    func stringAtPath(path: String) -> String {
+        return try! NSString(contentsOfFile: path.stringByExpandingTildeInPath, encoding: NSUTF8StringEncoding) as String
+    }
+    
+    func loadJSONResponseFromCassetteWithName(name: String) -> NSDictionary {
+        
+        let dictionary = self.loadJSONWithName(name)
+        
+        let interactions = dictionary["interactions"] as! [NSDictionary]
+        let response = interactions.first!["response"] as! NSDictionary
+        
+        //make sure it's json
+        assert(response["body_format"] as! String == "json")
+        
+        //get the response data out
+        let body = response["body"] as! NSDictionary
+        return body
+    }
     
     func loadJSONWithName(name: String) -> NSDictionary {
         
@@ -45,6 +87,12 @@ extension XCTestCase {
             XCTFail("Error reading file with name \(name), error: \(error)")
         }
         return NSDictionary()
+    }
+    
+    func botInCassetteWithName(name: String) -> Bot {
+        let json = self.loadJSONResponseFromCassetteWithName(name)
+        let bot = Bot(json: json)
+        return bot
     }
     
     func botInFileWithName(name: String) -> Bot {

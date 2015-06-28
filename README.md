@@ -84,6 +84,9 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 | _List devices connected to server_ | :white_check_mark: | :white_check_mark: |
 | _List hosted repositories on server_ | :white_check_mark: | :no_entry: |
 | _Create a new hosted repository_ | :white_check_mark: | :no_entry: |
+| Get supported platforms | :no_entry: | :white_check_mark: |
+| Get SCM branches from Blueprint | :no_entry: | :white_check_mark: |
+| Verify user can manage server | :no_entry: | :white_check_mark: |
 
 Opertions listed in table above in _italics_ are those provided by  in Xcode. Rest of operations are just a product of reverse engineering.
 
@@ -109,6 +112,9 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 
 # License
 [MIT](https://github.com/czechboy0/XcodeServerSDK/blob/master/LICENSE)
+
+# Building & Testing
+We use [Carthage](https://github.com/Carthage/Carthage) to pull in some dependencies for tests. If you clone this repo and want to run tests, first you have to run `carthage update --no-build` to download the necessary dependencies.
 
 # Contributing
 Create an issue or (preferably) send a pull request.
