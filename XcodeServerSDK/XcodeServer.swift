@@ -322,6 +322,38 @@ public extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for retrievieng specified Integration.
+    
+    - parameter integrationId: ID of integration which is about to be retrieved.
+    - parameter completion:
+    - Optional retrieved integration.
+    - Optional operation error.
+    */
+    public func retrieveIntegration(integrationId: String, completion: (integration: Integration?, error: NSError?) -> ()) {
+        
+        let params = [
+            "integration": integrationId
+        ]
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: params, query: nil, body: nil) {
+            (response, body, error) -> () in
+            
+            guard error == nil else {
+                completion(integration: nil, error: error)
+                return
+            }
+            
+            guard let integrationBody = body as? NSDictionary else {
+                completion(integration: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let integration = Integration(json: integrationBody)
+            completion(integration: integration, error: nil)
+        }
+    }
+    
     public func cancelIntegration(integrationId: String, completion: (success: Bool, error: NSError?) -> ()) {
         
         let params = [
