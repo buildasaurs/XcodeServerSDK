@@ -27,13 +27,13 @@ You'll need OS X Server of version >= 4. For Xcode 7 you need OS X >= 10.10.4.
 The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions **only** support the new, first publicly documented Xcode 7 version of the API. **Xcode 7 API support is still work in progress, our first beta release is [here](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1-beta1).**
 
 # Sources
-The easiest way to integrate `XcodeServerSDK` into your project is with Cocoapods. Add this to your Podfile and run `pod install`.
+One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile and run `pod install`:
 
 ```
 pod 'XcodeServerSDK', '0.0.4'
 ```
 
-If you're using Carthage you have to create a _Cartfile_ and run `carthage update` to fetch and build dependencies
+If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
 
 ```
 github "czechboy0/XcodeServerSDK"
