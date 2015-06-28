@@ -55,7 +55,7 @@ server.getBots { (bots, error) -> () in
 # Xcode Server Versions
 | Xcode Server API | Supported? |
 | :-- | :--: | :--: |
-| Xcode 6 and earlier | :white_check_mark: up to [0.0.4](https://github.com/czechboy0/XcodeServerSDK/releases/tag/0.0.4) |
+| Xcode 6 and older | :white_check_mark: up to [0.0.4](https://github.com/czechboy0/XcodeServerSDK/releases/tag/0.0.4) |
 | Xcode 7 and newer | :white_check_mark: from [0.1](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1-beta1) |
 
 The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions *only* support the new, first publicly documented Xcode 7 version of the API. **Xcode 7 API support is still work in progress, our first beta release is [here](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1-beta1).**
