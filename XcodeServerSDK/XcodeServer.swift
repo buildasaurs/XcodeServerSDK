@@ -410,7 +410,7 @@ public extension XcodeServer {
         }
     }
     
-    public func getPlatforms(completion: (platforms: [Platform]?, error: NSError?) -> ()) {
+    public func getPlatforms(completion: (platforms: [DevicePlatform]?, error: NSError?) -> ()) {
         
         self.sendRequestWithMethod(.GET, endpoint: .Platforms, params: nil, query: nil, body: nil) { (response, body, error) -> () in
             
@@ -420,7 +420,7 @@ public extension XcodeServer {
             }
             
             if let array = (body as? NSDictionary)?["results"] as? NSArray {
-                let platforms: [Platform] = XcodeServerArray(array)
+                let platforms: [DevicePlatform] = XcodeServerArray(array)
                 completion(platforms: platforms, error: error)
             } else {
                 completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
