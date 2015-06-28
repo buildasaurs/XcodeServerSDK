@@ -1,10 +1,16 @@
 # Change Log
 
-## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+## [v0.1-beta1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1-beta1) (2015-06-28)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/0.0.4...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/0.0.4...v0.1-beta1)
+
+**Fixed bugs:**
+
+- Different amount of tests on different platform [\#42](https://github.com/czechboy0/XcodeServerSDK/issues/42)
 
 **Closed issues:**
+
+- Find Swift 2-compatible HTTP request mocking library [\#46](https://github.com/czechboy0/XcodeServerSDK/issues/46)
 
 - Add `throw` method to TestUtils [\#36](https://github.com/czechboy0/XcodeServerSDK/issues/36)
 
@@ -17,6 +23,12 @@
 - Playground [\#26](https://github.com/czechboy0/XcodeServerSDK/issues/26)
 
 - iOS target missing [\#24](https://github.com/czechboy0/XcodeServerSDK/issues/24)
+
+- Xcode 7: add new keys  [\#23](https://github.com/czechboy0/XcodeServerSDK/issues/23)
+
+- Xcode 7: server fingerprint verification  [\#22](https://github.com/czechboy0/XcodeServerSDK/issues/22)
+
+- Xcode 7: tested device format [\#21](https://github.com/czechboy0/XcodeServerSDK/issues/21)
 
 - Detect XCS API version in server responses  [\#20](https://github.com/czechboy0/XcodeServerSDK/issues/20)
 
@@ -37,6 +49,12 @@
 - Dependency management support [\#1](https://github.com/czechboy0/XcodeServerSDK/issues/1)
 
 **Merged pull requests:**
+
+- Added support for the last missing keys [\#50](https://github.com/czechboy0/XcodeServerSDK/pull/50) ([czechboy0](https://github.com/czechboy0))
+
+- WIP: Xcode 7 Support [\#44](https://github.com/czechboy0/XcodeServerSDK/pull/44) ([czechboy0](https://github.com/czechboy0))
+
+- Fixed missing test classes in the iOS test target. [\#43](https://github.com/czechboy0/XcodeServerSDK/pull/43) ([czechboy0](https://github.com/czechboy0))
 
 - Test Assertions for throwing methods [\#41](https://github.com/czechboy0/XcodeServerSDK/pull/41) ([cojoj](https://github.com/cojoj))
 

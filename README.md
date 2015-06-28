@@ -16,14 +16,24 @@
 First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
 This is an unofficial, community-maintained project and is not associated with Apple.
 
+# Xcode Server API Versions
+| Xcode Server API | Supported? |
+| :-- | :--: | :--: |
+| Xcode 6 and older | :white_check_mark: up to [0.0.4](https://github.com/czechboy0/XcodeServerSDK/releases/tag/0.0.4) |
+| Xcode 7 and newer | :white_check_mark: from [0.1](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1-beta1) |
+
+You'll need OS X Server of version >= 4. For Xcode 7 you need OS X >= 10.10.4.
+
+The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions **only** support the new, first publicly documented Xcode 7 version of the API. **Xcode 7 API support is still work in progress, our first beta release is [here](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1-beta1).**
+
 # Sources
-The easiest way to integrate `XcodeServerSDK` into your project is with Cocoapods. Add this to your Podfile and run `pod install`.
+One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile:
 
 ```
 pod 'XcodeServerSDK', '0.0.4'
 ```
 
-If you're using Carthage you have to create a _Cartfile_ and run `carthage update` to fetch and build dependencies
+If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
 
 ```
 github "czechboy0/XcodeServerSDK"
@@ -51,9 +61,6 @@ server.getBots { (bots, error) -> () in
     }
 }
 ```
-
-# Xcode Server Versions
-The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions *only* support the new, first publicly documented Xcode 7 version of the API. **Xcode 7 API support is still work in progress.**
 
 # Swift Versions
 The latest Swift 1.2 compatible version is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4), so put this exact version in your Podfile if you're targetting Swift 1.2. All newer releases will be targetting Swift 2, because we're all just so forward-thinking.

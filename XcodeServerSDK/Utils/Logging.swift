@@ -78,6 +78,10 @@ public class Log {
         Log.log("[INFO]: " + message)
     }
     
+    public class func error(error: ErrorType) {
+        self.error("\(error)")
+    }
+    
     public class func error(message: String) {
         Log.log("[ERROR]: " + message)
     }
