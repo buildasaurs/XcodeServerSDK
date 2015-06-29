@@ -555,42 +555,60 @@ public extension XcodeServer {
     }
     
     /**
+    Enum with response from creation of repository.
+    
+    - RepositoryAlreadyExists: Repository with this name already exists on OS X Server.
+    - NilResponse:             Self explanatory.
+    - CorruptedJSON:           JSON you've used to create repository.
+    - WrongStatusCode:         Something wrong with HHTP status.
+    - Error:                   There was an error during netwotk activity.
+    - Success:                 Repository was successfully created 🎉
+    */
+    public enum CreateRepositoryResponse {
+        case RepositoryAlreadyExists
+        case NilResponse
+        case CorruptedJSON
+        case WrongStatusCode(Int)
+        case Error(ErrorType)
+        case Success(Repository)
+    }
+    
+    /**
     XCS API call for creating new repository on configured Xcode Server.
-    **HTTP status codes**:
-    - **200** - corrupted body JSON, repository wasn't created.
-    - **204** - repository was created.
-    - **409** - name of repository already exists.
     
     - parameter repository: Repository object.
     - parameter repository: Optional object of created repository.
     - parameter error:      Optional error.
     */
-    public func createRepository(repository: Repository, completion: (repository: Repository?, error: NSError?) -> ()) {
+    public func createRepository(repository: Repository, completion: (repsponse: CreateRepositoryResponse) -> ()) {
         let body = repository.dictionarify()
         
         self.sendRequestWithMethod(.POST, endpoint: .Repositories, params: nil, query: nil, body: body) { (response, body, error) -> () in
-            guard error != nil else {
-                completion(repository: nil, error: error)
+            if let error = error {
+                completion(repsponse: XcodeServer.CreateRepositoryResponse.Error(error))
                 return
             }
             
             guard let response = response else {
-                completion(repository: nil, error: Error.withInfo("Nil response"))
+                completion(repsponse: XcodeServer.CreateRepositoryResponse.NilResponse)
                 return
             }
             
-            guard let repositoryBody = body where response.statusCode == 204 else {
-                if response.statusCode == 409 {
-                    completion(repository: nil, error: Error.withInfo("Repository with this name already exists"))
-                } else {
-                    completion(repository: nil, error: Error.withInfo("Wrong status code: \(response.statusCode)"))
+            guard let repositoryBody = body as? NSDictionary where response.statusCode == 204 else {
+                switch response.statusCode {
+                case 200:
+                    completion(repsponse: XcodeServer.CreateRepositoryResponse.CorruptedJSON)
+                case 409:
+                    completion(repsponse: XcodeServer.CreateRepositoryResponse.RepositoryAlreadyExists)
+                default:
+                    completion(repsponse: XcodeServer.CreateRepositoryResponse.WrongStatusCode(response.statusCode))
                 }
 
                 return
             }
             
-            let repository = Repository(json: repositoryBody as! NSDictionary)
-            completion(repository: repository, error: nil)
+            let repository = Repository(json: repositoryBody)
+            completion(repsponse: XcodeServer.CreateRepositoryResponse.Success(repository))
         }
     }
     
