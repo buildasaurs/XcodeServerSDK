@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Repository {
+public class Repository: XcodeRead {
     
     /**
     Enumeration describing HTTP access to the repository
@@ -90,7 +90,7 @@ public struct Repository {
     
     - returns: Initialized repository struct.
     */
-    public init(json: NSDictionary) {
+    public required init(json: NSDictionary) {
         self.name = json.stringForKey("name")
         
         self.httpAccess = HTTPAccessType(rawValue: json.intForKey("httpAccessType"))!

@@ -530,6 +530,30 @@ public extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for getting all repositories stored on Xcode Server.
+    
+    - parameter repositories: Optional array of repositories.
+    - parameter error:        Optional error
+    */
+    public func getRepositories(completion: (repositories: [Repository]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Repositories, params: nil, query: nil, body: nil) { (response, body, error) -> () in
+            guard error == nil else {
+                completion(repositories: nil, error: error)
+                return
+            }
+            
+            guard let repositoriesBody = (body as? NSDictionary)?["results"] as? NSArray else {
+                completion(repositories: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let repos: [Repository] = XcodeServerArray(repositoriesBody)
+            completion(repositories: repos, error: nil)
+        }
+    }
+    
     //more advanced
     
     /**
