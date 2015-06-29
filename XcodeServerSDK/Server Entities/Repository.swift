@@ -59,10 +59,10 @@ public class Repository: XcodeRead {
     }
     
     public let name: String
-    public let httpAccess: HTTPAccessType
-    public let sshAccess: SSHAccessType
-    public let writeAccessExternalIds: [String]
-    public let readAccessExternalIds: [String]
+    public var httpAccess: HTTPAccessType = HTTPAccessType.None
+    public var sshAccess: SSHAccessType = SSHAccessType.SelectedReadWrite
+    public var writeAccessExternalIds: [String] = []
+    public var readAccessExternalIds: [String] = []
     
     /**
     Designated initializer.
@@ -75,12 +75,40 @@ public class Repository: XcodeRead {
     
     - returns: Initialized repository struct.
     */
-    public init(name: String, httpAccess: HTTPAccessType, sshAccess: SSHAccessType, writeAccessExternalIds: [String], readAccessExternalIds: [String]) {
+    public init(name: String, httpAccess: HTTPAccessType?, sshAccess: SSHAccessType?, writeAccessExternalIds: [String]?, readAccessExternalIds: [String]?) {
         self.name = name
-        self.httpAccess = httpAccess
-        self.sshAccess = sshAccess
-        self.writeAccessExternalIds = writeAccessExternalIds
-        self.readAccessExternalIds = readAccessExternalIds
+        
+        if let httpAccess = httpAccess {
+            self.httpAccess = httpAccess
+        }
+        
+        if let sshAccess = sshAccess {
+            self.sshAccess = sshAccess
+        }
+        
+        if let writeIDs = writeAccessExternalIds {
+            self.writeAccessExternalIds = writeIDs
+        }
+        
+        if let readIDs = readAccessExternalIds {
+            self.readAccessExternalIds = readIDs
+        }
+    }
+    
+    /**
+    Convenience initializer.
+    This initializer will only allow you to provie name and will create a
+    deault repository with values set to:
+    - **HTTP Access** - No user is allowed to read/write to repository
+    - **SSH Access** - Only selected users are allowed to read/write to repository
+    - **Empty arrays** of write and rad external IDs
+    
+    - parameter name: Name of the repository.
+    
+    - returns: Initialized default repository wwith provided name
+    */
+    public convenience init(name: String) {
+        self.init(name: name, httpAccess: nil, sshAccess: nil, writeAccessExternalIds: nil, readAccessExternalIds: nil)
     }
     
     /**
