@@ -3,10 +3,6 @@
 [![Latest XcodeServerSDK Release](https://img.shields.io/github/release/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/releases/latest)
 [![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)<br />
 
-[![Stars](https://img.shields.io/github/stars/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/stargazers)
-[![Forks](https://img.shields.io/github/forks/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/network/members)
-[![Issues](https://img.shields.io/github/issues-raw/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/issues)
-
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://en.wikipedia.org/wiki/MIT_License)
 [![Blog](https://img.shields.io/badge/blog-honzadvorsky.com-green.svg)](http://honzadvorsky.com)
 [![Twitter Czechboy0](https://img.shields.io/badge/twitter-czechboy0-green.svg)](http://twitter.com/czechboy0)
