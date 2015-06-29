@@ -128,4 +128,21 @@ public class Repository: XcodeRead {
         self.readAccessExternalIds = json.arrayForKey("readAccessExternalIDs")
     }
     
+    /**
+    Method for returning object in form of Dictionary.
+    
+    - returns: Dictionary representing JSON value of Repository object.
+    */
+    public func dictionarify() -> NSMutableDictionary {
+        let dict = NSMutableDictionary()
+        
+        dict["name"] = self.name
+        dict["httpAccessType"] = self.httpAccess.rawValue
+        dict["posixPermissions"] = self.sshAccess.rawValue
+        dict["writeAccessExternalIDs"] = self.writeAccessExternalIds
+        dict["readAccessExternalIDs"] = self.readAccessExternalIds
+        
+        return dict
+    }
+    
 }

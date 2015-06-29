@@ -554,6 +554,46 @@ public extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for creating new repository on configured Xcode Server.
+    **HTTP status codes**:
+    - **200** - corrupted body JSON, repository wasn't created.
+    - **204** - repository was created.
+    - **409** - name of repository already exists.
+    
+    - parameter repository: Repository object.
+    - parameter repository: Optional object of created repository.
+    - parameter error:      Optional error.
+    */
+    public func createRepository(repository: Repository, completion: (repository: Repository?, error: NSError?) -> ()) {
+        let body = repository.dictionarify()
+        
+        self.sendRequestWithMethod(.POST, endpoint: .Repositories, params: nil, query: nil, body: body) { (response, body, error) -> () in
+            guard error != nil else {
+                completion(repository: nil, error: error)
+                return
+            }
+            
+            guard let response = response else {
+                completion(repository: nil, error: Error.withInfo("Nil response"))
+                return
+            }
+            
+            guard let repositoryBody = body where response.statusCode == 204 else {
+                if response.statusCode == 409 {
+                    completion(repository: nil, error: Error.withInfo("Repository with this name already exists"))
+                } else {
+                    completion(repository: nil, error: Error.withInfo("Wrong status code: \(response.statusCode)"))
+                }
+
+                return
+            }
+            
+            let repository = Repository(json: repositoryBody as! NSDictionary)
+            completion(repository: repository, error: nil)
+        }
+    }
+    
     //more advanced
     
     /**
