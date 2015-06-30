@@ -488,89 +488,39 @@ public extension XcodeServer {
         }
     }
     
-    /**
-    XCS API call for getting all repositories stored on Xcode Server.
-    
-    - parameter repositories: Optional array of repositories.
-    - parameter error:        Optional error
-    */
-    public func getRepositories(completion: (repositories: [Repository]?, error: NSError?) -> ()) {
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Repositories, params: nil, query: nil, body: nil) { (response, body, error) -> () in
-            guard error == nil else {
-                completion(repositories: nil, error: error)
-                return
-            }
-            
-            guard let repositoriesBody = (body as? NSDictionary)?["results"] as? NSArray else {
-                completion(repositories: nil, error: Error.withInfo("Wrong body \(body)"))
-                return
-            }
-            
-            let repos: [Repository] = XcodeServerArray(repositoriesBody)
-            completion(repositories: repos, error: nil)
-        }
-    }
-    
-    /**
-    Enum with response from creation of repository.
-    
-    - RepositoryAlreadyExists: Repository with this name already exists on OS X Server.
-    - NilResponse:             Self explanatory.
-    - CorruptedJSON:           JSON you've used to create repository.
-    - WrongStatusCode:         Something wrong with HHTP status.
-    - Error:                   There was an error during netwotk activity.
-    - Success:                 Repository was successfully created 🎉
-    */
-    public enum CreateRepositoryResponse {
-        case RepositoryAlreadyExists
-        case NilResponse
-        case CorruptedJSON
-        case WrongStatusCode(Int)
-        case Error(ErrorType)
-        case Success(Repository)
-    }
-    
-    /**
-    XCS API call for creating new repository on configured Xcode Server.
-    
-    - parameter repository: Repository object.
-    - parameter repository: Optional object of created repository.
-    - parameter error:      Optional error.
-    */
-    public func createRepository(repository: Repository, completion: (response: CreateRepositoryResponse) -> ()) {
-        let body = repository.dictionarify()
-        
-        self.sendRequestWithMethod(.POST, endpoint: .Repositories, params: nil, query: nil, body: body) { (response, body, error) -> () in
-            if let error = error {
-                completion(response: XcodeServer.CreateRepositoryResponse.Error(error))
-                return
-            }
-            
-            guard let response = response else {
-                completion(response: XcodeServer.CreateRepositoryResponse.NilResponse)
-                return
-            }
-            
-            guard let repositoryBody = body as? NSDictionary where response.statusCode == 204 else {
-                switch response.statusCode {
-                case 200:
-                    completion(response: XcodeServer.CreateRepositoryResponse.CorruptedJSON)
-                case 409:
-                    completion(response: XcodeServer.CreateRepositoryResponse.RepositoryAlreadyExists)
-                default:
-                    completion(response: XcodeServer.CreateRepositoryResponse.WrongStatusCode(response.statusCode))
-                }
-
-                return
-            }
-            
-            let repository = Repository(json: repositoryBody)
-            completion(response: XcodeServer.CreateRepositoryResponse.Success(repository))
-        }
-    }
-    
     //more advanced
+    
+    /**
+    Checks whether the current user has the rights to create bots and perform other similar "write" actions.
+    Xcode Server offers two tiers of users, ones for reading only ("viewers") and others for management.
+    Here we check the current user can manage XCS, which is useful for projects like Buildasaur.
+    
+    - parameter success:    Indicates if user can create bots.
+    - parameter error:      Error if something went wrong.
+    */
+    public final func verifyXCSUserCanCreateBots(completion: (success: Bool, error: NSError?) -> ()) {
+        
+        //the way we check availability is first by logging out (does nothing if not logged in) and then
+        //calling getUserCanCreateBots, which, if necessary, automatically authenticates with Basic auth before resolving to true or false in JSON.
+        
+        self.logout { (success, error) -> () in
+            
+            if let error = error {
+                completion(success: false, error: error)
+                return
+            }
+            
+            self.getUserCanCreateBots { (canCreateBots, error) -> () in
+                
+                if let error = error {
+                    completion(success: false, error: error)
+                    return
+                }
+                
+                completion(success: canCreateBots, error: nil)
+            }
+        }
+    }
     
     /**
     Verifies that the blueprint contains valid Git credentials and that the blueprint contains a valid
