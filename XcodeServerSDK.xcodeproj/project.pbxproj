@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11129E591B4361C60037B689 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 		11376BD31B3A2F910005A681 /* XcodeServerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 11376BD21B3A2F910005A681 /* XcodeServerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11376BD81B3A2FD90005A681 /* XcodeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48DC1B2A5ADE0077ABEA /* XcodeServer.swift */; };
 		11376BD91B3A2FD90005A681 /* XcodeServerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48DF1B2A5ADE0077ABEA /* XcodeServerEntity.swift */; };
@@ -761,7 +762,6 @@
 				11376BDE1B3A2FE30005A681 /* BotConfiguration.swift in Sources */,
 				11376BDF1B3A2FE30005A681 /* EmailConfiguration.swift in Sources */,
 				11376BE61B3A2FEB0005A681 /* CIServer.swift in Sources */,
-				70C2D8451B43273B008845FB /* XcodeServer+Auth.swift in Sources */,
 				11376BE71B3A2FEB0005A681 /* Errors.swift in Sources */,
 				11376BE81B3A2FEB0005A681 /* Server.swift in Sources */,
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
@@ -775,7 +775,6 @@
 				11376BD81B3A2FD90005A681 /* XcodeServer.swift in Sources */,
 				11376BD91B3A2FD90005A681 /* XcodeServerEntity.swift in Sources */,
 				11376BDA1B3A2FD90005A681 /* XcodeServerConfig.swift in Sources */,
-				70C2D84B1B432A55008845FB /* XcodeServer+Repository.swift in Sources */,
 				3A80C8091B3B639D0065C1C6 /* DeviceSpecification.swift in Sources */,
 				11376BDB1B3A2FD90005A681 /* XcodeServerEndpoints.swift in Sources */,
 				11376BDC1B3A2FD90005A681 /* XcodeServerFactory.swift in Sources */,
@@ -793,12 +792,12 @@
 				11FB71B11B34AF3300D57A52 /* Errors.swift in Sources */,
 				11FB71B21B34AF3300D57A52 /* Server.swift in Sources */,
 				11FB71B31B34AF3300D57A52 /* XcodeServerConstants.swift in Sources */,
+				11129E591B4361C60037B689 /* Repository.swift in Sources */,
 				11FB71A71B34AF2400D57A52 /* Bot.swift in Sources */,
 				70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */,
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
 				11FB71AA1B34AF2400D57A52 /* BotSchedule.swift in Sources */,
-				70E1413B1B409EA100AC98DB /* Repository.swift in Sources */,
 				3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				11FB71AB1B34AF2400D57A52 /* Trigger.swift in Sources */,
 				11FB71AC1B34AF2400D57A52 /* TriggerConditions.swift in Sources */,
@@ -808,7 +807,6 @@
 				11FB71A21B34AF1A00D57A52 /* XcodeServer.swift in Sources */,
 				11FB71A31B34AF1A00D57A52 /* XcodeServerEntity.swift in Sources */,
 				11FB71A41B34AF1A00D57A52 /* XcodeServerConfig.swift in Sources */,
-				70C2D84A1B432A55008845FB /* XcodeServer+Repository.swift in Sources */,
 				3A80C8071B3B62390065C1C6 /* ContainerExtensions.swift in Sources */,
 				11FB71A51B34AF1A00D57A52 /* XcodeServerEndpoints.swift in Sources */,
 				11FB71A61B34AF1A00D57A52 /* XcodeServerFactory.swift in Sources */,
