@@ -48,7 +48,7 @@ class RepositoryTests: XCTestCase {
         
         XCTAssertEqual(repo.name, "Test")
         XCTAssertEqual(repo.httpAccess, Repository.HTTPAccessType.None)
-        XCTAssertEqual(repo.sshAccess, Repository.SSHAccessType.SelectedReadWrite)
+        XCTAssertEqual(repo.sshAccess, Repository.SSHAccessType.LoggedInReadWrite)
         XCTAssertEqual(repo.writeAccessExternalIds, [])
         XCTAssertEqual(repo.readAccessExternalIds, [])
     }

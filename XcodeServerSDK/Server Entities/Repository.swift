@@ -60,7 +60,9 @@ public class Repository: XcodeRead {
     
     public let name: String
     public var httpAccess: HTTPAccessType = HTTPAccessType.None
-    public var sshAccess: SSHAccessType = SSHAccessType.SelectedReadWrite
+    // XCS's defualt if SelectedReadWrite but if you don't provide 
+    // array of IDs, nobody will have access to the repository
+    public var sshAccess: SSHAccessType = SSHAccessType.LoggedInReadWrite
     public var writeAccessExternalIds: [String] = []
     public var readAccessExternalIds: [String] = []
     

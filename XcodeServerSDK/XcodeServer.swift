@@ -580,35 +580,35 @@ public extension XcodeServer {
     - parameter repository: Optional object of created repository.
     - parameter error:      Optional error.
     */
-    public func createRepository(repository: Repository, completion: (repsponse: CreateRepositoryResponse) -> ()) {
+    public func createRepository(repository: Repository, completion: (response: CreateRepositoryResponse) -> ()) {
         let body = repository.dictionarify()
         
         self.sendRequestWithMethod(.POST, endpoint: .Repositories, params: nil, query: nil, body: body) { (response, body, error) -> () in
             if let error = error {
-                completion(repsponse: XcodeServer.CreateRepositoryResponse.Error(error))
+                completion(response: XcodeServer.CreateRepositoryResponse.Error(error))
                 return
             }
             
             guard let response = response else {
-                completion(repsponse: XcodeServer.CreateRepositoryResponse.NilResponse)
+                completion(response: XcodeServer.CreateRepositoryResponse.NilResponse)
                 return
             }
             
             guard let repositoryBody = body as? NSDictionary where response.statusCode == 204 else {
                 switch response.statusCode {
                 case 200:
-                    completion(repsponse: XcodeServer.CreateRepositoryResponse.CorruptedJSON)
+                    completion(response: XcodeServer.CreateRepositoryResponse.CorruptedJSON)
                 case 409:
-                    completion(repsponse: XcodeServer.CreateRepositoryResponse.RepositoryAlreadyExists)
+                    completion(response: XcodeServer.CreateRepositoryResponse.RepositoryAlreadyExists)
                 default:
-                    completion(repsponse: XcodeServer.CreateRepositoryResponse.WrongStatusCode(response.statusCode))
+                    completion(response: XcodeServer.CreateRepositoryResponse.WrongStatusCode(response.statusCode))
                 }
 
                 return
             }
             
             let repository = Repository(json: repositoryBody)
-            completion(repsponse: XcodeServer.CreateRepositoryResponse.Success(repository))
+            completion(response: XcodeServer.CreateRepositoryResponse.Success(repository))
         }
     }
     
