@@ -119,6 +119,8 @@
 		70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
 		70C2D8381B431BCE008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
+		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
+		70C2D8451B43273B008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70E1413A1B409EA000AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 		70E1413B1B409EA100AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 /* End PBXBuildFile section */
@@ -758,6 +760,7 @@
 				11376BDE1B3A2FE30005A681 /* BotConfiguration.swift in Sources */,
 				11376BDF1B3A2FE30005A681 /* EmailConfiguration.swift in Sources */,
 				11376BE61B3A2FEB0005A681 /* CIServer.swift in Sources */,
+				70C2D8451B43273B008845FB /* XcodeServer+Auth.swift in Sources */,
 				11376BE71B3A2FEB0005A681 /* Errors.swift in Sources */,
 				11376BE81B3A2FEB0005A681 /* Server.swift in Sources */,
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
@@ -789,6 +792,7 @@
 				11FB71B21B34AF3300D57A52 /* Server.swift in Sources */,
 				11FB71B31B34AF3300D57A52 /* XcodeServerConstants.swift in Sources */,
 				11FB71A71B34AF2400D57A52 /* Bot.swift in Sources */,
+				70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */,
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
 				11FB71AA1B34AF2400D57A52 /* BotSchedule.swift in Sources */,
