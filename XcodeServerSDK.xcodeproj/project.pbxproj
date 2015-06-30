@@ -120,12 +120,8 @@
 		70C2D8381B431BCE008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
-		70C2D8451B43273B008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
-		70C2D84A1B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
-		70C2D84B1B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
 		70E1413A1B409EA000AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
-		70E1413B1B409EA100AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
