@@ -1,5 +1,17 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta1...HEAD)
+
+**Merged pull requests:**
+
+- Move API routes to separate files [\#54](https://github.com/czechboy0/XcodeServerSDK/pull/54) ([cojoj](https://github.com/cojoj))
+
+- Too many badges [\#51](https://github.com/czechboy0/XcodeServerSDK/pull/51) ([KrauseFx](https://github.com/KrauseFx))
+
+- Add missing API calls: manage hosted repositories, get integrations [\#48](https://github.com/czechboy0/XcodeServerSDK/pull/48) ([cojoj](https://github.com/cojoj))
+
 ## [v0.1-beta1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1-beta1) (2015-06-28)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/0.0.4...v0.1-beta1)
