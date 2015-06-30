@@ -349,7 +349,7 @@ public extension XcodeServer {
         }
     }
     
-    public func getIntegrations(botId: String, query: [String: String], completion: (integrations: [Integration]?, error: NSError?) -> ()) {
+    public func getBotIntegrations(botId: String, query: [String: String], completion: (integrations: [Integration]?, error: NSError?) -> ()) {
         
         let params = [
             "bot": botId
@@ -398,6 +398,38 @@ public extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for retrievieng specified Integration.
+    
+    - parameter integrationId: ID of integration which is about to be retrieved.
+    - parameter completion:
+    - Optional retrieved integration.
+    - Optional operation error.
+    */
+    public func getIntegration(integrationId: String, completion: (integration: Integration?, error: NSError?) -> ()) {
+        
+        let params = [
+            "integration": integrationId
+        ]
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: params, query: nil, body: nil) {
+            (response, body, error) -> () in
+            
+            guard error == nil else {
+                completion(integration: nil, error: error)
+                return
+            }
+            
+            guard let integrationBody = body as? NSDictionary else {
+                completion(integration: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let integration = Integration(json: integrationBody)
+            completion(integration: integration, error: nil)
+        }
+    }
+    
     public func cancelIntegration(integrationId: String, completion: (success: Bool, error: NSError?) -> ()) {
         
         let params = [
@@ -412,6 +444,32 @@ public extension XcodeServer {
             }
             
             completion(success: true, error: nil)
+        }
+    }
+    
+    /**
+    XCS API call for retrievieng all available integrations on server.
+    
+    - parameter integrations:   Optional array of integrations.
+    - parameter error:          Optional error.
+    */
+    public func getIntegrations(completion: (integrations: [Integration]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: nil, query: nil, body: nil) {
+            (response, body, error) -> () in
+            
+            guard error == nil else {
+                completion(integrations: nil, error: error)
+                return
+            }
+            
+            guard let integrationsBody = (body as? NSDictionary)?["results"] as? NSArray else {
+                completion(integrations: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let integrations: [Integration] = XcodeServerArray(integrationsBody)
+            completion(integrations: integrations, error: nil)
         }
     }
     
@@ -469,6 +527,88 @@ public extension XcodeServer {
             } else {
                 completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
             }
+        }
+    }
+    
+    /**
+    XCS API call for getting all repositories stored on Xcode Server.
+    
+    - parameter repositories: Optional array of repositories.
+    - parameter error:        Optional error
+    */
+    public func getRepositories(completion: (repositories: [Repository]?, error: NSError?) -> ()) {
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Repositories, params: nil, query: nil, body: nil) { (response, body, error) -> () in
+            guard error == nil else {
+                completion(repositories: nil, error: error)
+                return
+            }
+            
+            guard let repositoriesBody = (body as? NSDictionary)?["results"] as? NSArray else {
+                completion(repositories: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let repos: [Repository] = XcodeServerArray(repositoriesBody)
+            completion(repositories: repos, error: nil)
+        }
+    }
+    
+    /**
+    Enum with response from creation of repository.
+    
+    - RepositoryAlreadyExists: Repository with this name already exists on OS X Server.
+    - NilResponse:             Self explanatory.
+    - CorruptedJSON:           JSON you've used to create repository.
+    - WrongStatusCode:         Something wrong with HHTP status.
+    - Error:                   There was an error during netwotk activity.
+    - Success:                 Repository was successfully created 🎉
+    */
+    public enum CreateRepositoryResponse {
+        case RepositoryAlreadyExists
+        case NilResponse
+        case CorruptedJSON
+        case WrongStatusCode(Int)
+        case Error(ErrorType)
+        case Success(Repository)
+    }
+    
+    /**
+    XCS API call for creating new repository on configured Xcode Server.
+    
+    - parameter repository: Repository object.
+    - parameter repository: Optional object of created repository.
+    - parameter error:      Optional error.
+    */
+    public func createRepository(repository: Repository, completion: (response: CreateRepositoryResponse) -> ()) {
+        let body = repository.dictionarify()
+        
+        self.sendRequestWithMethod(.POST, endpoint: .Repositories, params: nil, query: nil, body: body) { (response, body, error) -> () in
+            if let error = error {
+                completion(response: XcodeServer.CreateRepositoryResponse.Error(error))
+                return
+            }
+            
+            guard let response = response else {
+                completion(response: XcodeServer.CreateRepositoryResponse.NilResponse)
+                return
+            }
+            
+            guard let repositoryBody = body as? NSDictionary where response.statusCode == 204 else {
+                switch response.statusCode {
+                case 200:
+                    completion(response: XcodeServer.CreateRepositoryResponse.CorruptedJSON)
+                case 409:
+                    completion(response: XcodeServer.CreateRepositoryResponse.RepositoryAlreadyExists)
+                default:
+                    completion(response: XcodeServer.CreateRepositoryResponse.WrongStatusCode(response.statusCode))
+                }
+
+                return
+            }
+            
+            let repository = Repository(json: repositoryBody)
+            completion(response: XcodeServer.CreateRepositoryResponse.Success(repository))
         }
     }
     
