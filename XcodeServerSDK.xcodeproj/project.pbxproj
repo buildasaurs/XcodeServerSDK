@@ -366,15 +366,15 @@
 			children = (
 				3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */,
 				3A7B48DC1B2A5ADE0077ABEA /* XcodeServer.swift */,
-				70C2D8331B4319CB008845FB /* API Routes */,
-				3A7B48DF1B2A5ADE0077ABEA /* XcodeServerEntity.swift */,
 				707D08951B2C684C003900F3 /* XcodeServerConfig.swift */,
 				3A7B48DE1B2A5ADE0077ABEA /* XcodeServerEndpoints.swift */,
+				3A7B48DF1B2A5ADE0077ABEA /* XcodeServerEntity.swift */,
 				3A7B48E01B2A5ADE0077ABEA /* XcodeServerFactory.swift */,
+				70C2D8331B4319CB008845FB /* API Routes */,
 				707D089F1B2C6AA1003900F3 /* Server Entities */,
 				707D08A11B2C6BB8003900F3 /* Server Helpers */,
-				707D08A01B2C6B6B003900F3 /* Utils */,
 				3A7B48BD1B2A5AC40077ABEA /* Supporting Files */,
+				707D08A01B2C6B6B003900F3 /* Utils */,
 			);
 			path = XcodeServerSDK;
 			sourceTree = "<group>";
