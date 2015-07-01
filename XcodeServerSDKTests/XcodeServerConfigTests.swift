@@ -55,7 +55,7 @@ class XcodeServerConfigTests: XCTestCase {
     
     func testInvalidSchemeProvided() {
         XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidSchemeProvided("")) {
-            try XcodeServerConfig(host: "http://127.0.0.1", user:nil, password:nil)
+            try XcodeServerConfig(host: "http://127.0.0.1")
         }
     }
     
