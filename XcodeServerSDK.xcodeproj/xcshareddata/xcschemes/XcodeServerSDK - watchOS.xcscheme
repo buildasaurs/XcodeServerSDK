@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11376BCF1B3A2F910005A681"
                BuildableName = "XcodeServerSDK.framework"
-               BlueprintName = "XcodeServerSDK - &#xf8ff;&#x1d21;&#x1d00;&#x1d1b;&#x1d04;&#x29c;"
+               BlueprintName = "XcodeServerSDK - watchOS"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,19 +26,9 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11376BCF1B3A2F910005A681"
-            BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK - &#xf8ff;&#x1d21;&#x1d00;&#x1d1b;&#x1d04;&#x29c;"
-            ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -57,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11376BCF1B3A2F910005A681"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK - &#xf8ff;&#x1d21;&#x1d00;&#x1d1b;&#x1d04;&#x29c;"
+            BlueprintName = "XcodeServerSDK - watchOS"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11376BCF1B3A2F910005A681"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK - &#xf8ff;&#x1d21;&#x1d00;&#x1d1b;&#x1d04;&#x29c;"
+            BlueprintName = "XcodeServerSDK - watchOS"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

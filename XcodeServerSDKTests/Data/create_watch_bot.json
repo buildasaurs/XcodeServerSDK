@@ -9,7 +9,7 @@
 		"performsTestAction": false,
 		"triggers": [],
 		"performsAnalyzeAction": true,
-		"schemeName": "XcodeServerSDK - ᴡᴀᴛᴄʜ",
+		"schemeName": "XcodeServerSDK - watchOS",
 		"exportsProductFromArchive": true,
 		"testingDeviceIDs": [],
 		"deviceSpecification": {
