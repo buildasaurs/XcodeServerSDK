@@ -431,24 +431,6 @@ public extension XcodeServer {
         }
     }
     
-    public func getDevices(completion: (devices: [Device]?, error: NSError?) -> ()) {
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Devices, params: nil, query: nil, body: nil) { (response, body, error) -> () in
-            
-            if error != nil {
-                completion(devices: nil, error: error)
-                return
-            }
-            
-            if let array = (body as? NSDictionary)?["results"] as? NSArray {
-                let devices: [Device] = XcodeServerArray(array)
-                completion(devices: devices, error: error)
-            } else {
-                completion(devices: nil, error: Error.withInfo("Wrong body \(body)"))
-            }
-        }
-    }
-    
     public func getUserCanCreateBots(completion: (canCreateBots: Bool, error: NSError?) -> ()) {
         
         self.sendRequestWithMethod(.GET, endpoint: .UserCanCreateBots, params: nil, query: nil, body: nil) { (response, body, error) -> () in
@@ -466,24 +448,6 @@ public extension XcodeServer {
                 }
             } else {
                 completion(canCreateBots: false, error: Error.withInfo("Wrong body \(body)"))
-            }
-        }
-    }
-    
-    public func getPlatforms(completion: (platforms: [DevicePlatform]?, error: NSError?) -> ()) {
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Platforms, params: nil, query: nil, body: nil) { (response, body, error) -> () in
-            
-            if error != nil {
-                completion(platforms: nil, error: error)
-                return
-            }
-            
-            if let array = (body as? NSDictionary)?["results"] as? NSArray {
-                let platforms: [DevicePlatform] = XcodeServerArray(array)
-                completion(platforms: platforms, error: error)
-            } else {
-                completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
             }
         }
     }
