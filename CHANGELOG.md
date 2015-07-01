@@ -4,7 +4,23 @@
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta1...HEAD)
 
+**Closed issues:**
+
+- Use `final` to aid compiler optimizations [\#53](https://github.com/czechboy0/XcodeServerSDK/issues/53)
+
+- Testing public/internal/private methods [\#52](https://github.com/czechboy0/XcodeServerSDK/issues/52)
+
+- Move API calls to separate files [\#47](https://github.com/czechboy0/XcodeServerSDK/issues/47)
+
 **Merged pull requests:**
+
+- Extracting leftovers [\#58](https://github.com/czechboy0/XcodeServerSDK/pull/58) ([cojoj](https://github.com/cojoj))
+
+- Device and Platform API routes [\#57](https://github.com/czechboy0/XcodeServerSDK/pull/57) ([cojoj](https://github.com/cojoj))
+
+- Added missing `Repository.swift` to iOS target. [\#56](https://github.com/czechboy0/XcodeServerSDK/pull/56) ([esttorhe](https://github.com/esttorhe))
+
+- Repository API routes extension [\#55](https://github.com/czechboy0/XcodeServerSDK/pull/55) ([cojoj](https://github.com/cojoj))
 
 - Move API routes to separate files [\#54](https://github.com/czechboy0/XcodeServerSDK/pull/54) ([cojoj](https://github.com/cojoj))
 
