@@ -13,32 +13,29 @@ class XcodeServerConfigTests: XCTestCase {
 
     // MARK: Initialization testing
     func testManualInit() {
-        do {
+        XCTempAssertNoThrowError("Failed to initialize the server configuration") {
             let config = try XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
             
             XCTAssertEqual(config.host, "https://127.0.0.1", "Should create proper host address")
             XCTAssertEqual(config.user!, "ICanCreateBots")
             XCTAssertEqual(config.password!, "superSecr3t")
-        } catch {
-            XCTFail("Failed to initialize the server configuration: \(error)")
+            XCTAssertTrue(config.availabilityState == AvailabilityCheckState.Unchecked)
         }
     }
     
     func testDictionaryInit() {
-        let json = [
-            "host": "https://127.0.0.1",
-            "user": "ICanCreateBots",
-            "password": "superSecr3t"
-        ]
-        
-        do {
+        XCTempAssertNoThrowError("Failed to initialize the server configuration") {
+            let json = [
+                "host": "https://127.0.0.1",
+                "user": "ICanCreateBots",
+                "password": "superSecr3t"
+            ]
+            
             let config = try XcodeServerConfig(json: json)
             
             XCTAssertEqual(config!.host, "https://127.0.0.1", "Should create proper host address")
             XCTAssertEqual(config!.user!, "ICanCreateBots")
             XCTAssertEqual(config!.password!, "superSecr3t")
-        } catch {
-            XCTFail("Failed to initialize the server configuration: \(error)")
         }
     }
     
@@ -54,7 +51,7 @@ class XcodeServerConfigTests: XCTestCase {
     }
     
     func testInvalidSchemeProvided() {
-        XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidSchemeProvided("")) {
+        XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidSchemeProvided("Xcode Server generally uses https, please double check your hostname")) {
             try XcodeServerConfig(host: "http://127.0.0.1")
         }
     }
