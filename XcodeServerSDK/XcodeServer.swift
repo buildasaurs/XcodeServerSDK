@@ -105,7 +105,16 @@ public extension XcodeServer {
         return nil
     }
     
-    //API functionality
+    /**
+    Internal usage generic method for sending HTTP requests.
+    
+    - parameter method:     HTTP method.
+    - parameter endpoint:   API endpoint.
+    - parameter params:     URL paramaters.
+    - parameter query:      URL query.
+    - parameter body:       POST method request body.
+    - parameter completion: Completion.
+    */
     internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndPoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
         
         var allParams = [
@@ -155,11 +164,5 @@ public extension XcodeServer {
             completion(response: nil, body: nil, error: Error.withInfo("Couldn't create Request"))
         }
     }
-    
-    
-    //    public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
-    
-    //TODO: we need to call getIntegrations() -> filter pending and running Integrations -> get unique bots of these integrations -> query for the average integration time of each bot -> estimate, based on the pending/running integrations, how long it will take for the passed in integration to finish
-    //    }
     
 }

@@ -160,4 +160,10 @@ extension XcodeServer {
         }
     }
     
+    // TODO: Methods about to be implemented...
+    
+    // public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
+    
+    //TODO: we need to call getIntegrations() -> filter pending and running Integrations -> get unique bots of these integrations -> query for the average integration time of each bot -> estimate, based on the pending/running integrations, how long it will take for the passed in integration to finish
+    
 }
