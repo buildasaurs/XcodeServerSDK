@@ -312,14 +312,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11376BD11B3A2F910005A681 /* XcodeServerSDK - ᴡᴀᴛᴄʜ */ = {
+		11376BD11B3A2F910005A681 /* XcodeServerSDK - watchOS */ = {
 			isa = PBXGroup;
 			children = (
 				11376BD21B3A2F910005A681 /* XcodeServerSDK.h */,
 				11376BD41B3A2F910005A681 /* Info.plist */,
 			);
-			name = "XcodeServerSDK - ᴡᴀᴛᴄʜ";
-			path = "XcodeServerSDK/XcodeServerSDK - ᴡᴀᴛᴄʜ";
+			path = "XcodeServerSDK - watchOS";
 			sourceTree = "<group>";
 		};
 		3A058A911B31596E0077FD47 /* Data */ = {
@@ -342,7 +341,7 @@
 			children = (
 				3A7B48BC1B2A5AC40077ABEA /* XcodeServerSDK */,
 				3A7B48C91B2A5AC40077ABEA /* XcodeServerSDKTests */,
-				11376BD11B3A2F910005A681 /* XcodeServerSDK - ᴡᴀᴛᴄʜ */,
+				11376BD11B3A2F910005A681 /* XcodeServerSDK - watchOS */,
 				3AA922A21B3F460E005A0F73 /* Dependencies */,
 				70F463351B2B3EF800C3F963 /* Playgrounds */,
 				3A7B48BB1B2A5AC40077ABEA /* Products */,
@@ -534,9 +533,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		11376BCF1B3A2F910005A681 /* XcodeServerSDK - ᴡᴀᴛᴄʜ */ = {
+		11376BCF1B3A2F910005A681 /* XcodeServerSDK - watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11376BD71B3A2F910005A681 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - ᴡᴀᴛᴄʜ" */;
+			buildConfigurationList = 11376BD71B3A2F910005A681 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - watchOS" */;
 			buildPhases = (
 				11376BCB1B3A2F910005A681 /* Sources */,
 				11376BCC1B3A2F910005A681 /* Frameworks */,
@@ -547,7 +546,7 @@
 			);
 			dependencies = (
 			);
-			name = "XcodeServerSDK - ᴡᴀᴛᴄʜ";
+			name = "XcodeServerSDK - watchOS";
 			productName = XcodeServerSDK;
 			productReference = 11376BD01B3A2F910005A681 /* XcodeServerSDK.framework */;
 			productType = "com.apple.product-type.framework";
@@ -675,7 +674,7 @@
 				3A7B48C41B2A5AC40077ABEA /* XcodeServerSDK - OS X Tests */,
 				11FB71881B34AE7F00D57A52 /* XcodeServerSDK - iOS */,
 				11FB71911B34AE7F00D57A52 /* XcodeServerSDK - iOS Tests */,
-				11376BCF1B3A2F910005A681 /* XcodeServerSDK - ᴡᴀᴛᴄʜ */,
+				11376BCF1B3A2F910005A681 /* XcodeServerSDK - watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -951,7 +950,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "XcodeServerSDK/XcodeServerSDK - ᴡᴀᴛᴄʜ/Info.plist";
+				INFOPLIST_FILE = "XcodeServerSDK - watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honzadvorsky.XcodeServerSDK;
@@ -972,7 +971,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "XcodeServerSDK/XcodeServerSDK - ᴡᴀᴛᴄʜ/Info.plist";
+				INFOPLIST_FILE = "XcodeServerSDK - watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honzadvorsky.XcodeServerSDK;
@@ -1221,7 +1220,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11376BD71B3A2F910005A681 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - ᴡᴀᴛᴄʜ" */ = {
+		11376BD71B3A2F910005A681 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11376BD51B3A2F910005A681 /* Debug */,
