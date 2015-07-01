@@ -107,6 +107,12 @@
 		3AA922BA1B3F4666005A0F73 /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA922AC1B3F4630005A0F73 /* DVR.framework */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
+		7027067E1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
+		7027067F1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
+		702706801B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
+		702706851B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
+		702706861B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
+		702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
 		7045917F1B4074CC00BA226C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 		704591861B40945700BA226C /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
@@ -128,6 +134,9 @@
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
+		70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
+		70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
+		70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70E1413A1B409EA000AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +249,8 @@
 		3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_error.json; path = Data/scm_branches_response_error.json; sourceTree = "<group>"; };
 		3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DVR.xcodeproj; path = Carthage/Checkouts/DVR/DVR.xcodeproj; sourceTree = "<group>"; };
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
+		7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Bot.swift"; sourceTree = "<group>"; };
+		702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+SCM.swift"; sourceTree = "<group>"; };
 		7045917E1B4074CC00BA226C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		704591851B40945700BA226C /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
@@ -255,6 +266,7 @@
 		70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Platform.swift"; sourceTree = "<group>"; };
 		70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Auth.swift"; sourceTree = "<group>"; };
 		70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Repository.swift"; sourceTree = "<group>"; };
+		70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Integration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +489,9 @@
 				70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */,
 				70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */,
 				70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */,
+				70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */,
+				7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */,
+				702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */,
 			);
 			path = "API Routes";
 			sourceTree = "<group>";
@@ -776,7 +791,9 @@
 				11376BE81B3A2FEB0005A681 /* Server.swift in Sources */,
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
 				70B43A8F1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
+				702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
 				70E1413A1B409EA000AC98DB /* Repository.swift in Sources */,
+				70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11376BE01B3A2FE30005A681 /* BotSchedule.swift in Sources */,
 				11376BE11B3A2FE30005A681 /* Trigger.swift in Sources */,
 				11376BE21B3A2FE30005A681 /* TriggerConditions.swift in Sources */,
@@ -789,6 +806,7 @@
 				11376BDA1B3A2FD90005A681 /* XcodeServerConfig.swift in Sources */,
 				3A80C8091B3B639D0065C1C6 /* DeviceSpecification.swift in Sources */,
 				11376BDB1B3A2FD90005A681 /* XcodeServerEndpoints.swift in Sources */,
+				702706801B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
 				11376BDC1B3A2FD90005A681 /* XcodeServerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,14 +817,17 @@
 			files = (
 				11FB71B41B34AF3900D57A52 /* HTTPUtils.swift in Sources */,
 				11FB71B51B34AF3900D57A52 /* JSON.swift in Sources */,
+				7027067F1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
 				11FB71B61B34AF3900D57A52 /* Logging.swift in Sources */,
 				11FB71B01B34AF3300D57A52 /* CIServer.swift in Sources */,
 				11FB71B11B34AF3300D57A52 /* Errors.swift in Sources */,
+				70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11FB71B21B34AF3300D57A52 /* Server.swift in Sources */,
 				11FB71B31B34AF3300D57A52 /* XcodeServerConstants.swift in Sources */,
 				11129E591B4361C60037B689 /* Repository.swift in Sources */,
 				11FB71A71B34AF2400D57A52 /* Bot.swift in Sources */,
 				70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */,
+				702706861B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
 				70B43A8E1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
@@ -856,6 +877,7 @@
 				3A7B48E81B2A5ADE0077ABEA /* XcodeServerConstants.swift in Sources */,
 				70C2D8381B431BCE008845FB /* XcodeServer+Auth.swift in Sources */,
 				707D089C1B2C69C4003900F3 /* Trigger.swift in Sources */,
+				7027067E1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
 				3A7B48E21B2A5ADE0077ABEA /* BotConfiguration.swift in Sources */,
 				3A7B48EA1B2A5ADE0077ABEA /* XcodeServerEntity.swift in Sources */,
 				7045917F1B4074CC00BA226C /* Repository.swift in Sources */,
@@ -864,10 +886,12 @@
 				70B43A8D1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				3A7B48EB1B2A5ADE0077ABEA /* XcodeServerFactory.swift in Sources */,
 				707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */,
+				702706851B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
 				3A7B48E11B2A5ADE0077ABEA /* Bot.swift in Sources */,
 				3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */,
 				3A7B48ED1B2A5B3C0077ABEA /* Server.swift in Sources */,
 				707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */,
+				70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				70B43A861B43C95A004F9DEB /* XcodeServer+Device.swift in Sources */,
 				3A7B48E41B2A5ADE0077ABEA /* Device.swift in Sources */,
 				70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */,
