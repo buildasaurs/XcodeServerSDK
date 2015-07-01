@@ -156,61 +156,6 @@ public extension XcodeServer {
         }
     }
     
-    public func getUserCanCreateBots(completion: (canCreateBots: Bool, error: NSError?) -> ()) {
-        
-        self.sendRequestWithMethod(.GET, endpoint: .UserCanCreateBots, params: nil, query: nil, body: nil) { (response, body, error) -> () in
-            
-            if let error = error {
-                completion(canCreateBots: false, error: error)
-                return
-            }
-            
-            if let body = body as? NSDictionary {
-                if let canCreateBots = body["result"] as? Bool where canCreateBots == true {
-                    completion(canCreateBots: true, error: nil)
-                } else {
-                    completion(canCreateBots: false, error: Error.withInfo("Specified user cannot create bots"))
-                }
-            } else {
-                completion(canCreateBots: false, error: Error.withInfo("Wrong body \(body)"))
-            }
-        }
-    }
-    
-    //more advanced
-    
-    /**
-    Checks whether the current user has the rights to create bots and perform other similar "write" actions.
-    Xcode Server offers two tiers of users, ones for reading only ("viewers") and others for management.
-    Here we check the current user can manage XCS, which is useful for projects like Buildasaur.
-    
-    - parameter success:    Indicates if user can create bots.
-    - parameter error:      Error if something went wrong.
-    */
-    public final func verifyXCSUserCanCreateBots(completion: (success: Bool, error: NSError?) -> ()) {
-        
-        //the way we check availability is first by logging out (does nothing if not logged in) and then
-        //calling getUserCanCreateBots, which, if necessary, automatically authenticates with Basic auth before resolving to true or false in JSON.
-        
-        self.logout { (success, error) -> () in
-            
-            if let error = error {
-                completion(success: false, error: error)
-                return
-            }
-            
-            self.getUserCanCreateBots { (canCreateBots, error) -> () in
-                
-                if let error = error {
-                    completion(success: false, error: error)
-                    return
-                }
-                
-                completion(success: canCreateBots, error: nil)
-            }
-        }
-    }
-    
     /**
     Verifies that the blueprint contains valid Git credentials and that the blueprint contains a valid
     server certificate fingerprint for client <-> XCS communication.
