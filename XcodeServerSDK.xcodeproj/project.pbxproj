@@ -128,6 +128,9 @@
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
+		70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
+		70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
+		70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70E1413A1B409EA000AC98DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +258,7 @@
 		70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Platform.swift"; sourceTree = "<group>"; };
 		70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Auth.swift"; sourceTree = "<group>"; };
 		70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Repository.swift"; sourceTree = "<group>"; };
+		70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Integration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +481,7 @@
 				70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */,
 				70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */,
 				70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */,
+				70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */,
 			);
 			path = "API Routes";
 			sourceTree = "<group>";
@@ -777,6 +782,7 @@
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
 				70B43A8F1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				70E1413A1B409EA000AC98DB /* Repository.swift in Sources */,
+				70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11376BE01B3A2FE30005A681 /* BotSchedule.swift in Sources */,
 				11376BE11B3A2FE30005A681 /* Trigger.swift in Sources */,
 				11376BE21B3A2FE30005A681 /* TriggerConditions.swift in Sources */,
@@ -802,6 +808,7 @@
 				11FB71B61B34AF3900D57A52 /* Logging.swift in Sources */,
 				11FB71B01B34AF3300D57A52 /* CIServer.swift in Sources */,
 				11FB71B11B34AF3300D57A52 /* Errors.swift in Sources */,
+				70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11FB71B21B34AF3300D57A52 /* Server.swift in Sources */,
 				11FB71B31B34AF3300D57A52 /* XcodeServerConstants.swift in Sources */,
 				11129E591B4361C60037B689 /* Repository.swift in Sources */,
@@ -868,6 +875,7 @@
 				3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */,
 				3A7B48ED1B2A5B3C0077ABEA /* Server.swift in Sources */,
 				707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */,
+				70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				70B43A861B43C95A004F9DEB /* XcodeServer+Device.swift in Sources */,
 				3A7B48E41B2A5ADE0077ABEA /* Device.swift in Sources */,
 				70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */,

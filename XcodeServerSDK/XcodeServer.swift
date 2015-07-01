@@ -307,28 +307,6 @@ public extension XcodeServer {
         }
     }
     
-    public func getBotIntegrations(botId: String, query: [String: String], completion: (integrations: [Integration]?, error: NSError?) -> ()) {
-        
-        let params = [
-            "bot": botId
-        ]
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: params, query: query, body: nil) { (response, body, error) -> () in
-            
-            if error != nil {
-                completion(integrations: nil, error: error)
-                return
-            }
-            
-            if let body = (body as? NSDictionary)?["results"] as? NSArray {
-                let integrations: [Integration] = XcodeServerArray(body)
-                completion(integrations: integrations, error: nil)
-            } else {
-                completion(integrations: nil, error: Error.withInfo("Wrong body \(body)"))
-            }
-        }
-    }
-    
     /**
     AKA "Integrate this bot now"
     
@@ -353,81 +331,6 @@ public extension XcodeServer {
             } else {
                 completion(integration: nil, error: Error.withInfo("Wrong body \(body)"))
             }
-        }
-    }
-    
-    /**
-    XCS API call for retrievieng specified Integration.
-    
-    - parameter integrationId: ID of integration which is about to be retrieved.
-    - parameter completion:
-    - Optional retrieved integration.
-    - Optional operation error.
-    */
-    public func getIntegration(integrationId: String, completion: (integration: Integration?, error: NSError?) -> ()) {
-        
-        let params = [
-            "integration": integrationId
-        ]
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: params, query: nil, body: nil) {
-            (response, body, error) -> () in
-            
-            guard error == nil else {
-                completion(integration: nil, error: error)
-                return
-            }
-            
-            guard let integrationBody = body as? NSDictionary else {
-                completion(integration: nil, error: Error.withInfo("Wrong body \(body)"))
-                return
-            }
-            
-            let integration = Integration(json: integrationBody)
-            completion(integration: integration, error: nil)
-        }
-    }
-    
-    public func cancelIntegration(integrationId: String, completion: (success: Bool, error: NSError?) -> ()) {
-        
-        let params = [
-            "integration": integrationId
-        ]
-        
-        self.sendRequestWithMethod(.POST, endpoint: .CancelIntegration, params: params, query: nil, body: nil) { (response, body, error) -> () in
-            
-            if error != nil {
-                completion(success: false, error: error)
-                return
-            }
-            
-            completion(success: true, error: nil)
-        }
-    }
-    
-    /**
-    XCS API call for retrievieng all available integrations on server.
-    
-    - parameter integrations:   Optional array of integrations.
-    - parameter error:          Optional error.
-    */
-    public func getIntegrations(completion: (integrations: [Integration]?, error: NSError?) -> ()) {
-        
-        self.sendRequestWithMethod(.GET, endpoint: .Integrations, params: nil, query: nil, body: nil) {
-            (response, body, error) -> () in
-            
-            guard error == nil else {
-                completion(integrations: nil, error: error)
-                return
-            }
-            
-            guard let integrationsBody = (body as? NSDictionary)?["results"] as? NSArray else {
-                completion(integrations: nil, error: Error.withInfo("Wrong body \(body)"))
-                return
-            }
-            
-            let integrations: [Integration] = XcodeServerArray(integrationsBody)
-            completion(integrations: integrations, error: nil)
         }
     }
     
