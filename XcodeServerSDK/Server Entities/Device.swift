@@ -15,6 +15,7 @@ public class Device : XcodeServerEntity {
     public let osVersion: String
     public let deviceType: String
     public let connected: Bool
+    public let platform: DevicePlatform.PlatformType
     
     public required init(json: NSDictionary) {
         
@@ -23,6 +24,7 @@ public class Device : XcodeServerEntity {
         self.osVersion = json.stringForKey("osVersion")
         self.deviceType = json.stringForKey("deviceType")
         self.connected = json.boolForKey("connected")
+        self.platform = DevicePlatform.PlatformType(rawValue: json.stringForKey("platformIdentifier")) ?? .Unknown
         
         super.init(json: json)
     }
