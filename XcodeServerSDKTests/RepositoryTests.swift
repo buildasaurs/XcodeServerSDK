@@ -79,5 +79,35 @@ class RepositoryTests: XCTestCase {
         sshEnum = .LoggedInReadWrite
         XCTAssertEqual(sshEnum.toString(), "All logged in users can read and write")
     }
+    
+    // MARK: API Routes tests
+    func testGetRepositories() {
+        let expectation = self.expectationWithDescription("Get Repositories")
+        let server = self.getRecordingXcodeServer("get_repositories")
+        
+        server.getRepositories() { (repositories, error) in
+            XCTAssertNil(error, "Error should be nil")
+            XCTAssertNotNil(repositories, "Repositories shouldn't be nil")
+            
+            if let repos = repositories {
+                XCTAssertEqual(repos.count, 2, "There should be two repositories available")
+                
+                for (index, repo) in repos.enumerate() {
+                    XCTAssertEqual(repo.name, "Test\(index + 1)")
+                }
+                
+                XCTAssertEqual(repos[0].sshAccess, Repository.SSHAccessType.LoggedInReadWrite)
+                XCTAssertEqual(repos[1].writeAccessExternalIds, [ "ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050", "D024C308-CEBE-4E72-BE40-E1E4115F38F9" ])
+            }
+            
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(10) { error in
+            if let error = error {
+                print("Timeout error: \(error.localizedDescription)")
+            }
+        }
+    }
 
 }

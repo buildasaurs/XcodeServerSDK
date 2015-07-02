@@ -115,6 +115,8 @@
 		702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
 		7045917F1B4074CC00BA226C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 		704591861B40945700BA226C /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
+		704B5FC41B455EE400989E4B /* get_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 704B5FC31B455EE400989E4B /* get_repositories.json */; };
+		704B5FC51B455EE400989E4B /* get_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 704B5FC31B455EE400989E4B /* get_repositories.json */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08951B2C684C003900F3 /* XcodeServerConfig.swift */; };
 		707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08971B2C6954003900F3 /* EmailConfiguration.swift */; };
@@ -253,6 +255,7 @@
 		702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+SCM.swift"; sourceTree = "<group>"; };
 		7045917E1B4074CC00BA226C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		704591851B40945700BA226C /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		704B5FC31B455EE400989E4B /* get_repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_repositories.json; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
 		707D08951B2C684C003900F3 /* XcodeServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfig.swift; sourceTree = "<group>"; };
 		707D08971B2C6954003900F3 /* EmailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfiguration.swift; sourceTree = "<group>"; };
@@ -436,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
+				704B5FC31B455EE400989E4B /* get_repositories.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -736,6 +740,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704B5FC51B455EE400989E4B /* get_repositories.json in Resources */,
 				3A13F30C1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853AA1B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A31B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -759,6 +764,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704B5FC41B455EE400989E4B /* get_repositories.json in Resources */,
 				3A13F30B1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853A91B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */,
