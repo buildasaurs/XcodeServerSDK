@@ -87,6 +87,19 @@ public class DeviceFilter : XcodeServerEntity {
         case AllDevices = 1
         case AllSimulators = 2
         case SelectedDevicesAndSimulators = 3
+        
+        public func toString() -> String {
+            switch self {
+            case .AllAvailableDevicesAndSimulators:
+                return "All Available Devices and Simulators"
+            case .AllDevices:
+                return "All Devices"
+            case .AllSimulators:
+                return "All Simulators"
+            case .SelectedDevicesAndSimulators:
+                return "Selected Devices and Simulators"
+            }
+        }
     }
     
     public let filterType: FilterType
