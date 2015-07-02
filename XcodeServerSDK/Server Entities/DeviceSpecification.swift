@@ -100,6 +100,25 @@ public class DeviceFilter : XcodeServerEntity {
                 return "Selected Devices and Simulators"
             }
         }
+        
+        public static func availableFiltersForPlatform(platformType: DevicePlatform.PlatformType) -> [FilterType] {
+            
+            switch platformType {
+            case .iOS:
+                return [
+                    .AllAvailableDevicesAndSimulators,
+                    .AllDevices,
+                    .AllSimulators,
+                    .SelectedDevicesAndSimulators
+                ]
+            case .OSX, .watchOS:
+                return [
+                    .AllAvailableDevicesAndSimulators
+                ]
+            default:
+                return []
+            }
+        }
     }
     
     public let filterType: FilterType
