@@ -108,6 +108,16 @@ public class DeviceFilter : XcodeServerEntity {
         case Unknown = -1
         case iOS_Like = 0 //also watchOS
         case OSX_Like = 1
+        
+        static func architectureFromPlatformType(platformType: DevicePlatform.PlatformType) -> ArchitectureType {
+            
+            switch platformType {
+            case .iOS, .watchOS, .Unknown:
+                return .iOS_Like
+            case .OSX:
+                return .OSX_Like
+            }
+        }
     }
     
     public let architectureType: ArchitectureType //TODO: ditto, find out more.
