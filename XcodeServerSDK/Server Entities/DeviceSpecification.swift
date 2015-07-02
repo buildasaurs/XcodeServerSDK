@@ -10,8 +10,8 @@ import Foundation
 
 public class DevicePlatform : XcodeServerEntity {
     
-    let displayName: String
-    let version: String
+    public let displayName: String
+    public let version: String
     
     public enum PlatformType: String {
         case Unknown = "unknown"
@@ -25,8 +25,8 @@ public class DevicePlatform : XcodeServerEntity {
         case Watch = "com.apple.platform.watchsimulator"
     }
     
-    let type: PlatformType
-    let simulatorType: SimulatorType?
+    public let type: PlatformType
+    public let simulatorType: SimulatorType?
     
     public required init(json: NSDictionary) {
         
@@ -80,7 +80,7 @@ public class DevicePlatform : XcodeServerEntity {
 
 public class DeviceFilter : XcodeServerEntity {
     
-    var platform: DevicePlatform
+    public var platform: DevicePlatform
     
     public enum FilterType: Int {
         case AllAvailableDevicesAndSimulators = 0
@@ -89,7 +89,7 @@ public class DeviceFilter : XcodeServerEntity {
         case SelectedDevicesAndSimulators = 3
     }
     
-    let filterType: FilterType
+    public let filterType: FilterType
     
     public enum ArchitectureType: Int {
         case Unknown = -1
@@ -97,7 +97,7 @@ public class DeviceFilter : XcodeServerEntity {
         case OSX_Like = 1
     }
     
-    let architectureType: ArchitectureType //TODO: ditto, find out more.
+    public let architectureType: ArchitectureType //TODO: ditto, find out more.
     
     public required init(json: NSDictionary) {
         
