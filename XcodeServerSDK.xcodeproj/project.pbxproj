@@ -125,6 +125,8 @@
 		707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */; };
 		709ED67C1B35FD3F00A06038 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
 		709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
+		70A4448F1B457ACC00C86EF8 /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
+		70A444931B457ACD00C86EF8 /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
 		70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
 		70B43A861B43C95A004F9DEB /* XcodeServer+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */; };
 		70B43A871B43C95A004F9DEB /* XcodeServer+Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */; };
@@ -810,6 +812,7 @@
 				11376BD91B3A2FD90005A681 /* XcodeServerEntity.swift in Sources */,
 				11376BDA1B3A2FD90005A681 /* XcodeServerConfig.swift in Sources */,
 				3A80C8091B3B639D0065C1C6 /* DeviceSpecification.swift in Sources */,
+				70A444931B457ACD00C86EF8 /* XcodeServer+Repository.swift in Sources */,
 				11376BDB1B3A2FD90005A681 /* XcodeServerEndpoints.swift in Sources */,
 				702706801B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
 				11376BDC1B3A2FD90005A681 /* XcodeServerFactory.swift in Sources */,
@@ -835,6 +838,7 @@
 				702706861B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
+				70A4448F1B457ACC00C86EF8 /* XcodeServer+Repository.swift in Sources */,
 				70B43A8E1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				11FB71AA1B34AF2400D57A52 /* BotSchedule.swift in Sources */,
 				3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
