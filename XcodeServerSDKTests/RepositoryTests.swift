@@ -92,22 +92,21 @@ class RepositoryTests: XCTestCase {
             if let repos = repositories {
                 XCTAssertEqual(repos.count, 2, "There should be two repositories available")
                 
-                for (index, repo) in repos.enumerate() {
-                    XCTAssertEqual(repo.name, "Test\(index + 1)")
-                }
+                let reposNames = Set(repos.map { $0.name })
+                let reposSSHAccess = Set(repos.map { $0.sshAccess.rawValue })
+                let writeAccessExternalIDs = Set(repos.flatMap { $0.writeAccessExternalIds })
                 
-                XCTAssertEqual(repos[0].sshAccess, Repository.SSHAccessType.LoggedInReadWrite)
-                XCTAssertEqual(repos[1].writeAccessExternalIds, [ "ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050", "D024C308-CEBE-4E72-BE40-E1E4115F38F9" ])
+                for (index, _) in repos.enumerate() {
+                    XCTAssertTrue(reposNames.contains("Test\(index + 1)"))
+                    XCTAssertTrue(reposSSHAccess.elementsEqual(Set([2, 0])))
+                    XCTAssertTrue(writeAccessExternalIDs.elementsEqual(Set([ "ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050", "D024C308-CEBE-4E72-BE40-E1E4115F38F9" ])))
+                }
             }
             
             expectation.fulfill()
         }
         
-        self.waitForExpectationsWithTimeout(10) { error in
-            if let error = error {
-                print("Timeout error: \(error.localizedDescription)")
-            }
-        }
+        self.waitForExpectationsWithTimeout(10.0, handler: nil)
     }
 
 }
