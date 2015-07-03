@@ -79,5 +79,34 @@ class RepositoryTests: XCTestCase {
         sshEnum = .LoggedInReadWrite
         XCTAssertEqual(sshEnum.toString(), "All logged in users can read and write")
     }
+    
+    // MARK: API Routes tests
+    func testGetRepositories() {
+        let expectation = self.expectationWithDescription("Get Repositories")
+        let server = self.getRecordingXcodeServer("get_repositories")
+        
+        server.getRepositories() { (repositories, error) in
+            XCTAssertNil(error, "Error should be nil")
+            XCTAssertNotNil(repositories, "Repositories shouldn't be nil")
+            
+            if let repos = repositories {
+                XCTAssertEqual(repos.count, 2, "There should be two repositories available")
+                
+                let reposNames = Set(repos.map { $0.name })
+                let reposSSHAccess = Set(repos.map { $0.sshAccess.rawValue })
+                let writeAccessExternalIDs = Set(repos.flatMap { $0.writeAccessExternalIds })
+                
+                for (index, _) in repos.enumerate() {
+                    XCTAssertTrue(reposNames.contains("Test\(index + 1)"))
+                    XCTAssertTrue(reposSSHAccess.elementsEqual(Set([2, 0])))
+                    XCTAssertTrue(writeAccessExternalIDs.elementsEqual(Set([ "ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050", "D024C308-CEBE-4E72-BE40-E1E4115F38F9" ])))
+                }
+            }
+            
+            expectation.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(10.0, handler: nil)
+    }
 
 }
