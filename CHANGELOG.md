@@ -2,7 +2,33 @@
 
 ## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta1...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta3...HEAD)
+
+**Merged pull requests:**
+
+- reinstated previously disabled tests due to the Xcode 7 refactoring [\#64](https://github.com/czechboy0/XcodeServerSDK/pull/64) ([czechboy0](https://github.com/czechboy0))
+
+- Add test for fetching repositories [\#63](https://github.com/czechboy0/XcodeServerSDK/pull/63) ([cojoj](https://github.com/cojoj))
+
+## [v0.1-beta3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1-beta3) (2015-07-02)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta2...v0.1-beta3)
+
+**Closed issues:**
+
+- CocoaPods now supports ᴡᴀᴛᴄʜ  [\#60](https://github.com/czechboy0/XcodeServerSDK/issues/60)
+
+**Merged pull requests:**
+
+- Changed status of `CocoaPods` support for ᴡᴀᴛᴄʜ [\#62](https://github.com/czechboy0/XcodeServerSDK/pull/62) ([esttorhe](https://github.com/esttorhe))
+
+- Back to ascii watch [\#61](https://github.com/czechboy0/XcodeServerSDK/pull/61) ([czechboy0](https://github.com/czechboy0))
+
+- Tests/some cleanup [\#59](https://github.com/czechboy0/XcodeServerSDK/pull/59) ([esttorhe](https://github.com/esttorhe))
+
+## [v0.1-beta2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1-beta2) (2015-07-01)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta1...v0.1-beta2)
 
 **Closed issues:**
 
