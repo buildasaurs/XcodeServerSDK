@@ -113,6 +113,8 @@
 		702706851B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
 		702706861B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
 		702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */; };
+		703FED511B53AD1B00943876 /* DevicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703FED501B53AD1B00943876 /* DevicesTests.swift */; };
+		703FED521B53AD1B00943876 /* DevicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703FED501B53AD1B00943876 /* DevicesTests.swift */; };
 		7045917F1B4074CC00BA226C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045917E1B4074CC00BA226C /* Repository.swift */; };
 		704591861B40945700BA226C /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		704B5FC41B455EE400989E4B /* get_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 704B5FC31B455EE400989E4B /* get_repositories.json */; };
@@ -123,6 +125,8 @@
 		707D089A1B2C6986003900F3 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08991B2C6986003900F3 /* BotSchedule.swift */; };
 		707D089C1B2C69C4003900F3 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089B1B2C69C4003900F3 /* Trigger.swift */; };
 		707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */; };
+		7089CBB21B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
+		7089CBB31B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
 		709ED67C1B35FD3F00A06038 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
 		709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
 		70A4448F1B457ACC00C86EF8 /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
@@ -255,6 +259,7 @@
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
 		7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Bot.swift"; sourceTree = "<group>"; };
 		702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+SCM.swift"; sourceTree = "<group>"; };
+		703FED501B53AD1B00943876 /* DevicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesTests.swift; sourceTree = "<group>"; };
 		7045917E1B4074CC00BA226C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		704591851B40945700BA226C /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		704B5FC31B455EE400989E4B /* get_repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_repositories.json; sourceTree = "<group>"; };
@@ -264,6 +269,7 @@
 		707D08991B2C6986003900F3 /* BotSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
 		707D089B1B2C69C4003900F3 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerConditions.swift; sourceTree = "<group>"; };
+		7089CBB11B53BD06006C9EC5 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerEntityTests.swift; sourceTree = "<group>"; };
 		709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfigTests.swift; sourceTree = "<group>"; };
 		70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotConfigurationTests.swift; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 				3A058A921B315BB50077FD47 /* TestUtils.swift */,
 				705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */,
 				70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */,
+				703FED501B53AD1B00943876 /* DevicesTests.swift */,
 				704591851B40945700BA226C /* RepositoryTests.swift */,
 				3A7B48CA1B2A5AC40077ABEA /* Supporting Files */,
 			);
@@ -442,6 +449,7 @@
 			children = (
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
+				7089CBB11B53BD06006C9EC5 /* get_devices.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -750,6 +758,7 @@
 				3A3853AC1B40046E00B7F842 /* create_watch_bot.json in Resources */,
 				3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */,
+				7089CBB31B53BD06006C9EC5 /* get_devices.json in Resources */,
 				3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
@@ -774,6 +783,7 @@
 				3A3853AB1B40046E00B7F842 /* create_watch_bot.json in Resources */,
 				3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */,
+				7089CBB21B53BD06006C9EC5 /* get_devices.json in Resources */,
 				3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
@@ -867,6 +877,7 @@
 				3A06D5FD1B3C184400F0A6C5 /* XcodeServerEntityTests.swift in Sources */,
 				70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */,
 				11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */,
+				703FED521B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */,
 				3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */,
 			);
@@ -920,6 +931,7 @@
 				704591861B40945700BA226C /* RepositoryTests.swift in Sources */,
 				3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */,
 				3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */,
+				703FED511B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */,
 				70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */,
 			);
