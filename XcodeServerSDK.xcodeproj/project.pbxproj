@@ -127,6 +127,10 @@
 		707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */; };
 		7089CBB21B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
 		7089CBB31B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
+		7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
+		7089CBB91B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
+		7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */; };
+		7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */; };
 		709ED67C1B35FD3F00A06038 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
 		709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */; };
 		70A4448F1B457ACC00C86EF8 /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
@@ -270,6 +274,8 @@
 		707D089B1B2C69C4003900F3 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerConditions.swift; sourceTree = "<group>"; };
 		7089CBB11B53BD06006C9EC5 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
+		7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
+		7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_platforms.json; sourceTree = "<group>"; };
 		709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerEntityTests.swift; sourceTree = "<group>"; };
 		709ED67F1B3608FC00A06038 /* XcodeServerConfigTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfigTests.swift; sourceTree = "<group>"; };
 		70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotConfigurationTests.swift; sourceTree = "<group>"; };
@@ -411,6 +417,7 @@
 				70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */,
 				703FED501B53AD1B00943876 /* DevicesTests.swift */,
 				704591851B40945700BA226C /* RepositoryTests.swift */,
+				7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */,
 				3A7B48CA1B2A5AC40077ABEA /* Supporting Files */,
 			);
 			path = XcodeServerSDKTests;
@@ -450,6 +457,7 @@
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
 				7089CBB11B53BD06006C9EC5 /* get_devices.json */,
+				7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -751,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC51B455EE400989E4B /* get_repositories.json in Resources */,
+				7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				3A13F30C1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853AA1B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A31B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -776,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC41B455EE400989E4B /* get_repositories.json in Resources */,
+				7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				3A13F30B1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853A91B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -879,6 +889,7 @@
 				11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */,
 				703FED521B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */,
+				7089CBB91B53DC9D006C9EC5 /* PlatformTests.swift in Sources */,
 				3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -933,6 +944,7 @@
 				3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */,
 				703FED511B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */,
+				7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */,
 				70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
