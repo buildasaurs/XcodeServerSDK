@@ -19,7 +19,6 @@ public class Device : XcodeServerEntity {
     public let deviceECID: String?
     public let modelUTI: String
     public let activeProxiedDevice: Device?
-    public let docType: String
     public let trusted: Bool
     public let name: String
     public let supported: Bool
@@ -47,7 +46,6 @@ public class Device : XcodeServerEntity {
         } else {
             self.activeProxiedDevice = nil
         }
-        self.docType = json.stringForKey("doc_type")
         self.trusted = json.boolForKey("trusted")
         self.name = json.stringForKey("name")
         self.supported = json.boolForKey("supported")
