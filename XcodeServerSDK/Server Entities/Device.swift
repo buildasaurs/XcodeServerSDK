@@ -41,7 +41,7 @@ public class Device : XcodeServerEntity {
         self.modelName = json.stringForKey("modelName")
         self.deviceECID = json.optionalStringForKey("deviceECID")
         self.modelUTI = json.stringForKey("modelUTI")
-        if let proxyDevice: NSDictionary = json.optionalForKey("activeProxiedDevice") {
+        if let proxyDevice = json.optionalDictionaryForKey("activeProxiedDevice") {
             self.activeProxiedDevice = Device(json: proxyDevice)
         } else {
             self.activeProxiedDevice = nil
