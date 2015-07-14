@@ -107,6 +107,8 @@
 		3AA922BA1B3F4666005A0F73 /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA922AC1B3F4630005A0F73 /* DVR.framework */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
+		700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
+		700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		7027067E1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
 		7027067F1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
 		702706801B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
@@ -125,8 +127,6 @@
 		707D089A1B2C6986003900F3 /* BotSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D08991B2C6986003900F3 /* BotSchedule.swift */; };
 		707D089C1B2C69C4003900F3 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089B1B2C69C4003900F3 /* Trigger.swift */; };
 		707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */; };
-		7089CBB21B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
-		7089CBB31B53BD06006C9EC5 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBB11B53BD06006C9EC5 /* get_devices.json */; };
 		7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
 		7089CBB91B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
 		7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */; };
@@ -261,6 +261,7 @@
 		3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_error.json; path = Data/scm_branches_response_error.json; sourceTree = "<group>"; };
 		3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DVR.xcodeproj; path = Carthage/Checkouts/DVR/DVR.xcodeproj; sourceTree = "<group>"; };
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
+		700C93551B54F58A00B3C6E6 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Bot.swift"; sourceTree = "<group>"; };
 		702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+SCM.swift"; sourceTree = "<group>"; };
 		703FED501B53AD1B00943876 /* DevicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesTests.swift; sourceTree = "<group>"; };
@@ -273,7 +274,6 @@
 		707D08991B2C6986003900F3 /* BotSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotSchedule.swift; sourceTree = "<group>"; };
 		707D089B1B2C69C4003900F3 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerConditions.swift; sourceTree = "<group>"; };
-		7089CBB11B53BD06006C9EC5 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_platforms.json; sourceTree = "<group>"; };
 		709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerEntityTests.swift; sourceTree = "<group>"; };
@@ -456,8 +456,8 @@
 			children = (
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
-				7089CBB11B53BD06006C9EC5 /* get_devices.json */,
 				7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */,
+				700C93551B54F58A00B3C6E6 /* get_devices.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -760,6 +760,7 @@
 			files = (
 				704B5FC51B455EE400989E4B /* get_repositories.json in Resources */,
 				7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
+				700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */,
 				3A13F30C1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853AA1B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A31B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -767,7 +768,6 @@
 				3A3853AC1B40046E00B7F842 /* create_watch_bot.json in Resources */,
 				3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */,
-				7089CBB31B53BD06006C9EC5 /* get_devices.json in Resources */,
 				3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
@@ -786,6 +786,7 @@
 			files = (
 				704B5FC41B455EE400989E4B /* get_repositories.json in Resources */,
 				7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
+				700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */,
 				3A13F30B1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853A91B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -793,7 +794,6 @@
 				3A3853AB1B40046E00B7F842 /* create_watch_bot.json in Resources */,
 				3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */,
 				3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */,
-				7089CBB21B53BD06006C9EC5 /* get_devices.json in Resources */,
 				3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */,
 			);
