@@ -55,7 +55,7 @@ class DevicesTests: XCTestCase {
                 XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.OSX }.count, 2, "There should be 2 real Macs")
                 XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.iOS_Simulator }.count, 9, "There should be 9 iOS simulators")
                 XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.watchOS_Simulator }.count, 2, "There should be 2 watchOS simulators")
-                XCTAssertEqual(devices.filter { $0.activeProxiedDevice != nil }.count, 2, "There should be 2 active procied devices (watchOS)")
+                XCTAssertEqual(devices.filter { $0.activeProxiedDevice != nil }.count, 2, "There should be 2 active proxied devices (watchOS)")
             }
             
             expectation.fulfill()
