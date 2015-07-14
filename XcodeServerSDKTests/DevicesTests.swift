@@ -25,7 +25,7 @@ class DevicesTests: XCTestCase {
         "name" : "bozenka",
         "supported" : true,
         "processor" : "2,5 GHz Intel Core i5",
-        "identifier" : "A89DE14F-0F3C-5893-AF8A-D9CFF068B82C-x86_64",
+        "identifier" : "FFFFFFFF-0F3C-5893-AF8A-D9CFF068B82C-x86_64",
         "enabledForDevelopment" : true,
         "serialNumber" : "C07JT7H5DWYL",
         "platformIdentifier" : "com.apple.platform.macosx",
@@ -34,7 +34,7 @@ class DevicesTests: XCTestCase {
         "retina" : false,
         "isServer" : true,
         "tinyID" : "7DCD98A"
-        ])
+    ])
     
     func testDictionarify() {
         let expected = [ "device_id": "1ad0e8785cacca73d980cdb23600383e" ]
@@ -50,8 +50,12 @@ class DevicesTests: XCTestCase {
             XCTAssertNotNil(devices)
             
             if let devices = devices {
-                XCTAssertEqual(devices.count, 13, "There should be 13 devices")
-                XCTAssertTrue(devices.map { $0.identifier }.contains(self.macMini.identifier))
+                XCTAssertEqual(devices.count, 15, "There should be 15 devices")
+                XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.iOS }.count, 2, "There should be 2 real iPhones")
+                XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.OSX }.count, 2, "There should be 2 real Macs")
+                XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.iOS_Simulator }.count, 9, "There should be 9 iOS simulators")
+                XCTAssertEqual(devices.filter { $0.platform == DevicePlatform.PlatformType.watchOS_Simulator }.count, 2, "There should be 2 watchOS simulators")
+                XCTAssertEqual(devices.filter { $0.activeProxiedDevice != nil }.count, 2, "There should be 2 active procied devices (watchOS)")
             }
             
             expectation.fulfill()
