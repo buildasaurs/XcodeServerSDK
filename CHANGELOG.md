@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.1.3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.3) (2015-07-15)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.2...v0.1.3)
+
+**Merged pull requests:**
+
+- Backwards compatible parsing of BuildResultSummary [\#69](https://github.com/czechboy0/XcodeServerSDK/pull/69) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.1.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.2) (2015-07-15)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.1...v0.1.2)
