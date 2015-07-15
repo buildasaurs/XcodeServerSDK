@@ -138,8 +138,8 @@ public class BuildResultSummary : XcodeServerEntity {
         self.errorChange = json.intForKey("errorChange")
         self.improvedPerfTestCount = json.intForKey("improvedPerfTestCount")
         self.analyzerWarningChange = json.intForKey("analyzerWarningChange")
-        self.codeCoveragePercentage = json.intForKey("codeCoveragePercentage")
-        self.codeCoveragePercentageDelta = json.intForKey("codeCoveragePercentageDelta")
+        self.codeCoveragePercentage = json.optionalIntForKey("codeCoveragePercentage") ?? 0
+        self.codeCoveragePercentageDelta = json.optionalIntForKey("codeCoveragePercentageDelta") ?? 0
         
         super.init(json: json)
     }
