@@ -14,7 +14,6 @@ public class TestHierarchy : XcodeServerEntity {
         
         //TODO: come up with useful things to parse
         //TODO: add search capabilities, aggregate generation etc
-        
         super.init(json: json)
     }
 }
