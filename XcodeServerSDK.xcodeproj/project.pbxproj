@@ -91,6 +91,9 @@
 		3A7B48F11B2A5B7B0077ABEA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F01B2A5B7B0077ABEA /* JSON.swift */; };
 		3A7B48F51B2A5BC60077ABEA /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F41B2A5BC60077ABEA /* Logging.swift */; };
 		3A7B48F71B2A5BDA0077ABEA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48F61B2A5BDA0077ABEA /* Errors.swift */; };
+		3A7CCD3A1B55F97B00CED8BC /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */; };
+		3A7CCD3B1B55F97B00CED8BC /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */; };
+		3A7CCD3C1B55F97B00CED8BC /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */; };
 		3A80C8061B3B62390065C1C6 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */; };
 		3A80C8071B3B62390065C1C6 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */; };
 		3A80C8081B3B63790065C1C6 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */; };
@@ -254,6 +257,7 @@
 		3A7B48F01B2A5B7B0077ABEA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3A7B48F41B2A5BC60077ABEA /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		3A7B48F61B2A5BDA0077ABEA /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHierarchy.swift; sourceTree = "<group>"; };
 		3A80C8051B3B62390065C1C6 /* ContainerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerExtensions.swift; sourceTree = "<group>"; };
 		3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_request_no_fingerprint.json; path = Data/scm_branches_request_no_fingerprint.json; sourceTree = "<group>"; };
 		3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_request_with_fingerprint.json; path = Data/scm_branches_request_with_fingerprint.json; sourceTree = "<group>"; };
@@ -473,10 +477,11 @@
 				3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */,
 				707D08971B2C6954003900F3 /* EmailConfiguration.swift */,
 				3A7B48DA1B2A5ADE0077ABEA /* Integration.swift */,
+				7045917E1B4074CC00BA226C /* Repository.swift */,
 				3A7B48DB1B2A5ADE0077ABEA /* SourceControlBlueprint.swift */,
+				3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */,
 				707D089B1B2C69C4003900F3 /* Trigger.swift */,
 				707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */,
-				7045917E1B4074CC00BA226C /* Repository.swift */,
 			);
 			path = "Server Entities";
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
 				70B43A8F1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
+				3A7CCD3C1B55F97B00CED8BC /* TestHierarchy.swift in Sources */,
 				70E1413A1B409EA000AC98DB /* Repository.swift in Sources */,
 				70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11376BE01B3A2FE30005A681 /* BotSchedule.swift in Sources */,
@@ -856,6 +862,7 @@
 				11FB71A71B34AF2400D57A52 /* Bot.swift in Sources */,
 				70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */,
 				702706861B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
+				3A7CCD3B1B55F97B00CED8BC /* TestHierarchy.swift in Sources */,
 				11FB71A81B34AF2400D57A52 /* BotConfiguration.swift in Sources */,
 				11FB71A91B34AF2400D57A52 /* EmailConfiguration.swift in Sources */,
 				70A4448F1B457ACC00C86EF8 /* XcodeServer+Repository.swift in Sources */,
@@ -911,6 +918,7 @@
 				7027067E1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
 				3A7B48E21B2A5ADE0077ABEA /* BotConfiguration.swift in Sources */,
 				3A7B48EA1B2A5ADE0077ABEA /* XcodeServerEntity.swift in Sources */,
+				3A7CCD3A1B55F97B00CED8BC /* TestHierarchy.swift in Sources */,
 				7045917F1B4074CC00BA226C /* Repository.swift in Sources */,
 				3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */,

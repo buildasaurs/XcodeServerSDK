@@ -23,10 +23,9 @@ public class Integration : XcodeServerEntity {
     public let duration: NSTimeInterval?
     public let result: Result?
     public let buildResultSummary: BuildResultSummary?
-    public let testedDevices: NSArray? //TODO: add typed array with parsing
-    public let testHierarchy: NSArray? //TODO: add typed array with parsing
+    public let testedDevices: [Device]?
+    public let testHierarchy: TestHierarchy?
     public let assets: NSDictionary?  //TODO: add typed array with parsing
-    
     public let blueprint: SourceControlBlueprint?
     
     public enum Step : String {
@@ -82,8 +81,18 @@ public class Integration : XcodeServerEntity {
             self.buildResultSummary = nil
         }
         
-        self.testedDevices = json.optionalArrayForKey("testedDevices")
-        self.testHierarchy = json.optionalArrayForKey("testHierarchy")
+        if let testedDevices = json.optionalArrayForKey("testedDevices") {
+            self.testedDevices = XcodeServerArray(testedDevices)
+        } else {
+            self.testedDevices = nil
+        }
+        
+        if let testHierarchy = json.optionalDictionaryForKey("testHierarchy") {
+            self.testHierarchy = TestHierarchy(json: testHierarchy)
+        } else {
+            self.testHierarchy = nil
+        }
+
         self.assets = json.optionalDictionaryForKey("assets")
         
         if let blueprint = json.optionalDictionaryForKey("revisionBlueprint") {
@@ -110,6 +119,8 @@ public class BuildResultSummary : XcodeServerEntity {
     public let errorChange: Int
     public let improvedPerfTestCount: Int
     public let analyzerWarningChange: Int
+    public let codeCoveragePercentage: Int
+    public let codeCoveragePercentageDelta: Int
     
     public required init(json: NSDictionary) {
         
@@ -125,6 +136,8 @@ public class BuildResultSummary : XcodeServerEntity {
         self.errorChange = json.intForKey("errorChange")
         self.improvedPerfTestCount = json.intForKey("improvedPerfTestCount")
         self.analyzerWarningChange = json.intForKey("analyzerWarningChange")
+        self.codeCoveragePercentage = json.intForKey("codeCoveragePercentage")
+        self.codeCoveragePercentageDelta = json.intForKey("codeCoveragePercentageDelta")
         
         super.init(json: json)
     }
