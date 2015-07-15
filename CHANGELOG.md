@@ -2,7 +2,17 @@
 
 ## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta3...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1...HEAD)
+
+**Merged pull requests:**
+
+- Added code coverage keys BuildResultSummary [\#67](https://github.com/czechboy0/XcodeServerSDK/pull/67) ([czechboy0](https://github.com/czechboy0))
+
+- Device and Platforms tests [\#65](https://github.com/czechboy0/XcodeServerSDK/pull/65) ([cojoj](https://github.com/cojoj))
+
+## [v0.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1) (2015-07-13)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1-beta3...v0.1)
 
 **Merged pull requests:**
 
