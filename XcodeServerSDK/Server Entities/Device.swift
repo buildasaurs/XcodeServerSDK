@@ -55,7 +55,10 @@ public class Device : XcodeServerEntity {
         self.serialNumber = json.optionalStringForKey("serialNumber")
         self.platform = DevicePlatform.PlatformType(rawValue: json.stringForKey("platformIdentifier")) ?? .Unknown
         self.architecture = json.stringForKey("architecture")
-        self.isServer = json.boolForKey("isServer")
+        
+        //for some reason which is not yet clear to me (probably old/new XcS versions), sometimes
+        //the key is "server" and sometimes "isServer". this just picks up the present one.
+        self.isServer = json.optionalBoolForKey("server") ?? json.optionalBoolForKey("isServer") ?? false
         self.retina = json.boolForKey("retina")
         
         super.init(json: json)
