@@ -1,8 +1,16 @@
 # Change Log
 
-## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+## [v0.1.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.2) (2015-07-15)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.1...v0.1.2)
+
+**Merged pull requests:**
+
+- New Integration States and Steps [\#68](https://github.com/czechboy0/XcodeServerSDK/pull/68) ([czechboy0](https://github.com/czechboy0))
+
+## [v0.1.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.1) (2015-07-15)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1...v0.1.1)
 
 **Merged pull requests:**
 
