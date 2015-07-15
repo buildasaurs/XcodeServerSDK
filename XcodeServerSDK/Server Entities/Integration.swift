@@ -33,11 +33,12 @@ public class Integration : XcodeServerEntity {
         case Pending = "pending"
         case Preparing = "preparing"
         case Checkout = "checkout"
-        case Triggers = "triggers"
+        case BeforeTriggers = "before-triggers"
         case Building = "building"
         case Testing = "testing"
         case Archiving = "archiving"
         case Processing = "processing"
+        case AfterTriggers = "after-triggers"
         case Uploading = "uploading"
         case Completed = "completed"
     }
@@ -56,6 +57,7 @@ public class Integration : XcodeServerEntity {
         case InternalBuildError = "internal-build-error"
         case InternalProcessingError = "internal-processing-error"
         case Canceled = "canceled"
+        case TriggerError = "trigger-error"
     }
     
     public required init(json: NSDictionary) {
