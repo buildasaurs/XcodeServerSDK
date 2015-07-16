@@ -69,5 +69,12 @@ class XcodeServerConfigTests: XCTestCase {
             XCTAssertEqual(config.jsonify(), expected)
         }
     }
+    
+    //just to have a perf test
+    func testPerformance() {
+        self.measureBlock { () -> Void in
+            _ = try! XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
+        }
+    }
 
 }
