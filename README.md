@@ -23,10 +23,10 @@ You'll need OS X Server of version >= 4. For Xcode 7 you need OS X >= 10.10.4.
 The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions **only** support the new, first publicly documented Xcode 7 version of the API.
 
 # Sources
-One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile:
+One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
-pod 'XcodeServerSDK', '0.0.4'
+pod 'XcodeServerSDK', '0.1.3'
 ```
 
 If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
