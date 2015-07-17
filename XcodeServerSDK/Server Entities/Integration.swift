@@ -89,7 +89,7 @@ public class Integration : XcodeServerEntity {
             self.testedDevices = nil
         }
         
-        if let testHierarchy = json.optionalDictionaryForKey("testHierarchy") {
+        if let testHierarchy = json.optionalDictionaryForKey("testHierarchy") where testHierarchy.count > 0 {
             self.testHierarchy = TestHierarchy(json: testHierarchy)
         } else {
             self.testHierarchy = nil

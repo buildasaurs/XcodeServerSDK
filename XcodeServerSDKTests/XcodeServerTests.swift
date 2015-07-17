@@ -30,7 +30,7 @@ class XcodeServerTests: XCTestCase {
     func testServerCreation() {
         XCTAssertNotNil(self.server)
     }
-    
+
     func DEV_testLive_GetBots() {
         
         let exp = self.expectationWithDescription("Network")
