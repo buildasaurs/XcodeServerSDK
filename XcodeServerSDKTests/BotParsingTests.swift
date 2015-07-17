@@ -8,7 +8,6 @@
 
 import Foundation
 import XcodeServerSDK
-import DVR
 import XCTest
 
 class BotParsingTests: XCTestCase {
