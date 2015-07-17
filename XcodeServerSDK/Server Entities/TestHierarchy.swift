@@ -12,8 +12,7 @@ let TestResultAggregateKey = "_xcsAggrDeviceStatus"
 
 public class TestHierarchy : XcodeServerEntity {
     
-    typealias DeviceId = String
-    typealias TestResult = [String: Bool]
+    typealias TestResult = [String: Double]
     typealias AggregateResult = TestResult
     
     enum TestMethod {
