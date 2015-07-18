@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import XcodeServerSDK
+import BuildaUtils
 
 class HTTPUtilsTests: XCTestCase {
 

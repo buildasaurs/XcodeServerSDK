@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BuildaUtils
 
 // MARK: - // MARK: - XcodeSever API Routes for Repositories management
 extension XcodeServer {

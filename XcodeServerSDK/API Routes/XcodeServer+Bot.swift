@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BuildaUtils
 
 // MARK: - XcodeSever API Routes for Bot management
 extension XcodeServer {

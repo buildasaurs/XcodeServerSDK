@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "XcodeServerSDK/**/*.{swift}"
 
-  s.dependency "BuildaUtils", "0.0.3"
+  s.dependency "BuildaUtils", "0.0.4"
 
 end

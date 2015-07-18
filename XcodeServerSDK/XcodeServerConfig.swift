@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BuildaUtils
 
 public enum AvailabilityCheckState: Equatable {
     case Unchecked

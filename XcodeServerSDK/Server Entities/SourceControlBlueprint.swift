@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BuildaUtils
 
 extension String {
     public var base64Encoded: String? {
