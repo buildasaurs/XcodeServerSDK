@@ -1,5 +1,29 @@
 # Change Log
 
+## [v0.1.5](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.5) (2015-07-18)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.4-test2...v0.1.5)
+
+**Merged pull requests:**
+
+- Switching to CocoaPods [\#72](https://github.com/czechboy0/XcodeServerSDK/pull/72) ([czechboy0](https://github.com/czechboy0))
+
+## [v0.1.4-test2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.4-test2) (2015-07-18)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.4...v0.1.4-test2)
+
+## [v0.1.4](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.4) (2015-07-18)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.3...v0.1.4)
+
+**Closed issues:**
+
+- Create TestHierarchy object [\#70](https://github.com/czechboy0/XcodeServerSDK/issues/70)
+
+**Merged pull requests:**
+
+- Added TestHierarchy [\#71](https://github.com/czechboy0/XcodeServerSDK/pull/71) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.1.3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.3) (2015-07-15)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.2...v0.1.3)
