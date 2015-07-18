@@ -57,6 +57,7 @@
 		11FB71B81B34B00000D57A52 /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */; };
 		11FB71B91B34B00000D57A52 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
+		142C384CB7F5374555AEF779 /* Pods_XcodeServerSDK___OS_X_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E595FB3AF040378D18B03E98 /* Pods_XcodeServerSDK___OS_X_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
 		3A06D5FD1B3C184400F0A6C5 /* XcodeServerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */; };
@@ -106,14 +107,13 @@
 		3AA922511B3F0E39005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */; };
 		3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */; };
 		3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */; };
-		3AA922B71B3F4657005A0F73 /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA922B21B3F4630005A0F73 /* DVR.framework */; };
-		3AA922BA1B3F4666005A0F73 /* DVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA922AC1B3F4630005A0F73 /* DVR.framework */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
 		3AC47F401B586DFD008C4E42 /* get_integration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC47F3F1B586DFD008C4E42 /* get_integration.json */; };
 		3AC47F411B586DFD008C4E42 /* get_integration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC47F3F1B586DFD008C4E42 /* get_integration.json */; };
 		3AC47F461B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
 		3AC47F471B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
+		3D19506C0E23052633263948 /* Pods_XcodeServerSDK___iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD1F2C73FB1DFB681AD807 /* Pods_XcodeServerSDK___iOS_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		7027067E1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */; };
@@ -174,55 +174,6 @@
 			remoteGlobalIDString = 3A7B48B91B2A5AC40077ABEA;
 			remoteInfo = XcodeServerSDK;
 		};
-		3AA922AB1B3F4630005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3647AF9B1B335D5500EF10D4;
-			remoteInfo = "DVR-iOS";
-		};
-		3AA922AD1B3F4630005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3647AFA51B335D5500EF10D4;
-			remoteInfo = "DVRTests-iOS";
-		};
-		3AA922AF1B3F4630005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3690A06E1B33AA0900731222;
-			remoteInfo = "DVR-watchOS";
-		};
-		3AA922B11B3F4630005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3690A07B1B33AA3B00731222;
-			remoteInfo = "DVR-OSX";
-		};
-		3AA922B31B3F4630005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3690A0841B33AA3C00731222;
-			remoteInfo = "DVRTests-OSX";
-		};
-		3AA922B51B3F4651005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3690A07A1B33AA3B00731222;
-			remoteInfo = "DVR-OSX";
-		};
-		3AA922B81B3F4661005A0F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3647AF9A1B335D5500EF10D4;
-			remoteInfo = "DVR-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -231,6 +182,7 @@
 		11376BD41B3A2F910005A681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FB71891B34AE7F00D57A52 /* XcodeServerSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeServerSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FB71921B34AE7F00D57A52 /* XcodeServerSDKTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeServerSDKTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A64D48621A713DEADE94E8 /* Pods-XcodeServerSDK - iOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotParsingTests.swift; sourceTree = "<group>"; };
 		3A058A921B315BB50077FD47 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3A13F30A1B404E7500C29D81 /* platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = platforms.json; path = Data/platforms.json; sourceTree = "<group>"; };
@@ -267,10 +219,10 @@
 		3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_request_with_fingerprint.json; path = Data/scm_branches_request_with_fingerprint.json; sourceTree = "<group>"; };
 		3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_success.json; path = Data/scm_branches_response_success.json; sourceTree = "<group>"; };
 		3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = scm_branches_response_error.json; path = Data/scm_branches_response_error.json; sourceTree = "<group>"; };
-		3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DVR.xcodeproj; path = Carthage/Checkouts/DVR/DVR.xcodeproj; sourceTree = "<group>"; };
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
 		3AC47F3F1B586DFD008C4E42 /* get_integration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration.json; sourceTree = "<group>"; };
 		3AC47F451B587C67008C4E42 /* IntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		5092B32F595740C3EB6EE029 /* Pods-XcodeServerSDK - iOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		700C93551B54F58A00B3C6E6 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Bot.swift"; sourceTree = "<group>"; };
 		702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+SCM.swift"; sourceTree = "<group>"; };
@@ -294,6 +246,10 @@
 		70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Auth.swift"; sourceTree = "<group>"; };
 		70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Repository.swift"; sourceTree = "<group>"; };
 		70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Integration.swift"; sourceTree = "<group>"; };
+		9BDE8F2120A2D7FF191C52AB /* Pods-XcodeServerSDK - OS X Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - OS X Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - OS X Tests/Pods-XcodeServerSDK - OS X Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C20201476B04C021A4213BDA /* Pods-XcodeServerSDK - OS X Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - OS X Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - OS X Tests/Pods-XcodeServerSDK - OS X Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E595FB3AF040378D18B03E98 /* Pods_XcodeServerSDK___OS_X_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___OS_X_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDD1F2C73FB1DFB681AD807 /* Pods_XcodeServerSDK___iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___iOS_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,8 +271,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA922BA1B3F4666005A0F73 /* DVR.framework in Frameworks */,
 				11FB71931B34AE7F00D57A52 /* XcodeServerSDK.framework in Frameworks */,
+				3D19506C0E23052633263948 /* Pods_XcodeServerSDK___iOS_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +287,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA922B71B3F4657005A0F73 /* DVR.framework in Frameworks */,
 				3A7B48C61B2A5AC40077ABEA /* XcodeServerSDK.framework in Frameworks */,
+				142C384CB7F5374555AEF779 /* Pods_XcodeServerSDK___OS_X_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +325,10 @@
 				3A7B48BC1B2A5AC40077ABEA /* XcodeServerSDK */,
 				3A7B48C91B2A5AC40077ABEA /* XcodeServerSDKTests */,
 				11376BD11B3A2F910005A681 /* XcodeServerSDK - watchOS */,
-				3AA922A21B3F460E005A0F73 /* Dependencies */,
 				70F463351B2B3EF800C3F963 /* Playgrounds */,
 				3A7B48BB1B2A5AC40077ABEA /* Products */,
+				71C1EC2766B2B707E0540456 /* Pods */,
+				A1830F6FD775BBC78E612B9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -440,26 +397,6 @@
 				3A7B48CB1B2A5AC40077ABEA /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3AA922A21B3F460E005A0F73 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		3AA922A41B3F4630005A0F73 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3AA922AC1B3F4630005A0F73 /* DVR.framework */,
-				3AA922AE1B3F4630005A0F73 /* DVRTests-iOS.xctest */,
-				3AA922B01B3F4630005A0F73 /* DVR.framework */,
-				3AA922B21B3F4630005A0F73 /* DVR.framework */,
-				3AA922B41B3F4630005A0F73 /* DVRTests-OSX.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3AD14B771B3F71C600BFDEAA /* Casettes */ = {
@@ -538,6 +475,26 @@
 			path = Playgrounds;
 			sourceTree = "<group>";
 		};
+		71C1EC2766B2B707E0540456 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BDE8F2120A2D7FF191C52AB /* Pods-XcodeServerSDK - OS X Tests.debug.xcconfig */,
+				C20201476B04C021A4213BDA /* Pods-XcodeServerSDK - OS X Tests.release.xcconfig */,
+				5092B32F595740C3EB6EE029 /* Pods-XcodeServerSDK - iOS Tests.debug.xcconfig */,
+				32A64D48621A713DEADE94E8 /* Pods-XcodeServerSDK - iOS Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1830F6FD775BBC78E612B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E595FB3AF040378D18B03E98 /* Pods_XcodeServerSDK___OS_X_Tests.framework */,
+				EBDD1F2C73FB1DFB681AD807 /* Pods_XcodeServerSDK___iOS_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -608,14 +565,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11FB719F1B34AE7F00D57A52 /* Build configuration list for PBXNativeTarget "XcodeServerSDK - iOS Tests" */;
 			buildPhases = (
+				5BB543B4D2125A792303C85C /* Check Pods Manifest.lock */,
 				11FB718E1B34AE7F00D57A52 /* Sources */,
 				11FB718F1B34AE7F00D57A52 /* Frameworks */,
 				11FB71901B34AE7F00D57A52 /* Resources */,
+				8F4F7CC206FE0679FD225D5A /* Embed Pods Frameworks */,
+				854ED95FC9D2AB943CDA28DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3AA922B91B3F4661005A0F73 /* PBXTargetDependency */,
 				11FB71951B34AE7F00D57A52 /* PBXTargetDependency */,
 			);
 			name = "XcodeServerSDK - iOS Tests";
@@ -645,14 +604,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A7B48D31B2A5AC40077ABEA /* Build configuration list for PBXNativeTarget "XcodeServerSDK - OS X Tests" */;
 			buildPhases = (
+				F5E0F8394FC009376AF0CDF3 /* Check Pods Manifest.lock */,
 				3A7B48C11B2A5AC40077ABEA /* Sources */,
 				3A7B48C21B2A5AC40077ABEA /* Frameworks */,
 				3A7B48C31B2A5AC40077ABEA /* Resources */,
+				9DD874A1B62369DB602977E5 /* Embed Pods Frameworks */,
+				8E4427E4D7267EC995410B13 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3AA922B61B3F4651005A0F73 /* PBXTargetDependency */,
 				3A7B48C81B2A5AC40077ABEA /* PBXTargetDependency */,
 			);
 			name = "XcodeServerSDK - OS X Tests";
@@ -697,12 +658,6 @@
 			mainGroup = 3A7B48B01B2A5AC40077ABEA;
 			productRefGroup = 3A7B48BB1B2A5AC40077ABEA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3AA922A41B3F4630005A0F73 /* Products */;
-					ProjectRef = 3AA922A31B3F4630005A0F73 /* DVR.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK - OS X */,
@@ -713,44 +668,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3AA922AC1B3F4630005A0F73 /* DVR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DVR.framework;
-			remoteRef = 3AA922AB1B3F4630005A0F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3AA922AE1B3F4630005A0F73 /* DVRTests-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "DVRTests-iOS.xctest";
-			remoteRef = 3AA922AD1B3F4630005A0F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3AA922B01B3F4630005A0F73 /* DVR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DVR.framework;
-			remoteRef = 3AA922AF1B3F4630005A0F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3AA922B21B3F4630005A0F73 /* DVR.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DVR.framework;
-			remoteRef = 3AA922B11B3F4630005A0F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3AA922B41B3F4630005A0F73 /* DVRTests-OSX.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "DVRTests-OSX.xctest";
-			remoteRef = 3AA922B31B3F4630005A0F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		11376BCE1B3A2F910005A681 /* Resources */ = {
@@ -815,6 +732,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BB543B4D2125A792303C85C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		854ED95FC9D2AB943CDA28DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4427E4D7267EC995410B13 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XcodeServerSDK - OS X Tests/Pods-XcodeServerSDK - OS X Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4F7CC206FE0679FD225D5A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DD874A1B62369DB602977E5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XcodeServerSDK - OS X Tests/Pods-XcodeServerSDK - OS X Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E0F8394FC009376AF0CDF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11376BCB1B3A2F910005A681 /* Sources */ = {
@@ -982,16 +992,6 @@
 			target = 3A7B48B91B2A5AC40077ABEA /* XcodeServerSDK - OS X */;
 			targetProxy = 3A7B48C71B2A5AC40077ABEA /* PBXContainerItemProxy */;
 		};
-		3AA922B61B3F4651005A0F73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "DVR-OSX";
-			targetProxy = 3AA922B51B3F4651005A0F73 /* PBXContainerItemProxy */;
-		};
-		3AA922B91B3F4661005A0F73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "DVR-iOS";
-			targetProxy = 3AA922B81B3F4661005A0F73 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -1086,6 +1086,7 @@
 		};
 		11FB719C1B34AE7F00D57A52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5092B32F595740C3EB6EE029 /* Pods-XcodeServerSDK - iOS Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1100,6 +1101,7 @@
 		};
 		11FB719D1B34AE7F00D57A52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A64D48621A713DEADE94E8 /* Pods-XcodeServerSDK - iOS Tests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = XcodeServerSDKTests/Info.plist;
@@ -1237,6 +1239,7 @@
 		};
 		3A7B48D41B2A5AC40077ABEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDE8F2120A2D7FF191C52AB /* Pods-XcodeServerSDK - OS X Tests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1257,6 +1260,7 @@
 		};
 		3A7B48D51B2A5AC40077ABEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C20201476B04C021A4213BDA /* Pods-XcodeServerSDK - OS X Tests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -1,0 +1,20 @@
+PODS:
+  - DVR (0.0.2-czechboy0)
+
+DEPENDENCIES:
+  - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.2-czechboy0`)
+
+EXTERNAL SOURCES:
+  DVR:
+    :git: https://github.com/czechboy0/DVR.git
+    :tag: v0.0.2-czechboy0
+
+CHECKOUT OPTIONS:
+  DVR:
+    :git: https://github.com/czechboy0/DVR.git
+    :tag: v0.0.2-czechboy0
+
+SPEC CHECKSUMS:
+  DVR: c252cd3f4a88f6a3a49f0d66305335951a0aa133
+
+COCOAPODS: 0.38.0.beta.2
