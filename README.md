@@ -101,9 +101,9 @@ Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the followi
 |:--:|:--:|:--:|:--:|
 |OS X | 10.10| :white_check_mark: | :white_check_mark: |
 |iOS | 8.0| :white_check_mark: | :white_check_mark: |
-|ᴡᴀᴛᴄʜ | 2.0 | :white_check_mark: | :warning: * |
+|ᴡᴀᴛᴄʜ | 2.0 | :white_check_mark: | :white_check_mark:* |
 
-*: _CocoaPods supports this on the `0.38.0.beta.1` release; you can check the `PR` [here][cocoapodswatchos]; and [here][watchossample] you can take a look at a sample implementation of ᴡᴀᴛᴄʜ pods._
+*: _CocoaPods supports watchOS from the `0.38` release. [Here][watchossample] you can take a look at a sample implementation of ᴡᴀᴛᴄʜ pods._
 [cocoapodswatchos]:https://github.com/CocoaPods/CocoaPods/pull/3681
 [watchossample]:https://github.com/neonichu/native-watchOS-example
 
