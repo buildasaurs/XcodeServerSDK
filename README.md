@@ -12,7 +12,7 @@
 First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
 This is an unofficial, community-maintained project and is not associated with Apple.
 
-# Xcode Server API Versions
+# :signal_strength: Xcode Server API Versions
 | Xcode Server API | Supported? |
 | :-- | :--: | :--: |
 | Xcode 7 and newer | :white_check_mark: from [0.1](https://github.com/czechboy0/XcodeServerSDK/releases/tag/v0.1) |
@@ -22,7 +22,7 @@ You'll need OS X Server of version >= 4. For Xcode 7 you need OS X >= 10.10.4.
 
 The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions **only** support the new, first publicly documented Xcode 7 version of the API.
 
-# Sources
+# :octocat: Sources
 One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
@@ -35,7 +35,7 @@ If you're using [Carthage](https://github.com/Carthage/Carthage) add this to you
 github "czechboy0/XcodeServerSDK"
 ```
 
-# Usage
+# :wrench: Usage
 
 Create the server config object with the server's URL, username and password.
 ```swift
@@ -58,16 +58,16 @@ server.getBots { (bots, error) -> () in
 }
 ```
 
-# Swift Versions
+# :signal_strength: Swift Versions
 The latest Swift 1.2 compatible version is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4), so put this exact version in your Podfile if you're targeting Swift 1.2. All newer releases will be targeting Swift 2, because we're all just so forward-thinking.
 
 When it comes to branches, [`master`](https://github.com/czechboy0/XcodeServerSDK/tree/master) will still host the latest stable Xcode's version (Xcode 6.3.2 with Swift 1.2), until this fall when Swift 2 will come out of beta with Xcode 7. Until then, please send pull requests and contribute to the [`swift-2`](https://github.com/czechboy0/XcodeServerSDK/tree/swift-2) branch.
 
-# Play with Playground
+# :circus_tent: Play with Playground
 
 We're providing a Plaground in which you can easily interact with `XcodeServerSDK` and test it's functionalities without any need to create a new app. Playground target is set to be OS X (so don't use `UIKit` inside).
 
-# Features
+# :rocket: Features
 
 | Name | Official  support | `XcodeServerSDK` |
 | :-- | :--: | :--: |
@@ -93,7 +93,7 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 
 Opertions listed in table above in _italics_ are those provided by  in Xcode. Rest of operations are just a product of reverse engineering.
 
-# Supported Platforms
+# :city_sunrise: Supported Platforms
 
 Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following platforms:
 
@@ -107,27 +107,27 @@ Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the followi
 [cocoapodswatchos]:https://github.com/CocoaPods/CocoaPods/pull/3681
 [watchossample]:https://github.com/neonichu/native-watchOS-example
 
-# Projects using XcodeServerSDK
+# :tada: Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
 - (using XcodeServerSDK too? Send a PR with a link to your project added here!)
 
 Want to create yours but need some inspiration? Watch [this WWDC 2015 session](https://developer.apple.com/videos/wwdc/2015/?id=410) on Xcode Server!
 Using hardware buttons to start integrations? Why not! The sky is the limit.
 
-# License
+# :v: License
 [MIT](https://github.com/czechboy0/XcodeServerSDK/blob/master/LICENSE)
 
-# Building & Testing
+# :ship: Building & Testing
 We use [CocoaPods](https://github.com/CocoaPods/CocoaPods) for dependency management. When you clone the repo, you'll need to run `pod install` to download the necessary dependencies.
 
-# Contributing
+# :pencil2: Contributing
 Create an issue or (preferably) send a pull request.
 Do you just want to get involved and help out? See the issues marked as [up-for-grabs](https://github.com/czechboy0/XcodeServerSDK/labels/up-for-grabs). These are the ones just waiting for some beautiful soul like you to build/fix it. We just don't have enough bandwidth and any help is welcome :) (You'll be in the contributors list of the release if you send a PR! :fireworks:)
 
-# Origin Story
+# :santa: Origin Story
 This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Buildasaur), bringing you integration of GitHub Pull Requests to Xcode Bots.
 
-# Author
+# :alien: Author
 Honza Dvorsky
 [honzadvorsky.com](http://honzadvorsky.com)
 [@czechboy0](https://twitter.com/czechboy0)
