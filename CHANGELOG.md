@@ -1,5 +1,19 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.5...HEAD)
+
+**Closed issues:**
+
+- Podfile parsing error [\#73](https://github.com/czechboy0/XcodeServerSDK/issues/73)
+
+**Merged pull requests:**
+
+- XcodeServer Credential tests [\#75](https://github.com/czechboy0/XcodeServerSDK/pull/75) ([cojoj](https://github.com/cojoj))
+
+- Create request tests [\#74](https://github.com/czechboy0/XcodeServerSDK/pull/74) ([cojoj](https://github.com/cojoj))
+
 ## [v0.1.5](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.5) (2015-07-18)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.4-test2...v0.1.5)
