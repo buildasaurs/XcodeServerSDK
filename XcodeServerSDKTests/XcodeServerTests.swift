@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import XcodeServerSDK
+@testable import XcodeServerSDK
 
 class XcodeServerTests: XCTestCase {
     
@@ -29,6 +29,23 @@ class XcodeServerTests: XCTestCase {
     
     func testServerCreation() {
         XCTAssertNotNil(self.server)
+    }
+    
+    // MARK: Creadentials tests
+    
+    func testCredentials() {
+        let user = server.credential?.user
+        let pass = server.credential?.password
+        
+        XCTAssertEqual(user!, "ICanCreateBots")
+        XCTAssertEqual(pass!, "superSecr3t")
+    }
+    
+    func testNoUserCredentials() {
+        let noUserConfig = try! XcodeServerConfig(host: "https://127.0.0.1")
+        let server = XcodeServerFactory.server(noUserConfig)
+        
+        XCTAssertNil(server.credential)
     }
 
     func DEV_testLive_GetBots() {
