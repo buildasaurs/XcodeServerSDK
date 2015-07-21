@@ -11,7 +11,7 @@ import Foundation
 public class Commit: XcodeServerEntity {
     
     public let hash: String
-    // public let filePaths: [AnyObject] // Array of File Paths
+    public let filePaths: [File]
     public let message: String?
     public let date: NSDate
     public let repositoryID: String
@@ -20,11 +20,11 @@ public class Commit: XcodeServerEntity {
     // MARK: Initializers
     public required init(json: NSDictionary) {
         self.hash = json.stringForKey("XCSCommitHash")
-        // self.filePaths = ...
+        // self.filePaths = File(json: json)
         self.message = json.optionalStringForKey("XCSCommitMessage")
         self.date = json.dateForKey("XCSCommitTimestamp")
         self.repositoryID = json.stringForKey("XCSBlueprintRepositoryID")
-        self.contributor = Contributor(json: json)
+        self.contributor = Contributor(json: json.dictionaryForKey("XCSCommitContributor"))
         
         super.init(json: json)
     }
