@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Repository: XcodeRead {
+public class Repository: XcodeServerEntity {
     
     /**
     Enumeration describing HTTP access to the repository
@@ -95,6 +95,8 @@ public class Repository: XcodeRead {
         if let readIDs = readAccessExternalIds {
             self.readAccessExternalIds = readIDs
         }
+        
+        super.init()
     }
     
     /**
@@ -128,6 +130,8 @@ public class Repository: XcodeRead {
         
         self.writeAccessExternalIds = json.arrayForKey("writeAccessExternalIDs")
         self.readAccessExternalIds = json.arrayForKey("readAccessExternalIDs")
+        
+        super.init(json: json)
     }
     
     /**
@@ -135,7 +139,7 @@ public class Repository: XcodeRead {
     
     - returns: Dictionary representing JSON value of Repository object.
     */
-    public func dictionarify() -> NSMutableDictionary {
+    public override func dictionarify() -> NSMutableDictionary {
         let dict = NSMutableDictionary()
         
         dict["name"] = self.name
