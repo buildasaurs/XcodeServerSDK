@@ -20,7 +20,7 @@ public class Commit: XcodeServerEntity {
     // MARK: Initializers
     public required init(json: NSDictionary) {
         self.hash = json.stringForKey("XCSCommitHash")
-        // self.filePaths = File(json: json)
+        self.filePaths = json.arrayForKey("XCSCommitCommitChangeFilePaths").map { File(json: $0) }
         self.message = json.optionalStringForKey("XCSCommitMessage")
         self.date = json.dateForKey("XCSCommitTimestamp")
         self.repositoryID = json.stringForKey("XCSBlueprintRepositoryID")

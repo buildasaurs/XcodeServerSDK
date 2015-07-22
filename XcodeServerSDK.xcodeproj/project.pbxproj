@@ -97,6 +97,8 @@
 		3AC47F461B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
 		3AC47F471B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
 		3D19506C0E23052633263948 /* Pods_XcodeServerSDK___iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD1F2C73FB1DFB681AD807 /* Pods_XcodeServerSDK___iOS_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		700B43581B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
+		700B43591B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
 		700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		7019563C1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
@@ -220,6 +222,7 @@
 		5092B32F595740C3EB6EE029 /* Pods-XcodeServerSDK - iOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		50E9132396FE4F9BF104B42C /* Pods_XcodeServerSDK___watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA6A6E6E245E84BFBB93C35 /* Pods-XcodeServerSDK - iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS/Pods-XcodeServerSDK - iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		700B43571B5FA7A200E27175 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
 		700C93551B54F58A00B3C6E6 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		7019563B1B5E26C5007CDF0B /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		7019563F1B5E2BEE007CDF0B /* Contributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -394,6 +397,7 @@
 				3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */,
 				7088E7CB1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift */,
 				701956431B5E2F79007CDF0B /* ContributorTests.swift */,
+				700B43571B5FA7A200E27175 /* FileTests.swift */,
 				3AD14B771B3F71C600BFDEAA /* Casettes */,
 				3A058A911B31596E0077FD47 /* Data */,
 				3A7B48CA1B2A5AC40077ABEA /* Supporting Files */,
@@ -437,8 +441,8 @@
 				3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */,
 				707D089B1B2C69C4003900F3 /* Trigger.swift */,
 				707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */,
-				7019563B1B5E26C5007CDF0B /* Commit.swift */,
 				7019563F1B5E2BEE007CDF0B /* Contributor.swift */,
+				7019563B1B5E26C5007CDF0B /* Commit.swift */,
 				701956461B5E54E8007CDF0B /* File.swift */,
 			);
 			path = "Server Entities";
@@ -1018,6 +1022,7 @@
 				703FED521B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				11FB71BA1B34B00000D57A52 /* TestUtils.swift in Sources */,
 				7089CBB91B53DC9D006C9EC5 /* PlatformTests.swift in Sources */,
+				700B43591B5FA7A200E27175 /* FileTests.swift in Sources */,
 				701956451B5E2F79007CDF0B /* ContributorTests.swift in Sources */,
 				3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */,
 			);
@@ -1074,6 +1079,7 @@
 				703FED511B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */,
 				7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */,
+				700B43581B5FA7A200E27175 /* FileTests.swift in Sources */,
 				701956441B5E2F79007CDF0B /* ContributorTests.swift in Sources */,
 				70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */,
 			);
