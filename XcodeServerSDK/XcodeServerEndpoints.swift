@@ -9,7 +9,7 @@
 import Foundation
 import BuildaUtils
 
-public class XcodeServerEndPoints {
+public class XcodeServerEndpoints {
     
     enum Endpoint {
         case Bots

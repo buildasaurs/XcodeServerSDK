@@ -13,10 +13,10 @@ import BuildaUtils
 class XcodeServerEndpointsTests: XCTestCase {
 
     let serverConfig = try! XcodeServerConfig(host: "https://127.0.0.1", user: "test", password: "test")
-    var endpoints: XcodeServerEndPoints?
+    var endpoints: XcodeServerEndpoints?
     
     override func setUp() {
-        self.endpoints = XcodeServerEndPoints(serverConfig: serverConfig)
+        self.endpoints = XcodeServerEndpoints(serverConfig: serverConfig)
     }
     
     // If malformed URL is passed to request creation function it should early exit and retur nil
