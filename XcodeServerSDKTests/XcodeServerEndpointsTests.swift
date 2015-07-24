@@ -16,6 +16,7 @@ class XcodeServerEndpointsTests: XCTestCase {
     var endpoints: XcodeServerEndpoints?
     
     override func setUp() {
+        super.setUp()
         self.endpoints = XcodeServerEndpoints(serverConfig: serverConfig)
     }
     
