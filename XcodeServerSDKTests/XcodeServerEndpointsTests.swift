@@ -282,4 +282,22 @@ class XcodeServerEndpointsTests: XCTestCase {
         let url = self.endpoints?.endpointURL(.Login, params: params)
         XCTAssertEqual(url!, "/api/auth/login", "endpointURL(.Login, \(params)) should return \"/api/auth/login\"")
     }
+    
+    // MARK: endpointURL(.Logout)
+    
+    func testEndpointURLCreationForLogoutWithoutParams() {
+        let url = self.endpoints?.endpointURL(.Logout)
+        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout) should return \"/api/auth/logout\"")
+    }
+    
+    func testEndpointURLCreationForAuthLogout() {
+        let params = [
+            "rev": "revValue",
+            "bot": "botValue",
+            "integration": "integrationValue",
+            "otherKey": "otherValue"
+        ]
+        let url = self.endpoints?.endpointURL(.Logout, params: params)
+        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout, \(params)) should return \"/api/auth/logout\"")
+    }
 }
