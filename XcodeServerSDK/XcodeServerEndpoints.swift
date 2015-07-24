@@ -37,7 +37,7 @@ public class XcodeServerEndpoints {
         self.serverConfig = serverConfig
     }
     
-    private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
+    func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
         let base = "/api"
         
