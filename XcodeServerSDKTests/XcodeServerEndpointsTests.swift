@@ -155,4 +155,77 @@ class XcodeServerEndpointsTests: XCTestCase {
             XCTAssertEqual(url!, "/api/integrations/integrationValue", "endpointURL(.Integrations, \(params)) should return \"/api/integrations/integrationValue\"")
         }
     }
+    
+    // MARK: endpointURL(.CancelIntegration)
+    
+    func testEndpointURLCreationForCancelIntegrationWithoutParams() {
+        let url = self.endpoints?.endpointURL(.CancelIntegration)
+        XCTAssertEqual(url!, "/api/integrations/cancel", "endpointURL(.CancelIntegration) should return \"/api/integrations\"")
+    }
+    
+    func testEndpointURLCreationForBotsBotIntegrationsCancel() {
+        let paramsArray = [
+            [
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
+            XCTAssertEqual(url!, "/api/bots/botValue/integrations/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/bots/botValue/integrations/cancel\"")
+        }
+    }
+    
+    func testEndpointURLCreationForBotsBotRevIntegrationsCancel() {
+        let paramsArray = [
+            [
+                "rev": "revValue",
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "rev": "revValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "rev": "revValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
+            XCTAssertEqual(url!, "/api/bots/botValue/revValue/integrations/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/bots/botValue/revValue/integrations/cancel\"")
+        }
+    }
+    
+    func testEndpointURLCreationForIntegrationsIntegrationCancel() {
+        let paramsArray = [
+            [
+                "integration": "integrationValue",
+            ],
+            [
+                "otherKey": "otherValue",
+                "integration": "integrationValue"
+            ],
+            [
+                "rev": "revValue",
+                "otherKey": "otherValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
+            XCTAssertEqual(url!, "/api/integrations/integrationValue/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/integrations/integrationValue/cancel\"")
+        }
+    }
 }
