@@ -160,7 +160,7 @@ class XcodeServerEndpointsTests: XCTestCase {
     
     func testEndpointURLCreationForCancelIntegrationWithoutParams() {
         let url = self.endpoints?.endpointURL(.CancelIntegration)
-        XCTAssertEqual(url!, "/api/integrations/cancel", "endpointURL(.CancelIntegration) should return \"/api/integrations\"")
+        XCTAssertEqual(url!, "/api/integrations/cancel", "endpointURL(.CancelIntegration) should return \"/api/integrations/cancel\"")
     }
     
     func testEndpointURLCreationForBotsBotIntegrationsCancel() {
