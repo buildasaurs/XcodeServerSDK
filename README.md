@@ -26,7 +26,7 @@ The latest version supporting the old, undocumented Xcode 6 version of the Xcode
 One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
-pod 'XcodeServerSDK', '0.1.3'
+pod 'XcodeServerSDK', '0.1.6'
 ```
 
 If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
