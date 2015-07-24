@@ -23,4 +23,19 @@ class IntegrationTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
     
+    // MAKR: Commits
+    func testGetIntegrationCommits() {
+        
+        let exp = self.expectationWithDescription("Network")
+        let server = self.getRecordingXcodeServer("get_integration_commits")
+        server.getIntegrationCommits("56ad016e2e3993ca0b8ed276050150e8") { (commitIntegrations, error) in
+            XCTAssertNil(error, "Error should be nil")
+            
+            exp.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(10, handler: nil)
+        
+    }
+    
 }

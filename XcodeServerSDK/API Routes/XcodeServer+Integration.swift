@@ -181,12 +181,12 @@ extension XcodeServer {
                 return
             }
             
-            guard let integrationCommitsBody = body as? NSDictionary else {
+            guard let integrationCommitsBody = (body as? NSDictionary)?["results"] as? NSArray else {
                 completion(integrationCommits: nil, error: Error.withInfo("Wrong body \(body)"))
                 return
             }
             
-            let integrationCommits = IntegrationCommits(json: integrationCommitsBody)
+            let integrationCommits = IntegrationCommits(json: integrationCommitsBody[0] as! NSDictionary)
             completion(integrationCommits: integrationCommits, error: nil)
             
         }

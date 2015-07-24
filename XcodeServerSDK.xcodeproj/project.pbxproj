@@ -101,6 +101,8 @@
 		700B43591B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
 		700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
+		70138A811B62478100477F91 /* get_integration_commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 70138A801B62478100477F91 /* get_integration_commits.json */; };
+		70138A821B62478100477F91 /* get_integration_commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 70138A801B62478100477F91 /* get_integration_commits.json */; };
 		7019563C1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
 		7019563D1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
 		7019563E1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
@@ -227,6 +229,7 @@
 		5CA6A6E6E245E84BFBB93C35 /* Pods-XcodeServerSDK - iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS/Pods-XcodeServerSDK - iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		700B43571B5FA7A200E27175 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
 		700C93551B54F58A00B3C6E6 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
+		70138A801B62478100477F91 /* get_integration_commits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration_commits.json; sourceTree = "<group>"; };
 		7019563B1B5E26C5007CDF0B /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		7019563F1B5E2BEE007CDF0B /* Contributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		701956431B5E2F79007CDF0B /* ContributorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
@@ -421,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC47F3F1B586DFD008C4E42 /* get_integration.json */,
+				70138A801B62478100477F91 /* get_integration_commits.json */,
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
 				7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */,
@@ -716,6 +720,7 @@
 				3AC47F411B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */,
+				70138A821B62478100477F91 /* get_integration_commits.json in Resources */,
 				3A13F30C1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853AA1B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A31B4002C900B7F842 /* osx_bot.json in Resources */,
@@ -743,6 +748,7 @@
 				3AC47F401B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */,
+				70138A811B62478100477F91 /* get_integration_commits.json in Resources */,
 				3A13F30B1B404E7500C29D81 /* platforms.json in Resources */,
 				3A3853A91B40046E00B7F842 /* create_osx_bot.json in Resources */,
 				3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */,
