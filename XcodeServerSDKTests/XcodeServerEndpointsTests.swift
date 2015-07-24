@@ -14,10 +14,17 @@ class XcodeServerEndpointsTests: XCTestCase {
 
     let serverConfig = try! XcodeServerConfig(host: "https://127.0.0.1", user: "test", password: "test")
     var endpoints: XcodeServerEndpoints?
+    var randomParams: [String: String]?
     
     override func setUp() {
         super.setUp()
         self.endpoints = XcodeServerEndpoints(serverConfig: serverConfig)
+        self.randomParams = [
+            "rev": "revValue",
+            "bot": "botValue",
+            "integration": "integrationValue",
+            "otherKey": "otherValue"
+        ]
     }
     
     // If malformed URL is passed to request creation function it should early exit and retur nil
@@ -237,14 +244,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForDevices() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.Devices, params: params)
-        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices, \(params)) should return \"/api/devices\"")
+        let url = self.endpoints?.endpointURL(.Devices, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices, \(self.randomParams)) should return \"/api/devices\"")
     }
     
     // MARK: endpointURL(.UserCanCreateBots)
@@ -255,14 +256,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForAuthIsBotCreator() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.UserCanCreateBots, params: params)
-        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots, \(params)) should return \"/api/auth/isBotCreator\"")
+        let url = self.endpoints?.endpointURL(.UserCanCreateBots, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots, \(self.randomParams)) should return \"/api/auth/isBotCreator\"")
     }
     
     // MARK: endpointURL(.Login)
@@ -273,14 +268,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForAuthLogin() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.Login, params: params)
-        XCTAssertEqual(url!, "/api/auth/login", "endpointURL(.Login, \(params)) should return \"/api/auth/login\"")
+        let url = self.endpoints?.endpointURL(.Login, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/auth/login", "endpointURL(.Login, \(self.randomParams)) should return \"/api/auth/login\"")
     }
     
     // MARK: endpointURL(.Logout)
@@ -291,14 +280,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForAuthLogout() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.Logout, params: params)
-        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout, \(params)) should return \"/api/auth/logout\"")
+        let url = self.endpoints?.endpointURL(.Logout, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout, \(self.randomParams)) should return \"/api/auth/logout\"")
     }
     
     // MARK: endpointURL(.Platforms)
@@ -309,14 +292,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForPlatforms() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.Platforms, params: params)
-        XCTAssertEqual(url!, "/api/platforms", "endpointURL(.Platforms, \(params)) should return \"/api/platforms\"")
+        let url = self.endpoints?.endpointURL(.Platforms, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/platforms", "endpointURL(.Platforms, \(self.randomParams)) should return \"/api/platforms\"")
     }
     
     // MARK: endpointURL(.SCM_Branches)
@@ -327,14 +304,8 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForSCMBranches() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.SCM_Branches, params: params)
-        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches, \(params)) should return \"/api/scm/branches\"")
+        let url = self.endpoints?.endpointURL(.SCM_Branches, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches, \(self.randomParams)) should return \"/api/scm/branches\"")
     }
     
     // MARK: endpointURL(.Repositories)
@@ -345,13 +316,7 @@ class XcodeServerEndpointsTests: XCTestCase {
     }
     
     func testEndpointURLCreationForRepositories() {
-        let params = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
-        let url = self.endpoints?.endpointURL(.Repositories, params: params)
-        XCTAssertEqual(url!, "/api/repositories", "endpointURL(.Repositories, \(params)) should return \"/api/repositories\"")
+        let url = self.endpoints?.endpointURL(.Repositories, params: self.randomParams)
+        XCTAssertEqual(url!, "/api/repositories", "endpointURL(.Repositories, \(self.randomParams)) should return \"/api/repositories\"")
     }
 }
