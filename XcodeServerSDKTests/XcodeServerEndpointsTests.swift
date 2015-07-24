@@ -228,4 +228,22 @@ class XcodeServerEndpointsTests: XCTestCase {
             XCTAssertEqual(url!, "/api/integrations/integrationValue/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/integrations/integrationValue/cancel\"")
         }
     }
+    
+    // MARK: endpointURL(.Devices)
+    
+    func testEndpointURLCreationForDevicesWithoutParams() {
+        let url = self.endpoints?.endpointURL(.Devices)
+        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices) should return \"/api/devices\"")
+    }
+    
+    func testEndpointURLCreationForDevices() {
+        let params = [
+            "rev": "revValue",
+            "bot": "botValue",
+            "integration": "integrationValue",
+            "otherKey": "otherValue"
+        ]
+        let url = self.endpoints?.endpointURL(.Devices, params: params)
+        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices, \(params)) should return \"/api/devices\"")
+    }
 }
