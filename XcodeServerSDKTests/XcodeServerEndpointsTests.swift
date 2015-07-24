@@ -82,4 +82,77 @@ class XcodeServerEndpointsTests: XCTestCase {
             XCTAssertEqual(url!, "/api/bots/botValue/revValue", "endpointURL(.Bots, \(params)) should return \"/api/bots/botValue/revValue\"")
         }
     }
+    
+    // MARK: endpointURL(.Integrations)
+    
+    func testEndpointURLCreationForIntegrationsWithoutParams() {
+        let url = self.endpoints?.endpointURL(.Integrations)
+        XCTAssertEqual(url!, "/api/integrations", "endpointURL(.Integrations) should return \"/api/integrations\"")
+    }
+    
+    func testEndpointURLCreationForBotsBotIntegrations() {
+        let paramsArray = [
+            [
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.Integrations, params: params)
+            XCTAssertEqual(url!, "/api/bots/botValue/integrations", "endpointURL(.Integrations, \(params)) should return \"/api/bots/botValue/integrations\"")
+        }
+    }
+    
+    func testEndpointURLCreationForBotsBotRevIntegrations() {
+        let paramsArray = [
+            [
+                "rev": "revValue",
+                "bot": "botValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "rev": "revValue"
+            ],
+            [
+                "otherKey": "otherValue",
+                "bot": "botValue",
+                "rev": "revValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.Integrations, params: params)
+            XCTAssertEqual(url!, "/api/bots/botValue/revValue/integrations", "endpointURL(.Integrations, \(params)) should return \"/api/bots/botValue/revValue/integrations\"")
+        }
+    }
+    
+    func testEndpointURLCreationForIntegrationsIntegration() {
+        let paramsArray = [
+            [
+                "integration": "integrationValue",
+            ],
+            [
+                "otherKey": "otherValue",
+                "integration": "integrationValue"
+            ],
+            [
+                "rev": "revValue",
+                "otherKey": "otherValue",
+                "integration": "integrationValue"
+            ]
+        ]
+        for params in paramsArray {
+            let url = self.endpoints?.endpointURL(.Integrations, params: params)
+            XCTAssertEqual(url!, "/api/integrations/integrationValue", "endpointURL(.Integrations, \(params)) should return \"/api/integrations/integrationValue\"")
+        }
+    }
 }
