@@ -318,4 +318,22 @@ class XcodeServerEndpointsTests: XCTestCase {
         let url = self.endpoints?.endpointURL(.Platforms, params: params)
         XCTAssertEqual(url!, "/api/platforms", "endpointURL(.Platforms, \(params)) should return \"/api/platforms\"")
     }
+    
+    // MARK: endpointURL(.SCM_Branches)
+    
+    func testEndpointURLCreationForSCMBranchesWithoutParams() {
+        let url = self.endpoints?.endpointURL(.SCM_Branches)
+        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches) should return \"/api/scm/branches\"")
+    }
+    
+    func testEndpointURLCreationForSCMBranches() {
+        let params = [
+            "rev": "revValue",
+            "bot": "botValue",
+            "integration": "integrationValue",
+            "otherKey": "otherValue"
+        ]
+        let url = self.endpoints?.endpointURL(.SCM_Branches, params: params)
+        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches, \(params)) should return \"/api/scm/branches\"")
+    }
 }
