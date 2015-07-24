@@ -246,4 +246,22 @@ class XcodeServerEndpointsTests: XCTestCase {
         let url = self.endpoints?.endpointURL(.Devices, params: params)
         XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices, \(params)) should return \"/api/devices\"")
     }
+    
+    // MARK: endpointURL(.UserCanCreateBots)
+    
+    func testEndpointURLCreationForUserCanCreateBotsWithoutParams() {
+        let url = self.endpoints?.endpointURL(.UserCanCreateBots)
+        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots) should return \"/api/auth/isBotCreator\"")
+    }
+    
+    func testEndpointURLCreationForAuthIsBotCreator() {
+        let params = [
+            "rev": "revValue",
+            "bot": "botValue",
+            "integration": "integrationValue",
+            "otherKey": "otherValue"
+        ]
+        let url = self.endpoints?.endpointURL(.UserCanCreateBots, params: params)
+        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots, \(params)) should return \"/api/auth/isBotCreator\"")
+    }
 }
