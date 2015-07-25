@@ -61,7 +61,7 @@ platform :mac do
     slack(
       message: "Successfully released [XcodeServerSDK #{version}](#{release['html_url']}) :rocket:",
       payload: {
-        "New" => github_release['body']
+        "New" => release['body']
       }
     )
   end
