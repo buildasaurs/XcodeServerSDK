@@ -49,7 +49,7 @@ platform :mac do
     # create a new release on GitHub
     release = set_github_release(
       repository_name: "czechboy0/XcodeServerSDK",
-      api_token: ENV["GITHUB_TOKEN"]
+      api_token: ENV["GITHUB_TOKEN"],
       name: [version, title].join(" - "),
       tag_name: version,
       description: description,
