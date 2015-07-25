@@ -13,9 +13,9 @@ import BuildaUtils
 public class XcodeServer : CIServer {
     
     public let config: XcodeServerConfig
-    let endpoints: XcodeServerEndPoints
+    let endpoints: XcodeServerEndpoints
     
-    public init(config: XcodeServerConfig, endpoints: XcodeServerEndPoints) {
+    public init(config: XcodeServerConfig, endpoints: XcodeServerEndpoints) {
         
         self.config = config
         self.endpoints = endpoints
@@ -116,7 +116,7 @@ public extension XcodeServer {
     - parameter body:       POST method request body.
     - parameter completion: Completion.
     */
-    internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndPoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
+    internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndpoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
         
         var allParams = [
             "method": method.rawValue

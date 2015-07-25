@@ -9,7 +9,7 @@
 import Foundation
 import BuildaUtils
 
-public class XcodeServerEndPoints {
+public class XcodeServerEndpoints {
     
     enum Endpoint {
         case Bots
@@ -37,7 +37,7 @@ public class XcodeServerEndPoints {
         self.serverConfig = serverConfig
     }
     
-    private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
+    func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
         let base = "/api"
         
