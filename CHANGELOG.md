@@ -2,7 +2,31 @@
 
 ## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.5...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.6...HEAD)
+
+**Closed issues:**
+
+- XcodeServerEndpoints refactoring proposition [\#79](https://github.com/czechboy0/XcodeServerSDK/issues/79)
+
+- Date from array [\#78](https://github.com/czechboy0/XcodeServerSDK/issues/78)
+
+- Commits request [\#76](https://github.com/czechboy0/XcodeServerSDK/issues/76)
+
+**Merged pull requests:**
+
+- Trigger Postbuild Status XCS Magic Fix [\#85](https://github.com/czechboy0/XcodeServerSDK/pull/85) ([czechboy0](https://github.com/czechboy0))
+
+- XcodeServerEndpoints.createRequest tests [\#84](https://github.com/czechboy0/XcodeServerSDK/pull/84) ([pmkowal](https://github.com/pmkowal))
+
+- Slack info [\#83](https://github.com/czechboy0/XcodeServerSDK/pull/83) ([cojoj](https://github.com/cojoj))
+
+- Bot Deletion Test [\#82](https://github.com/czechboy0/XcodeServerSDK/pull/82) ([czechboy0](https://github.com/czechboy0))
+
+- XcodeServerEndpoints.endpointURL tests [\#80](https://github.com/czechboy0/XcodeServerSDK/pull/80) ([pmkowal](https://github.com/pmkowal))
+
+## [v0.1.6](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.6) (2015-07-22)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.5...v0.1.6)
 
 **Closed issues:**
 
