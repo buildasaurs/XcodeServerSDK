@@ -10,6 +10,7 @@ import Foundation
 
 public class TriggerConditions : XcodeServerEntity {
     
+    public let status: Int
     public let onAnalyzerWarnings: Bool
     public let onBuildErrors: Bool
     public let onFailingTests: Bool
@@ -17,8 +18,9 @@ public class TriggerConditions : XcodeServerEntity {
     public let onSuccess: Bool
     public let onWarnings: Bool
     
-    public init(onAnalyzerWarnings: Bool, onBuildErrors: Bool, onFailingTests: Bool, onInternalErrors: Bool, onSuccess: Bool, onWarnings: Bool) {
+    public init(status: Int = 2, onAnalyzerWarnings: Bool, onBuildErrors: Bool, onFailingTests: Bool, onInternalErrors: Bool, onSuccess: Bool, onWarnings: Bool) {
         
+        self.status = status
         self.onAnalyzerWarnings = onAnalyzerWarnings
         self.onBuildErrors = onBuildErrors
         self.onFailingTests = onFailingTests
@@ -33,6 +35,7 @@ public class TriggerConditions : XcodeServerEntity {
         
         let dict = NSMutableDictionary()
         
+        dict["status"] = self.status
         dict["onAnalyzerWarnings"] = self.onAnalyzerWarnings
         dict["onBuildErrors"] = self.onBuildErrors
         dict["onFailingTests"] = self.onFailingTests
@@ -45,6 +48,7 @@ public class TriggerConditions : XcodeServerEntity {
     
     public required init(json: NSDictionary) {
         
+        self.status = json.optionalIntForKey("status") ?? 2
         self.onAnalyzerWarnings = json.boolForKey("onAnalyzerWarnings")
         self.onBuildErrors = json.boolForKey("onBuildErrors")
         self.onFailingTests = json.boolForKey("onFailingTests")
