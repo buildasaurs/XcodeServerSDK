@@ -47,8 +47,9 @@ platform :mac do
     # TODO: up the CocoaPod version spec, commit and push and pod trunk push before you make the release
 
     # create a new release on GitHub
-    release = set_github_release(
-      repository_name: "czechboy0/XcodeServerSDK",
+    repo_url = "czechboy0/XcodeServerSDK"
+    set_github_release(
+      repository_name: repo_url,
       api_token: ENV["GITHUB_TOKEN"],
       name: [version, title].join(" - "),
       tag_name: version,
@@ -56,6 +57,13 @@ platform :mac do
       is_draft: false,
       is_prerelease: false
     )
+
+    # TODO: workaround till https://github.com/KrauseFx/fastlane/pull/446 gets into a release
+    # then let set_github_release already return the JSON so that we can use it
+    release = get_github_release(
+        url: repo_url,
+        version: version
+      )
 
     # notify us on slack
     slack(
@@ -75,11 +83,6 @@ platform :mac do
       slack(
         message: "XcodeServerSDK: Build finished"
       )
-    end
-    if lane == :release
-      slack(
-        message: "XcodeServerSDK: New Version Released: https://github.com/czechboy0/XcodeServerSDK/releases"
-        )
     end
   end
  
