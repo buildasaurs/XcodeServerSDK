@@ -20,10 +20,44 @@ class XcodeServerEndpointsTests: XCTestCase {
         self.endpoints = XcodeServerEndpoints(serverConfig: serverConfig)
     }
     
+    // MARK: createRequest()
+    
     // If malformed URL is passed to request creation function it should early exit and retur nil
     func testMalformedURLCreation() {
         let expectation = endpoints?.createRequest(.GET, endpoint: .Bots, params: ["test": "test"], query: ["test//http\\": "!test"], body: ["test": "test"], doBasicAuth: true)
         XCTAssertNil(expectation, "Shouldn't create request from malformed URL")
+    }
+    
+    func testGETRequestCreation() {
+        let expectedUrl = NSURL(string: "https://127.0.0.1:20343/api/bots/bot_id/integrations?format=json")
+        let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
+        // HTTPMethod
+        expectedRequest.HTTPMethod = "GET"
+        // Authorization header: "test": "test"
+        expectedRequest.setValue("Basic dGVzdDp0ZXN0", forHTTPHeaderField: "Authorization")
+        
+        let request = self.endpoints?.createRequest(.GET, endpoint: .Integrations, params: ["bot": "bot_id"], query: ["format": "json"], body: nil, doBasicAuth: true)
+        XCTAssertEqual(expectedRequest, request!)
+    }
+    
+    func testPOSTRequestCreation() {
+        let expectedUrl = NSURL(string: "https://127.0.0.1:20343/api/auth/logout")
+        let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
+        // HTTPMethod
+        expectedRequest.HTTPMethod = "POST"
+        
+        let request = self.endpoints?.createRequest(.POST, endpoint: .Logout, params: nil, query: nil, body: nil, doBasicAuth: false)
+        XCTAssertEqual(expectedRequest, request!)
+    }
+    
+    func testDELETERequestCreation() {
+        let expectedUrl = NSURL(string: "https://127.0.0.1:20343/api/bots/bot_id/rev_id")
+        let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
+        // HTTPMethod
+        expectedRequest.HTTPMethod = "DELETE"
+        
+        let request = self.endpoints?.createRequest(.DELETE, endpoint: .Bots, params: ["bot": "bot_id", "rev": "rev_id", "method": "DELETE"], query: nil, body: nil, doBasicAuth: false)
+        XCTAssertEqual(expectedRequest, request!)
     }
     
     // MARK: endpointURL(.Bots)
