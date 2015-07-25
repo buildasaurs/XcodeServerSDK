@@ -32,12 +32,6 @@ platform :mac do
     ensure_git_branch(branch: "swift-2")
     git_pull
 
-    # regenerate changelog and make sure it's committed
-    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
-
-    # nothing should have changed, we should still be on clean status, if not, commit first
-    ensure_git_status_clean
-
     # ask for the version
     version = prompt(text: 'New Version Tag: ')
     title = prompt(text: 'Release Title: ')
@@ -73,6 +67,11 @@ platform :mac do
         "New" => release['body']
       }
     )
+
+    # regenerate changelog to get it committed
+    # TODO: is there a "commit" fastlane action?
+    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
+
   end
 
   #TODO: create a lane for releasing a new podspec

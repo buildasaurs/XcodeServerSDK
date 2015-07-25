@@ -1,8 +1,8 @@
 # Change Log
 
-## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+## [v0.1.7](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.7) (2015-07-25)
 
-[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.6...HEAD)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.6...v0.1.7)
 
 **Closed issues:**
 
