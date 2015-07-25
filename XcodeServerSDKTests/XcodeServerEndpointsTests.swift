@@ -28,6 +28,20 @@ class XcodeServerEndpointsTests: XCTestCase {
         XCTAssertNil(expectation, "Shouldn't create request from malformed URL")
     }
     
+    func testRequestCreationForEmptyAuthorizationParams() {
+        let expectedUrl = NSURL(string: "https://127.0.0.1:20343/api/bots/bot_id/integrations")
+        let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
+        // HTTPMethod
+        expectedRequest.HTTPMethod = "GET"
+        // Authorization header: "": ""
+        expectedRequest.setValue("Basic Og==", forHTTPHeaderField: "Authorization")
+        
+        let noAuthorizationConfig = try! XcodeServerConfig(host: "https://127.0.0.1")
+        let noAuthorizationEndpoints = XcodeServerEndpoints(serverConfig: noAuthorizationConfig)
+        let request = noAuthorizationEndpoints.createRequest(.GET, endpoint: .Integrations, params: ["bot": "bot_id"], query: nil, body: nil, doBasicAuth: true)
+        XCTAssertEqual(expectedRequest, request!)
+    }
+    
     func testGETRequestCreation() {
         let expectedUrl = NSURL(string: "https://127.0.0.1:20343/api/bots/bot_id/integrations?format=json")
         let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
