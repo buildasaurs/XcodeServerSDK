@@ -50,6 +50,16 @@ class BotParsingTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
     
+//    func testBots() {
+//        
+//        let exp = self.expectationWithDescription("Network")
+//        let config = try! XcodeServerConfig(host: "192.168.1.64")
+//        let server = XcodeServerFactory.server(config)
+//        server.getBots { (bots, error) -> () in
+//            exp.fulfill()
+//        }
+//        self.waitForExpectationsWithTimeout(10, handler: nil)
+//    }
 //    func testBot() {
 //        
 //        let bot = self.botInFileWithName("bot_mac_xcode6")
