@@ -47,7 +47,8 @@ class XcodeServerEndpointsTests: XCTestCase {
         let expectation = "/api/bots/bot_id/rev_id"
         let params = [
             "bot": "bot_id",
-            "rev": "rev_id"
+            "rev": "rev_id",
+            "method": "DELETE"
         ]
         let url = self.endpoints?.endpointURL(.Bots, params: params)
         XCTAssertEqual(url!, expectation, "endpointURL(.Bots, \(params)) should return \(expectation)")
