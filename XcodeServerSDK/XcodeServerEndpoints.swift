@@ -48,7 +48,10 @@ public class XcodeServerEndpoints {
             let bots = "\(base)/bots"
             if let bot = params?["bot"] {
                 let bot = "\(bots)/\(bot)"
-                if let rev = params?["rev"] {
+                if
+                    let rev = params?["rev"],
+                    let method = params?["method"] where method == "DELETE"
+                {
                     let rev = "\(bot)/\(rev)"
                     return rev
                 }

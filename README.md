@@ -10,7 +10,7 @@
 > Use Xcode Server's API with native Swift objects.
 
 First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
-This is an unofficial, community-maintained project and is not associated with Apple.
+This is an unofficial, community-maintained project and is not associated with Apple. We also maintain [unofficial documentation](https://github.com/czechboy0/XcodeServer-API-Docs) of Xcode Server in case you'd like to integrate using a different programming language! :wink:
 
 # :signal_strength: Xcode Server API Versions
 | Xcode Server API | Supported? |
@@ -26,7 +26,7 @@ The latest version supporting the old, undocumented Xcode 6 version of the Xcode
 One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
-pod 'XcodeServerSDK', '0.1.3'
+pod 'XcodeServerSDK', '0.1.6'
 ```
 
 If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:

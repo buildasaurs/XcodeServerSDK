@@ -1,0 +1,46 @@
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.13.0"
+
+default_platform :mac
+
+platform :mac do
+
+  before_all do |lane|
+  end
+
+  lane :prebuild do
+    cocoapods
+  end
+
+  lane :postbuild do
+    # nada
+  end
+
+  after_all do |lane|    
+
+    if lane == :postbuild
+      slack(
+        message: "XcodeServerSDK: Build finished"
+      )
+    end
+  end
+ 
+  error do |lane, exception|
+    slack(
+      message: "XcodeServerSDK: Seems like we have a failing build: #{exception.message}",
+      success: false
+    )
+  end
+
+  #TODO: create a lane for releasing a new podspec
+end
+
