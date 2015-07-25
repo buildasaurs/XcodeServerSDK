@@ -14,17 +14,10 @@ class XcodeServerEndpointsTests: XCTestCase {
 
     let serverConfig = try! XcodeServerConfig(host: "https://127.0.0.1", user: "test", password: "test")
     var endpoints: XcodeServerEndpoints?
-    var randomParams: [String: String]?
     
     override func setUp() {
         super.setUp()
         self.endpoints = XcodeServerEndpoints(serverConfig: serverConfig)
-        self.randomParams = [
-            "rev": "revValue",
-            "bot": "botValue",
-            "integration": "integrationValue",
-            "otherKey": "otherValue"
-        ]
     }
     
     // If malformed URL is passed to request creation function it should early exit and retur nil
@@ -35,288 +28,121 @@ class XcodeServerEndpointsTests: XCTestCase {
     
     // MARK: endpointURL(.Bots)
     
-    func testEndpointURLCreationForBotsWithoutParams() {
+    func testEndpointURLCreationForBotsPath() {
+        let expectation = "/api/bots"
         let url = self.endpoints?.endpointURL(.Bots)
-        XCTAssertEqual(url!, "/api/bots", "endpointURL(.Bots) should return \"/api/bots\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Bots) should return \(expectation)")
     }
     
-    func testEndpointURLCreationForBots() {
-        let paramsArray = [
-            [
-                "key": "value"
-            ],
-            [
-                "key": "value",
-                "rev": "rev"
-            ]
+    func testEndpointURLCreationForBotsBotPath() {
+        let expectation = "/api/bots/bot_id"
+        let params = [
+            "bot": "bot_id"
         ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Bots, params: params)
-            XCTAssertEqual(url!, "/api/bots", "endpointURL(.Bots, \(params)) should return \"/api/bots\"")
-        }
+        let url = self.endpoints?.endpointURL(.Bots, params: params)
+        XCTAssertEqual(url!, expectation, "endpointURL(.Bots, \(params)) should return \(expectation)")
     }
     
-    func testEndpointURLCreationForBotsBot() {
-        let paramsArray = [
-            [
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue"
-            ]
+    func testEndpointURLCreationForBotsBotRevPath() {
+        let expectation = "/api/bots/bot_id/rev_id"
+        let params = [
+            "bot": "bot_id",
+            "rev": "rev_id"
         ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Bots, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue", "endpointURL(.Bots, \(params)) should return \"/api/bots/botValue\"")
-        }
-    }
-    
-    func testEndpointURLCreationForBotsBotRev() {
-        let paramsArray = [
-            [
-                "rev": "revValue",
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "rev": "revValue"
-            ]
-        ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Bots, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue/revValue", "endpointURL(.Bots, \(params)) should return \"/api/bots/botValue/revValue\"")
-        }
+        let url = self.endpoints?.endpointURL(.Bots, params: params)
+        XCTAssertEqual(url!, expectation, "endpointURL(.Bots, \(params)) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Integrations)
     
-    func testEndpointURLCreationForIntegrationsWithoutParams() {
+    func testEndpointURLCreationForIntegrationsPath() {
+        let expectation = "/api/integrations"
         let url = self.endpoints?.endpointURL(.Integrations)
-        XCTAssertEqual(url!, "/api/integrations", "endpointURL(.Integrations) should return \"/api/integrations\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Integrations) should return \(expectation)")
     }
     
-    func testEndpointURLCreationForBotsBotIntegrations() {
-        let paramsArray = [
-            [
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "integration": "integrationValue"
-            ]
+    func testEndpointURLCreationForIntegrationsIntegrationPath() {
+        let expectation = "/api/integrations/integration_id"
+        let params = [
+            "integration": "integration_id"
         ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Integrations, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue/integrations", "endpointURL(.Integrations, \(params)) should return \"/api/bots/botValue/integrations\"")
-        }
+        let url = self.endpoints?.endpointURL(.Integrations, params: params)
+        XCTAssertEqual(url!, expectation, "endpointURL(.Integrations, \(params)) should return \(expectation)")
     }
     
-    func testEndpointURLCreationForBotsBotRevIntegrations() {
-        let paramsArray = [
-            [
-                "rev": "revValue",
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "rev": "revValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "rev": "revValue",
-                "integration": "integrationValue"
-            ]
+    func testEndpointURLCreationForBotsBotIntegrationsPath() {
+        let expectation = "/api/bots/bot_id/integrations"
+        let params = [
+            "bot": "bot_id"
         ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Integrations, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue/revValue/integrations", "endpointURL(.Integrations, \(params)) should return \"/api/bots/botValue/revValue/integrations\"")
-        }
-    }
-    
-    func testEndpointURLCreationForIntegrationsIntegration() {
-        let paramsArray = [
-            [
-                "integration": "integrationValue",
-            ],
-            [
-                "otherKey": "otherValue",
-                "integration": "integrationValue"
-            ],
-            [
-                "rev": "revValue",
-                "otherKey": "otherValue",
-                "integration": "integrationValue"
-            ]
-        ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.Integrations, params: params)
-            XCTAssertEqual(url!, "/api/integrations/integrationValue", "endpointURL(.Integrations, \(params)) should return \"/api/integrations/integrationValue\"")
-        }
+        let url = self.endpoints?.endpointURL(.Integrations, params: params)
+        XCTAssertEqual(url!, expectation, "endpointURL(.Integrations, \(params)) should return \(expectation)")
     }
     
     // MARK: endpointURL(.CancelIntegration)
     
-    func testEndpointURLCreationForCancelIntegrationWithoutParams() {
-        let url = self.endpoints?.endpointURL(.CancelIntegration)
-        XCTAssertEqual(url!, "/api/integrations/cancel", "endpointURL(.CancelIntegration) should return \"/api/integrations/cancel\"")
-    }
-    
-    func testEndpointURLCreationForBotsBotIntegrationsCancel() {
-        let paramsArray = [
-            [
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "integration": "integrationValue"
-            ]
+    func testEndpointURLCreationForIntegrationsIntegrationCancelPath() {
+        let expectation = "/api/integrations/integration_id/cancel"
+        let params = [
+            "integration": "integration_id"
         ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue/integrations/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/bots/botValue/integrations/cancel\"")
-        }
-    }
-    
-    func testEndpointURLCreationForBotsBotRevIntegrationsCancel() {
-        let paramsArray = [
-            [
-                "rev": "revValue",
-                "bot": "botValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "rev": "revValue"
-            ],
-            [
-                "otherKey": "otherValue",
-                "bot": "botValue",
-                "rev": "revValue",
-                "integration": "integrationValue"
-            ]
-        ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
-            XCTAssertEqual(url!, "/api/bots/botValue/revValue/integrations/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/bots/botValue/revValue/integrations/cancel\"")
-        }
-    }
-    
-    func testEndpointURLCreationForIntegrationsIntegrationCancel() {
-        let paramsArray = [
-            [
-                "integration": "integrationValue",
-            ],
-            [
-                "otherKey": "otherValue",
-                "integration": "integrationValue"
-            ],
-            [
-                "rev": "revValue",
-                "otherKey": "otherValue",
-                "integration": "integrationValue"
-            ]
-        ]
-        for params in paramsArray {
-            let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
-            XCTAssertEqual(url!, "/api/integrations/integrationValue/cancel", "endpointURL(.CancelIntegration, \(params)) should return \"/api/integrations/integrationValue/cancel\"")
-        }
+        let url = self.endpoints?.endpointURL(.CancelIntegration, params: params)
+        XCTAssertEqual(url!, expectation, "endpointURL(.CancelIntegration, \(params)) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Devices)
     
-    func testEndpointURLCreationForDevicesWithoutParams() {
+    func testEndpointURLCreationForDevicesPath() {
+        let expectation = "/api/devices"
         let url = self.endpoints?.endpointURL(.Devices)
-        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices) should return \"/api/devices\"")
-    }
-    
-    func testEndpointURLCreationForDevices() {
-        let url = self.endpoints?.endpointURL(.Devices, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/devices", "endpointURL(.Devices, \(self.randomParams)) should return \"/api/devices\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Devices) should return \(expectation)")
     }
     
     // MARK: endpointURL(.UserCanCreateBots)
     
-    func testEndpointURLCreationForUserCanCreateBotsWithoutParams() {
+    func testEndpointURLCreationForAuthIsBotCreatorPath() {
+        let expectation = "/api/auth/isBotCreator"
         let url = self.endpoints?.endpointURL(.UserCanCreateBots)
-        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots) should return \"/api/auth/isBotCreator\"")
-    }
-    
-    func testEndpointURLCreationForAuthIsBotCreator() {
-        let url = self.endpoints?.endpointURL(.UserCanCreateBots, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/auth/isBotCreator", "endpointURL(.UserCanCreateBots, \(self.randomParams)) should return \"/api/auth/isBotCreator\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.UserCanCreateBots) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Login)
     
-    func testEndpointURLCreationForLoginWithoutParams() {
+    func testEndpointURLCreationForAuthLoginPath() {
+        let expectation = "/api/auth/login"
         let url = self.endpoints?.endpointURL(.Login)
-        XCTAssertEqual(url!, "/api/auth/login", "endpointURL(.Login) should return \"/api/auth/login\"")
-    }
-    
-    func testEndpointURLCreationForAuthLogin() {
-        let url = self.endpoints?.endpointURL(.Login, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/auth/login", "endpointURL(.Login, \(self.randomParams)) should return \"/api/auth/login\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Login) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Logout)
     
-    func testEndpointURLCreationForLogoutWithoutParams() {
+    func testEndpointURLCreationForAuthLogoutPath() {
+        let expectation = "/api/auth/logout"
         let url = self.endpoints?.endpointURL(.Logout)
-        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout) should return \"/api/auth/logout\"")
-    }
-    
-    func testEndpointURLCreationForAuthLogout() {
-        let url = self.endpoints?.endpointURL(.Logout, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/auth/logout", "endpointURL(.Logout, \(self.randomParams)) should return \"/api/auth/logout\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Logout) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Platforms)
     
-    func testEndpointURLCreationForPlatformsWithoutParams() {
+    func testEndpointURLCreationForPlatformsPath() {
+        let expectation = "/api/platforms"
         let url = self.endpoints?.endpointURL(.Platforms)
-        XCTAssertEqual(url!, "/api/platforms", "endpointURL(.Platforms) should return \"/api/platforms\"")
-    }
-    
-    func testEndpointURLCreationForPlatforms() {
-        let url = self.endpoints?.endpointURL(.Platforms, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/platforms", "endpointURL(.Platforms, \(self.randomParams)) should return \"/api/platforms\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Platforms) should return \(expectation)")
     }
     
     // MARK: endpointURL(.SCM_Branches)
     
-    func testEndpointURLCreationForSCMBranchesWithoutParams() {
+    func testEndpointURLCreationForScmBranchesPath() {
+        let expectation = "/api/scm/branches"
         let url = self.endpoints?.endpointURL(.SCM_Branches)
-        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches) should return \"/api/scm/branches\"")
-    }
-    
-    func testEndpointURLCreationForSCMBranches() {
-        let url = self.endpoints?.endpointURL(.SCM_Branches, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/scm/branches", "endpointURL(.SCM_Branches, \(self.randomParams)) should return \"/api/scm/branches\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.SCM_Branches) should return \(expectation)")
     }
     
     // MARK: endpointURL(.Repositories)
     
-    func testEndpointURLCreationForRepositoriesWithoutParams() {
+    func testEndpointURLCreationForRepositoriesPath() {
+        let expectation = "/api/repositories"
         let url = self.endpoints?.endpointURL(.Repositories)
-        XCTAssertEqual(url!, "/api/repositories", "endpointURL(.Repositories) should return \"/api/repositories\"")
-    }
-    
-    func testEndpointURLCreationForRepositories() {
-        let url = self.endpoints?.endpointURL(.Repositories, params: self.randomParams)
-        XCTAssertEqual(url!, "/api/repositories", "endpointURL(.Repositories, \(self.randomParams)) should return \"/api/repositories\"")
+        XCTAssertEqual(url!, expectation, "endpointURL(.Repositories) should return \(expectation)")
     }
 }
