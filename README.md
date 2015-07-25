@@ -124,6 +124,11 @@ We use [CocoaPods](https://github.com/CocoaPods/CocoaPods) for dependency manage
 Create an issue or (preferably) send a pull request.
 Do you just want to get involved and help out? See the issues marked as [up-for-grabs](https://github.com/czechboy0/XcodeServerSDK/labels/up-for-grabs). These are the ones just waiting for some beautiful soul like you to build/fix it. We just don't have enough bandwidth and any help is welcome :) (You'll be in the contributors list of the release if you send a PR! :fireworks:)
 
+# :speech_balloon: Get in touch
+
+For things like general problems/ideas please report an **issue**, so anyone can see them and relate to them in the future. It's realy important for Open Source projects like this!
+If your problem requires a deep discussion or you have a great idea and you really want to share it with someone before opening an issue (or you simply want to hang out with some cool guys and talk for a while...:beers::computer:) you can join the official [Buildasaurs](https://github.com/buildasaurs) **Slack team**! (To do so, you need to provide your e-mail address :e-mail:)
+
 # :santa: Origin Story
 This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Buildasaur), bringing you integration of GitHub Pull Requests to Xcode Bots.
 
