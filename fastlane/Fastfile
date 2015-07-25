@@ -67,7 +67,7 @@ platform :mac do
 
     # notify us on slack
     slack(
-      slack_url: ENV['SLACK_URL'],
+      slack_url: ENV['SLACK_RELEASES_URL'],
       message: "Successfully released [XcodeServerSDK #{version}](#{release['html_url']}) :rocket:",
       payload: {
         "New" => release['body']
