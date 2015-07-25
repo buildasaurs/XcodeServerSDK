@@ -33,7 +33,7 @@ platform :mac do
     git_pull
 
     # regenerate changelog and make sure it's committed
-    sh "github_changelog_generator -t $GITHUB_TOKEN"
+    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
 
     # nothing should have changed, we should still be on clean status, if not, commit first
     ensure_git_status_clean
