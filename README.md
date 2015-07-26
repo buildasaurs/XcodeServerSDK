@@ -10,7 +10,7 @@
 > Use Xcode Server's API with native Swift objects.
 
 First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), now in an independent project.
-This is an unofficial, community-maintained project and is not associated with Apple. We also maintain [unofficial documentation](https://github.com/czechboy0/XcodeServer-API-Docs) of Xcode Server in case you'd like to integrate using a different programming language! :wink:
+This is an unofficial, community-maintained project and is not associated with Apple. We also maintain the **[unofficial documentation](https://github.com/czechboy0/XcodeServer-API-Docs) of Xcode Server** in case you'd like to integrate using a different programming language! :wink:
 
 # :signal_strength: Xcode Server API Versions
 | Xcode Server API | Supported? |
