@@ -70,7 +70,7 @@ class XcodeServerEndpointsTests: XCTestCase {
         // HTTPMethod
         expectedRequest.HTTPMethod = "DELETE"
         
-        let request = self.endpoints?.createRequest(.DELETE, endpoint: .Bots, params: ["bot": "bot_id", "rev": "rev_id", "method": "DELETE"], query: nil, body: nil, doBasicAuth: false)
+        let request = self.endpoints?.createRequest(.DELETE, endpoint: .Bots, params: ["bot": "bot_id", "rev": "rev_id"], query: nil, body: nil, doBasicAuth: false)
         XCTAssertEqual(expectedRequest, request!)
     }
     
