@@ -117,19 +117,7 @@ public extension XcodeServer {
     - parameter completion: Completion.
     */
     internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndpoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
-        
-        var allParams = [
-            "method": method.rawValue
-        ]
-        
-        //merge the two params
-        if let params = params {
-            for (key, value) in params {
-                allParams[key] = value
-            }
-        }
-        
-        if let request = self.endpoints.createRequest(method, endpoint: endpoint, params: allParams, query: query, body: body) {
+        if let request = self.endpoints.createRequest(method, endpoint: endpoint, params: params, query: query, body: body) {
             
             self.http.sendRequest(request, completion: { (response, body, error) -> () in
                 

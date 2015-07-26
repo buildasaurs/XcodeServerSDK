@@ -132,7 +132,18 @@ public class XcodeServerEndpoints {
     - returns: NSMutableRequest or nil if wrong URL was provided
     */
     func createRequest(method: HTTP.Method, endpoint: Endpoint, params: [String : String]? = nil, query: [String : String]? = nil, body: NSDictionary? = nil, doBasicAuth auth: Bool = true) -> NSMutableURLRequest? {
-        let endpointURL = self.endpointURL(endpoint, params: params)
+        var allParams = [
+            "method": method.rawValue
+        ]
+        
+        //merge the two params
+        if let params = params {
+            for (key, value) in params {
+                allParams[key] = value
+            }
+        }
+        
+        let endpointURL = self.endpointURL(endpoint, params: allParams)
         let queryString = HTTP.stringForQuery(query)
         let wholePath = "\(self.serverConfig.host):\(self.serverConfig.port)\(endpointURL)\(queryString)"
         
