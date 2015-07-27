@@ -39,21 +39,14 @@ class IntegrationTests: XCTestCase {
         server.getIntegrationCommits("56ad016e2e3993ca0b8ed276050150e8") { (integrationCommits, error) in
             XCTAssertNil(error, "Error should be nil")
             
-            guard let integrationCommits = integrationCommits else {
+            guard let integrationCommits = integrationCommits,
+                  let expectationDate = integrationCommits.endedTimeDate,
+                  let commits = integrationCommits.commits["A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"] else {
                 XCTFail("Integration commits are empty")
                 return
             }
             
-            // Casette assertions
-            if let expectationDate = integrationCommits.endedTimeDate {
-                XCTAssertEqual(expectationDate, self.expectedDate)
-            }
-            
-            guard let commits = integrationCommits.commits["A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"] else {
-                XCTFail("Commits dictionary is empty but should have one key")
-                return
-            }
-            
+            XCTAssertEqual(expectationDate, self.expectedDate)
             XCTAssertEqual(commits.count, 6)
             
             let commiters = Set(commits.map { $0.contributor.name })
