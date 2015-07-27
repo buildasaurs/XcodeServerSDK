@@ -2,7 +2,7 @@
 use_frameworks!
 
 utils_name = 'BuildaUtils'
-utils_version = '0.0.7'
+utils_version = '0.0.8'
 
 target 'XcodeServerSDK - OS X' do
 pod utils_name, utils_version
