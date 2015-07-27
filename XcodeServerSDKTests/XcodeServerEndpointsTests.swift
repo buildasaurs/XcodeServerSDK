@@ -59,9 +59,14 @@ class XcodeServerEndpointsTests: XCTestCase {
         let expectedRequest = NSMutableURLRequest(URL: expectedUrl!)
         // HTTPMethod
         expectedRequest.HTTPMethod = "POST"
+        // HTTPBody
+        let expectedData = "{\n  \"bodyParam\" : \"bodyValue\"\n}".dataUsingEncoding(NSUTF8StringEncoding)
+        expectedRequest.HTTPBody = expectedData!
+        expectedRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let request = self.endpoints?.createRequest(.POST, endpoint: .Logout, params: nil, query: nil, body: nil, doBasicAuth: false)
+        let request = self.endpoints?.createRequest(.POST, endpoint: .Logout, params: nil, query: nil, body: ["bodyParam": "bodyValue"], doBasicAuth: false)
         XCTAssertEqual(expectedRequest, request!)
+        XCTAssertEqual(expectedRequest.HTTPBody!, request!.HTTPBody!)
     }
     
     func testDELETERequestCreation() {
