@@ -161,6 +161,38 @@ extension XcodeServer {
         }
     }
     
+    /**
+    XCS API call for fetching all commits for specific integration.
+    
+    - parameter integrationId: ID of integration.
+    - parameter success:       Optional Integration Commits object with result.
+    - parameter error:         Optional operation error.
+    */
+    public final func getIntegrationCommits(integrationId: String, completion: (integrationCommits: IntegrationCommits?, error: NSError?) ->()) {
+        
+        let params = [
+            "integration": integrationId
+        ]
+        
+        self.sendRequestWithMethod(.GET, endpoint: .Commits, params: params, query: nil, body: nil) { (response, body, error) -> () in
+            
+            guard error == nil else {
+                completion(integrationCommits: nil, error: error)
+                return
+            }
+            
+            guard let integrationCommitsBody = (body as? NSDictionary)?["results"] as? NSArray else {
+                completion(integrationCommits: nil, error: Error.withInfo("Wrong body \(body)"))
+                return
+            }
+            
+            let integrationCommits = IntegrationCommits(json: integrationCommitsBody[0] as! NSDictionary)
+            completion(integrationCommits: integrationCommits, error: nil)
+            
+        }
+        
+    }
+    
     // TODO: Methods about to be implemented...
     
     // public func reportQueueSizeAndEstimatedWaitingTime(integration: Integration, completion: ((queueSize: Int, estWait: Double), NSError?) -> ()) {
