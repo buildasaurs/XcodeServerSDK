@@ -96,6 +96,8 @@
 		3AC47F411B586DFD008C4E42 /* get_integration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC47F3F1B586DFD008C4E42 /* get_integration.json */; };
 		3AC47F461B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
 		3AC47F471B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
+		3AE691081B62CA2300966937 /* bot_deletion.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE691071B62CA2300966937 /* bot_deletion.json */; };
+		3AE691091B62CA2300966937 /* bot_deletion.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE691071B62CA2300966937 /* bot_deletion.json */; };
 		3D19506C0E23052633263948 /* Pods_XcodeServerSDK___iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD1F2C73FB1DFB681AD807 /* Pods_XcodeServerSDK___iOS_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		700B43581B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
 		700B43591B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
@@ -224,6 +226,7 @@
 		3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSpecification.swift; sourceTree = "<group>"; };
 		3AC47F3F1B586DFD008C4E42 /* get_integration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration.json; sourceTree = "<group>"; };
 		3AC47F451B587C67008C4E42 /* IntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		3AE691071B62CA2300966937 /* bot_deletion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bot_deletion.json; sourceTree = "<group>"; };
 		5092B32F595740C3EB6EE029 /* Pods-XcodeServerSDK - iOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS Tests/Pods-XcodeServerSDK - iOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		50E9132396FE4F9BF104B42C /* Pods_XcodeServerSDK___watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA6A6E6E245E84BFBB93C35 /* Pods-XcodeServerSDK - iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - iOS/Pods-XcodeServerSDK - iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -423,6 +426,7 @@
 		3AD14B771B3F71C600BFDEAA /* Casettes */ = {
 			isa = PBXGroup;
 			children = (
+				3AE691071B62CA2300966937 /* bot_deletion.json */,
 				3AC47F3F1B586DFD008C4E42 /* get_integration.json */,
 				70138A801B62478100477F91 /* get_integration_commits.json */,
 				3A3853A11B4002C900B7F842 /* osx_bot.json */,
@@ -470,11 +474,11 @@
 			isa = PBXGroup;
 			children = (
 				70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */,
-				70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */,
-				70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */,
-				70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */,
-				70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */,
 				7027067D1B44548800E09FDF /* XcodeServer+Bot.swift */,
+				70B43A851B43C95A004F9DEB /* XcodeServer+Device.swift */,
+				70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */,
+				70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */,
+				70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */,
 				702706841B445F6A00E09FDF /* XcodeServer+SCM.swift */,
 			);
 			path = "API Routes";
@@ -730,6 +734,7 @@
 				3AA922541B3F0E39005A0F73 /* scm_branches_response_error.json in Resources */,
 				3AA922501B3F0E39005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA922531B3F0E39005A0F73 /* scm_branches_response_success.json in Resources */,
+				3AE691091B62CA2300966937 /* bot_deletion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +763,7 @@
 				3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */,
 				3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */,
 				3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */,
+				3AE691081B62CA2300966937 /* bot_deletion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

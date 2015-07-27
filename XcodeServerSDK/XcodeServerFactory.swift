@@ -12,7 +12,7 @@ public class XcodeServerFactory {
     
     public class func server(config: XcodeServerConfig) -> XcodeServer {
         
-        let endpoints = XcodeServerEndPoints(serverConfig: config)
+        let endpoints = XcodeServerEndpoints(serverConfig: config)
         let server = XcodeServer(config: config, endpoints: endpoints)
         
         return server

@@ -1,0 +1,98 @@
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.13.0"
+
+default_platform :mac
+
+platform :mac do
+
+  before_all do |lane|
+  end
+
+  lane :prebuild do
+    cocoapods
+  end
+
+  lane :postbuild do
+    # nada
+  end
+
+  lane :release do
+
+    # prep the local state
+    ensure_git_status_clean
+    ensure_git_branch(branch: "swift-2")
+    git_pull
+
+    # ask for the version
+    version = prompt(text: 'New Version Tag: ')
+    title = prompt(text: 'Release Title: ')
+    description = prompt(text: "Release changelog: ",
+                         multi_line_end_keyword: "END")
+
+    # TODO: up the CocoaPod version spec, commit and push and pod trunk push before you make the release
+
+    # create a new release on GitHub
+    repo_url = "czechboy0/XcodeServerSDK"
+    set_github_release(
+      repository_name: repo_url,
+      api_token: ENV["GITHUB_TOKEN"],
+      name: [version, title].join(" - "),
+      tag_name: version,
+      description: description,
+      is_draft: false,
+      is_prerelease: false
+    )
+
+    # TODO: workaround till https://github.com/KrauseFx/fastlane/pull/446 gets into a release
+    # then let set_github_release already return the JSON so that we can use it
+    release = get_github_release(
+        url: repo_url,
+        version: version
+      )
+
+    # notify us on slack
+    slack(
+      slack_url: ENV['SLACK_RELEASES_URL'],
+      message: "Successfully released [XcodeServerSDK #{version}](#{release['html_url']}) :rocket:",
+      payload: {
+        "New" => release['body']
+      }
+    )
+
+    # regenerate changelog to get it committed
+    # TODO: is there a "commit" fastlane action?
+    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
+
+  end
+
+  #TODO: create a lane for releasing a new podspec
+
+  after_all do |lane|    
+
+    if lane == :postbuild
+      slack(
+        message: "XcodeServerSDK: Build finished"
+      )
+    end
+  end
+ 
+  error do |lane, exception|
+    if lane == :postbuild
+      slack(
+        message: "XcodeServerSDK: Seems like we have a failing build: #{exception.message}",
+        success: false
+      )
+    end
+  end
+
+end
+

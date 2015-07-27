@@ -9,7 +9,7 @@
 import Foundation
 import BuildaUtils
 
-public class XcodeServerEndPoints {
+public class XcodeServerEndpoints {
     
     enum Endpoint {
         case Bots
@@ -38,7 +38,7 @@ public class XcodeServerEndPoints {
         self.serverConfig = serverConfig
     }
     
-    private func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
+    func endpointURL(endpoint: Endpoint, params: [String: String]? = nil) -> String {
         
         let base = "/api"
         
@@ -49,7 +49,10 @@ public class XcodeServerEndPoints {
             let bots = "\(base)/bots"
             if let bot = params?["bot"] {
                 let bot = "\(bots)/\(bot)"
-                if let rev = params?["rev"] {
+                if
+                    let rev = params?["rev"],
+                    let method = params?["method"] where method == "DELETE"
+                {
                     let rev = "\(bot)/\(rev)"
                     return rev
                 }
@@ -136,7 +139,18 @@ public class XcodeServerEndPoints {
     - returns: NSMutableRequest or nil if wrong URL was provided
     */
     func createRequest(method: HTTP.Method, endpoint: Endpoint, params: [String : String]? = nil, query: [String : String]? = nil, body: NSDictionary? = nil, doBasicAuth auth: Bool = true) -> NSMutableURLRequest? {
-        let endpointURL = self.endpointURL(endpoint, params: params)
+        var allParams = [
+            "method": method.rawValue
+        ]
+        
+        //merge the two params
+        if let params = params {
+            for (key, value) in params {
+                allParams[key] = value
+            }
+        }
+        
+        let endpointURL = self.endpointURL(endpoint, params: allParams)
         let queryString = HTTP.stringForQuery(query)
         let wholePath = "\(self.serverConfig.host):\(self.serverConfig.port)\(endpointURL)\(queryString)"
         

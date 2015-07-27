@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import XcodeServerSDK
 import XCTest
+import XcodeServerSDK
 
 class BotParsingTests: XCTestCase {
     
@@ -36,6 +36,30 @@ class BotParsingTests: XCTestCase {
     }
     
     //MARK: bot
+    
+    func testDeleteBot() {
+        
+        let exp = self.expectationWithDescription("Network")
+        let server = self.getRecordingXcodeServer("bot_deletion")
+        
+        server.deleteBot("5f79bd4f6eb05c645336606cc790ccd7", revision: "5-4939a8253e8243107a0d4733490fd36e") { (success, error) in
+            XCTAssertNil(error)
+            XCTAssertTrue(success)
+            exp.fulfill()
+        }
+        self.waitForExpectationsWithTimeout(10, handler: nil)
+    }
+    
+//    func testBots() {
+//        
+//        let exp = self.expectationWithDescription("Network")
+//        let config = try! XcodeServerConfig(host: "192.168.1.64")
+//        let server = XcodeServerFactory.server(config)
+//        server.getBots { (bots, error) -> () in
+//            exp.fulfill()
+//        }
+//        self.waitForExpectationsWithTimeout(10, handler: nil)
+//    }
 //    func testBot() {
 //        
 //        let bot = self.botInFileWithName("bot_mac_xcode6")
