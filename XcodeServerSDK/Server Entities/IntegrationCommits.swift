@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BuildaUtils
 
 public class IntegrationCommits: XcodeServerEntity {
     
@@ -30,10 +31,12 @@ public class IntegrationCommits: XcodeServerEntity {
         var resultsDictionary: [String: [Commit]] = Dictionary()
         
         for (key, value) in json {
-            let blueprintID = key as! String
-            let commitsArray = (value as! NSArray) as Array
+            guard let blueprintID = key as? String, let commitsArray = value as? [NSDictionary] else {
+                Log.error("Couldn't parse key \(key) and value \(value)")
+                continue
+            }
             
-            resultsDictionary[blueprintID] = commitsArray.map { Commit(json: $0 as! NSDictionary) }
+            resultsDictionary[blueprintID] = commitsArray.map { Commit(json: $0) }
         }
         
         return resultsDictionary
