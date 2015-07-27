@@ -22,7 +22,27 @@ public class IntegrationCommits: XcodeServerEntity {
         self.botTinyID = json.stringForKey("botTinyID")
         self.botID = json.stringForKey("botID")
         self.commits = IntegrationCommits.populateCommits(json.dictionaryForKey("commits"))
-        self.endedTimeDate = NSDate()
+        self.endedTimeDate = {
+            let dateArray = json.arrayForKey("endedTimeDate") as [Int]
+            do {
+                let stringDate = try dateArray.dateString()
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"
+                
+                guard let date = formatter.dateFromString(stringDate) else {
+                    Log.error("Formatter couldn't parse date")
+                    return NSDate()
+                }
+                
+                return date
+            } catch DateParsing.WrongNumberOfElements(let elements) {
+                Log.error("Couldn't parse date as Array has \(elements) elements")
+            } catch {
+                Log.error("Something went wrong while parsing date")
+            }
+            
+            return NSDate()
+        }()
         
         super.init(json: json)
     }
