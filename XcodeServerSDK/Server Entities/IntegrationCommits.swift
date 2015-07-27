@@ -15,7 +15,7 @@ public class IntegrationCommits: XcodeServerEntity {
     public let botTinyID: String
     public let botID: String
     public let commits: [String: [Commit]]
-    public let endedTimeDate: NSDate
+    public let endedTimeDate: NSDate?
     
     public required init(json: NSDictionary) {
         self.integration = json.stringForKey("integration")
@@ -27,6 +27,13 @@ public class IntegrationCommits: XcodeServerEntity {
         super.init(json: json)
     }
     
+    /**
+    Method for populating commits property with data from JSON dictionary.
+    
+    - parameter json: JSON dictionary with blueprints and commits for each one.
+    
+    - returns: Dictionary of parsed Commit objects.
+    */
     class func populateCommits(json: NSDictionary) -> [String: [Commit]] {
         var resultsDictionary: [String: [Commit]] = Dictionary()
         
@@ -42,17 +49,25 @@ public class IntegrationCommits: XcodeServerEntity {
         return resultsDictionary
     }
     
-    class func parseDate(array: NSArray) -> NSDate {
-        let dateArray = array as! [Int]
+    /**
+    Parser for data objects which comes in form of array.
+    
+    - parameter array: Array with date components.
+    
+    - returns: Optional parsed date to the format used by Xcode Server.
+    */
+    class func parseDate(array: NSArray) -> NSDate? {
+        guard let dateArray = array as? [Int] else {
+            Log.error("Couldn't parse XCS date array")
+            return nil
+        }
         
         do {
             let stringDate = try dateArray.dateString()
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZ"
             
-            guard let date = formatter.dateFromString(stringDate) else {
+            guard let date = NSDate.dateFromXCSString(stringDate) else {
                 Log.error("Formatter couldn't parse date")
-                return NSDate()
+                return nil
             }
             
             return date
@@ -62,7 +77,7 @@ public class IntegrationCommits: XcodeServerEntity {
             Log.error("Something went wrong while parsing date")
         }
         
-        return NSDate()
+        return nil
     }
     
 }

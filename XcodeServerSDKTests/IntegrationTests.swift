@@ -45,7 +45,9 @@ class IntegrationTests: XCTestCase {
             }
             
             // Casette assertions
-            XCTAssertEqual(integrationCommits.endedTimeDate, self.expectedDate)
+            if let expectationDate = integrationCommits.endedTimeDate {
+                XCTAssertEqual(expectationDate, self.expectedDate)
+            }
             
             guard let commits = integrationCommits.commits["A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"] else {
                 XCTFail("Commits dictionary is empty but should have one key")
