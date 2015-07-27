@@ -71,7 +71,7 @@ public class IntegrationCommits: XcodeServerEntity {
             }
             
             return date
-        } catch DateParsing.WrongNumberOfElements(let elements) {
+        } catch DateParsingError.WrongNumberOfElements(let elements) {
             Log.error("Couldn't parse date as Array has \(elements) elements")
         } catch {
             Log.error("Something went wrong while parsing date")
