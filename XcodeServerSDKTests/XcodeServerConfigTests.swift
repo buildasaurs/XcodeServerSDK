@@ -23,6 +23,12 @@ class XcodeServerConfigTests: XCTestCase {
         }
     }
     
+    func testInvalidHostProvidingForManualInit() {
+        XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidHostProvided("Invalid host name provided, please double check your host name")) {
+            try XcodeServerConfig(host: "<>127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
+        }
+    }
+    
     func testDictionaryInit() {
         XCTempAssertNoThrowError("Failed to initialize the server configuration") {
             let json = [
