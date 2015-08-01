@@ -11,6 +11,35 @@ import XcodeServerSDK
 
 class XcodeServerConfigTests: XCTestCase {
 
+    // MARK: AvailabilityCheckState testing
+    func testEqualityOfUncheckedStates() {
+        XCTAssertEqual(AvailabilityCheckState.Unchecked, AvailabilityCheckState.Unchecked)
+    }
+    
+    func testEqualityOfCheckingStates() {
+        XCTAssertEqual(AvailabilityCheckState.Checking, AvailabilityCheckState.Checking)
+    }
+    
+    func testEqualityOfFailedStates() {
+        let error1 = ConfigurationErrors.InvalidSchemeProvided("http") as NSError
+        let error2 = ConfigurationErrors.InvalidSchemeProvided("ftp") as NSError
+        XCTAssertEqual(AvailabilityCheckState.Failed(error1), AvailabilityCheckState.Failed(error2))
+    }
+    
+    func testInequalityOfFailedStates() {
+        let error1 = ConfigurationErrors.NoHostProvided as NSError
+        let error2 = ConfigurationErrors.InvalidSchemeProvided("ftp") as NSError
+        XCTAssertNotEqual(AvailabilityCheckState.Failed(error1), AvailabilityCheckState.Failed(error2))
+    }
+    
+    func testEqualityOfSucceededStates() {
+        XCTAssertEqual(AvailabilityCheckState.Succeeded, AvailabilityCheckState.Succeeded)
+    }
+    
+    func testInequalityOfUncheckedAndSucceededStates() {
+        XCTAssertNotEqual(AvailabilityCheckState.Unchecked, AvailabilityCheckState.Succeeded)
+    }
+    
     // MARK: Initialization testing
     func testManualInit() {
         XCTempAssertNoThrowError("Failed to initialize the server configuration") {
