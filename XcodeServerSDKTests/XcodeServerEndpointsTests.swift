@@ -199,4 +199,26 @@ class XcodeServerEndpointsTests: XCTestCase {
         let url = self.endpoints?.endpointURL(.Repositories)
         XCTAssertEqual(url!, expectation, "endpointURL(.Repositories) should return \(expectation)")
     }
+    
+    // MARK: endpointURL(.Commits)
+    
+    func testEndpointURLCreationForCommits() {
+        let expected = "/api/integrations/integration_id/commits"
+        let params = [
+            "integration": "integration_id"
+        ]
+        let url = self.endpoints?.endpointURL(.Commits, params: params)
+        XCTAssertEqual(url!, expected)
+    }
+    
+    // MARK: endpointURL(.Commits)
+    
+    func testEndpointURLCreationForIssues() {
+        let expected = "/api/integrations/integration_id/issues"
+        let params = [
+            "integration": "integration_id"
+        ]
+        let url = self.endpoints?.endpointURL(.Issues, params: params)
+        XCTAssertEqual(url!, expected)
+    }
 }

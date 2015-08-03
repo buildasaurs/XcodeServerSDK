@@ -23,6 +23,7 @@ public class XcodeServerEndpoints {
         case SCM_Branches
         case Repositories
         case Commits
+        case Issues
     }
     
     let serverConfig: XcodeServerConfig
@@ -122,6 +123,12 @@ public class XcodeServerEndpoints {
             let integration = self.endpointURL(.Integrations, params: params)
             let commits = "\(integration)/commits"
             return commits
+            
+        case .Issues:
+            
+            let integration = self.endpointURL(.Integrations, params: params)
+            let issues = "\(integration)/issues"
+            return issues
             
         }
     }
