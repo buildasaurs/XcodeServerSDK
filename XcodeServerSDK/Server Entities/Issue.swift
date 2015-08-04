@@ -14,7 +14,7 @@ public class Issue: XcodeServerEntity {
         case BuildServiceError = "buildServiceError"
         // Looks like build service warnings are treated as warnings in case
         // of type. In case of Issue Type they're Build Service Error
-        // case BuildServiceWarining
+        // case BuildServiceWarining = "warning"
         case TriggerError = "triggerError"
         case Error = "error"
         case Warning = "warning"
@@ -29,7 +29,8 @@ public class Issue: XcodeServerEntity {
         case Silenced
     }
     
-    public let payload: NSDictionary
+    /// Payload is holding whole Dictionary of the Issue
+    public let payload: NSDictionary?
     
     public let messge: String?
     public let type: Type
@@ -41,7 +42,16 @@ public class Issue: XcodeServerEntity {
     
     // MARK: Initialization
     public required init(json: NSDictionary) {
-        // Initialization of each object
+        self.payload = json.copy() as? NSDictionary
+        
+        self.messge = json.optionalStringForKey("message")
+        self.type = Type(rawValue: json.stringForKey("type"))!
+        self.issueType = json.stringForKey("issueType")
+        self.commits = json.arrayForKey("commits").map { Commit(json: $0) }
+        self.integrationID = json.stringForKey("integrationID")
+        self.age = json.intForKey("age")
+        self.status = IssueStatus(rawValue: json.intForKey("status"))!
+        
         super.init(json: json)
     }
     
