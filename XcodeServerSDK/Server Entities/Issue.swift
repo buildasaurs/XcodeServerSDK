@@ -23,16 +23,16 @@ public class Issue: XcodeServerEntity {
     }
     
     public enum IssueStatus: Int {
-        case Unresolved = 0
-        case Fresh
+        case Fresh = 0
+        case Unresolved
         case Resolved
         case Silenced
     }
     
     /// Payload is holding whole Dictionary of the Issue
-    public let payload: NSDictionary?
+    public let payload: NSDictionary
     
-    public let messge: String?
+    public let message: String?
     public let type: Type
     public let issueType: String
     public let commits: [Commit]
@@ -42,9 +42,9 @@ public class Issue: XcodeServerEntity {
     
     // MARK: Initialization
     public required init(json: NSDictionary) {
-        self.payload = json.copy() as? NSDictionary
+        self.payload = json.copy() as? NSDictionary ?? NSDictionary()
         
-        self.messge = json.optionalStringForKey("message")
+        self.message = json.optionalStringForKey("message")
         self.type = Type(rawValue: json.stringForKey("type"))!
         self.issueType = json.stringForKey("issueType")
         self.commits = json.arrayForKey("commits").map { Commit(json: $0) }
