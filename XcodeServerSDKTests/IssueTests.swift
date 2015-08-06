@@ -45,10 +45,10 @@ class IssueTests: XCTestCase {
                 "XCSBlueprintRepositoryID": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                 "XCSCommitContributor": [
                     "XCSContributorEmails": [
-                    "cojoj@icloud.com"
+                    "example@example.com"
                     ],
-                    "XCSContributorName": "cojoj",
-                    "XCSContributorDisplayName": "cojoj"
+                    "XCSContributorName": "tester",
+                    "XCSContributorDisplayName": "tester"
                 ],
                 "XCSCommitHash": "1a37d7ce39297ad822626fc2061a1ba343aed343",
                 "XCSCommitTimestamp": "2015-08-03T08:23:17.000Z"
@@ -90,7 +90,7 @@ class IssueTests: XCTestCase {
         // Error, on the other hand, has one...
         XCTAssertEqual(errorWithCommits.commits.count, 1)
         XCTAssertEqual(errorWithCommits.commits.first!.filePaths.count, 2)
-        XCTAssertEqual(errorWithCommits.commits.first!.contributor.name, "cojoj")
+        XCTAssertEqual(errorWithCommits.commits.first!.contributor.name, "tester")
     }
 
 }
