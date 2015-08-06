@@ -12,6 +12,7 @@ public class Issue: XcodeServerEntity {
     
     public enum Type: String {
         case BuildServiceError = "buildServiceError"
+        case BuildServiceWarning = "buildServiceWarning"
         case TriggerError = "triggerError"
         case Error = "error"
         case Warning = "warning"
