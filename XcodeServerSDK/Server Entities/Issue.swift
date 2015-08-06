@@ -12,9 +12,6 @@ public class Issue: XcodeServerEntity {
     
     public enum Type: String {
         case BuildServiceError = "buildServiceError"
-        // Looks like build service warnings are treated as warnings in case
-        // of type. In case of Issue Type they're Build Service Error
-        // case BuildServiceWarining = "warning"
         case TriggerError = "triggerError"
         case Error = "error"
         case Warning = "warning"
