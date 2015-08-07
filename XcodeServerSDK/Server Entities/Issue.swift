@@ -8,24 +8,24 @@
 
 import Foundation
 
+public enum Type: String {
+    case BuildServiceError = "buildServiceError"
+    case BuildServiceWarning = "buildServiceWarning"
+    case TriggerError = "triggerError"
+    case Error = "error"
+    case Warning = "warning"
+    case TestFailure = "testFailure"
+    case AnalyzerWarning = "analyzerWarning"
+}
+
+public enum IssueStatus: Int {
+    case Fresh = 0
+    case Unresolved
+    case Resolved
+    case Silenced
+}
+
 public class Issue: XcodeServerEntity {
-    
-    public enum Type: String {
-        case BuildServiceError = "buildServiceError"
-        case BuildServiceWarning = "buildServiceWarning"
-        case TriggerError = "triggerError"
-        case Error = "error"
-        case Warning = "warning"
-        case TestFailure = "testFailure"
-        case AnalyzerWarning = "analyzerWarning"
-    }
-    
-    public enum IssueStatus: Int {
-        case Fresh = 0
-        case Unresolved
-        case Resolved
-        case Silenced
-    }
     
     /// Payload is holding whole Dictionary of the Issue
     public let payload: NSDictionary
