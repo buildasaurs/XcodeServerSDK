@@ -49,7 +49,7 @@ extension XCTestCase {
 extension XCTestCase {
     
     func stringAtPath(path: String) -> String {
-        return try! NSString(contentsOfFile: path.stringByExpandingTildeInPath, encoding: NSUTF8StringEncoding) as String
+        return try! NSString(contentsOfFile: (path as NSString).stringByExpandingTildeInPath, encoding: NSUTF8StringEncoding) as String
     }
     
     func loadJSONResponseFromCassetteWithName(name: String) -> NSDictionary {
