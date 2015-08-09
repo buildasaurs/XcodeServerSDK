@@ -1,5 +1,27 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.7...HEAD)
+
+**Closed issues:**
+
+- Update readme with new supported endpoint: list commits [\#87](https://github.com/czechboy0/XcodeServerSDK/issues/87)
+
+**Merged pull requests:**
+
+- XcodeServerConfigTests - availability check state tests [\#92](https://github.com/czechboy0/XcodeServerSDK/pull/92) ([pmkowal](https://github.com/pmkowal))
+
+- XcodeServerConfig - invalid host name test [\#91](https://github.com/czechboy0/XcodeServerSDK/pull/91) ([pmkowal](https://github.com/pmkowal))
+
+- createRequest - add test for `body` [\#90](https://github.com/czechboy0/XcodeServerSDK/pull/90) ([pmkowal](https://github.com/pmkowal))
+
+- Add another API method support [\#88](https://github.com/czechboy0/XcodeServerSDK/pull/88) ([cojoj](https://github.com/cojoj))
+
+- Refactoring of `sendRequestWithMethod` [\#86](https://github.com/czechboy0/XcodeServerSDK/pull/86) ([pmkowal](https://github.com/pmkowal))
+
+- List all commits for integration [\#77](https://github.com/czechboy0/XcodeServerSDK/pull/77) ([cojoj](https://github.com/cojoj))
+
 ## [v0.1.7](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.7) (2015-07-25)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.6...v0.1.7)
