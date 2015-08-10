@@ -55,8 +55,14 @@ public class Bot : XcodeServerEntity {
         return dictionary
     }
     
-    func description() -> String {
-        return "[Bot \(self.name)]"
+
+}
+
+extension Bot : CustomStringConvertible {
+    public var description : String {
+        get {
+            return "[Bot \(self.name)]"
+        }
     }
 }
 
