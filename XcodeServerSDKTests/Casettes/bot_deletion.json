@@ -9,7 +9,7 @@
         "url" : "https:\/\/127.0.0.1:20343\/api\/bots\/5f79bd4f6eb05c645336606cc790ccd7\/5-4939a8253e8243107a0d4733490fd36e",
         "headers" : {
           "Etag" : "W\/\"a-b541a50d\"",
-          "X-XCSAPIVersion" : "3",
+          "X-XCSAPIVersion" : "5",
           "X-XCSResponse-Status-Title" : "No Content",
           "Keep-Alive" : "timeout=5; max=100",
           "Connection" : "keep-alive",
