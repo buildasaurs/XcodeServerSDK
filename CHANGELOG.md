@@ -1,5 +1,21 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.8...HEAD)
+
+**Closed issues:**
+
+- SupportedAPIVersion should be 5 [\#95](https://github.com/czechboy0/XcodeServerSDK/issues/95)
+
+- New name for this project! \[POLL\] [\#66](https://github.com/czechboy0/XcodeServerSDK/issues/66)
+
+**Merged pull requests:**
+
+- Use CustomStringConvertible for description [\#97](https://github.com/czechboy0/XcodeServerSDK/pull/97) ([drewcrawford](https://github.com/drewcrawford))
+
+- Support API v5 [\#96](https://github.com/czechboy0/XcodeServerSDK/pull/96) ([drewcrawford](https://github.com/drewcrawford))
+
 ## [v0.1.8](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.8) (2015-08-09)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.7...v0.1.8)
