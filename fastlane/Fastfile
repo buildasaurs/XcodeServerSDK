@@ -42,7 +42,7 @@ platform :mac do
 
     # create a new release on GitHub
     repo_url = "czechboy0/XcodeServerSDK"
-    set_github_release(
+    release = set_github_release(
       repository_name: repo_url,
       api_token: ENV["GITHUB_TOKEN"],
       name: [version, title].join(" - "),
@@ -51,13 +51,6 @@ platform :mac do
       is_draft: false,
       is_prerelease: false
     )
-
-    # TODO: workaround till https://github.com/KrauseFx/fastlane/pull/446 gets into a release
-    # then let set_github_release already return the JSON so that we can use it
-    release = get_github_release(
-        url: repo_url,
-        version: version
-      )
 
     # notify us on slack
     slack(
