@@ -227,7 +227,7 @@
           "Content-Encoding" : "gzip",
           "X-XCSResponse-Status-Title" : "OK",
           "Keep-Alive" : "timeout=5; max=100",
-          "X-XCSAPIVersion" : "3",
+          "X-XCSAPIVersion" : "5",
           "Vary" : "Accept-Encoding"
         }
       },

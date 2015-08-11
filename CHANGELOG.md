@@ -1,5 +1,43 @@
 # Change Log
 
+## [v0.1.9](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.9) (2015-08-10)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.8...v0.1.9)
+
+**Closed issues:**
+
+- SupportedAPIVersion should be 5 [\#95](https://github.com/czechboy0/XcodeServerSDK/issues/95)
+
+- New name for this project! \[POLL\] [\#66](https://github.com/czechboy0/XcodeServerSDK/issues/66)
+
+**Merged pull requests:**
+
+- Use CustomStringConvertible for description [\#97](https://github.com/czechboy0/XcodeServerSDK/pull/97) ([drewcrawford](https://github.com/drewcrawford))
+
+- Support API v5 [\#96](https://github.com/czechboy0/XcodeServerSDK/pull/96) ([drewcrawford](https://github.com/drewcrawford))
+
+## [v0.1.8](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.8) (2015-08-09)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.7...v0.1.8)
+
+**Closed issues:**
+
+- Update readme with new supported endpoint: list commits [\#87](https://github.com/czechboy0/XcodeServerSDK/issues/87)
+
+**Merged pull requests:**
+
+- XcodeServerConfigTests - availability check state tests [\#92](https://github.com/czechboy0/XcodeServerSDK/pull/92) ([pmkowal](https://github.com/pmkowal))
+
+- XcodeServerConfig - invalid host name test [\#91](https://github.com/czechboy0/XcodeServerSDK/pull/91) ([pmkowal](https://github.com/pmkowal))
+
+- createRequest - add test for `body` [\#90](https://github.com/czechboy0/XcodeServerSDK/pull/90) ([pmkowal](https://github.com/pmkowal))
+
+- Add another API method support [\#88](https://github.com/czechboy0/XcodeServerSDK/pull/88) ([cojoj](https://github.com/cojoj))
+
+- Refactoring of `sendRequestWithMethod` [\#86](https://github.com/czechboy0/XcodeServerSDK/pull/86) ([pmkowal](https://github.com/pmkowal))
+
+- List all commits for integration [\#77](https://github.com/czechboy0/XcodeServerSDK/pull/77) ([cojoj](https://github.com/cojoj))
+
 ## [v0.1.7](https://github.com/czechboy0/XcodeServerSDK/tree/v0.1.7) (2015-07-25)
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.6...v0.1.7)

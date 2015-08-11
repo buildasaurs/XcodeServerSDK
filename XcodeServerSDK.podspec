@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XcodeServerSDK"
-  s.version      = "0.1.7"
+  s.version      = "0.1.9"
   s.summary      = "Access Xcode Server API with native Swift objects."
 
   s.homepage     = "https://github.com/czechboy0/XcodeServerSDK"
@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.watchos.deployment_target = "2.0"
   
-  s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "v0.1.7" }
+  s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "v0.1.9" }
 
   s.source_files  = "XcodeServerSDK/**/*.{swift}"
 
-  s.dependency "BuildaUtils", "0.0.6"
+  s.dependency "BuildaUtils", "0.0.10"
 
 end
