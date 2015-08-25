@@ -71,7 +71,7 @@ extension XcodeServer : NSURLSessionDelegate {
 
 // MARK: Header constants
 let Headers_APIVersion = "X-XCSAPIVersion"
-let SupportedAPIVersion: Int = 5 //will change with time, this codebase supports this version
+let SupportedAPIVersion: Int = 6 //will change with time, this codebase supports this version
 
 // MARK: XcodeServer API methods
 public extension XcodeServer {

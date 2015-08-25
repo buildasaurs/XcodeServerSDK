@@ -52,7 +52,7 @@ class XcodeServerTests: XCTestCase {
         
         let exp = self.expectationWithDescription("Network")
         self.server.getBots { (bots, error) in
-            print()
+            print("")
             exp.fulfill()
         }
         self.waitForExpectationsWithTimeout(10, handler: nil)
@@ -64,7 +64,7 @@ class XcodeServerTests: XCTestCase {
         let server = self.getRecordingXcodeServer("test_bot")
         
         server.getBots { (bots, error) in
-            print()
+            print("")
             exp.fulfill()
         }
         
@@ -94,13 +94,13 @@ class XcodeServerTests: XCTestCase {
 
         self.server.createBot(bot) { (response) -> () in
             
-            print()
+            print("")
             switch response {
             case .Success(let newBot):
                 
                 self.server.postIntegration(newBot.id) { (integration, error) -> () in
                     
-                    print()
+                    print("")
                     exp.fulfill()
                 }
                 

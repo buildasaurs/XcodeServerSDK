@@ -54,7 +54,7 @@ class XcodeServerConfigTests: XCTestCase {
     
     func testInvalidHostProvidingForManualInit() {
         XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidHostProvided("Invalid host name provided, please double check your host name")) {
-            try XcodeServerConfig(host: "<>127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
+            _ = try XcodeServerConfig(host: "<>127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
         }
     }
     
@@ -81,13 +81,13 @@ class XcodeServerConfigTests: XCTestCase {
         ]
         
         XCTempAssertThrowsSpecificError(ConfigurationErrors.NoHostProvided) {
-            try XcodeServerConfig(json: json)
+            _ = try XcodeServerConfig(json: json)
         }
     }
     
     func testInvalidSchemeProvided() {
         XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidSchemeProvided("Xcode Server generally uses https, please double check your hostname")) {
-            try XcodeServerConfig(host: "http://127.0.0.1")
+            _ = try XcodeServerConfig(host: "http://127.0.0.1")
         }
     }
     
