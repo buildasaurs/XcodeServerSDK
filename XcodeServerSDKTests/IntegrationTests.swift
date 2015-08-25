@@ -17,7 +17,7 @@ class IntegrationTests: XCTestCase {
         let exp = self.expectationWithDescription("Network")
         let server = self.getRecordingXcodeServer("get_integration")
         server.getIntegration("ad2fac04895bd1bb06c1d50e3400fd35") { (integration, error) in
-            print()
+            print("")
             exp.fulfill()
         }
         self.waitForExpectationsWithTimeout(10, handler: nil)
