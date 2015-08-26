@@ -59,4 +59,14 @@ class IntegrationTests: XCTestCase {
         
     }
     
+    // MARK: Issues
+    
+    func testGetIntegrationIssues() {
+        
+        let exp = self.expectationWithDescription("Network")
+        let server = self.getRecordingXcodeServer("get_integration_issues")
+        server.getIntegrationIssues(<#T##integrationId: String##String#>, completion: <#T##(integrationIssues: IntegrationIssues?, error: ErrorType?) -> ()#>)
+        
+    }
+    
 }

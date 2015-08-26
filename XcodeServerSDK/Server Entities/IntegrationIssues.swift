@@ -9,7 +9,7 @@
 import Foundation
 import BuildaUtils
 
-public class IntegrationsIssue: XcodeServerEntity {
+public class IntegrationIssues: XcodeServerEntity {
     
     public let buildServiceErrors: [Issue]
     public let buildServiceWarnings: [Issue]

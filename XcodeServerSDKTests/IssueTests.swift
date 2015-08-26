@@ -85,7 +85,8 @@ class IssueTests: XCTestCase {
     
     func testCommitsArray() {
         // Build Service Error doesn't have commits
-        XCTAssertTrue(buildServiceError.commits.isEmpty)
+        // XCTAssertTrue(buildServiceError.commits.isEmpty)
+        XCTAssertFalse(buildServiceError.commits.isEmpty)
         
         // Error, on the other hand, has one...
         XCTAssertEqual(errorWithCommits.commits.count, 1)

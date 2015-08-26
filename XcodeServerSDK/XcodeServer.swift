@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import BuildaUtils
+import BuildaUtil
 
 // MARK: XcodeServer Class
 public class XcodeServer : CIServer {
