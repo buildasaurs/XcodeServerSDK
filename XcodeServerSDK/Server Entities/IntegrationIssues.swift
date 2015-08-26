@@ -27,10 +27,10 @@ public class IntegrationIssues: XcodeServerEntity {
         self.triggerErrors = json.arrayForKey("triggerErrors").map { Issue(json: $0) }
         
         // Nested issues
-        self.errors = json.dictionaryForKey("errors").allValues.map { Issue(json: $0 as! NSDictionary) }
-        self.warnings = json.dictionaryForKey("warnings").allValues.map { Issue(json: $0 as! NSDictionary) }
-        self.testFailures = json.dictionaryForKey("testFailures").allValues.map { Issue(json: $0 as! NSDictionary) }
-        self.analyzerWarnings = json.dictionaryForKey("analyzerWarnings").allValues.map { Issue(json: $0 as! NSDictionary) }
+        self.errors = json.dictionaryForKey("errors").allValues.filter { $0 is NSDictionary }.map { Issue(json: $0 as! NSDictionary) }
+        self.warnings = json.dictionaryForKey("warnings").allValues.filter { $0 is NSDictionary }.map { Issue(json: $0 as! NSDictionary) }
+        self.testFailures = json.dictionaryForKey("testFailures").allValues.filter { $0 is NSDictionary }.map { Issue(json: $0 as! NSDictionary) }
+        self.analyzerWarnings = json.dictionaryForKey("analyzerWarnings").allValues.filter { $0 is NSDictionary }.map { Issue(json: $0 as! NSDictionary) }
         
         super.init(json: json)
     }
