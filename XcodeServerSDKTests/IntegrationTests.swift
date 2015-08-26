@@ -65,7 +65,13 @@ class IntegrationTests: XCTestCase {
         
         let exp = self.expectationWithDescription("Network")
         let server = self.getRecordingXcodeServer("get_integration_issues")
-//        server.getIntegrationIssues(<#T##integrationId: String##String#>, completion: <#T##(integrationIssues: IntegrationIssues?, error: ErrorType?) -> ()#>)
+        server.getIntegrationIssues("960f6989b4c7289433ff04db71033d28") { (integrationIssues, error) -> () in
+            XCTAssertNil(error, "Error should be nil")
+            
+            exp.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(10, handler: nil)
         
     }
     
