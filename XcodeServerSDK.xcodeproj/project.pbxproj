@@ -165,6 +165,8 @@
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
+		70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; settings = {ASSET_TAGS = (); }; };
+		70CCA08A1B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; settings = {ASSET_TAGS = (); }; };
 		70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
@@ -270,6 +272,7 @@
 		70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Platform.swift"; sourceTree = "<group>"; };
 		70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Auth.swift"; sourceTree = "<group>"; };
 		70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Repository.swift"; sourceTree = "<group>"; };
+		70CCA0881B8E586A00024E21 /* get_integration_issues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration_issues.json; sourceTree = "<group>"; };
 		70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Integration.swift"; sourceTree = "<group>"; };
 		9C3051A2882C5ACD2DFE4A61 /* Pods-XcodeServerSDK - OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - OS X/Pods-XcodeServerSDK - OS X.debug.xcconfig"; sourceTree = "<group>"; };
 		A377110DF464BCC1E2B470DB /* Pods_XcodeServerSDK___iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,6 +464,7 @@
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
 				7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */,
 				700C93551B54F58A00B3C6E6 /* get_devices.json */,
+				70CCA0881B8E586A00024E21 /* get_integration_issues.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -734,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC51B455EE400989E4B /* get_repositories.json in Resources */,
+				70CCA08A1B8E586A00024E21 /* get_integration_issues.json in Resources */,
 				3AC47F411B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */,
@@ -763,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC41B455EE400989E4B /* get_repositories.json in Resources */,
+				70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */,
 				3AC47F401B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */,

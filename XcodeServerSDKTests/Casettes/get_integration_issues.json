@@ -1,0 +1,1601 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1440620689.145635,
+      "response" : {
+        "body" : {
+          "triggerErrors" : [
+
+          ],
+          "errors" : {
+            "unresolvedIssues" : [
+
+            ],
+            "freshIssues" : [
+
+            ],
+            "resolvedIssues" : [
+              {
+                "message" : "Editor placeholder in source file",
+                "age" : 1,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIyRYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBobVSRudWxs2gkKCwwNDg8QERITFBQVFhcYGRgVW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACECQQABABgAMQQ4AAXxCbZmlsZTovLy9MaWJyYXJ5L0RldmVsb3Blci9YY29kZVNlcnZlci9JbnRlZ3JhdGlvbnMvQ2FjaGVzLzk2MGY2OTg5YjRjNzI4OTQzM2ZmMDRkYjcxMDExM2VhL1NvdXJjZS9YY29kZVNlcnZlclNESy9YY29kZVNlcnZlclNES1Rlc3RzL0ludGVncmF0aW9uVGVzdHMuc3dpZnTSHB0eH1okY2xhc3NuYW1lWCRjbGFzc2VzXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb26jICEiXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb25fEBNEVlREb2N1bWVudExvY2F0aW9uWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0SUmVHJvb3SAAQAIABEAGgAjAC0AMgA3ADwAQgBXAGMAegCPAKMAtgC9ANAA2gDvAQMBBQEHAQkBCwENAQ8BEQGvAbQBvwHIAeIB5gIAAhYCHwIxAjQCOQAAAAAAAAIBAAAAAAAAACcAAAAAAAAAAAAAAAAAAAI7",
+                "_rev" : "4-fc5304bdcb10a4ff6b8e7310c3e2b452",
+                "integrationID" : "960f6989b4c7289433ff04db7102d344",
+                "_id" : "960f6989b4c7289433ff04db71032fd1",
+                "type" : "error",
+                "commits" : [
+
+                ],
+                "lineNumber" : 68,
+                "target" : "XcodeServerSDK - OS X Tests",
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Swift Compiler Error",
+                "status" : 2
+              }
+            ],
+            "silencedIssues" : [
+
+            ]
+          },
+          "buildServiceErrors" : [
+
+          ],
+          "buildServiceWarnings" : [
+
+          ],
+          "warnings" : {
+            "unresolvedIssues" : [
+
+            ],
+            "freshIssues" : [
+              {
+                "message" : "Initialization of immutable value 'exp' was never used; consider replacing with assignment to '_' or removing it",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIyRYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBobVSRudWxs2gkKCwwNDg8QERITFBQVFhcYGRgVW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACEAwQABABgAMQQYAAXxCbZmlsZTovLy9MaWJyYXJ5L0RldmVsb3Blci9YY29kZVNlcnZlci9JbnRlZ3JhdGlvbnMvQ2FjaGVzLzk2MGY2OTg5YjRjNzI4OTQzM2ZmMDRkYjcxMDExM2VhL1NvdXJjZS9YY29kZVNlcnZlclNESy9YY29kZVNlcnZlclNES1Rlc3RzL0ludGVncmF0aW9uVGVzdHMuc3dpZnTSHB0eH1okY2xhc3NuYW1lWCRjbGFzc2VzXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb26jICEiXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb25fEBNEVlREb2N1bWVudExvY2F0aW9uWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0SUmVHJvb3SAAQAIABEAGgAjAC0AMgA3ADwAQgBXAGMAegCPAKMAtgC9ANAA2gDvAQMBBQEHAQkBCwENAQ8BEQGvAbQBvwHIAeIB5gIAAhYCHwIxAjQCOQAAAAAAAAIBAAAAAAAAACcAAAAAAAAAAAAAAAAAAAI7",
+                "_rev" : "3-27d33789e2b95f7029a98797ab86141d",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db71075422",
+                "type" : "warning",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 66,
+                "target" : "XcodeServerSDK - OS X Tests",
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Swift Compiler Warning",
+                "status" : 0
+              },
+              {
+                "message" : "Initialization of immutable value 'server' was never used; consider replacing with assignment to '_' or removing it",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIyRYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBobVSRudWxs2gkKCwwNDg8QERITFBQVFhcYGRgVW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACEAwQABABgAMQQoAAXxCbZmlsZTovLy9MaWJyYXJ5L0RldmVsb3Blci9YY29kZVNlcnZlci9JbnRlZ3JhdGlvbnMvQ2FjaGVzLzk2MGY2OTg5YjRjNzI4OTQzM2ZmMDRkYjcxMDExM2VhL1NvdXJjZS9YY29kZVNlcnZlclNESy9YY29kZVNlcnZlclNES1Rlc3RzL0ludGVncmF0aW9uVGVzdHMuc3dpZnTSHB0eH1okY2xhc3NuYW1lWCRjbGFzc2VzXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb26jICEiXxAXRFZUVGV4dERvY3VtZW50TG9jYXRpb25fEBNEVlREb2N1bWVudExvY2F0aW9uWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0SUmVHJvb3SAAQAIABEAGgAjAC0AMgA3ADwAQgBXAGMAegCPAKMAtgC9ANAA2gDvAQMBBQEHAQkBCwENAQ8BEQGvAbQBvwHIAeIB5gIAAhYCHwIxAjQCOQAAAAAAAAIBAAAAAAAAACcAAAAAAAAAAAAAAAAAAAI7",
+                "_rev" : "3-82edb523d2139772cc11dade6b947917",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db71075be1",
+                "type" : "warning",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 67,
+                "target" : "XcodeServerSDK - OS X Tests",
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Swift Compiler Warning",
+                "status" : 0
+              }
+            ],
+            "resolvedIssues" : [
+
+            ],
+            "silencedIssues" : [
+
+            ]
+          },
+          "testFailures" : {
+            "unresolvedIssues" : [
+
+            ],
+            "freshIssues" : [
+              {
+                "message" : "XCTAssertNil failed: \"Error Domain=com.honzadvorsky.Buildasaur Code=0 \"Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.\" UserInfo={NSLocalizedDescription=Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.}\" - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAtgABfEJpmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvQm90UGFyc2luZ1Rlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbMBuAHDAcwB5gHqAgQCGgIjAjUCOAI9AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAj8=",
+                "testCase" : "-[BotParsingTests testDeleteBot()]",
+                "_rev" : "3-7a81e39eaabaa3e289084ec8f859be43",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107690c",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/TriggerConditions.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/BotParsingTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-25T22:40:28.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "76e05d3edb6cd46ca02dc0908e186c68477b6344",
+                    "XCSCommitMessage" : "magic in XCS dictates that postbuild triggers have to have a status of 2, otherwise they don't run. why? what are other values? nope. nada. you shall not know.\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServerEndpoints.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.xcodeproj\/project.pbxproj"
+                      },
+                      {
+                        "status" : 1,
+                        "filePath" : "XcodeServerSDKTests\/Casettes\/bot_deletion.json"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/BotParsingTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-24T19:34:42.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "7545700c60536f934b5dc04587cc4edbc6fc2601",
+                    "XCSCommitMessage" : "added a bot deletion test, endpoint URL creation now uses `rev` only when method is `DELETE`\n"
+                  }
+                ],
+                "lineNumber" : 46,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/BotParsingTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertTrue failed - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAugABfEJpmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvQm90UGFyc2luZ1Rlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbMBuAHDAcwB5gHqAgQCGgIjAjUCOAI9AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAj8=",
+                "testCase" : "-[BotParsingTests testDeleteBot()]",
+                "_rev" : "3-71c43dec76e54d7196c6d26505e5480d",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db710774ca",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/TriggerConditions.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/BotParsingTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-25T22:40:28.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "76e05d3edb6cd46ca02dc0908e186c68477b6344",
+                    "XCSCommitMessage" : "magic in XCS dictates that postbuild triggers have to have a status of 2, otherwise they don't run. why? what are other values? nope. nada. you shall not know.\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServerEndpoints.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.xcodeproj\/project.pbxproj"
+                      },
+                      {
+                        "status" : 1,
+                        "filePath" : "XcodeServerSDKTests\/Casettes\/bot_deletion.json"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/BotParsingTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-24T19:34:42.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "7545700c60536f934b5dc04587cc4edbc6fc2601",
+                    "XCSCommitMessage" : "added a bot deletion test, endpoint URL creation now uses `rev` only when method is `DELETE`\n"
+                  }
+                ],
+                "lineNumber" : 47,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/BotParsingTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNil failed: \"Error Domain=com.honzadvorsky.Buildasaur Code=0 \"Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.\" UserInfo={NSLocalizedDescription=Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.}\" - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAwgABfEJdmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvRGV2aWNlc1Rlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbABtQHAAckB4wHnAgECFwIgAjICNQI6AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAjw=",
+                "testCase" : "-[DevicesTests testGetDevices()]",
+                "_rev" : "3-488d7208ad826afeec6d2219c3a6bd0f",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107776f",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 49,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/DevicesTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNotNil failed - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAxgABfEJdmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvRGV2aWNlc1Rlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbABtQHAAckB4wHnAgECFwIgAjICNQI6AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAjw=",
+                "testCase" : "-[DevicesTests testGetDevices()]",
+                "_rev" : "3-1f61b40d852c9988631b594d7d299d73",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db710780f2",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 50,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/DevicesTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNil failed: \"Error Domain=com.honzadvorsky.Buildasaur Code=0 \"Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.\" UserInfo={NSLocalizedDescription=Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.}\" - Error should be nil",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAngABfEJtmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvSW50ZWdyYXRpb25UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgG0AbkBxAHNAecB6wIFAhsCJAI2AjkCPgAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAJA",
+                "testCase" : "-[IntegrationTests testGetIntegrationCommits()]",
+                "_rev" : "3-c71cd4fae2d317897f92c2526718d5ef",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db71078da9",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 40,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "failed - Integration commits are empty",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxAsgABfEJtmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvSW50ZWdyYXRpb25UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgG0AbkBxAHNAecB6wIFAhsCJAI2AjkCPgAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAJA",
+                "testCase" : "-[IntegrationTests testGetIntegrationCommits()]",
+                "_rev" : "3-3ad359f8cb50d22d6f2f3123b93afcfa",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db710793d3",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 45,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "Asynchronous wait failed: Exceeded timeout of 10 seconds, with unfulfilled expectations: \"Network\".",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxA5gABfEJtmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvSW50ZWdyYXRpb25UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgG0AbkBxAHNAecB6wIFAhsCJAI2AjkCPgAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAJA",
+                "testCase" : "-[IntegrationTests testGetIntegrationCommits()]",
+                "_rev" : "3-9d96fa3bdd33947a4993557e08b49537",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db71079d16",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 58,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "Failed due to unwaited expectations.",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxBBgABfEJtmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvSW50ZWdyYXRpb25UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgG0AbkBxAHNAecB6wIFAhsCJAI2AjkCPgAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAJA",
+                "testCase" : "-[IntegrationTests testGetIntegrationIssues()]",
+                "_rev" : "3-517e5e6def353fefa2919a102e46cc1c",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107a897",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
+                    "XCSCommitMessage" : "Fix one issue for casette purpose\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerConfigTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.podspec"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/XcodeServerTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorEmails" : [
+                        "honza@swiftkey.com"
+                      ],
+                      "XCSContributorName" : "Honza Dvorsky"
+                    },
+                    "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
+                    "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
+                    "XCSCommitMessage" : "Make test case sleek 😬\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationCommits.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
+                    "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "Podfile.lock"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
+                    "XCSCommitMessage" : "Write more assertions\n"
+                  }
+                ],
+                "lineNumber" : 66,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IntegrationTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertFalse failed - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxBYgABfEJVmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvSXNzdWVUZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgGuAbMBvgHHAeEB5QH\/AhUCHgIwAjMCOAAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAI6",
+                "testCase" : "-[IssueTests testCommitsArray()]",
+                "_rev" : "3-8a28c407b6fd6a429f6e10c6b6863152",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107b7b1",
+                "type" : "testFailure",
+                "commits" : [
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IntegrationTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/API Routes\/XcodeServer+Integration.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/XcodeServer.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/IntegrationIssues.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
+                    "XCSCommitMessage" : "Introduce some on purpose errors\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/Issue.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-12T15:38:35.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "Mateusz Zajac"
+                    },
+                    "XCSCommitHash" : "bbbcf00996231bdc62e9256f4531af9fdad49d39",
+                    "XCSCommitMessage" : "Change name to a non-conflicting one\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/Issue.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-07T09:52:36.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "cojoj",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "cojoj"
+                    },
+                    "XCSCommitHash" : "5b1a035701c589006434e43f01871c21268f2d8d",
+                    "XCSCommitMessage" : "Enum issues\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/Issue.swift"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-07T09:30:42.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "cojoj",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "cojoj"
+                    },
+                    "XCSCommitHash" : "29c5efcca2a4931e97fb9498d1f510c55fcf7823",
+                    "XCSCommitMessage" : "Add new Type case\n"
+                  },
+                  {
+                    "XCSCommitCommitChangeFilePaths" : [
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK.xcodeproj\/project.pbxproj"
+                      },
+                      {
+                        "status" : 4,
+                        "filePath" : "XcodeServerSDK\/Server Entities\/Issue.swift"
+                      },
+                      {
+                        "status" : 1,
+                        "filePath" : "XcodeServerSDKTests\/IssueTests.swift"
+                      }
+                    ],
+                    "XCSCommitTimestamp" : "2015-08-06T10:46:04.000Z",
+                    "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+                    "XCSCommitContributor" : {
+                      "XCSContributorDisplayName" : "cojoj",
+                      "XCSContributorEmails" : [
+                        "cojoj@icloud.com"
+                      ],
+                      "XCSContributorName" : "cojoj"
+                    },
+                    "XCSCommitHash" : "4c7f0b09815c54810d6525d578fab837c0facf88",
+                    "XCSCommitMessage" : "Write test cases for Issue"
+                  }
+                ],
+                "lineNumber" : 89,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/IssueTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNil failed: \"Error Domain=com.honzadvorsky.Buildasaur Code=0 \"Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.\" UserInfo={NSLocalizedDescription=Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.}\" - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxASgABfEJhmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvUGxhdGZvcm1UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgGxAbYBwQHKAeQB6AICAhgCIQIzAjYCOwAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAI9",
+                "testCase" : "-[PlatformTests testGetPlatforms()]",
+                "_rev" : "3-25f4b9ee38fff7175b69a2c4932a5661",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107b90b",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 19,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/PlatformTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNotNil failed - ",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxATgABfEJhmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvUGxhdGZvcm1UZXN0cy5zd2lmdNIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbqMfICFfEBdEVlRUZXh0RG9jdW1lbnRMb2NhdGlvbl8QE0RWVERvY3VtZW50TG9jYXRpb25YTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRJCVUcm9vdIABAAgAEQAaACMALQAyADcAPABCAFcAYwB6AI8AowC2AL0A0ADaAO8BAwEFAQ4BEAESARQBFgGxAbYBwQHKAeQB6AICAhgCIQIzAjYCOwAAAAAAAAIBAAAAAAAAACYAAAAAAAAAAAAAAAAAAAI9",
+                "testCase" : "-[PlatformTests testGetPlatforms()]",
+                "_rev" : "3-07e217500033d5f5eabe40e0fcc0b05b",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107bc3a",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 20,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/PlatformTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNil failed: \"Error Domain=com.honzadvorsky.Buildasaur Code=0 \"Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.\" UserInfo={NSLocalizedDescription=Version mismatch: response from API version 5, but we support version 6. You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https:\/\/github.com\/czechboy0\/XcodeServerSDK or consider upgrading your Xcode Server to the current version.}\" - Error should be nil",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxBYgABfEJpmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvUmVwb3NpdG9yeVRlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbMBuAHDAcwB5gHqAgQCGgIjAjUCOAI9AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAj8=",
+                "testCase" : "-[RepositoryTests testGetRepositories()]",
+                "_rev" : "3-940dec1fc573ab650f0ddbf2da587f77",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107bc48",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 89,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/RepositoryTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              },
+              {
+                "message" : "XCTAssertNotNil failed - Repositories shouldn't be nil",
+                "age" : 0,
+                "documentLocationData" : "YnBsaXN0MDDUAQIDBAUGIiNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKQHCBkaVSRudWxs2gkKCwwNDg8QERITFBQVFRYXGBcUW2RvY3VtZW50VVJMXxAUc3RhcnRpbmdDb2x1bW5OdW1iZXJfEBJlbmRpbmdDb2x1bW5OdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxlbl8QEGxvY2F0aW9uRW5jb2RpbmdWJGNsYXNzXxAQZW5kaW5nTGluZU51bWJlcll0aW1lc3RhbXBfEBJzdGFydGluZ0xpbmVOdW1iZXJfEBFjaGFyYWN0ZXJSYW5nZUxvY4ACE\/\/\/\/\/\/\/\/\/\/\/EACAAxBZgABfEJpmaWxlOi8vL0xpYnJhcnkvRGV2ZWxvcGVyL1hjb2RlU2VydmVyL0ludGVncmF0aW9ucy9DYWNoZXMvOTYwZjY5ODliNGM3Mjg5NDMzZmYwNGRiNzEwMTEzZWEvU291cmNlL1hjb2RlU2VydmVyU0RLL1hjb2RlU2VydmVyU0RLVGVzdHMvUmVwb3NpdG9yeVRlc3RzLnN3aWZ00hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF0RWVFRleHREb2N1bWVudExvY2F0aW9uox8gIV8QF0RWVFRleHREb2N1bWVudExvY2F0aW9uXxATRFZURG9jdW1lbnRMb2NhdGlvblhOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEkJVRyb290gAEACAARABoAIwAtADIANwA8AEIAVwBjAHoAjwCjALYAvQDQANoA7wEDAQUBDgEQARIBFAEWAbMBuAHDAcwB5gHqAgQCGgIjAjUCOAI9AAAAAAAAAgEAAAAAAAAAJgAAAAAAAAAAAAAAAAAAAj8=",
+                "testCase" : "-[RepositoryTests testGetRepositories()]",
+                "_rev" : "3-36862e12a2c04a76cb3e996dc4e00f7e",
+                "integrationID" : "960f6989b4c7289433ff04db71033d28",
+                "_id" : "960f6989b4c7289433ff04db7107bd9b",
+                "type" : "testFailure",
+                "commits" : [
+
+                ],
+                "lineNumber" : 90,
+                "documentFilePath" : "XcodeServerSDK\/XcodeServerSDKTests\/RepositoryTests.swift",
+                "issueType" : "Uncategorized",
+                "status" : 0
+              }
+            ],
+            "resolvedIssues" : [
+
+            ],
+            "silencedIssues" : [
+
+            ]
+          },
+          "analyzerWarnings" : {
+            "unresolvedIssues" : [
+
+            ],
+            "freshIssues" : [
+
+            ],
+            "resolvedIssues" : [
+
+            ],
+            "silencedIssues" : [
+
+            ]
+          }
+        },
+        "body_format" : "json",
+        "status" : 200,
+        "url" : "https:\/\/127.0.0.1:20343\/api\/integrations\/960f6989b4c7289433ff04db71033d28\/issues",
+        "headers" : {
+          "Connection" : "keep-alive",
+          "Content-Type" : "application\/json",
+          "Set-Cookie" : "session=s%3Az-Zq8fbQvMzbDDDBgJXettJR1iq2eI5V.kJOtj0TMbDV2ofNqdfBZNWhQPP2TuMgLeSQBbzXAkVY; Path=\/; Expires=Thu, 27 Aug 2015 20:24:49 GMT; HttpOnly; Secure",
+          "Transfer-Encoding" : "Identity",
+          "Date" : "Wed, 26 Aug 2015 20:24:49 GMT",
+          "Content-Encoding" : "gzip",
+          "Keep-Alive" : "timeout=5; max=100",
+          "X-XCSAPIVersion" : "6",
+          "Vary" : "Accept-Encoding"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/127.0.0.1:20343\/api\/integrations\/960f6989b4c7289433ff04db71033d28\/issues",
+        "headers" : {
+          "Authorization" : "Basic SUNhbkNyZWF0ZUJvdHM6c3VwZXJTZWNyM3Q="
+        }
+      }
+    }
+  ],
+  "name" : "get_integration_issues"
+}
