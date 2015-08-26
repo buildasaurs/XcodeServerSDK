@@ -65,7 +65,7 @@ class IntegrationTests: XCTestCase {
         
         let exp = self.expectationWithDescription("Network")
         let server = self.getRecordingXcodeServer("get_integration_issues")
-        server.getIntegrationIssues(<#T##integrationId: String##String#>, completion: <#T##(integrationIssues: IntegrationIssues?, error: ErrorType?) -> ()#>)
+//        server.getIntegrationIssues(<#T##integrationId: String##String#>, completion: <#T##(integrationIssues: IntegrationIssues?, error: ErrorType?) -> ()#>)
         
     }
     
