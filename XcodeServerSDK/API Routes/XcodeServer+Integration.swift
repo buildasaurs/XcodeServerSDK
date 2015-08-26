@@ -213,12 +213,12 @@ extension XcodeServer {
                 return
             }
             
-            guard let integrationIssuesBody = (body as? NSDictionary)?["results"] as? NSArray else {
+            guard let integrationIssuesBody = body as? NSDictionary else {
                 completion(integrationIssues: nil, error: Error.withInfo("Wrong body \(body)"))
                 return
             }
             
-            let integrationIssues = IntegrationIssues(json: integrationIssuesBody[0] as! NSDictionary)
+            let integrationIssues = IntegrationIssues(json: integrationIssuesBody)
             completion(integrationIssues: integrationIssues, error: nil)
             
         }
