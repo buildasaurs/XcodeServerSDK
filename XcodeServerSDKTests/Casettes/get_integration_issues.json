@@ -34,7 +34,7 @@
               }
             ],
             "silencedIssues" : [
-
+                
             ]
           },
           "buildServiceErrors" : [
@@ -71,11 +71,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -106,11 +106,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -149,11 +149,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -168,11 +168,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -191,11 +191,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -214,11 +214,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -253,11 +253,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -288,11 +288,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -331,11 +331,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -350,11 +350,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -373,11 +373,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -396,11 +396,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -453,11 +453,11 @@
                     "XCSCommitTimestamp" : "2015-07-25T22:40:28.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "76e05d3edb6cd46ca02dc0908e186c68477b6344",
                     "XCSCommitMessage" : "magic in XCS dictates that postbuild triggers have to have a status of 2, otherwise they don't run. why? what are other values? nope. nada. you shall not know.\n"
@@ -484,11 +484,11 @@
                     "XCSCommitTimestamp" : "2015-07-24T19:34:42.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "7545700c60536f934b5dc04587cc4edbc6fc2601",
                     "XCSCommitMessage" : "added a bot deletion test, endpoint URL creation now uses `rev` only when method is `DELETE`\n"
@@ -527,11 +527,11 @@
                     "XCSCommitTimestamp" : "2015-07-25T22:40:28.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "76e05d3edb6cd46ca02dc0908e186c68477b6344",
                     "XCSCommitMessage" : "magic in XCS dictates that postbuild triggers have to have a status of 2, otherwise they don't run. why? what are other values? nope. nada. you shall not know.\n"
@@ -558,11 +558,11 @@
                     "XCSCommitTimestamp" : "2015-07-24T19:34:42.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "7545700c60536f934b5dc04587cc4edbc6fc2601",
                     "XCSCommitMessage" : "added a bot deletion test, endpoint URL creation now uses `rev` only when method is `DELETE`\n"
@@ -631,11 +631,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -666,11 +666,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -709,11 +709,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -728,11 +728,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -751,11 +751,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -774,11 +774,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -813,11 +813,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -848,11 +848,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -891,11 +891,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -910,11 +910,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -933,11 +933,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -956,11 +956,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -995,11 +995,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -1030,11 +1030,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -1073,11 +1073,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -1092,11 +1092,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -1115,11 +1115,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -1138,11 +1138,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -1177,11 +1177,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T20:20:23.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "6f340f1bae96b10df73036705468872e4c5b26f6",
                     "XCSCommitMessage" : "Fix one issue for casette purpose\n"
@@ -1212,11 +1212,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -1255,11 +1255,11 @@
                     "XCSCommitTimestamp" : "2015-08-25T12:21:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Honza Dvorsky",
+                      "XCSContributorDisplayName" : "czechboy0",
                       "XCSContributorEmails" : [
-                        "honza@swiftkey.com"
+                        "sample@mail.com"
                       ],
-                      "XCSContributorName" : "Honza Dvorsky"
+                      "XCSContributorName" : "czechboy0"
                     },
                     "XCSCommitHash" : "8d634f065592c9a2e5241cfeb6479cc28338cf0d",
                     "XCSCommitMessage" : "xcode 7 beta 6 fixes\n"
@@ -1274,11 +1274,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:40:11.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "5dd9af9c722ccb2d0041ec420ea7d4d33a98695f",
                     "XCSCommitMessage" : "Make test case sleek 😬\n"
@@ -1297,11 +1297,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T10:20:05.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "ad55773063364b66ab1b20a309e967487531c8de",
                     "XCSCommitMessage" : "Documentation and slight changes in codebase\n"
@@ -1320,11 +1320,11 @@
                     "XCSCommitTimestamp" : "2015-07-27T07:18:56.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "b42f8bf1be0e7621901d10d758ce73cafc685673",
                     "XCSCommitMessage" : "Write more assertions\n"
@@ -1371,11 +1371,11 @@
                     "XCSCommitTimestamp" : "2015-08-26T19:53:25.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "78109f31cc95eadc31ec593e62124ef59af1ab1a",
                     "XCSCommitMessage" : "Introduce some on purpose errors\n"
@@ -1394,11 +1394,11 @@
                     "XCSCommitTimestamp" : "2015-08-12T15:38:35.000Z",
                     "XCSBlueprintRepositoryID" : "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
                     "XCSCommitContributor" : {
-                      "XCSContributorDisplayName" : "Mateusz Zajac",
+                      "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
-                      "XCSContributorName" : "Mateusz Zajac"
+                      "XCSContributorName" : "cojoj"
                     },
                     "XCSCommitHash" : "bbbcf00996231bdc62e9256f4531af9fdad49d39",
                     "XCSCommitMessage" : "Change name to a non-conflicting one\n"
@@ -1419,7 +1419,7 @@
                     "XCSCommitContributor" : {
                       "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
                       "XCSContributorName" : "cojoj"
                     },
@@ -1442,7 +1442,7 @@
                     "XCSCommitContributor" : {
                       "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
                       "XCSContributorName" : "cojoj"
                     },
@@ -1469,7 +1469,7 @@
                     "XCSCommitContributor" : {
                       "XCSContributorDisplayName" : "cojoj",
                       "XCSContributorEmails" : [
-                        "cojoj@icloud.com"
+                        "example@example.com"
                       ],
                       "XCSContributorName" : "cojoj"
                     },

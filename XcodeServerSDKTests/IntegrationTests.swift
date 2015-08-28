@@ -68,6 +68,18 @@ class IntegrationTests: XCTestCase {
         server.getIntegrationIssues("960f6989b4c7289433ff04db71033d28") { (integrationIssues, error) -> () in
             XCTAssertNil(error, "Error should be nil")
             
+            guard let issues = integrationIssues else {
+                XCTFail("Integration issues should be present")
+                return
+            }
+            
+            XCTAssertEqual(issues.errors.count, 1)
+            
+            let expectation = issues.warnings.filter { $0.status == .Fresh }
+            XCTAssertEqual(expectation.count, 2)
+            
+            XCTAssertTrue(issues.analyzerWarnings.isEmpty)
+            
             exp.fulfill()
         }
         
