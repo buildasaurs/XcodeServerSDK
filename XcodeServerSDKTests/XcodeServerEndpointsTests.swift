@@ -211,7 +211,7 @@ class XcodeServerEndpointsTests: XCTestCase {
         XCTAssertEqual(url!, expected)
     }
     
-    // MARK: endpointURL(.Commits)
+    // MARK: endpointURL(.Issues)
     
     func testEndpointURLCreationForIssues() {
         let expected = "/api/integrations/integration_id/issues"
