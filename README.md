@@ -86,7 +86,7 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 | _Retrieve an integration by ID_ | :white_check_mark: | :white_check_mark: |
 | Cancel integration | :no_entry: | :white_check_mark: |
 | _List the commits included in an integration_ | :white_check_mark: | :white_check_mark: |
-| _List the build issues produced by an integration_ | :white_check_mark: | :no_entry: |
+| _List the build issues produced by an integration_ | :white_check_mark: | :white_check_mark: |
 | _List devices connected to server_ | :white_check_mark: | :white_check_mark: |
 | _List hosted repositories on server_ | :white_check_mark: | :white_check_mark: |
 | _Create a new hosted repository_ | :white_check_mark: | :white_check_mark: |

@@ -105,6 +105,9 @@
 		700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		70138A811B62478100477F91 /* get_integration_commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 70138A801B62478100477F91 /* get_integration_commits.json */; };
 		70138A821B62478100477F91 /* get_integration_commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 70138A801B62478100477F91 /* get_integration_commits.json */; };
+		7014A53F1B7120980034DA74 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014A53E1B7120980034DA74 /* Issue.swift */; };
+		7014A5401B7120980034DA74 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014A53E1B7120980034DA74 /* Issue.swift */; };
+		7014A5411B7120980034DA74 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014A53E1B7120980034DA74 /* Issue.swift */; };
 		7019563C1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
 		7019563D1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
 		7019563E1B5E26C5007CDF0B /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7019563B1B5E26C5007CDF0B /* Commit.swift */; };
@@ -128,6 +131,7 @@
 		704591861B40945700BA226C /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		704B5FC41B455EE400989E4B /* get_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 704B5FC31B455EE400989E4B /* get_repositories.json */; };
 		704B5FC51B455EE400989E4B /* get_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 704B5FC31B455EE400989E4B /* get_repositories.json */; };
+		704EC6DA1B724592003E002A /* IssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704EC6D91B724592003E002A /* IssueTests.swift */; };
 		705D59A11B3AE502002521BA /* HTTPUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */; };
 		7073359F1B60B5DB0018D2A6 /* IntegrationCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7073359E1B60B5DB0018D2A6 /* IntegrationCommits.swift */; };
 		707335A01B60B5DB0018D2A6 /* IntegrationCommits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7073359E1B60B5DB0018D2A6 /* IntegrationCommits.swift */; };
@@ -139,6 +143,9 @@
 		707D089E1B2C6A1F003900F3 /* TriggerConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */; };
 		7088E7CC1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088E7CB1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift */; };
 		7088E7CD1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7088E7CB1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift */; };
+		708904D01B7B98800004426D /* IntegrationIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708904CF1B7B98800004426D /* IntegrationIssues.swift */; };
+		708904D11B7B98800004426D /* IntegrationIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708904CF1B7B98800004426D /* IntegrationIssues.swift */; };
+		708904D21B7B98800004426D /* IntegrationIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708904CF1B7B98800004426D /* IntegrationIssues.swift */; };
 		7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
 		7089CBB91B53DC9D006C9EC5 /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */; };
 		7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */; };
@@ -158,6 +165,8 @@
 		70C2D8391B431F1E008845FB /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704591851B40945700BA226C /* RepositoryTests.swift */; };
 		70C2D8411B43273A008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
+		70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; settings = {ASSET_TAGS = (); }; };
+		70CCA08A1B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; settings = {ASSET_TAGS = (); }; };
 		70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
 		70DE3FA91B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
@@ -233,6 +242,7 @@
 		700B43571B5FA7A200E27175 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
 		700C93551B54F58A00B3C6E6 /* get_devices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_devices.json; sourceTree = "<group>"; };
 		70138A801B62478100477F91 /* get_integration_commits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration_commits.json; sourceTree = "<group>"; };
+		7014A53E1B7120980034DA74 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		7019563B1B5E26C5007CDF0B /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		7019563F1B5E2BEE007CDF0B /* Contributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		701956431B5E2F79007CDF0B /* ContributorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
@@ -243,6 +253,7 @@
 		7045917E1B4074CC00BA226C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		704591851B40945700BA226C /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		704B5FC31B455EE400989E4B /* get_repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_repositories.json; sourceTree = "<group>"; };
+		704EC6D91B724592003E002A /* IssueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTests.swift; sourceTree = "<group>"; };
 		705D59A01B3AE502002521BA /* HTTPUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtilsTests.swift; sourceTree = "<group>"; };
 		7073359E1B60B5DB0018D2A6 /* IntegrationCommits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationCommits.swift; sourceTree = "<group>"; };
 		707D08951B2C684C003900F3 /* XcodeServerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerConfig.swift; sourceTree = "<group>"; };
@@ -251,6 +262,7 @@
 		707D089B1B2C69C4003900F3 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		707D089D1B2C6A1F003900F3 /* TriggerConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriggerConditions.swift; sourceTree = "<group>"; };
 		7088E7CB1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerEndpointsTests.swift; sourceTree = "<group>"; };
+		708904CF1B7B98800004426D /* IntegrationIssues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationIssues.swift; sourceTree = "<group>"; };
 		7089CBB71B53DC9D006C9EC5 /* PlatformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_platforms.json; sourceTree = "<group>"; };
 		709ED67B1B35FD3F00A06038 /* XcodeServerEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeServerEntityTests.swift; sourceTree = "<group>"; };
@@ -260,6 +272,7 @@
 		70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Platform.swift"; sourceTree = "<group>"; };
 		70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Auth.swift"; sourceTree = "<group>"; };
 		70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Repository.swift"; sourceTree = "<group>"; };
+		70CCA0881B8E586A00024E21 /* get_integration_issues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = get_integration_issues.json; sourceTree = "<group>"; };
 		70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XcodeServer+Integration.swift"; sourceTree = "<group>"; };
 		9C3051A2882C5ACD2DFE4A61 /* Pods-XcodeServerSDK - OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeServerSDK - OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XcodeServerSDK - OS X/Pods-XcodeServerSDK - OS X.debug.xcconfig"; sourceTree = "<group>"; };
 		A377110DF464BCC1E2B470DB /* Pods_XcodeServerSDK___iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_XcodeServerSDK___iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +438,7 @@
 				7088E7CB1B5CE3E400C3B694 /* XcodeServerEndpointsTests.swift */,
 				701956431B5E2F79007CDF0B /* ContributorTests.swift */,
 				700B43571B5FA7A200E27175 /* FileTests.swift */,
+				704EC6D91B724592003E002A /* IssueTests.swift */,
 				3AD14B771B3F71C600BFDEAA /* Casettes */,
 				3A058A911B31596E0077FD47 /* Data */,
 				3A7B48CA1B2A5AC40077ABEA /* Supporting Files */,
@@ -450,6 +464,7 @@
 				704B5FC31B455EE400989E4B /* get_repositories.json */,
 				7089CBBA1B53DD7A006C9EC5 /* get_platforms.json */,
 				700C93551B54F58A00B3C6E6 /* get_devices.json */,
+				70CCA0881B8E586A00024E21 /* get_integration_issues.json */,
 			);
 			name = Casettes;
 			path = XcodeServerSDKTests/Casettes;
@@ -486,6 +501,8 @@
 				7019563B1B5E26C5007CDF0B /* Commit.swift */,
 				701956461B5E54E8007CDF0B /* File.swift */,
 				7073359E1B60B5DB0018D2A6 /* IntegrationCommits.swift */,
+				7014A53E1B7120980034DA74 /* Issue.swift */,
+				708904CF1B7B98800004426D /* IntegrationIssues.swift */,
 			);
 			path = "Server Entities";
 			sourceTree = "<group>";
@@ -721,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC51B455EE400989E4B /* get_repositories.json in Resources */,
+				70CCA08A1B8E586A00024E21 /* get_integration_issues.json in Resources */,
 				3AC47F411B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBC1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93571B54F58A00B3C6E6 /* get_devices.json in Resources */,
@@ -750,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B5FC41B455EE400989E4B /* get_repositories.json in Resources */,
+				70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */,
 				3AC47F401B586DFD008C4E42 /* get_integration.json in Resources */,
 				7089CBBB1B53DD7A006C9EC5 /* get_platforms.json in Resources */,
 				700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */,
@@ -962,7 +981,9 @@
 				11376BDF1B3A2FE30005A681 /* EmailConfiguration.swift in Sources */,
 				11376BE61B3A2FEB0005A681 /* CIServer.swift in Sources */,
 				11376BE91B3A2FEB0005A681 /* XcodeServerConstants.swift in Sources */,
+				7014A5411B7120980034DA74 /* Issue.swift in Sources */,
 				70B43A8F1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
+				708904D21B7B98800004426D /* IntegrationIssues.swift in Sources */,
 				702706871B445F6A00E09FDF /* XcodeServer+SCM.swift in Sources */,
 				3A7CCD3C1B55F97B00CED8BC /* TestHierarchy.swift in Sources */,
 				70E1413A1B409EA000AC98DB /* Repository.swift in Sources */,
@@ -994,6 +1015,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7027067F1B44548800E09FDF /* XcodeServer+Bot.swift in Sources */,
+				7014A5401B7120980034DA74 /* Issue.swift in Sources */,
 				11FB71B01B34AF3300D57A52 /* CIServer.swift in Sources */,
 				70DE3FA81B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				11FB71B31B34AF3300D57A52 /* XcodeServerConstants.swift in Sources */,
@@ -1010,6 +1032,7 @@
 				70B43A8E1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				11FB71AA1B34AF2400D57A52 /* BotSchedule.swift in Sources */,
 				701956481B5E54E8007CDF0B /* File.swift in Sources */,
+				708904D11B7B98800004426D /* IntegrationIssues.swift in Sources */,
 				3ABE68671B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				11FB71AB1B34AF2400D57A52 /* Trigger.swift in Sources */,
 				11FB71AC1B34AF2400D57A52 /* TriggerConditions.swift in Sources */,
@@ -1052,6 +1075,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7B48E61B2A5ADE0077ABEA /* SourceControlBlueprint.swift in Sources */,
+				7014A53F1B7120980034DA74 /* Issue.swift in Sources */,
 				3A7B48E31B2A5ADE0077ABEA /* CIServer.swift in Sources */,
 				3A7B48E71B2A5ADE0077ABEA /* XcodeServer.swift in Sources */,
 				3A7B48E91B2A5ADE0077ABEA /* XcodeServerEndpoints.swift in Sources */,
@@ -1068,6 +1092,7 @@
 				7045917F1B4074CC00BA226C /* Repository.swift in Sources */,
 				3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */,
 				701956471B5E54E8007CDF0B /* File.swift in Sources */,
+				708904D01B7B98800004426D /* IntegrationIssues.swift in Sources */,
 				707D08961B2C684C003900F3 /* XcodeServerConfig.swift in Sources */,
 				70B43A8D1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */,
 				3A7B48EB1B2A5ADE0077ABEA /* XcodeServerFactory.swift in Sources */,
@@ -1099,6 +1124,7 @@
 				703FED511B53AD1B00943876 /* DevicesTests.swift in Sources */,
 				709ED6801B3608FC00A06038 /* XcodeServerConfigTests.swift in Sources */,
 				7089CBB81B53DC9D006C9EC5 /* PlatformTests.swift in Sources */,
+				704EC6DA1B724592003E002A /* IssueTests.swift in Sources */,
 				700B43581B5FA7A200E27175 /* FileTests.swift in Sources */,
 				701956441B5E2F79007CDF0B /* ContributorTests.swift in Sources */,
 				70B21FF81B3AFB1D00EAD4EB /* BotConfigurationTests.swift in Sources */,
