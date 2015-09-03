@@ -36,7 +36,7 @@ platform :mac do
     sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN && subl CHANGELOG.md"
 
     # assume version from the podspec
-    version = read_cocoapod_spec['source']['tag']
+    version = read_podspec['source']['tag']
 
     # ask for info
     title = prompt(text: 'Release Title: ')

@@ -1,10 +1,10 @@
 module Fastlane
   module Actions
     module SharedValues
-      READ_COCOAPOD_SPEC_JSON = :READ_COCOAPOD_SPEC_JSON
+      READ_PODSPEC_JSON = :READ_PODSPEC_JSON
     end
 
-    class ReadCocoapodSpecAction < Action
+    class ReadPodspecAction < Action
       def self.run(params)
         path = params[:path] || Dir['*.podspec*'].first
 
@@ -14,7 +14,7 @@ module Fastlane
 
         Helper.log.info "Reading podspec from file #{path}".green
 
-        Actions.lane_context[SharedValues::READ_COCOAPOD_SPEC_JSON] = spec
+        Actions.lane_context[SharedValues::READ_PODSPEC_JSON] = spec
         return spec
       end
 
@@ -30,25 +30,25 @@ module Fastlane
         [
           "This can be used for only specifying a version string in your podspec",
           "- and during your release process you'd read it from the podspec by running",
-          "`version = read_cocoapod_spec['version']` at the beginning of your lane"
-          ].join("\n")
+          "`version = read_podspec['version']` at the beginning of your lane"
+        ].join("\n")
       end
 
       def self.available_options
         [
           FastlaneCore::ConfigItem.new(key: :path,
-                                       env_name: "FL_READ_COCOAPOD_SPEC_PATH",
+                                       env_name: "FL_READ_PODSPEC_PATH",
                                        description: "(Optional) Path to the podspec to be read",
                                        optional: true,
                                        verify_block: proc do |value|
-                                          raise "File #{value} not found".red unless File.exists?(spec_path)
+                                         raise "File #{value} not found".red unless File.exist?(spec_path)
                                        end)
         ]
       end
 
       def self.output
         [
-          ['READ_COCOAPOD_SPEC_JSON', 'Podspec JSON payload']
+          ['READ_PODSPEC_JSON', 'Podspec JSON payload']
         ]
       end
 
