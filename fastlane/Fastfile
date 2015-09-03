@@ -8,7 +8,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.22.0"
+fastlane_version "1.23.0"
 
 default_platform :mac
 
