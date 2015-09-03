@@ -36,7 +36,7 @@ platform :mac do
     sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN && subl CHANGELOG.md"
 
     # assume version from the podspec
-    version = JSON.parse(sh "cd .. && pod spec cat *.podspec")['source']['tag']
+    version = read_cocoapod_spec['source']['tag']
 
     # ask for info
     title = prompt(text: 'Release Title: ')
@@ -73,8 +73,6 @@ platform :mac do
     sh "cd .. && git commit -am \"changelog\" && git push"
 
   end
-
-  #TODO: create a lane for releasing a new podspec
 
   after_all do |lane|    
 
