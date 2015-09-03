@@ -68,7 +68,6 @@ platform :mac do
     )
 
     # regenerate changelog to get it committed
-    ensure_git_status_clean
     sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
     sh "cd .. && git commit -am \"changelog\" && git push"
 
