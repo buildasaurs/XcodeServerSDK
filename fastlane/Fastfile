@@ -8,7 +8,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.13.0"
+fastlane_version "1.22.0"
 
 default_platform :mac
 
@@ -31,6 +31,10 @@ platform :mac do
     ensure_git_status_clean
     ensure_git_branch(branch: "swift-2")
     git_pull
+
+    # regen the changelog
+    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
+    sh "cd .. && subl CHANGELOG.md"
 
     # ask for the version
     version = prompt(text: 'New Version Tag: ')
@@ -62,8 +66,9 @@ platform :mac do
     )
 
     # regenerate changelog to get it committed
-    # TODO: is there a "commit" fastlane action?
+    ensure_git_status_clean
     sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
+    sh "cd .. && git commit -am \"changelog\" && git push"
 
   end
 
