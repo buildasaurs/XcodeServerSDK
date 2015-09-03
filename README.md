@@ -51,7 +51,7 @@ Go wild!
 ```swift
 server.getBots { (bots, error) -> () in
     if let error = error {
-        Log.error("Oh noz! \(error.description)")
+        Log.error("Oh no! \(error.description)")
         return
     }
     
