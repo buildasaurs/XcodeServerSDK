@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.2.1) (2015-09-05)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.2.0...v0.2.1)
+
+**Merged pull requests:**
+
+- Renamed Issue [\#101](https://github.com/czechboy0/XcodeServerSDK/pull/101) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.2.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.2.0) (2015-09-03)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.1.10...v0.2.0)
 
