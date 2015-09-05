@@ -8,88 +8,74 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.23.0"
+fastlane_version "1.24.0"
 
-default_platform :mac
+# -----------
 
-platform :mac do
+def project_name
+  "XcodeServerSDK"
+end
 
-  before_all do |lane|
-  end
+def project_github_name
+  "czechboy0/#{project_name}"
+end
 
-  lane :prebuild do
-    cocoapods
-  end
+def release_branch
+  "swift-2"
+end
 
-  lane :postbuild do
-    # nada
-  end
+# -----------
 
-  lane :release do
+lane :prebuild do
+  cocoapods
+end
 
-    # prep the local state
-    ensure_git_status_clean
-    ensure_git_branch(branch: "swift-2")
-    git_pull
+lane :release do
 
-    # regen the changelog and open it
-    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN && subl CHANGELOG.md"
+  # prep the local state
+  ensure_git_status_clean
+  ensure_git_branch(branch: release_branch)
+  git_pull
 
-    # assume version from the podspec
-    version = read_podspec['source']['tag']
+  # regen the changelog and open it
+  sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN && subl CHANGELOG.md"
 
-    # ask for info
-    title = prompt(text: 'Release Title: ')
-    description = prompt(text: "Release changelog: ",
-                         multi_line_end_keyword: "END")
+  # assume version from the podspec
+  version = read_podspec['source']['tag']
 
-    # create a new release on GitHub
-    repo_url = "czechboy0/XcodeServerSDK"
-    release = set_github_release(
-      repository_name: repo_url,
-      api_token: ENV["GITHUB_TOKEN"],
-      name: [version, title].join(" - "),
-      tag_name: version,
-      description: description,
-      is_draft: false,
-      is_prerelease: false
-    )
+  # ask for info
+  title = prompt(text: 'Release Title: ')
+  description = prompt(text: "Release changelog: ",
+                       multi_line_end_keyword: "END")
 
-    # release podspec to cocoapods
-    sh "cd .. && pod trunk push"
+  # create a new release on GitHub
+  repo_url = project_github_name
+  release = set_github_release(
+    repository_name: repo_url,
+    commitish: release_branch,
+    api_token: ENV["GITHUB_TOKEN"],
+    name: [version, title].join(" - "),
+    tag_name: version,
+    description: description,
+    is_draft: false,
+    is_prerelease: false
+  )
 
-    # notify us on slack
-    slack(
-      slack_url: ENV['SLACK_RELEASES_URL'],
-      message: "Successfully released [XcodeServerSDK #{version}](#{release['html_url']}) :rocket:",
-      payload: {
-        "New" => release['body']
-      }
-    )
+  # release podspec to cocoapods
+  sh "cd .. && pod trunk push"
 
-    # regenerate changelog to get it committed
-    sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
-    sh "cd .. && git commit -am \"changelog\" && git push"
+  # notify us on slack
+  slack(
+    slack_url: ENV['SLACK_RELEASES_URL'],
+    message: "Successfully released [#{project_name} #{version}](#{release['html_url']}) :rocket:",
+    payload: {
+      "New" => release['body']
+    }
+  )
 
-  end
-
-  after_all do |lane|    
-
-    if lane == :postbuild
-      slack(
-        message: "XcodeServerSDK: Build finished"
-      )
-    end
-  end
- 
-  error do |lane, exception|
-    if lane == :postbuild
-      slack(
-        message: "XcodeServerSDK: Seems like we have a failing build: #{exception.message}",
-        success: false
-      )
-    end
-  end
+  # regenerate changelog to get it committed
+  sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"
+  sh "cd .. && git commit -am \"changelog\" && git push"
 
 end
 
