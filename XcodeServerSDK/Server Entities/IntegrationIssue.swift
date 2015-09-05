@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Issue: XcodeServerEntity {
+public class IntegrationIssue: XcodeServerEntity {
     
     public enum IssueType: String {
         case BuildServiceError = "buildServiceError"
