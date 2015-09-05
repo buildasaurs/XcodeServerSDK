@@ -11,7 +11,7 @@ import XCTest
 
 class IssueTests: XCTestCase {
 
-    let buildServiceError = Issue(json: [
+    let buildServiceError = IntegrationIssue(json: [
         "_id": "99e84a22b20df344df2217d5e4186094",
         "_rev": "3-0cf0b25e995f1a050617d3c5824007f7",
         "message": "This integration was canceled.",
@@ -23,7 +23,7 @@ class IssueTests: XCTestCase {
         "status": 0
     ])
     
-    let errorWithCommits = Issue(json: [
+    let errorWithCommits = IntegrationIssue(json: [
         "_id": "99e84a22b20df344df2217d5e413f43e",
         "_rev": "3-7dfc0aa57a8119c025cd2d86143589f2",
         "message": "Expected declaration",
@@ -70,8 +70,8 @@ class IssueTests: XCTestCase {
         XCTAssertNotNil(errorWithCommits)
         
         // Check types
-        XCTAssertEqual(buildServiceError.type, Issue.IssueType.BuildServiceError)
-        XCTAssertEqual(errorWithCommits.type, Issue.IssueType.Error)
+        XCTAssertEqual(buildServiceError.type, IntegrationIssue.IssueType.BuildServiceError)
+        XCTAssertEqual(errorWithCommits.type, IntegrationIssue.IssueType.Error)
     }
     
     func testPayload() {
