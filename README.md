@@ -65,8 +65,6 @@ server.getBots { (bots, error) -> () in
 # :signal_strength: Swift Versions
 The latest Swift 1.2 compatible version is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4), so put this exact version in your Podfile if you're targeting Swift 1.2. All newer releases will be targeting Swift 2, because we're all just so forward-thinking.
 
-When it comes to branches, [`master`](https://github.com/czechboy0/XcodeServerSDK/tree/master) will still host the latest stable Xcode's version (Xcode 6.3.2 with Swift 1.2), until this fall when Swift 2 will come out of beta with Xcode 7. Until then, please send pull requests and contribute to the [`swift-2`](https://github.com/czechboy0/XcodeServerSDK/tree/swift-2) branch.
-
 # :circus_tent: Play with Playground
 
 We're providing a Plaground in which you can easily interact with `XcodeServerSDK` and test it's functionalities without any need to create a new app. Playground target is set to be OS X (so don't use `UIKit` inside).
@@ -105,11 +103,8 @@ Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the followi
 |:--:|:--:|:--:|:--:|
 |OS X | 10.10| :white_check_mark: | :white_check_mark: |
 |iOS | 8.0| :white_check_mark: | :white_check_mark: |
-|ᴡᴀᴛᴄʜ | 2.0 | :white_check_mark: | :white_check_mark:* |
-
-*: _CocoaPods supports watchOS from the `0.38` release. [Here][watchossample] you can take a look at a sample implementation of ᴡᴀᴛᴄʜ pods._
-[cocoapodswatchos]:https://github.com/CocoaPods/CocoaPods/pull/3681
-[watchossample]:https://github.com/neonichu/native-watchOS-example
+|watchOS | 2.0 | :white_check_mark: | :white_check_mark: |
+|tvOS | ? | ? | ? |
 
 # :tada: Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
