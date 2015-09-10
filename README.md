@@ -1,6 +1,6 @@
 # Xcode Server SDK
 
-[![satellite badge](https://stlt.herokuapp.com/v1/badge/czechboy0/xcodeserversdk/swift-2)](https://github.com/czechboy0/xcodeserversdk/branches)
+[![satellite badge](https://stlt.herokuapp.com/v1/badge/czechboy0/xcodeserversdk/master)](https://github.com/czechboy0/xcodeserversdk/branches)
 [![Latest XcodeServerSDK Release](https://img.shields.io/github/release/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/releases/latest)
 [![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)<br />
 
@@ -30,7 +30,7 @@ The latest version supporting the old, undocumented Xcode 6 version of the Xcode
 One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
-pod 'XcodeServerSDK', '0.1.6'
+pod 'XcodeServerSDK'
 ```
 
 If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
