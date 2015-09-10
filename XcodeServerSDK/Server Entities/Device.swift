@@ -46,7 +46,7 @@ public class Device : XcodeServerEntity {
         } else {
             self.activeProxiedDevice = nil
         }
-        self.trusted = json.boolForKey("trusted")
+        self.trusted = json.optionalBoolForKey("trusted") ?? false
         self.name = json.stringForKey("name")
         self.supported = json.boolForKey("supported")
         self.processor = json.optionalStringForKey("processor")
