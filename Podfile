@@ -1,28 +1,32 @@
 
 use_frameworks!
 
-utils_name = 'BuildaUtils'
-utils_version = '0.0.11'
+def utils
+	pod 'BuildaUtils', '0.0.11'
+end
+
+def dvr
+	pod 'DVR', :git => "https://github.com/czechboy0/DVR.git", :tag => "v0.0.4-czechboy0" 
+end
 
 target 'XcodeServerSDK - OS X' do
-pod utils_name, utils_version
+	utils
 end
 
 target 'XcodeServerSDK - OS X Tests' do
-pod utils_name, utils_version
-pod 'DVR', :git => "https://github.com/czechboy0/DVR.git", :tag => "v0.0.4-czechboy0"
+	utils
+	dvr
 end
 
 target 'XcodeServerSDK - iOS' do
-pod utils_name, utils_version
+	utils
 end
 
 target 'XcodeServerSDK - iOS Tests' do
-pod utils_name, utils_version
-pod 'DVR', :git => "https://github.com/czechboy0/DVR.git", :tag => "v0.0.4-czechboy0"
+	utils
+	dvr
 end
 
 target 'XcodeServerSDK - watchOS' do
-pod utils_name, utils_version
+	utils
 end
-

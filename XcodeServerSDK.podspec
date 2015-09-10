@@ -16,8 +16,15 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => "https://github.com/czechboy0/XcodeServerSDK.git", :tag => "v#{s.version}" }
 
-  s.source_files  = "XcodeServerSDK/**/*.{swift}"
+  subspec "Core" do |sp|
+    sp.source_files  = "XcodeServerSDK/**/*.{swift}"
+    sp.dependency "BuildaUtils", "0.0.11"
+  end
 
-  s.dependency "BuildaUtils", "0.0.11"
+  subspec "ReactiveCocoa" do |sp|
+    sp.dependency "XcodeServerSDK/Core"
+    # sp.dependency "ReactiveCocoa", "~> SWIFT 2 WHENEVER ITS READY"
+    sp.source_files = "XcodeServerSDK-ReactiveCocoa/**/*.{swift}"
+  end
 
 end
