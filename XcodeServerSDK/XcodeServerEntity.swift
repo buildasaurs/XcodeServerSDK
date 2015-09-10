@@ -17,6 +17,10 @@ public class XcodeServerEntity : XcodeRead {
     public let id: String!
     public let rev: String!
     public let tinyID: String!
+    public let docType: String!
+    
+    //when created from json, let's save the original data here.
+    public let originalJSON: NSDictionary?
     
     //initializer which takes a dictionary and fills in values for recognized keys
     public required init(json: NSDictionary) {
@@ -24,12 +28,16 @@ public class XcodeServerEntity : XcodeRead {
         self.id = json.optionalStringForKey("_id")
         self.rev = json.optionalStringForKey("_rev")
         self.tinyID = json.optionalStringForKey("tinyID")
+        self.docType = json.optionalStringForKey("doc_type")
+        self.originalJSON = json.copy() as? NSDictionary
     }
     
     public init() {
         self.id = nil
         self.rev = nil
         self.tinyID = nil
+        self.docType = nil
+        self.originalJSON = nil
     }
     
     public func dictionarify() -> NSDictionary {

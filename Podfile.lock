@@ -1,0 +1,23 @@
+PODS:
+  - BuildaUtils (0.0.11)
+  - DVR (0.0.4-czechboy0)
+
+DEPENDENCIES:
+  - BuildaUtils (= 0.0.11)
+  - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.4-czechboy0`)
+
+EXTERNAL SOURCES:
+  DVR:
+    :git: https://github.com/czechboy0/DVR.git
+    :tag: v0.0.4-czechboy0
+
+CHECKOUT OPTIONS:
+  DVR:
+    :git: https://github.com/czechboy0/DVR.git
+    :tag: v0.0.4-czechboy0
+
+SPEC CHECKSUMS:
+  BuildaUtils: be29c9977230329a330a02c6f97454a7422ae534
+  DVR: 386f347071f55f3f9105239db6764483009ec875
+
+COCOAPODS: 0.38.2

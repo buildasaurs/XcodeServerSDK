@@ -1,0 +1,128 @@
+{
+	"group": {
+		"name": "2FDD3BEB-D750-47EE-B386-07EA9BABA98B"
+	},
+	"configuration": {
+		"builtFromClean": 0,
+		"periodicScheduleInterval": 1,
+		"codeCoveragePreference": 2,
+		"performsTestAction": true,
+		"triggers": [
+			{
+				"phase": 1,
+				"scriptBody": "echo \"Run before\"",
+				"type": 1,
+				"name": "Run Script"
+			},
+			{
+				"phase": 2,
+				"scriptBody": "echo \"Run after\"",
+				"type": 1,
+				"name": "Run Script",
+				"conditions": {
+					"status": 2,
+					"onWarnings": true,
+					"onBuildErrors": true,
+					"onInternalErrors": true,
+					"onAnalyzerWarnings": true,
+					"onFailingTests": true,
+					"onSuccess": true
+				}
+			},
+			{
+				"phase": 2,
+				"scriptBody": "",
+				"type": 2,
+				"name": "Send Email Notification",
+				"conditions": {
+					"status": 2,
+					"onWarnings": true,
+					"onBuildErrors": true,
+					"onInternalErrors": true,
+					"onAnalyzerWarnings": true,
+					"onFailingTests": true,
+					"onSuccess": false
+				},
+				"emailConfiguration": {
+					"includeCommitMessages": true,
+					"additionalRecipients": [
+						"email@committers.yo"
+					],
+					"emailCommitters": true,
+					"scmOptions": {
+						"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": true
+					},
+					"includeIssueDetails": true
+				}
+			}
+		],
+		"performsAnalyzeAction": true,
+		"schemeName": "XcodeServerSDK - OS X",
+		"exportsProductFromArchive": true,
+		"testingDeviceIDs": [],
+		"deviceSpecification": {
+			"filters": [
+				{
+					"platform": {
+						"buildNumber": "15A204f",
+						"_id": "a85553a5b26a7c1a4998f3b237000b18",
+						"_rev": "12-b005bffe3337cfe101fd597c300b0208",
+						"displayName": "OS X",
+						"identifier": "com.apple.platform.macosx",
+						"version": "1.1"
+					},
+					"filterType": 0,
+					"architectureType": 1
+				}
+			],
+			"deviceIdentifiers": []
+		},
+		"weeklyScheduleDay": 0,
+		"minutesAfterHourToIntegrate": 0,
+		"scheduleType": 1,
+		"hourOfIntegration": 0,
+		"performsArchiveAction": true,
+		"sourceControlBlueprint": {
+			"DVTSourceControlWorkspaceBlueprintLocationsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlBranchIdentifierKey": "hd/tested_devices_xcode_7",
+					"DVTSourceControlBranchOptionsKey": 156,
+					"DVTSourceControlWorkspaceBlueprintLocationTypeKey": "DVTSourceControlBranch"
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": {
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryUsernameKey": "git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationStrategiesKey": "MY_PRIVATE_KEY",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryAuthenticationTypeKey": "DVTSourceControlSSHKeysAuthenticationStrategy",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPublicKeyDataKey": "c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFETUlyMHIyK3pt\r\nZ2JIajhBcnczRDQzZ0N5WURMc3p6ZWtIdTZZK0FKd29xZC8venFXU1FqamxlMkRt\r\nSmFueXNORnRhbFU3U005M2dtYXEzYTI4YjM3aWZnRmMrMXlhSDRNOC9EUk1yaHRR\r\ndk9JSEhYcWNzeUpwU0RWRkl3YjVxRm5LblNGaW96NGdSTkV0R1VOWWdCVTNYNHRs\r\nQzNMQkV1RmZhdS9RVXZZOEY5NmdMS3BGMTF0ZHdaanlDREN5ZWtIT2JaeWU2RS9R\r\nelRKZXppWjF5RXdHcXdvS3Q1NlpoZ1JHNG5yRHMwaEU2dDYxUG90WkdiMEpSbVRm\r\nYThFM05Mckp5ZklreS9DK2hpQ2tsSmZRelZndGk2MWtwMDJuZFN1ODlHK3dBY0xJ\r\nUjJ2Qzk2TndWRW9pZG1MTnN0bXlrMlhEbG1jVzB2Z0ZHVmptNWx2ZkljWVYgaG9u\r\nemFAc3dpZnRrZXkubmV0Cg==",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryPasswordKey": ""
+				}
+			},
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": 0
+			},
+			"DVTSourceControlWorkspaceBlueprintIdentifierKey": "04531A78-B36E-4E1E-B304-92BD53E2E173",
+			"DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey": {
+				"A36AEFA3F9FF1F738E92F0C497C14977DCE02B97": "XcodeServerSDK/"
+			},
+			"DVTSourceControlWorkspaceBlueprintNameKey": "XcodeServerSDK",
+			"DVTSourceControlWorkspaceBlueprintVersion": 203,
+			"DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey": "XcodeServerSDK.xcworkspace",
+			"DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey": [
+				{
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey": "com.apple.dt.Xcode.sourcecontrol.Git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey": "git@github.com:czechboy0/XcodeServerSDK.git",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustedCertFingerprintKey": "1627ACA576282D36631B564DEBDFA648",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey": "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97",
+					"DVTSourceControlWorkspaceBlueprintRemoteRepositoryTrustSelfSignedCertKey": true
+				}
+			]
+		},
+		"testingDestinationType": 7
+	},
+	"requiresUpgrade": false,
+	"name": "Default OS X Bot",
+	"type": 1
+}

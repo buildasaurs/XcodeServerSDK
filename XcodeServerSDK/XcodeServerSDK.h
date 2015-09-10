@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Honza Dvorsky. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Foundation;
 
 //! Project version number for XcodeServerSDK.
 FOUNDATION_EXPORT double XcodeServerSDKVersionNumber;
@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double XcodeServerSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char XcodeServerSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <XcodeServerSDK/PublicHeader.h>
-
-

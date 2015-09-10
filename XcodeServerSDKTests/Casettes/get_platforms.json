@@ -1,0 +1,69 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1436788154.310033,
+      "response" : {
+        "body" : {
+          "count" : 3,
+          "results" : [
+            {
+              "_id" : "1ad0e8785cacca73d980cdb236002dc6",
+              "displayName" : "OS X",
+              "_rev" : "3-4fab2e1d78397a4b10b23493de9e333c",
+              "tinyID" : "67F229A",
+              "identifier" : "com.apple.platform.macosx",
+              "buildNumber" : "15A216g",
+              "version" : "1.1",
+              "doc_type" : "platform"
+            },
+            {
+              "_id" : "1ad0e8785cacca73d980cdb236002f3d",
+              "displayName" : "Watch OS",
+              "_rev" : "3-ed75f59aab9305de47f062a3349deb91",
+              "tinyID" : "87C0EB5",
+              "simulatorIdentifier" : "com.apple.platform.watchsimulator",
+              "identifier" : "com.apple.platform.watchos",
+              "buildNumber" : "13S5293f",
+              "version" : "2.0",
+              "doc_type" : "platform"
+            },
+            {
+              "_id" : "1ad0e8785cacca73d980cdb236003378",
+              "displayName" : "iOS",
+              "_rev" : "3-e059eb79237844f062c28ea5a723aa06",
+              "tinyID" : "80A6C18",
+              "simulatorIdentifier" : "com.apple.platform.iphonesimulator",
+              "identifier" : "com.apple.platform.iphoneos",
+              "buildNumber" : "13A4293g",
+              "version" : "9.0",
+              "doc_type" : "platform"
+            }
+          ]
+        },
+        "body_format" : "json",
+        "status" : 200,
+        "url" : "https:\/\/127.0.0.1:20343\/api\/platforms",
+        "headers" : {
+          "X-XCSResultsList" : "true",
+          "Content-Type" : "application\/json",
+          "Connection" : "keep-alive",
+          "Transfer-Encoding" : "Identity",
+          "Date" : "Mon, 13 Jul 2015 11:49:14 GMT",
+          "Content-Encoding" : "gzip",
+          "X-XCSResponse-Status-Title" : "OK",
+          "Keep-Alive" : "timeout=5; max=100",
+          "X-XCSAPIVersion" : "6",
+          "Vary" : "Accept-Encoding"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/127.0.0.1:20343\/api\/platforms",
+        "headers" : {
+          "Authorization" : "Basic SUNhbkNyZWF0ZUJvdHM6c3VwZXJTZWNyM3Q="
+        }
+      }
+    }
+  ],
+  "name" : "get_platforms"
+}
