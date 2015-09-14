@@ -18,8 +18,8 @@ extension XcodeServer {
         } else {
             precondition(next != nil)
             sendNext(sink, next!)
+            sendCompleted(sink)
         }
-        sendCompleted(sink)
     }
     
     //MARK: Auth
