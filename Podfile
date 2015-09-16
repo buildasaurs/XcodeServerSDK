@@ -30,3 +30,8 @@ end
 target 'XcodeServerSDK - watchOS' do
 	utils
 end
+
+target 'XCSReactiveCocoaOSX' do
+	utils
+	pod 'ReactiveCocoa', '4.0.0-alpha-1'
+end

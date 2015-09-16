@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'ReactiveCocoa' do |sp|
     sp.dependency "XcodeServerSDK/Core"
-    # sp.dependency "ReactiveCocoa", "~> SWIFT 2 WHENEVER ITS READY"
+    sp.dependency "ReactiveCocoa", '4.0.0-alpha-1'
     sp.source_files = "XCSReactiveCocoaOSX/**/*.{swift}"
   end
 
