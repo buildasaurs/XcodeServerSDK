@@ -3,6 +3,7 @@ use_frameworks!
 
 def utils
 	pod 'BuildaUtils', '0.0.11'
+	pod 'ReactiveCocoa', '4.0.2-alpha-1'
 end
 
 def dvr
@@ -29,9 +30,4 @@ end
 
 target 'XcodeServerSDK - watchOS' do
 	utils
-end
-
-target 'XCSReactiveCocoaOSX' do
-	utils
-	pod 'ReactiveCocoa', '4.0.0-alpha-1'
 end

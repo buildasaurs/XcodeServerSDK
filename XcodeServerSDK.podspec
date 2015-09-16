@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XcodeServerSDK"
-  s.version      = "0.2.1"
+  s.version      = "0.3.0"
   s.summary      = "Access Xcode Server API with native Swift objects."
 
   s.homepage     = "https://github.com/czechboy0/XcodeServerSDK"
@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'ReactiveCocoa' do |sp|
     sp.dependency "XcodeServerSDK/Core"
-    sp.dependency "ReactiveCocoa", '4.0.0-alpha-1'
-    sp.source_files = "XCSReactiveCocoaOSX/**/*.{swift}"
+    sp.dependency "ReactiveCocoa", '4.0.2-alpha-1'
+    sp.source_files = "XCSReactiveCocoa/**/*.{swift}"
   end
 
   s.default_subspec = 'Core'
