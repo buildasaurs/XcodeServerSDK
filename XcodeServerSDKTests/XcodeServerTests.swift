@@ -47,12 +47,36 @@ class XcodeServerTests: XCTestCase {
         
         XCTAssertNil(server.credential)
     }
+    
+    func testLive_LiveUpdates() {
+        
+        let exp = self.expectationWithDescription("Network")
+        let stopHandler = self.server.startListeningForLiveUpdates({ (message: String) -> () in
+            print(message)
+
+            if let openRange = message.rangeOfString("{") {
+                //let's find json
+                let jsonMessage = message.substringFromIndex(openRange.startIndex)
+                let data = jsonMessage.dataUsingEncoding(NSUTF8StringEncoding)!
+                let json = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as! NSDictionary
+                
+                //example: 5:::{"name":"advisoryIntegrationStatus","args":[{"message":"BuildaKit : Linking","_id":"07a63fae4ff2d5a37eee830be5092de2","percentage":0.7578125,"botId":"9e7520b0b7a865544691ffe8c603f7d6"},null]}
+                
+                print("")
+            } else {
+                //nah
+            }
+            
+            })
+        self.waitForExpectationsWithTimeout(1000) { (_) -> Void in
+            stopHandler()
+        }
+    }
 
     func DEV_testLive_GetBots() {
         
         let exp = self.expectationWithDescription("Network")
         self.server.getBots { (bots, error) in
-            print("")
             exp.fulfill()
         }
         self.waitForExpectationsWithTimeout(10, handler: nil)
@@ -64,7 +88,6 @@ class XcodeServerTests: XCTestCase {
         let server = self.getRecordingXcodeServer("test_bot")
         
         server.getBots { (bots, error) in
-            print("")
             exp.fulfill()
         }
         

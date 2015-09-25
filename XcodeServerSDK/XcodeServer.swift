@@ -82,15 +82,10 @@ public extension XcodeServer {
             return Error.withInfo("No headers provided in response")
         }
         
-        guard let apiVersionString = headers[Headers_APIVersion] as? String else {
-            return Error.withInfo("Couldn't find API version Int in headers")
-        }
+        let apiVersionString = (headers[Headers_APIVersion] as? String) ?? "-1"
+        let apiVersion = Int(apiVersionString)
         
-        guard let apiVersion = Int(apiVersionString) else {
-            return Error.withInfo("Couldn't find API version Int in headers")
-        }
-        
-        if SupportedAPIVersion != apiVersion {
+        if apiVersion > 0 && SupportedAPIVersion != apiVersion {
             var common = "Version mismatch: response from API version \(apiVersion), but we support version \(SupportedAPIVersion). "
             
             if apiVersion > SupportedAPIVersion {
@@ -116,10 +111,10 @@ public extension XcodeServer {
     - parameter body:       POST method request body.
     - parameter completion: Completion.
     */
-    internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndpoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, completion: HTTP.Completion) {
-        if let request = self.endpoints.createRequest(method, endpoint: endpoint, params: params, query: query, body: body) {
+    internal func sendRequestWithMethod(method: HTTP.Method, endpoint: XcodeServerEndpoints.Endpoint, params: [String: String]?, query: [String: String]?, body: NSDictionary?, portOverride: Int? = nil, completion: HTTP.Completion) -> NSURLSessionTask? {
+        if let request = self.endpoints.createRequest(method, endpoint: endpoint, params: params, query: query, body: body, portOverride: portOverride) {
             
-            self.http.sendRequest(request, completion: { (response, body, error) -> () in
+            return self.http.sendRequest(request, completion: { (response, body, error) -> () in
                 
                 //TODO: fix hack, make completion always return optionals
                 let resp: NSHTTPURLResponse? = response
@@ -151,6 +146,7 @@ public extension XcodeServer {
             
         } else {
             completion(response: nil, body: nil, error: Error.withInfo("Couldn't create Request"))
+            return nil
         }
     }
     

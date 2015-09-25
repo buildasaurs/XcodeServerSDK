@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import BuildaUtils
 @testable import XcodeServerSDK
 
 class XcodeServerEndpointsTests: XCTestCase {
@@ -219,6 +218,23 @@ class XcodeServerEndpointsTests: XCTestCase {
             "integration": "integration_id"
         ]
         let url = self.endpoints?.endpointURL(.Issues, params: params)
+        XCTAssertEqual(url!, expected)
+    }
+    
+    // MARK: endpoingURL(.LiveUpdates)
+    
+    func testEndpointURLCreationForLiveUpdates_Start() {
+        let expected = "/xcode/internal/socket.io/1"
+        let url = self.endpoints?.endpointURL(.LiveUpdates, params: nil)
+        XCTAssertEqual(url!, expected)
+    }
+    
+    func testEndpointURLCreationForLiveUpdates_Poll() {
+        let expected = "/xcode/internal/socket.io/1/xhr-polling/sup3rS3cret"
+        let params = [
+            "poll_id": "sup3rS3cret"
+        ]
+        let url = self.endpoints?.endpointURL(.LiveUpdates, params: params)
         XCTAssertEqual(url!, expected)
     }
 }
