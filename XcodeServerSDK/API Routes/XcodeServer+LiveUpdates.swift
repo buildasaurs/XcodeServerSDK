@@ -103,6 +103,7 @@ extension XcodeServer {
         let params = [
             "poll_id": state.pollId!
         ]
+        
         self.sendRequest(state, params: params) { [weak self] (message) -> () in
             
             state.messageHandler?(message: message)

@@ -55,6 +55,9 @@
 		3A06D6001B3C184F00F0A6C5 /* BotConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B21FF71B3AFB1D00EAD4EB /* BotConfigurationTests.swift */; };
 		3A13F30B1B404E7500C29D81 /* platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A13F30A1B404E7500C29D81 /* platforms.json */; };
 		3A13F30C1B404E7500C29D81 /* platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A13F30A1B404E7500C29D81 /* platforms.json */; };
+		3A32ABC91BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		3A32ABCA1BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		3A32ABCB1BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */; settings = {ASSET_TAGS = (); }; };
 		3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A11B4002C900B7F842 /* osx_bot.json */; };
 		3A3853A31B4002C900B7F842 /* osx_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A11B4002C900B7F842 /* osx_bot.json */; };
 		3A3853A71B40046E00B7F842 /* create_ios_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A41B40046E00B7F842 /* create_ios_bot.json */; };
@@ -209,6 +212,7 @@
 		3A058A921B315BB50077FD47 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		3A13F30A1B404E7500C29D81 /* platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = platforms.json; path = Data/platforms.json; sourceTree = "<group>"; };
 		3A25FBBB1B36E2C700897D11 /* XcodeServerSDK.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = XcodeServerSDK.playground; sourceTree = "<group>"; };
+		3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveUpdateMessage.swift; sourceTree = "<group>"; };
 		3A3853A11B4002C900B7F842 /* osx_bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = osx_bot.json; sourceTree = "<group>"; };
 		3A3853A41B40046E00B7F842 /* create_ios_bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = create_ios_bot.json; path = Data/create_ios_bot.json; sourceTree = "<group>"; };
 		3A3853A51B40046E00B7F842 /* create_osx_bot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = create_osx_bot.json; path = Data/create_osx_bot.json; sourceTree = "<group>"; };
@@ -496,8 +500,9 @@
 				701956461B5E54E8007CDF0B /* File.swift */,
 				3A7B48DA1B2A5ADE0077ABEA /* Integration.swift */,
 				7073359E1B60B5DB0018D2A6 /* IntegrationCommits.swift */,
-				708904CF1B7B98800004426D /* IntegrationIssues.swift */,
 				7014A53E1B7120980034DA74 /* IntegrationIssue.swift */,
+				708904CF1B7B98800004426D /* IntegrationIssues.swift */,
+				3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */,
 				7045917E1B4074CC00BA226C /* Repository.swift */,
 				3A7B48DB1B2A5ADE0077ABEA /* SourceControlBlueprint.swift */,
 				3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */,
@@ -1004,6 +1009,7 @@
 				11376BD91B3A2FD90005A681 /* XcodeServerEntity.swift in Sources */,
 				11376BDA1B3A2FD90005A681 /* XcodeServerConfig.swift in Sources */,
 				3A80C8091B3B639D0065C1C6 /* DeviceSpecification.swift in Sources */,
+				3A32ABCB1BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */,
 				70A444931B457ACD00C86EF8 /* XcodeServer+Repository.swift in Sources */,
 				707335A11B60B5DB0018D2A6 /* IntegrationCommits.swift in Sources */,
 				11376BDB1B3A2FD90005A681 /* XcodeServerEndpoints.swift in Sources */,
@@ -1044,6 +1050,7 @@
 				11FB71AF1B34AF2400D57A52 /* Integration.swift in Sources */,
 				11FB71A21B34AF1A00D57A52 /* XcodeServer.swift in Sources */,
 				701956411B5E2BEE007CDF0B /* Contributor.swift in Sources */,
+				3A32ABCA1BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */,
 				11FB71A31B34AF1A00D57A52 /* XcodeServerEntity.swift in Sources */,
 				3A60613D1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift in Sources */,
 				11FB71A41B34AF1A00D57A52 /* XcodeServerConfig.swift in Sources */,
@@ -1104,6 +1111,7 @@
 				707D08981B2C6954003900F3 /* EmailConfiguration.swift in Sources */,
 				70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */,
 				701956401B5E2BEE007CDF0B /* Contributor.swift in Sources */,
+				3A32ABC91BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */,
 				70B43A861B43C95A004F9DEB /* XcodeServer+Device.swift in Sources */,
 				3A60613C1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift in Sources */,
 				3A7B48E41B2A5ADE0077ABEA /* Device.swift in Sources */,
