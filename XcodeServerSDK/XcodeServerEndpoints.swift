@@ -24,6 +24,7 @@ public class XcodeServerEndpoints {
         case Repositories
         case Commits
         case Issues
+        case LiveUpdates
     }
     
     let serverConfig: XcodeServerConfig
@@ -130,6 +131,13 @@ public class XcodeServerEndpoints {
             let issues = "\(integration)/issues"
             return issues
             
+        case .LiveUpdates:
+            
+            let base = "/xcode/internal/socket.io/1"
+            if let pollId = params?["poll_id"] {
+                return "\(base)/xhr-polling/\(pollId)"
+            }
+            return base
         }
     }
     
@@ -145,7 +153,7 @@ public class XcodeServerEndpoints {
     
     - returns: NSMutableRequest or nil if wrong URL was provided
     */
-    func createRequest(method: HTTP.Method, endpoint: Endpoint, params: [String : String]? = nil, query: [String : String]? = nil, body: NSDictionary? = nil, doBasicAuth auth: Bool = true) -> NSMutableURLRequest? {
+    func createRequest(method: HTTP.Method, endpoint: Endpoint, params: [String : String]? = nil, query: [String : String]? = nil, body: NSDictionary? = nil, doBasicAuth auth: Bool = true, portOverride: Int? = nil) -> NSMutableURLRequest? {
         var allParams = [
             "method": method.rawValue
         ]
@@ -157,9 +165,10 @@ public class XcodeServerEndpoints {
             }
         }
         
+        let port = portOverride ?? self.serverConfig.port
         let endpointURL = self.endpointURL(endpoint, params: allParams)
         let queryString = HTTP.stringForQuery(query)
-        let wholePath = "\(self.serverConfig.host):\(self.serverConfig.port)\(endpointURL)\(queryString)"
+        let wholePath = "\(self.serverConfig.host):\(port)\(endpointURL)\(queryString)"
         
         guard let url = NSURL(string: wholePath) else {
             return nil
