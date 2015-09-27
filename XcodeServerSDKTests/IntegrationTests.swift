@@ -9,18 +9,20 @@
 import Foundation
 import XcodeServerSDK
 import XCTest
+import Nimble
 
 class IntegrationTests: XCTestCase {
     
     func test_GetIntegration() {
         
-        let exp = self.expectationWithDescription("Network")
         let server = self.getRecordingXcodeServer("get_integration")
+        var done = false
         server.getIntegration("ad2fac04895bd1bb06c1d50e3400fd35") { (integration, error) in
-            print("")
-            exp.fulfill()
+            expect(error).to(beNil())
+            expect(integration).toNot(beNil())
+            done = true
         }
-        self.waitForExpectationsWithTimeout(10, handler: nil)
+        expect(done).toEventually(beTrue())
     }
     
     // MARK: Commits
@@ -34,57 +36,57 @@ class IntegrationTests: XCTestCase {
     
     func testGetIntegrationCommits() {
         
-        let exp = self.expectationWithDescription("Network")
+        var done = false
         let server = self.getRecordingXcodeServer("get_integration_commits")
-        server.getIntegrationCommits("56ad016e2e3993ca0b8ed276050150e8") { (integrationCommits, error) in
-            XCTAssertNil(error, "Error should be nil")
+        server.getIntegrationCommits("56ad016e2e3993ca0b8ed276050150e8") {
             
+            (integrationCommits, error) in
+            
+            expect(error).to(beNil())
             guard let integrationCommits = integrationCommits,
                   let expectationDate = integrationCommits.endedTimeDate,
                   let commits = integrationCommits.commits["A36AEFA3F9FF1F738E92F0C497C14977DCE02B97"] else {
-                XCTFail("Integration commits are empty")
+                fail("Integration commits are empty")
                 return
             }
             
-            XCTAssertEqual(expectationDate, self.expectedDate)
-            XCTAssertEqual(commits.count, 6)
+            expect(expectationDate) == self.expectedDate
+            expect(commits.count) == 6
             
             let commiters = Set(commits.map { $0.contributor.name })
-            XCTAssertEqual(commiters.count, 2)
+            expect(commiters.count) == 2
             
-            exp.fulfill()
+            done = true
         }
         
-        self.waitForExpectationsWithTimeout(10, handler: nil)
-        
+        expect(done).toEventually(beTrue())
     }
     
     // MARK: Issues
     
     func testGetIntegrationIssues() {
         
-        let exp = self.expectationWithDescription("Network")
+        var done = false
         let server = self.getRecordingXcodeServer("get_integration_issues")
         server.getIntegrationIssues("960f6989b4c7289433ff04db71033d28") { (integrationIssues, error) -> () in
-            XCTAssertNil(error, "Error should be nil")
+            
+            expect(error).to(beNil())
             
             guard let issues = integrationIssues else {
-                XCTFail("Integration issues should be present")
+                fail("Integration issues should be present")
                 return
             }
             
-            XCTAssertEqual(issues.errors.count, 1)
+            expect(issues.errors.count) == 1
             
             let expectation = issues.warnings.filter { $0.status == .Fresh }
-            XCTAssertEqual(expectation.count, 2)
+            expect(expectation.count) == 2
+            expect(issues.analyzerWarnings.isEmpty).to(beTrue())
             
-            XCTAssertTrue(issues.analyzerWarnings.isEmpty)
-            
-            exp.fulfill()
+            done = true
         }
         
-        self.waitForExpectationsWithTimeout(10, handler: nil)
-        
+        expect(done).toEventually(beTrue())
     }
     
 }
