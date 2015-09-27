@@ -4,17 +4,17 @@ PODS:
 
 DEPENDENCIES:
   - BuildaUtils (= 0.1.0)
-  - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.4-czechboy0`)
+  - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.5-czechboy0`)
 
 EXTERNAL SOURCES:
   DVR:
     :git: https://github.com/czechboy0/DVR.git
-    :tag: v0.0.4-czechboy0
+    :tag: v0.0.5-czechboy0
 
 CHECKOUT OPTIONS:
   DVR:
     :git: https://github.com/czechboy0/DVR.git
-    :tag: v0.0.4-czechboy0
+    :tag: v0.0.5-czechboy0
 
 SPEC CHECKSUMS:
   BuildaUtils: cf7756290492ca286935d996c8bf4a3085662514

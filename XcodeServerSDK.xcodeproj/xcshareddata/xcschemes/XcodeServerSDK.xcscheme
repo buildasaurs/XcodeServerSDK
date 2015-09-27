@@ -14,30 +14,49 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11376BCF1B3A2F910005A681"
+               BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
                BuildableName = "XcodeServerSDK.framework"
-               BlueprintName = "XcodeServerSDK - watchOS"
+               BlueprintName = "XcodeServerSDK"
                ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3A7B48C41B2A5AC40077ABEA"
+               BuildableName = "XcodeServerSDKTest.xctest"
+               BlueprintName = "XcodeServerSDKTests"
+               ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
+            BuildableName = "XcodeServerSDK.framework"
+            BlueprintName = "XcodeServerSDK"
+            ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -45,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11376BCF1B3A2F910005A681"
+            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK - watchOS"
+            BlueprintName = "XcodeServerSDK"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,17 +74,17 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11376BCF1B3A2F910005A681"
+            BlueprintIdentifier = "3A7B48B91B2A5AC40077ABEA"
             BuildableName = "XcodeServerSDK.framework"
-            BlueprintName = "XcodeServerSDK - watchOS"
+            BlueprintName = "XcodeServerSDK"
             ReferencedContainer = "container:XcodeServerSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
