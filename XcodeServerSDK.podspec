@@ -18,12 +18,16 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |sp|
     sp.source_files  = "XcodeServerSDK/**/*.{swift}"
-    sp.dependency "BuildaUtils", "0.0.11"
+    # load the dependencies from the podfile for target ekgclient
+    podfile_deps = Podfile.from_file(Dir["Podfile"].first).target_definitions["XcodeServerSDK"].dependencies
+    podfile_deps.each do |dep|
+      sp.dependency dep.name, dep.requirement.to_s
+    end
   end
 
   s.subspec 'ReactiveCocoa' do |sp|
     sp.dependency "XcodeServerSDK/Core"
-    sp.dependency "ReactiveCocoa", '4.0.2-alpha-1'
+    sp.dependency "ReactiveCocoa", '4.0.2-alpha-1' #load RAC version from Podfile
     sp.source_files = "XCSReactiveCocoa/**/*.{swift}"
   end
 
