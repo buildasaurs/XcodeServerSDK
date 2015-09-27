@@ -18,6 +18,10 @@ Pod::Spec.new do |s|
 
   s.source_files  = "XcodeServerSDK/**/*.{swift}"
 
-  s.dependency "BuildaUtils", "0.0.11"
+  # load the dependencies from the podfile for target ekgclient
+  podfile_deps = Podfile.from_file(Dir["Podfile"].first).target_definitions["XcodeServerSDK"].dependencies
+  podfile_deps.each do |dep|
+    s.dependency dep.name, dep.requirement.to_s
+  end
 
 end
