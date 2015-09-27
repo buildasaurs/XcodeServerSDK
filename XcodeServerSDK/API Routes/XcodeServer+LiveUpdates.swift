@@ -12,7 +12,7 @@ import BuildaUtils
 // MARK: - XcodeSever API Routes for Live Updates
 extension XcodeServer {
     
-    public typealias MessageHandler = (message: String) -> ()
+    public typealias MessageHandler = (messages: [LiveUpdateMessage]) -> ()
     public typealias StopHandler = () -> ()
     public typealias ErrorHandler = (error: ErrorType) -> ()
     
@@ -106,10 +106,35 @@ extension XcodeServer {
         
         self.sendRequest(state, params: params) { [weak self] (message) -> () in
             
-            state.messageHandler?(message: message)
-            if !state.terminated {
-                self?.poll(state)
+            let packets = SocketIOHelper.parsePackets(message)
+            self?.handlePackets(packets, state: state)
+        }
+    }
+    
+    private func handlePackets(packets: [SocketIOPacket], state: LiveUpdateState) {
+        
+        //check for errors
+        if let lastPacket = packets.last where lastPacket.type == .Error {
+            let (_, advice) = lastPacket.parseError()
+            if
+                let advice = advice,
+                case .Reconnect = advice {
+                    //reconnect!
+                    self.startPolling(state)
+                    return
             }
+            print("Unrecognized socket.io error: \(lastPacket.stringPayload)")
+        }
+        
+        //we good?
+        let events = packets.filter { $0.type == .Event }
+        let validEvents = events.filter { $0.jsonPayload != nil }
+        let messages = validEvents.map { LiveUpdateMessage(json: $0.jsonPayload!) }
+        if messages.count > 0 {
+            state.messageHandler?(messages: messages)
+        }
+        if !state.terminated {
+            self.poll(state)
         }
     }
 }

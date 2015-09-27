@@ -10,31 +10,7 @@ import Foundation
 
 public class LiveUpdateMessage: XcodeServerEntity {
     
-    static func parseMessages(message: String) -> [LiveUpdateMessage] {
-        
-        let messageComps = message.componentsSeparatedByString(":::")
-        let count = messageComps.count
-        
-        //the first message is a control string, ignore
-        guard count > 1 else { return [] }
-        
-        //just take the content messages
-        let messageStrings = messageComps[1..<count]
-        
-        //parse from strings into dicts
-        let parsedJSONs = messageStrings.map { (string: String) -> NSDictionary? in
-            guard let data = string.dataUsingEncoding(NSUTF8StringEncoding) else { return nil }
-            let obj = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())
-            let dict = obj as? NSDictionary
-            return dict
-        }.filter { $0 != nil }.map { $0! }
-        
-        //parse into objects
-        let messages = parsedJSONs.map { LiveUpdateMessage(json: $0) }
-        return messages
-    }
-    
-    public enum Type: String {
+    public enum MessageType: String {
         
         //bots
         case BotCreated = "botCreated"
@@ -67,23 +43,41 @@ public class LiveUpdateMessage: XcodeServerEntity {
         case Unknown = ""
     }
     
-    let type: Type
-    var message: String? {
-        return self.args?["message"] as? String
-    }
-    
-    var progress: Double? {
-        return self.args?["percentage"] as? Double
-    }
-    
-    private var args: NSDictionary? {
-        return self.originalJSON?["args"]?[0] as? NSDictionary
-    }
+    public let type: MessageType
+    public let message: String?
+    public let progress: Double?
+    public let integrationId: String?
+    public let botId: String?
+    public let result: Integration.Result?
+    public let currentStep: Integration.Step?
     
     required public init(json: NSDictionary) {
         
         let typeString = json.optionalStringForKey("name") ?? ""
-        self.type = Type(rawValue: typeString) ?? .Unknown
+        
+        self.type = MessageType(rawValue: typeString) ?? .Unknown
+        
+        let args = json["args"]?[0] as? NSDictionary
+        
+        self.message = args?["message"] as? String
+        self.progress = args?["percentage"] as? Double
+        self.integrationId = args?["_id"] as? String
+        self.botId = args?["botId"] as? String
+        
+        if
+            let resultString = args?["result"] as? String,
+            let result = Integration.Result(rawValue: resultString) {
+                self.result = result
+        } else {
+            self.result = nil
+        }
+        if
+            let stepString = args?["currentStep"] as? String,
+            let step = Integration.Step(rawValue: stepString) {
+                self.currentStep = step
+        } else {
+            self.currentStep = nil
+        }
         
         super.init(json: json)
     }
@@ -93,6 +87,21 @@ public class LiveUpdateMessage: XcodeServerEntity {
 extension LiveUpdateMessage: CustomStringConvertible {
     
     public var description: String {
-        return "LiveUpdateMessage \"\(self.type)\", \(self.progress), \"\(self.message)\""
+        
+        let empty = "" //fixed in Swift 2.1
+
+        let nonNilComps = [
+            self.message,
+            "\(self.progress?.description ?? empty)",
+            self.result?.rawValue,
+            self.currentStep?.rawValue
+        ]
+            .filter { $0 != nil }
+            .map { $0! }
+            .filter { $0.characters.count > 0 }
+            .map { "\"\($0)\"" }
+        
+        let str = nonNilComps.joinWithSeparator(", ")
+        return "LiveUpdateMessage \"\(self.type)\", \(str)"
     }
 }

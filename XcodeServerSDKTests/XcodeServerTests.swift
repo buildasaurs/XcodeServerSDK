@@ -48,15 +48,19 @@ class XcodeServerTests: XCTestCase {
         XCTAssertNil(server.credential)
     }
     
-    func testLiveUpdates() {
+    func DEV_testLiveUpdates() {
         
         let exp = self.expectationWithDescription("Network")
-        let stopHandler = self.server.startListeningForLiveUpdates({ (messages: String) -> () in
-
-            let messages = LiveUpdateMessage.parseMessages(messages)
+        let stopHandler = self.server.startListeningForLiveUpdates({ (messages: [LiveUpdateMessage]) -> () in
             print(messages)
-//            exp.fulfill()
-            })
+        })
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5000 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue(), { () -> Void in
+            print("stopping")
+            stopHandler()
+            //            exp.fulfill()
+        })
         self.waitForExpectationsWithTimeout(1000) { (_) -> Void in
             stopHandler()
         }
