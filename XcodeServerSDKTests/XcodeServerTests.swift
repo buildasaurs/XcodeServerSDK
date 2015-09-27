@@ -47,12 +47,29 @@ class XcodeServerTests: XCTestCase {
         
         XCTAssertNil(server.credential)
     }
+    
+    func DEV_testLiveUpdates() {
+        
+        let exp = self.expectationWithDescription("Network")
+        let stopHandler = self.server.startListeningForLiveUpdates({ (messages: [LiveUpdateMessage]) -> () in
+            print(messages)
+        })
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(5000 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue(), { () -> Void in
+            print("stopping")
+            stopHandler()
+            exp.fulfill()
+        })
+        self.waitForExpectationsWithTimeout(1000) { (_) -> Void in
+            stopHandler()
+        }
+    }
 
     func DEV_testLive_GetBots() {
         
         let exp = self.expectationWithDescription("Network")
         self.server.getBots { (bots, error) in
-            print("")
             exp.fulfill()
         }
         self.waitForExpectationsWithTimeout(10, handler: nil)
@@ -64,7 +81,6 @@ class XcodeServerTests: XCTestCase {
         let server = self.getRecordingXcodeServer("test_bot")
         
         server.getBots { (bots, error) in
-            print("")
             exp.fulfill()
         }
         

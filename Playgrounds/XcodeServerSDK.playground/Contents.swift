@@ -4,7 +4,7 @@ import Foundation
 import XcodeServerSDK
 import XCPlayground
 
-let serverConfig = XcodeServerConfig(host: "https://127.0.0.1", user: "MacUser", password: "Secr3t")
+let serverConfig = try! XcodeServerConfig(host: "https://127.0.0.1", user: "MacUser", password: "Secr3t")
 
 let server = XcodeServerFactory.server(serverConfig)
 
