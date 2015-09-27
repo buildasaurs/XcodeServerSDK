@@ -2,7 +2,7 @@
 
 [![satellite badge](https://stlt.herokuapp.com/v1/badge/czechboy0/xcodeserversdk/master)](https://github.com/czechboy0/xcodeserversdk/branches)
 [![Latest XcodeServerSDK Release](https://img.shields.io/github/release/czechboy0/XcodeServerSDK.svg)](https://github.com/czechboy0/XcodeServerSDK/releases/latest)
-[![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)<br />
+[![CocoaPods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg)](https://cocoapods.org/pods/XcodeServerSDK) <br />
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://en.wikipedia.org/wiki/MIT_License)
 [![Blog](https://img.shields.io/badge/blog-honzadvorsky.com-green.svg)](http://honzadvorsky.com)
@@ -27,16 +27,10 @@ You'll need OS X Server of version >= 4. For Xcode 7 you need OS X >= 10.10.4.
 The latest version supporting the old, undocumented Xcode 6 version of the Xcode Server API is [0.0.4](https://github.com/czechboy0/XcodeServerSDK/tree/0.0.4). All newer versions **only** support the new, first publicly documented Xcode 7 version of the API.
 
 # :octocat: Sources
-One way to integrate `XcodeServerSDK` into your project is with [Cocoapods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![Cocoapods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
+One way to integrate `XcodeServerSDK` into your project is with [CocoaPods](https://github.com/CocoaPods/CocoaPods). Add this to your Podfile (with the version being the latest released pod version: ![CocoaPods](https://img.shields.io/cocoapods/v/XcodeServerSDK.svg):
 
 ```
 pod 'XcodeServerSDK'
-```
-
-If you're using [Carthage](https://github.com/Carthage/Carthage) add this to your *Cartfile*:
-
-```
-github "czechboy0/XcodeServerSDK"
 ```
 
 # :wrench: Usage
@@ -97,14 +91,14 @@ Opertions listed in table above in _italics_ are those provided by  in Xcode.
 
 # :city_sunrise: Supported Platforms
 
-Currently [`XcodeServerSDK`][xcodeserversdk] provides frameworks for the following platforms:
+Currently [`XcodeServerSDK`][xcodeserversdk] provides support for the following platforms:
 
-| Platform | Minimum Version | Carthage | CocoaPods |
-|:--:|:--:|:--:|:--:|
-|OS X | 10.10| :white_check_mark: | :white_check_mark: |
-|iOS | 8.0| :white_check_mark: | :white_check_mark: |
-|watchOS | 2.0 | :white_check_mark: | :white_check_mark: |
-|tvOS | ? | ? | ? |
+| Platform | Minimum Version | CocoaPods |
+|:--:|:--:|:--:|
+|OS X | 10.10| :white_check_mark: |
+|iOS | 8.0| :white_check_mark: |
+|watchOS | 2.0 | :white_check_mark: |
+|tvOS | ? | ? |
 
 # :tada: Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
