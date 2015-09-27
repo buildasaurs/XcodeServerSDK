@@ -59,7 +59,7 @@ class XcodeServerTests: XCTestCase {
         dispatch_after(delayTime, dispatch_get_main_queue(), { () -> Void in
             print("stopping")
             stopHandler()
-            //            exp.fulfill()
+            exp.fulfill()
         })
         self.waitForExpectationsWithTimeout(1000) { (_) -> Void in
             stopHandler()
