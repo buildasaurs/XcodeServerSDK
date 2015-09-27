@@ -1,5 +1,28 @@
 # Change Log
 
+## [v0.3.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.0) (2015-09-27)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.2.1...v0.3.0)
+
+**Fixed bugs:**
+
+- carthage doesn't actually work [\#94](https://github.com/czechboy0/XcodeServerSDK/issues/94)
+- BuildaUtils for iOS target [\#89](https://github.com/czechboy0/XcodeServerSDK/issues/89)
+
+**Closed issues:**
+
+- Add support for live updates from XCS [\#107](https://github.com/czechboy0/XcodeServerSDK/issues/107)
+- Use Nimble for test matchers [\#105](https://github.com/czechboy0/XcodeServerSDK/issues/105)
+- Increase test coverage [\#45](https://github.com/czechboy0/XcodeServerSDK/issues/45)
+
+**Merged pull requests:**
+
+- Start using Nimble matchers in tests [\#111](https://github.com/czechboy0/XcodeServerSDK/pull/111) ([czechboy0](https://github.com/czechboy0))
+- Simplified Targets [\#110](https://github.com/czechboy0/XcodeServerSDK/pull/110) ([czechboy0](https://github.com/czechboy0))
+- Removing Carthage support [\#109](https://github.com/czechboy0/XcodeServerSDK/pull/109) ([czechboy0](https://github.com/czechboy0))
+- Live Updates from Xcode Server [\#108](https://github.com/czechboy0/XcodeServerSDK/pull/108) ([czechboy0](https://github.com/czechboy0))
+- Fixed a crash with force unwrapping of the 'trusted' property [\#104](https://github.com/czechboy0/XcodeServerSDK/pull/104) ([czechboy0](https://github.com/czechboy0))
+- Swift 2! [\#103](https://github.com/czechboy0/XcodeServerSDK/pull/103) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.2.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.2.1) (2015-09-05)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.2.0...v0.2.1)
 
