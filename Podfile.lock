@@ -4,9 +4,9 @@ PODS:
   - Nimble (2.0.0-rc.3)
 
 DEPENDENCIES:
-  - BuildaUtils (= 0.1.0)
+  - BuildaUtils (~> 0.1.0)
   - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.5-czechboy0`)
-  - Nimble (= 2.0.0-rc.3)
+  - Nimble (~> 2.0.0-rc.3)
 
 EXTERNAL SOURCES:
   DVR:
@@ -23,4 +23,4 @@ SPEC CHECKSUMS:
   DVR: 386f347071f55f3f9105239db6764483009ec875
   Nimble: 9dff98ee195ffe7351d3b2fb01d3a1420fd97948
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0.beta.3
