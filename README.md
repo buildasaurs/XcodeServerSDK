@@ -15,7 +15,7 @@ This is an unofficial, community-maintained project and is not associated with A
 
 # :mortar_board: Getting Started With Xcode Server 
 To find out how to set up Xcode Server on your Mac in minutes (and more), check out my [series of tutorials](http://honzadvorsky.com/pages/xcode_server_tutorials/).  
-If you want to check how easy it is to integrate `XcodeServerSDK` with iOS app, check this little [sample project](https://github.com/cojoj/XCSDemo).
+To see how easy it is to integrate `XcodeServerSDK` into an iOS app, check out the [XCSDemo](https://github.com/cojoj/XCSDemo) project created by [@cojoj](https://twitter.com/cojoj).
 
 # :signal_strength: Xcode Server API Versions
 | Xcode Server API | Supported? |
@@ -40,14 +40,20 @@ Create the server config object with the server's URL, username and password.
 ```swift
 do {
     let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
+} catch ConfigurationErrors.NoHostProvided {
+    fatalError("You haven't provided any host")
+} catch ConfigurationErrors.InvalidHostProvided(let host){
+    fatalError("You've provided invalid host: \(host)")
+} catch ConfigurationErrors.InvalidSchemeProvided(let scheme) {
+    fatalError("You've provided invalid scheme: \(scheme)")
 } catch {
-    fatalError("Something went wrong!")
+    fatalError("Error, not related to XcodeServerConfig; \(error)")
 }
 ```
 
 Instantiate `XcodeServer`.
 ```swift
-let server = XcodeServer(config: config, endpoints: endpoints)
+let server = XcodeServerFactory.server(config: config)
 ```
 
 Go wild!
