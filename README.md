@@ -14,7 +14,8 @@ First brought to you in [Buildasaur](https://github.com/czechboy0/Buildasaur), n
 This is an unofficial, community-maintained project and is not associated with Apple. We also maintain the **[unofficial documentation](https://github.com/czechboy0/XcodeServer-API-Docs) of Xcode Server** in case you'd like to integrate using a different programming language! :wink:
 
 # :mortar_board: Getting Started With Xcode Server 
-To find out how to set up Xcode Server on your Mac in minutes (and more), check out my [series of tutorials](http://honzadvorsky.com/pages/xcode_server_tutorials/).
+To find out how to set up Xcode Server on your Mac in minutes (and more), check out my [series of tutorials](http://honzadvorsky.com/pages/xcode_server_tutorials/).  
+If you want to check how easy it is to integrate `XcodeServerSDK` with iOS app, check this little [sample project](https://github.com/cojoj/XCSDemo).
 
 # :signal_strength: Xcode Server API Versions
 | Xcode Server API | Supported? |
@@ -37,14 +38,22 @@ pod 'XcodeServerSDK'
 
 Create the server config object with the server's URL, username and password.
 ```swift
-let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
-let server = XcodeServerFactory.server(config)
+do {
+    let config = XcodeServerConfig(host: "https://127.0.0.1", user: "IRuleBots", password: "superSecr3t")
+} catch {
+    fatalError("Something went wrong!")
+}
+```
+
+Instantiate `XcodeServer`.
+```swift
+let server = XcodeServer(config: config, endpoints: endpoints)
 ```
 
 Go wild!
 ```swift
-server.getBots { (bots, error) -> () in
-    if let error = error {
+server.getBots { bots, error in
+    guard error == nil else {
         Log.error("Oh no! \(error.description)")
         return
     }
