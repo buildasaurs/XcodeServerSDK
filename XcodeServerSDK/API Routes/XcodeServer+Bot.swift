@@ -55,6 +55,7 @@ extension XcodeServer {
                     try self.replacePlaceholderPlatformInBot(botOrder, platforms: platforms!)
                 } catch {
                     completion(response: .Error(error: error))
+                    return
                 }
                 
                 //cool, let's do it.
