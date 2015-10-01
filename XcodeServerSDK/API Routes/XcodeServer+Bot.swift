@@ -50,8 +50,12 @@ extension XcodeServer {
                     return
                 }
                 
-                //we have platforms, find the one in the bot config and replace it
-                self.replacePlaceholderPlatformInBot(botOrder, platforms: platforms!)
+                do {
+                    //we have platforms, find the one in the bot config and replace it
+                    try self.replacePlaceholderPlatformInBot(botOrder, platforms: platforms!)
+                } catch {
+                    completion(response: .Error(error: error))
+                }
                 
                 //cool, let's do it.
                 self.createBotNoValidation(botOrder, completion: completion)
@@ -161,7 +165,12 @@ extension XcodeServer {
         case Error(error: ErrorType)
     }
     
-    private func replacePlaceholderPlatformInBot(bot: Bot, platforms: [DevicePlatform]) {
+    enum PlaceholderError: ErrorType {
+        case PlatformMissing
+        case DeviceFilterMissing
+    }
+    
+    private func replacePlaceholderPlatformInBot(bot: Bot, platforms: [DevicePlatform]) throws {
         
         if let filter = bot.configuration.deviceSpecification.filters.first {
             let intendedPlatform = filter.platform
@@ -169,10 +178,12 @@ extension XcodeServer {
                 //replace
                 filter.platform = platform
             } else {
-                fatalError("Couldn't find intended platform in list of platforms: \(platforms)!")
+                // Couldn't find intended platform in list of platforms
+                throw PlaceholderError.PlatformMissing
             }
         } else {
-            fatalError("Couldn't find device filter!")
+            // Couldn't find device filter
+            throw PlaceholderError.DeviceFilterMissing
         }
     }
     
