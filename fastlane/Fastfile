@@ -50,10 +50,10 @@ lane :release do
 
   # create a new release on GitHub
   repo_url = project_github_name
+  ENV["FL_GITHUB_RELEASE_API_TOKEN"] = ENV["GITHUB_TOKEN"]
   release = set_github_release(
     repository_name: repo_url,
     commitish: release_branch,
-    api_token: ENV["GITHUB_TOKEN"],
     name: [version, title].join(" - "),
     tag_name: version,
     description: description,
