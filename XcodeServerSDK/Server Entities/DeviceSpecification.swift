@@ -19,12 +19,14 @@ public class DevicePlatform : XcodeServerEntity {
         case iOS_Simulator = "com.apple.platform.iphonesimulator"
         case OSX = "com.apple.platform.macosx"
         case watchOS = "com.apple.platform.watchos"
-        case watchOS_Simulator = "com.apple.platform.watchsimulator"
+        case watchOS_Simulator = "com.apple.platform.watchsimulator" // Why is it here?
+        case tvOS = "com.apple.platform.appletvos"
     }
     
     public enum SimulatorType: String {
         case iPhone = "com.apple.platform.iphonesimulator"
         case Watch = "com.apple.platform.watchsimulator"
+        case TV = "com.apple.platform.appletvsimulator"
     }
     
     public let type: PlatformType
@@ -60,6 +62,10 @@ public class DevicePlatform : XcodeServerEntity {
     
     public class func watchOS() -> DevicePlatform {
         return DevicePlatform(type: DevicePlatform.PlatformType.watchOS)
+    }
+    
+    public class func tvOS() -> DevicePlatform {
+        return DevicePlatform(type: DevicePlatform.PlatformType.tvOS)
     }
     
     public override func dictionarify() -> NSDictionary {
@@ -133,7 +139,7 @@ public class DeviceFilter : XcodeServerEntity {
         public static func architectureFromPlatformType(platformType: DevicePlatform.PlatformType) -> ArchitectureType {
             
             switch platformType {
-            case .iOS, .iOS_Simulator, .watchOS, .watchOS_Simulator, .Unknown:
+            case .iOS, .iOS_Simulator, .watchOS, .watchOS_Simulator, .tvOS, .Unknown:
                 return .iOS_Like
             case .OSX:
                 return .OSX_Like
@@ -228,6 +234,13 @@ public class DeviceSpecification : XcodeServerEntity {
     
     public class func watchOS() -> DeviceSpecification {
         let platform = DevicePlatform.watchOS()
+        let filter = DeviceFilter(platform: platform, filterType: .AllAvailableDevicesAndSimulators, architectureType: .iOS_Like)
+        let spec = DeviceSpecification(filters: [filter], deviceIdentifiers: [])
+        return spec
+    }
+    
+    public class func tvOS() -> DeviceSpecification {
+        let platform = DevicePlatform.tvOS()
         let filter = DeviceFilter(platform: platform, filterType: .AllAvailableDevicesAndSimulators, architectureType: .iOS_Like)
         let spec = DeviceSpecification(filters: [filter], deviceIdentifiers: [])
         return spec
