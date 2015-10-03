@@ -121,7 +121,7 @@ public class XcodeServerConfig : JSONSerializable {
         - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
         - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
     */
-    public required convenience init?(json: NSDictionary) throws {
+    public required convenience init(json: NSDictionary) throws {
         guard let host = json.optionalStringForKey("host") else {
             throw ConfigurationErrors.NoHostProvided
         }

@@ -68,9 +68,9 @@ class XcodeServerConfigTests: XCTestCase {
             
             let config = try XcodeServerConfig(json: json)
             
-            XCTAssertEqual(config!.host, "https://127.0.0.1", "Should create proper host address")
-            XCTAssertEqual(config!.user!, "ICanCreateBots")
-            XCTAssertEqual(config!.password!, "superSecr3t")
+            XCTAssertEqual(config.host, "https://127.0.0.1", "Should create proper host address")
+            XCTAssertEqual(config.user!, "ICanCreateBots")
+            XCTAssertEqual(config.password!, "superSecr3t")
         }
     }
     

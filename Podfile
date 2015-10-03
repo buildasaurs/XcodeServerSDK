@@ -2,7 +2,7 @@
 use_frameworks!
 
 def utils
-	pod 'BuildaUtils', '~> 0.1.0'
+	pod 'BuildaUtils', '~> 0.1.3'
 end
 
 def tests

@@ -1,5 +1,5 @@
 PODS:
-  - BuildaUtils (0.1.0)
+  - BuildaUtils (0.1.3)
   - DVR (0.0.4-czechboy0)
   - Nimble (2.0.0-rc.3)
 
@@ -19,8 +19,8 @@ CHECKOUT OPTIONS:
     :tag: v0.0.5-czechboy0
 
 SPEC CHECKSUMS:
-  BuildaUtils: cf7756290492ca286935d996c8bf4a3085662514
+  BuildaUtils: a9ece265022c420198d28aed5fc56a5ae019f6f1
   DVR: 386f347071f55f3f9105239db6764483009ec875
   Nimble: 9dff98ee195ffe7351d3b2fb01d3a1420fd97948
 
-COCOAPODS: 0.39.0.beta.3
+COCOAPODS: 0.39.0.beta.5
