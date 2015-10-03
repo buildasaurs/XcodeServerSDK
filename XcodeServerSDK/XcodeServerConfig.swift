@@ -28,22 +28,31 @@ private struct Keys {
 
 public struct XcodeServerConfig : JSONSerializable {
     
-    public let host: String
-    public let user: String?
-    public let password: String?
-    public let port: Int = 20343
     public let id: RefType
+    public var host: String
+    public var user: String?
+    public var password: String?
+    
+    public let port: Int = 20343
     
     //if set to false, fails if server certificate is not trusted yet
     public let automaticallyTrustSelfSignedCertificates: Bool = true
     
     public func jsonify() -> NSDictionary {
         let dict = NSMutableDictionary()
-        dict[Keys.Host] = self.host
         dict[Keys.Id] = self.id
+        dict[Keys.Host] = self.host
         dict.optionallyAddValueForKey(self.user, key: Keys.User)
         dict.optionallyAddValueForKey(self.password, key: Keys.Password)
         return dict
+    }
+    
+    //creates a new default config
+    public init() {
+        self.id = Ref.new()
+        self.host = ""
+        self.user = nil
+        self.password = nil
     }
     
     /**
