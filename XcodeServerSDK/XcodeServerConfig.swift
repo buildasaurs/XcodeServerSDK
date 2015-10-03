@@ -9,24 +9,6 @@
 import Foundation
 import BuildaUtils
 
-public enum AvailabilityCheckState: Equatable {
-    case Unchecked
-    case Checking
-    case Failed(NSError?)
-    case Succeeded
-}
-
-/// Added `Equatable` to the enum to better test properties of this enum.
-public func == (a:AvailabilityCheckState, b:AvailabilityCheckState) -> Bool {
-    switch(a,b) {
-        case (.Unchecked, .Unchecked) : return true
-        case (.Checking, .Checking) : return true
-        case (.Failed(let fa), .Failed(let fb)) : return fa == fb
-        case (.Succeeded, .Succeeded) : return true
-        default: return false
-    }
-}
-
 /// Posible errors thrown by `XcodeServerConfig`
 public enum ConfigurationErrors : ErrorType {
     /// Thrown when no host was provided
@@ -37,23 +19,30 @@ public enum ConfigurationErrors : ErrorType {
     case InvalidSchemeProvided(String)
 }
 
-public class XcodeServerConfig : JSONSerializable {
+private struct Keys {
+    static let Host = "host"
+    static let User = "user"
+    static let Password = "password"
+    static let Id = "id"
+}
+
+public struct XcodeServerConfig : JSONSerializable {
     
     public let host: String
     public let user: String?
     public let password: String?
     public let port: Int = 20343
+    public let id: RefType
     
     //if set to false, fails if server certificate is not trusted yet
     public let automaticallyTrustSelfSignedCertificates: Bool = true
     
-    public var availabilityState: AvailabilityCheckState = .Unchecked
-    
     public func jsonify() -> NSDictionary {
         let dict = NSMutableDictionary()
-        dict["host"] = self.host
-        dict.optionallyAddValueForKey(self.user, key: "user")
-        dict.optionallyAddValueForKey(self.password, key: "password")
+        dict[Keys.Host] = self.host
+        dict[Keys.Id] = self.id
+        dict.optionallyAddValueForKey(self.user, key: Keys.User)
+        dict.optionallyAddValueForKey(self.password, key: Keys.Password)
         return dict
     }
     
@@ -72,29 +61,15 @@ public class XcodeServerConfig : JSONSerializable {
         - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
         - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
     */
-    public required init(var host: String, user: String?=nil, password: String?=nil) throws {
+    public init(var host: String, user: String? = nil, password: String? = nil, id: RefType? = nil) throws {
+        
         guard let url = NSURL(string: host) else {
-            /*******************************************************************
-             **   Had to be added to silence the compiler ¯\_(ツ)_/¯
-             **   Radar: http://openradar.me/21514477
-             **   Reply: https://twitter.com/jckarter/status/613491369311535104
-             ******************************************************************/
-            self.host = ""; self.user = nil; self.password = nil
-            
             throw ConfigurationErrors.InvalidHostProvided(host)
         }
         
         guard url.scheme.isEmpty || url.scheme == "https" else {
             let errMsg = "Xcode Server generally uses https, please double check your hostname"
             Log.error(errMsg)
-            
-            /*******************************************************************
-            **   Had to be added to silence the compiler ¯\_(ツ)_/¯
-            **   Radar: http://openradar.me/21514477
-            **   Reply: https://twitter.com/jckarter/status/613491369311535104
-            ******************************************************************/
-            self.host = ""; self.user = nil; self.password = nil
-            
             throw ConfigurationErrors.InvalidSchemeProvided(errMsg)
         }
         
@@ -107,7 +82,7 @@ public class XcodeServerConfig : JSONSerializable {
         self.host = host
         self.user = user
         self.password = password
-        self.availabilityState = .Unchecked
+        self.id = id ?? Ref.new()
     }
     
     /**
@@ -121,11 +96,15 @@ public class XcodeServerConfig : JSONSerializable {
         - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
         - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
     */
-    public required convenience init(json: NSDictionary) throws {
-        guard let host = json.optionalStringForKey("host") else {
+    public init(json: NSDictionary) throws {
+        
+        guard let host = json.optionalStringForKey(Keys.Host) else {
             throw ConfigurationErrors.NoHostProvided
         }
 
-        try self.init(host: host, user: json.optionalStringForKey("user"), password: json.optionalStringForKey("password"))
+        let user = json.optionalStringForKey(Keys.User)
+        let password = json.optionalStringForKey(Keys.Password)
+        let id = json.optionalStringForKey(Keys.Id)
+        try self.init(host: host, user: user, password: password, id: id)
     }
 }

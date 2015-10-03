@@ -11,35 +11,6 @@ import XcodeServerSDK
 
 class XcodeServerConfigTests: XCTestCase {
 
-    // MARK: AvailabilityCheckState testing
-    func testEqualityOfUncheckedStates() {
-        XCTAssertEqual(AvailabilityCheckState.Unchecked, AvailabilityCheckState.Unchecked)
-    }
-    
-    func testEqualityOfCheckingStates() {
-        XCTAssertEqual(AvailabilityCheckState.Checking, AvailabilityCheckState.Checking)
-    }
-    
-    func testEqualityOfFailedStates() {
-        let error1 = ConfigurationErrors.InvalidSchemeProvided("http") as NSError
-        let error2 = ConfigurationErrors.InvalidSchemeProvided("ftp") as NSError
-        XCTAssertEqual(AvailabilityCheckState.Failed(error1), AvailabilityCheckState.Failed(error2))
-    }
-    
-    func testInequalityOfFailedStates() {
-        let error1 = ConfigurationErrors.NoHostProvided as NSError
-        let error2 = ConfigurationErrors.InvalidSchemeProvided("ftp") as NSError
-        XCTAssertNotEqual(AvailabilityCheckState.Failed(error1), AvailabilityCheckState.Failed(error2))
-    }
-    
-    func testEqualityOfSucceededStates() {
-        XCTAssertEqual(AvailabilityCheckState.Succeeded, AvailabilityCheckState.Succeeded)
-    }
-    
-    func testInequalityOfUncheckedAndSucceededStates() {
-        XCTAssertNotEqual(AvailabilityCheckState.Unchecked, AvailabilityCheckState.Succeeded)
-    }
-    
     // MARK: Initialization testing
     func testManualInit() {
         XCTempAssertNoThrowError("Failed to initialize the server configuration") {
@@ -48,7 +19,6 @@ class XcodeServerConfigTests: XCTestCase {
             XCTAssertEqual(config.host, "https://127.0.0.1", "Should create proper host address")
             XCTAssertEqual(config.user!, "ICanCreateBots")
             XCTAssertEqual(config.password!, "superSecr3t")
-            XCTAssertTrue(config.availabilityState == AvailabilityCheckState.Unchecked)
         }
     }
     
@@ -94,11 +64,12 @@ class XcodeServerConfigTests: XCTestCase {
     // MARK: Returning JSON
     func testJsonify() {
         XCTempAssertNoThrowError("Failed to initialize the server configuration") {
-            let config = try XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
+            let config = try XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: "superSecr3t", id: "12345")
             let expected = [
                 "host": "https://127.0.0.1",
                 "user": "ICanCreateBots",
-                "password": "superSecr3t"
+                "password": "superSecr3t",
+                "id": "12345"
             ]
             
             XCTAssertEqual(config.jsonify(), expected)
