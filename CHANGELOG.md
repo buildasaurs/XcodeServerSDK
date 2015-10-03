@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.3.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.2) (2015-10-03)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.1...v0.3.2)
+
+**Closed issues:**
+
+- Crash - no available platforms on Xcode Server [\#114](https://github.com/czechboy0/XcodeServerSDK/issues/114)
+
+**Merged pull requests:**
+
+- Add error type and handle it in bot creation process [\#115](https://github.com/czechboy0/XcodeServerSDK/pull/115) ([cojoj](https://github.com/cojoj))
+- Update README [\#113](https://github.com/czechboy0/XcodeServerSDK/pull/113) ([cojoj](https://github.com/cojoj))
+
 ## [v0.3.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.1) (2015-09-28)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.0...v0.3.1)
 
