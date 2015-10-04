@@ -19,8 +19,9 @@ public class DevicePlatform : XcodeServerEntity {
         case iOS_Simulator = "com.apple.platform.iphonesimulator"
         case OSX = "com.apple.platform.macosx"
         case watchOS = "com.apple.platform.watchos"
-        case watchOS_Simulator = "com.apple.platform.watchsimulator" // Why is it here?
+        case watchOS_Simulator = "com.apple.platform.watchsimulator"
         case tvOS = "com.apple.platform.appletvos"
+        case tvOS_Simulator = "com.apple.platform.appletvsimulator"
     }
     
     public enum SimulatorType: String {
@@ -133,13 +134,13 @@ public class DeviceFilter : XcodeServerEntity {
     
     public enum ArchitectureType: Int {
         case Unknown = -1
-        case iOS_Like = 0 //also watchOS
+        case iOS_Like = 0 //also watchOS and tvOS
         case OSX_Like = 1
         
         public static func architectureFromPlatformType(platformType: DevicePlatform.PlatformType) -> ArchitectureType {
             
             switch platformType {
-            case .iOS, .iOS_Simulator, .watchOS, .watchOS_Simulator, .tvOS, .Unknown:
+            case .iOS, .iOS_Simulator, .watchOS, .watchOS_Simulator, .tvOS, .tvOS_Simulator, .Unknown:
                 return .iOS_Like
             case .OSX:
                 return .OSX_Like
