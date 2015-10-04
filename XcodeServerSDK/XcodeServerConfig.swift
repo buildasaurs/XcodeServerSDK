@@ -17,6 +17,8 @@ public enum ConfigurationErrors : ErrorType {
     case InvalidHostProvided(String)
     /// Thrown when a host is provided with an invalid scheme (explanation message returned)
     case InvalidSchemeProvided(String)
+    /// Thrown when only one of (username, password) is provided, which is not valid
+    case InvalidCredentialsProvided
 }
 
 private struct Keys {
@@ -85,6 +87,10 @@ public struct XcodeServerConfig : JSONSerializable {
             let errMsg = "Xcode Server generally uses https, please double check your hostname"
             Log.error(errMsg)
             throw ConfigurationErrors.InvalidSchemeProvided(errMsg)
+        }
+        
+        guard user?.isEmpty == password?.isEmpty else {
+            throw ConfigurationErrors.InvalidCredentialsProvided
         }
         
         // validate if host is a valid URL

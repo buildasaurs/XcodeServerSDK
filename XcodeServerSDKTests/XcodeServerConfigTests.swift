@@ -22,6 +22,18 @@ class XcodeServerConfigTests: XCTestCase {
         }
     }
     
+    func testInvalidCredentials_MissingPassword() {
+        XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidCredentialsProvided) {
+            _ = try XcodeServerConfig(host: "127.0.0.1", user: "ICanCreateBots", password: nil)
+        }
+    }
+    
+    func testInvalidCredentials_MissingUsername() {
+        XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidCredentialsProvided) {
+            _ = try XcodeServerConfig(host: "127.0.0.1", user: "", password: "hello")
+        }
+    }
+    
     func testInvalidHostProvidingForManualInit() {
         XCTempAssertThrowsSpecificError(ConfigurationErrors.InvalidHostProvided("Invalid host name provided, please double check your host name")) {
             _ = try XcodeServerConfig(host: "<>127.0.0.1", user: "ICanCreateBots", password: "superSecr3t")
