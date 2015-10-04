@@ -15,6 +15,8 @@ public class XcodeServer : CIServer {
     public let config: XcodeServerConfig
     let endpoints: XcodeServerEndpoints
     
+    public var availabilityState: AvailabilityCheckState = .Unchecked
+    
     public init(config: XcodeServerConfig, endpoints: XcodeServerEndpoints) {
         
         self.config = config
