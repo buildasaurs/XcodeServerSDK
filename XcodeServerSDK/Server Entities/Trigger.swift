@@ -48,6 +48,17 @@ public struct TriggerConfig: XcodeRead, XcodeWrite {
     public var conditions: TriggerConditions?
     public var emailConfiguration: EmailConfiguration?
     
+    //creates a default trigger config
+    public init() {
+        self.phase = .Prebuild
+        self.kind = .RunScript
+        self.scriptBody = "cd *\n"
+        self.name = "Prebuild Script"
+        self.conditions = nil
+        self.emailConfiguration = nil
+        self.id = Ref.new()
+    }
+    
     public init?(phase: Phase, kind: Kind, scriptBody: String?, name: String?,
         conditions: TriggerConditions?, emailConfiguration: EmailConfiguration?, id: RefType? = Ref.new()) {
             
