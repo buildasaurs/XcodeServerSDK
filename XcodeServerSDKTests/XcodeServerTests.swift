@@ -97,7 +97,7 @@ class XcodeServerTests: XCTestCase {
         let blueprint = SourceControlBlueprint(branch: "swift-2", projectWCCIdentifier: "A36AEFA3F9FF1F738E92F0C497C14977DCE02B97", wCCName: "XcodeServerSDK", projectName: "XcodeServerSDK", projectURL: "git@github.com:czechboy0/XcodeServerSDK.git", projectPath: "XcodeServerSDK.xcworkspace", publicSSHKey: publicKey, privateSSHKey: privateKey, sshPassphrase: nil, certificateFingerprint: nil)
         
         let scriptBody = "cd XcodeServerSDK; /usr/local/bin/carthage update --no-build"
-        let scriptTrigger = Trigger(phase: .Prebuild, kind: .RunScript, scriptBody: scriptBody, name: "Carthage", conditions: nil, emailConfiguration: nil)!
+        let scriptTrigger = Trigger(config: TriggerConfig(phase: .Prebuild, kind: .RunScript, scriptBody: scriptBody, name: "Carthage", conditions: nil, emailConfiguration: nil)!)
         
         let devices = [
             "a85553a5b26a7c1a4998f3b237005ac7",

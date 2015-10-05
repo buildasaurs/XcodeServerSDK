@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import BuildaUtils
 
-public class Trigger : XcodeServerEntity {
+public struct TriggerConfig: XcodeRead, XcodeWrite {
+    
+    public let id: RefType
     
     public enum Phase: Int {
         case Prebuild = 1
@@ -38,17 +41,15 @@ public class Trigger : XcodeServerEntity {
         }
     }
     
-    public let phase: Phase
-    public let kind: Kind
-    public let scriptBody: String
-    public let name: String
-    public let conditions: TriggerConditions?
-    public let emailConfiguration: EmailConfiguration?
-    
-    public let uniqueId: String //only for in memory manipulation, don't persist anywhere
+    public var phase: Phase
+    public var kind: Kind
+    public var scriptBody: String
+    public var name: String
+    public var conditions: TriggerConditions?
+    public var emailConfiguration: EmailConfiguration?
     
     public init?(phase: Phase, kind: Kind, scriptBody: String?, name: String?,
-        conditions: TriggerConditions?, emailConfiguration: EmailConfiguration?) {
+        conditions: TriggerConditions?, emailConfiguration: EmailConfiguration?, id: RefType = Ref.new()) {
             
             self.phase = phase
             self.kind = kind
@@ -56,9 +57,7 @@ public class Trigger : XcodeServerEntity {
             self.name = name ?? kind.toString()
             self.conditions = conditions
             self.emailConfiguration = emailConfiguration
-            self.uniqueId = NSUUID().UUIDString
-            
-            super.init()
+            self.id = id
             
             //post build triggers must have conditions
             if phase == Phase.Postbuild {
@@ -75,21 +74,7 @@ public class Trigger : XcodeServerEntity {
             }
     }
     
-    public override func dictionarify() -> NSDictionary {
-        
-        let dict = NSMutableDictionary()
-        
-        dict["phase"] = self.phase.rawValue
-        dict["type"] = self.kind.rawValue
-        dict["scriptBody"] = self.scriptBody
-        dict["name"] = self.name
-        dict.optionallyAddValueForKey(self.conditions?.dictionarify(), key: "conditions")
-        dict.optionallyAddValueForKey(self.emailConfiguration?.dictionarify(), key: "emailConfiguration")
-        
-        return dict
-    }
-    
-    public required init(json: NSDictionary) {
+    public init(json: NSDictionary) {
         
         let phase = Phase(rawValue: json.intForKey("phase"))!
         self.phase = phase
@@ -112,8 +97,46 @@ public class Trigger : XcodeServerEntity {
         self.name = json.stringForKey("name")
         self.scriptBody = json.stringForKey("scriptBody")
         
-        self.uniqueId = NSUUID().UUIDString
+        self.id = json.optionalStringForKey("id") ?? Ref.new()
+    }
+    
+    public func dictionarify() -> NSDictionary {
         
-        super.init(json: json)
+        let dict = NSMutableDictionary()
+        
+        dict["id"] = self.id
+        dict["phase"] = self.phase.rawValue
+        dict["type"] = self.kind.rawValue
+        dict["scriptBody"] = self.scriptBody
+        dict["name"] = self.name
+        dict.optionallyAddValueForKey(self.conditions?.dictionarify(), key: "conditions")
+        dict.optionallyAddValueForKey(self.emailConfiguration?.dictionarify(), key: "emailConfiguration")
+        
+        return dict
     }
 }
+
+public class Trigger : XcodeServerEntity {
+    
+    public let config: TriggerConfig
+    
+    public init(config: TriggerConfig) {
+        self.config = config
+        super.init()
+    }
+    
+    required public init(json: NSDictionary) {
+        
+        self.config = TriggerConfig(json: json)
+        super.init(json: json)
+    }
+    
+    public override func dictionarify() -> NSDictionary {
+        let dict = self.config.dictionarify()
+        return dict
+    }
+}
+
+
+
+
