@@ -49,7 +49,7 @@ public struct TriggerConfig: XcodeRead, XcodeWrite {
     public var emailConfiguration: EmailConfiguration?
     
     public init?(phase: Phase, kind: Kind, scriptBody: String?, name: String?,
-        conditions: TriggerConditions?, emailConfiguration: EmailConfiguration?, id: RefType = Ref.new()) {
+        conditions: TriggerConditions?, emailConfiguration: EmailConfiguration?, id: RefType? = Ref.new()) {
             
             self.phase = phase
             self.kind = kind
@@ -57,7 +57,7 @@ public struct TriggerConfig: XcodeRead, XcodeWrite {
             self.name = name ?? kind.toString()
             self.conditions = conditions
             self.emailConfiguration = emailConfiguration
-            self.id = id
+            self.id = id ?? Ref.new()
             
             //post build triggers must have conditions
             if phase == Phase.Postbuild {
