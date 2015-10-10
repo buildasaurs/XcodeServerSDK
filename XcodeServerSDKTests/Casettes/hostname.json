@@ -1,0 +1,34 @@
+{
+  "interactions" : [
+    {
+      "recorded_at" : 1444476701.622059,
+      "response" : {
+        "body" : {
+          "hostname" : "honzadvysmbpr14.home"
+        },
+        "body_format" : "json",
+        "status" : 200,
+        "url" : "https:\/\/127.0.0.1:20343\/api\/hostname",
+        "headers" : {
+          "Connection" : "keep-alive",
+          "Content-Type" : "application\/json",
+          "Set-Cookie" : "session=s%3AnnpNukOtB_DB3TD6HtlEZRfDSuFAvk8_.XWcOAW2wfgWTaQXWtfc%2BSGIhWI75cUJLiSdCw6vYHEM; Path=\/; Expires=Sun, 11 Oct 2015 11:31:41 GMT; HttpOnly; Secure",
+          "Transfer-Encoding" : "Identity",
+          "Date" : "Sat, 10 Oct 2015 11:31:41 GMT",
+          "Content-Encoding" : "gzip",
+          "Keep-Alive" : "timeout=5; max=100",
+          "X-XCSAPIVersion" : "6",
+          "Vary" : "Accept-Encoding"
+        }
+      },
+      "request" : {
+        "method" : "GET",
+        "url" : "https:\/\/127.0.0.1:20343\/api\/hostname",
+        "headers" : {
+          "Authorization" : "Basic SUNhbkNyZWF0ZUJvdHM6c3VwZXJTZWNyM3Q="
+        }
+      }
+    }
+  ],
+  "name" : "hostname"
+}
