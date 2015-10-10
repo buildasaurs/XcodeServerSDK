@@ -53,7 +53,7 @@ public struct TriggerConfig: XcodeRead, XcodeWrite {
         self.phase = .Prebuild
         self.kind = .RunScript
         self.scriptBody = "cd *\n"
-        self.name = "Prebuild Script"
+        self.name = ""
         self.conditions = nil
         self.emailConfiguration = nil
         self.id = Ref.new()
