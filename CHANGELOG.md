@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.4.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.0) (2015-10-10)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.10...v0.4.0)
+
+**Merged pull requests:**
+
+- Added Hostname endpoint [\#120](https://github.com/czechboy0/XcodeServerSDK/pull/120) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.3.10](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.10) (2015-10-05)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.9...v0.3.10)
 
