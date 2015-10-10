@@ -13,18 +13,19 @@ public class XcodeServerEndpoints {
     
     enum Endpoint {
         case Bots
-        case Integrations
         case CancelIntegration
-        case UserCanCreateBots
+        case Commits
         case Devices
+        case Hostname
+        case Integrations
+        case Issues
+        case LiveUpdates
         case Login
         case Logout
         case Platforms
-        case SCM_Branches
         case Repositories
-        case Commits
-        case Issues
-        case LiveUpdates
+        case SCM_Branches
+        case UserCanCreateBots
     }
     
     let serverConfig: XcodeServerConfig
@@ -138,6 +139,11 @@ public class XcodeServerEndpoints {
                 return "\(base)/xhr-polling/\(pollId)"
             }
             return base
+            
+        case .Hostname:
+            
+            let hostname = "\(base)/hostname"
+            return hostname
         }
     }
     
