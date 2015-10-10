@@ -12,7 +12,7 @@ import BuildaUtils
 // MARK: XcodeServer Class
 public class XcodeServer : CIServer {
     
-    public let config: XcodeServerConfig
+    public var config: XcodeServerConfig
     let endpoints: XcodeServerEndpoints
     
     public var availabilityState: AvailabilityCheckState = .Unchecked
