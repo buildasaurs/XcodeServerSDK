@@ -113,7 +113,7 @@ Currently [`XcodeServerSDK`][xcodeserversdk] provides support for the following 
 |OS X | 10.10| :white_check_mark: |
 |iOS | 8.0| :white_check_mark: |
 |watchOS | 2.0 | :white_check_mark: |
-|tvOS | ? | ? |
+|tvOS | 9.0 | :white_check_mark: |
 
 # :tada: Projects using XcodeServerSDK
 - [Buildasaur](https://github.com/czechboy0/Buildasaur) - connect Xcode Server with GitHub Pull Requests.
