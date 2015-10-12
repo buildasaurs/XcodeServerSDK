@@ -73,7 +73,7 @@ extension XcodeServer : NSURLSessionDelegate {
 
 // MARK: Header constants
 let Headers_APIVersion = "X-XCSAPIVersion"
-let SupportedAPIVersion: Int = 6 //will change with time, this codebase supports this version
+let SupportedAPIVersions: Set<Int> = [6, 7] //will change with time, this codebase supports this version
 
 // MARK: XcodeServer API methods
 public extension XcodeServer {
@@ -87,10 +87,12 @@ public extension XcodeServer {
         let apiVersionString = (headers[Headers_APIVersion] as? String) ?? "-1"
         let apiVersion = Int(apiVersionString)
         
-        if apiVersion > 0 && SupportedAPIVersion != apiVersion {
-            var common = "Version mismatch: response from API version \(apiVersion), but we support version \(SupportedAPIVersion). "
+        if let apiVersion = apiVersion where
+            apiVersion > 0 && !SupportedAPIVersions.contains(apiVersion) {
+            var common = "Version mismatch: response from API version \(apiVersion), but we support version \(SupportedAPIVersions). "
             
-            if apiVersion > SupportedAPIVersion {
+            let maxVersion = SupportedAPIVersions.sort().last!
+            if apiVersion > maxVersion {
                 common += "You're using a newer Xcode Server than we support. Please visit https://github.com/czechboy0/XcodeServerSDK to check whether there's a new version of the SDK for it."
             } else {
                 common += "You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https://github.com/czechboy0/XcodeServerSDK or consider upgrading your Xcode Server to the current version."
