@@ -15,7 +15,7 @@ public class EmailConfiguration : XcodeServerEntity {
     public let includeCommitMessages: Bool
     public let includeIssueDetails: Bool
     
-    public init?(additionalRecipients: [String], emailCommitters: Bool, includeCommitMessages: Bool, includeIssueDetails: Bool) {
+    public init(additionalRecipients: [String], emailCommitters: Bool, includeCommitMessages: Bool, includeIssueDetails: Bool) {
         
         self.additionalRecipients = additionalRecipients
         self.emailCommitters = emailCommitters

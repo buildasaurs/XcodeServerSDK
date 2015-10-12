@@ -1,5 +1,30 @@
 # Change Log
 
+## [v0.4.3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.3) (2015-10-10)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.2...v0.4.3)
+
+## [v0.4.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.2) (2015-10-10)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.1...v0.4.2)
+
+## [v0.4.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.1) (2015-10-10)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.0...v0.4.1)
+
+## [v0.4.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.0) (2015-10-10)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.10...v0.4.0)
+
+**Merged pull requests:**
+
+- Added Hostname endpoint [\#120](https://github.com/czechboy0/XcodeServerSDK/pull/120) ([czechboy0](https://github.com/czechboy0))
+
+## [v0.3.10](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.10) (2015-10-05)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.9...v0.3.10)
+
+## [v0.3.9](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.9) (2015-10-05)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.8...v0.3.9)
+
+## [v0.3.8](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.8) (2015-10-05)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.7...v0.3.8)
+
 ## [v0.3.7](https://github.com/czechboy0/XcodeServerSDK/tree/v0.3.7) (2015-10-04)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.3.6...v0.3.7)
 

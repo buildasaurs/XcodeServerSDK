@@ -12,7 +12,11 @@ public protocol XcodeRead {
     init(json: NSDictionary)
 }
 
-public class XcodeServerEntity : XcodeRead {
+public protocol XcodeWrite {
+    func dictionarify() -> NSDictionary
+}
+
+public class XcodeServerEntity : XcodeRead, XcodeWrite {
     
     public let id: String!
     public let rev: String!

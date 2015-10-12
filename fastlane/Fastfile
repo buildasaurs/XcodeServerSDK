@@ -37,6 +37,9 @@ lane :release do
   ensure_git_branch(branch: release_branch)
   git_pull
 
+  # lint podspec first
+  sh "cd .. && pod lib lint"
+
   # regen the changelog and open it
   sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN && subl CHANGELOG.md"
 

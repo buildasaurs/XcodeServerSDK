@@ -41,7 +41,6 @@ build/
 xcuserdata
 
 ## Other
-*.xccheckout
 *.moved-aside
 DerivedData
 *.xcuserstate
