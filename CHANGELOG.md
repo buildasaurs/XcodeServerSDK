@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.5.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.1) (2015-10-13)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.3...v0.5.1)
+
+**Closed issues:**
+
+- Add platforms for tvOS and tvOS simulator [\#116](https://github.com/czechboy0/XcodeServerSDK/issues/116)
+
+**Merged pull requests:**
+
+- API v7 compatibility [\#121](https://github.com/czechboy0/XcodeServerSDK/pull/121) ([czechboy0](https://github.com/czechboy0))
+- Add tvOS specification [\#117](https://github.com/czechboy0/XcodeServerSDK/pull/117) ([cojoj](https://github.com/cojoj))
+
 ## [v0.4.3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.4.3) (2015-10-10)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.2...v0.4.3)
 
