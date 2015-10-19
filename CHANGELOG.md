@@ -1,5 +1,20 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.2...HEAD)
+
+**Closed issues:**
+
+- Release a spec with tvOS support [\#122](https://github.com/czechboy0/XcodeServerSDK/issues/122)
+
+## [v0.5.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.2) (2015-10-19)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.1...v0.5.2)
+
+**Merged pull requests:**
+
+- tvOS support [\#124](https://github.com/czechboy0/XcodeServerSDK/pull/124) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.5.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.1) (2015-10-13)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.4.3...v0.5.1)
 
