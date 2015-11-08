@@ -80,29 +80,40 @@ We're providing a Plaground in which you can easily interact with `XcodeServerSD
 
 # :rocket: Features
 
-| Name | Official  support | `XcodeServerSDK` |
-| :-- | :--: | :--: |
-| Check if user can create bots | :no_entry: | :white_check_mark: |
-| _List bots on server_ | :white_check_mark: | :white_check_mark: |
-| _Create a new bot_ | :white_check_mark: | :white_check_mark: |
-| _Retrieve a bot_ | :white_check_mark: | :white_check_mark: |
-| _Update a bot’s configuration_ | :white_check_mark: | :no_entry: |
-| Delete a bot | :no_entry: | :white_check_mark: |
-| _Get bot's most recent integrations_ | :white_check_mark: | :white_check_mark: |
-| _Enqueue a new integration_ | :white_check_mark: | :white_check_mark: |
-| _List integrations on server_ | :white_check_mark: | :white_check_mark: |
-| _Retrieve an integration by ID_ | :white_check_mark: | :white_check_mark: |
-| Cancel integration | :no_entry: | :white_check_mark: |
-| _List the commits included in an integration_ | :white_check_mark: | :white_check_mark: |
-| _List the build issues produced by an integration_ | :white_check_mark: | :white_check_mark: |
-| _List devices connected to server_ | :white_check_mark: | :white_check_mark: |
-| _List hosted repositories on server_ | :white_check_mark: | :white_check_mark: |
-| _Create a new hosted repository_ | :white_check_mark: | :white_check_mark: |
-| Get supported platforms | :no_entry: | :white_check_mark: |
-| Get SCM branches from Blueprint | :no_entry: | :white_check_mark: |
-| Verify user can manage server | :no_entry: | :white_check_mark: |
+Apple has finally shipped the [**official** docs](https://developer.apple.com/library/prerelease/mac/documentation/Xcode/Conceptual/XcodeServerAPIReference/index.html#//apple_ref/doc/uid/TP40016472-CH1-SW1) for Xcode Server. They're slightly different from what has been presented on [WWDC](http://devstreaming.apple.com/videos/wwdc/2015/41097fby32x3opk/410/410_continuous_integration_and_code_coverage_in_xcode.pdf?dl=1) (slide 69).
+Below is the table with _features_ described in docs - divided into categories. Last category, unofficial, is the cluster of features reverse engineered while working on `XcodesServerSDK`, so you won't find them in docs, but they're definitely in code! 😃
 
-Opertions listed in table above in _italics_ are those provided by  in Xcode. Rest of operations are just a product of reverse engineering.
+|Category|Description|`XcodeServerSDK` support|
+|:-:|---|---|
+|**Bots**|||
+||Creates a new bot|✅|
+||Retrieve a list of bots|✅|
+||Retrieve a single bot|✅|
+||Update a single bot|⛔|
+||Delete a single bot|✅|
+||Duplicate an existing bot|⛔|
+|**Integrations**|||
+||Begin an integration for the specified bot|✅|
+||Retrieve a single integration|✅|
+||Delete an integration|⛔|
+||Cancel a integration currently being executed|✅|
+||Retrieve options to perform filters, selections and calculations on all integrations for the specified bot|_partially_|
+||Retrieve options to perform filters, selections and calculations on all integrations|_partially_|
+||Retrieve the tests for an integration|_partially_|
+||Retrieve the test information list for a given integration and device identifier|_partially_|
+||Retrieve the test information list of issues for a given integration and device identifier|✅|
+||Retrieve the list of files for a given integration|⛔|
+|**Assets**|||
+||Retrieve an asset given its relative path|⛔|
+|**Code Coverage**|||
+||Retrieve the Code Coverage information for a given integration|⛔|
+|**Unofficial**|||
+||Check if user can create bots|✅|
+||List hosted repositories on server|✅|
+||Create a new hosted repository|✅|
+||Get supported platforms|✅|
+||Get SCM branches from Blueprint|✅|
+||Verify user can manage server|✅|
 
 # :city_sunrise: Supported Platforms
 
