@@ -10,13 +10,13 @@
 		3A058A8E1B31595A0077FD47 /* BotParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A8D1B31595A0077FD47 /* BotParsingTests.swift */; };
 		3A058A931B315BB50077FD47 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A058A921B315BB50077FD47 /* TestUtils.swift */; };
 		3A13F30B1B404E7500C29D81 /* platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A13F30A1B404E7500C29D81 /* platforms.json */; };
-		3A32ABC91BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		3A32ABC91BB6F89A00A1E400 /* LiveUpdateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32ABC81BB6F89A00A1E400 /* LiveUpdateMessage.swift */; };
 		3A3853A21B4002C900B7F842 /* osx_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A11B4002C900B7F842 /* osx_bot.json */; };
 		3A3853A71B40046E00B7F842 /* create_ios_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A41B40046E00B7F842 /* create_ios_bot.json */; };
 		3A3853A91B40046E00B7F842 /* create_osx_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A51B40046E00B7F842 /* create_osx_bot.json */; };
 		3A3853AB1B40046E00B7F842 /* create_watch_bot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A3853A61B40046E00B7F842 /* create_watch_bot.json */; };
-		3A60613C1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A60613B1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift */; settings = {ASSET_TAGS = (); }; };
-		3A6E32CD1BB82F5900095A75 /* LiveUpdatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E32CC1BB82F5900095A75 /* LiveUpdatesTests.swift */; settings = {ASSET_TAGS = (); }; };
+		3A60613C1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A60613B1BB5EFBC000FC39F /* XcodeServer+LiveUpdates.swift */; };
+		3A6E32CD1BB82F5900095A75 /* LiveUpdatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E32CC1BB82F5900095A75 /* LiveUpdatesTests.swift */; };
 		3A7B48C01B2A5AC40077ABEA /* XcodeServerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7B48BF1B2A5AC40077ABEA /* XcodeServerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A7B48C61B2A5AC40077ABEA /* XcodeServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7B48BA1B2A5AC40077ABEA /* XcodeServerSDK.framework */; };
 		3A7B48CD1B2A5AC40077ABEA /* XcodeServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48CC1B2A5AC40077ABEA /* XcodeServerTests.swift */; };
@@ -32,19 +32,19 @@
 		3A7B48EA1B2A5ADE0077ABEA /* XcodeServerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48DF1B2A5ADE0077ABEA /* XcodeServerEntity.swift */; };
 		3A7B48EB1B2A5ADE0077ABEA /* XcodeServerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B48E01B2A5ADE0077ABEA /* XcodeServerFactory.swift */; };
 		3A7CCD3A1B55F97B00CED8BC /* TestHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CCD391B55F97B00CED8BC /* TestHierarchy.swift */; };
-		3A7D28E91BC92C1C00EFF863 /* XcodeServer+Miscs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7D28E81BC92C1C00EFF863 /* XcodeServer+Miscs.swift */; settings = {ASSET_TAGS = (); }; };
-		3A7D28EB1BC92D4F00EFF863 /* MiscsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7D28EA1BC92D4F00EFF863 /* MiscsTests.swift */; settings = {ASSET_TAGS = (); }; };
-		3A7D28ED1BC92F0600EFF863 /* hostname.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D28EC1BC92F0600EFF863 /* hostname.json */; settings = {ASSET_TAGS = (); }; };
+		3A7D28E91BC92C1C00EFF863 /* XcodeServer+Miscs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7D28E81BC92C1C00EFF863 /* XcodeServer+Miscs.swift */; };
+		3A7D28EB1BC92D4F00EFF863 /* MiscsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7D28EA1BC92D4F00EFF863 /* MiscsTests.swift */; };
+		3A7D28ED1BC92F0600EFF863 /* hostname.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A7D28EC1BC92F0600EFF863 /* hostname.json */; };
 		3AA9224B1B3F0E38005A0F73 /* scm_branches_request_no_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA922391B3F0E2C005A0F73 /* scm_branches_request_no_fingerprint.json */; };
 		3AA9224C1B3F0E38005A0F73 /* scm_branches_request_with_fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223A1B3F0E2C005A0F73 /* scm_branches_request_with_fingerprint.json */; };
 		3AA9224E1B3F0E38005A0F73 /* scm_branches_response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223C1B3F0E2C005A0F73 /* scm_branches_response_success.json */; };
 		3AA9224F1B3F0E38005A0F73 /* scm_branches_response_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AA9223D1B3F0E2C005A0F73 /* scm_branches_response_error.json */; };
 		3ABE68661B3AC3C500FA0A61 /* DeviceSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE68651B3AC3C500FA0A61 /* DeviceSpecification.swift */; };
-		3AC0A1DD1BB81A690032A905 /* SocketIOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0A1DC1BB81A690032A905 /* SocketIOHelper.swift */; settings = {ASSET_TAGS = (); }; };
+		3AC0A1DD1BB81A690032A905 /* SocketIOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0A1DC1BB81A690032A905 /* SocketIOHelper.swift */; };
 		3AC47F401B586DFD008C4E42 /* get_integration.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AC47F3F1B586DFD008C4E42 /* get_integration.json */; };
 		3AC47F461B587C67008C4E42 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC47F451B587C67008C4E42 /* IntegrationTests.swift */; };
 		3AE691081B62CA2300966937 /* bot_deletion.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AE691071B62CA2300966937 /* bot_deletion.json */; };
-		6EB6C0095FB9B44F447524FA /* Pods_XcodeServerSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D691154CAE41123A936FA /* Pods_XcodeServerSDKTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6EB6C0095FB9B44F447524FA /* Pods_XcodeServerSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818D691154CAE41123A936FA /* Pods_XcodeServerSDKTests.framework */; };
 		700B43581B5FA7A200E27175 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B43571B5FA7A200E27175 /* FileTests.swift */; };
 		700C93561B54F58A00B3C6E6 /* get_devices.json in Resources */ = {isa = PBXBuildFile; fileRef = 700C93551B54F58A00B3C6E6 /* get_devices.json */; };
 		70138A811B62478100477F91 /* get_integration_commits.json in Resources */ = {isa = PBXBuildFile; fileRef = 70138A801B62478100477F91 /* get_integration_commits.json */; };
@@ -77,9 +77,9 @@
 		70B43A8D1B43D6EA004F9DEB /* XcodeServer+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B43A8C1B43D6EA004F9DEB /* XcodeServer+Platform.swift */; };
 		70C2D8381B431BCE008845FB /* XcodeServer+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8371B431BCE008845FB /* XcodeServer+Auth.swift */; };
 		70C2D8491B432A55008845FB /* XcodeServer+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C2D8481B432A55008845FB /* XcodeServer+Repository.swift */; };
-		70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; settings = {ASSET_TAGS = (); }; };
+		70CCA0891B8E586A00024E21 /* get_integration_issues.json in Resources */ = {isa = PBXBuildFile; fileRef = 70CCA0881B8E586A00024E21 /* get_integration_issues.json */; };
 		70DE3FA71B443137000761B7 /* XcodeServer+Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DE3FA61B443137000761B7 /* XcodeServer+Integration.swift */; };
-		FCBE549437CAFDC2ED47011C /* Pods_XcodeServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FA43018DFF98EDC75EA303 /* Pods_XcodeServerSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FCBE549437CAFDC2ED47011C /* Pods_XcodeServerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FA43018DFF98EDC75EA303 /* Pods_XcodeServerSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
