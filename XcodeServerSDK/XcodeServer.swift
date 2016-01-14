@@ -73,7 +73,7 @@ extension XcodeServer : NSURLSessionDelegate {
 
 // MARK: Header constants
 let Headers_APIVersion = "X-XCSAPIVersion"
-let SupportedAPIVersions: Set<Int> = [6, 7] //will change with time, this codebase supports this version
+let VerifiedAPIVersions: Set<Int> = [6, 7] //will change with time, this codebase supports these versions
 
 // MARK: XcodeServer API methods
 public extension XcodeServer {
@@ -88,17 +88,16 @@ public extension XcodeServer {
         let apiVersion = Int(apiVersionString)
         
         if let apiVersion = apiVersion where
-            apiVersion > 0 && !SupportedAPIVersions.contains(apiVersion) {
-            var common = "Version mismatch: response from API version \(apiVersion), but we support version \(SupportedAPIVersions). "
+            apiVersion > 0 && !VerifiedAPIVersions.contains(apiVersion) {
+            var common = "Version mismatch: response from API version \(apiVersion), but we only verified versions \(VerifiedAPIVersions). "
             
-            let maxVersion = SupportedAPIVersions.sort().last!
+            let maxVersion = VerifiedAPIVersions.sort().last!
             if apiVersion > maxVersion {
-                common += "You're using a newer Xcode Server than we support. Please visit https://github.com/czechboy0/XcodeServerSDK to check whether there's a new version of the SDK for it."
+                Log.info("You're using a newer Xcode Server than we've verified (\(apiVersion), last verified is \(maxVersion)). Please visit https://github.com/czechboy0/XcodeServerSDK to check whether there's a new version of the SDK for it. If not, please file an issue in the XcodeServerSDK repository. The requests are still going through, however we haven't verified this API version, so here be dragons.")
             } else {
                 common += "You're using an old Xcode Server which we don't support any more. Please look for an older version of the SDK at https://github.com/czechboy0/XcodeServerSDK or consider upgrading your Xcode Server to the current version."
+                return Error.withInfo(common)
             }
-            
-            return Error.withInfo(common)
         }
         
         //all good
