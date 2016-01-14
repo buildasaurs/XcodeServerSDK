@@ -4,9 +4,18 @@
 
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.2...HEAD)
 
+**Fixed bugs:**
+
+- Incompatible with Xcode 7.3 beta [\#128](https://github.com/czechboy0/XcodeServerSDK/issues/128)
+
 **Closed issues:**
 
 - Release a spec with tvOS support [\#122](https://github.com/czechboy0/XcodeServerSDK/issues/122)
+
+**Merged pull requests:**
+
+- Softer API version check [\#129](https://github.com/czechboy0/XcodeServerSDK/pull/129) ([czechboy0](https://github.com/czechboy0))
+- Readme update with official API endpoint [\#125](https://github.com/czechboy0/XcodeServerSDK/pull/125) ([cojoj](https://github.com/cojoj))
 
 ## [v0.5.2](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.2) (2015-10-19)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.1...v0.5.2)
