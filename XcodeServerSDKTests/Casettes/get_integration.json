@@ -265,6 +265,7 @@
           "doc_type" : "integration",
           "ccPercentageDelta" : 0,
           "queuedDate" : "2015-07-16T22:42:36.931Z",
+          "expectedCompletionDate": "2015-07-16T22:43:56.931Z",
           "number" : 2,
           "ccPercentage" : 0,
           "buildServiceFingerprint" : "5B:6C:E6:F0:B7:A6:45:9C:3A:D4:AE:38:84:E3:45:17:DA:71:90:23",

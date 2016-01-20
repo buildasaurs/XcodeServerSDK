@@ -68,13 +68,13 @@ lane :release do
   sh "cd .. && pod trunk push"
 
   # notify us on slack
-  slack(
-    slack_url: ENV['SLACK_RELEASES_URL'],
-    message: "Successfully released [#{project_name} #{version}](#{release['html_url']}) :rocket:",
-    payload: {
-      "New" => release['body']
-    }
-  )
+  # slack(
+  #   slack_url: ENV['SLACK_RELEASES_URL'],
+  #   message: "Successfully released [#{project_name} #{version}](#{release['html_url']}) :rocket:",
+  #   payload: {
+  #     "New" => release['body']
+  #   }
+  # )
 
   # regenerate changelog to get it committed
   sh "cd .. && github_changelog_generator -t $GITHUB_TOKEN"

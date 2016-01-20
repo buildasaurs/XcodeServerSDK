@@ -28,6 +28,9 @@ public class Integration : XcodeServerEntity {
     public let assets: NSDictionary?  //TODO: add typed array with parsing
     public let blueprint: SourceControlBlueprint?
     
+    //new keys
+    public let expectedCompletionDate: NSDate?
+    
     public enum Step : String {
         case Unknown = ""
         case Pending = "pending"
@@ -70,6 +73,7 @@ public class Integration : XcodeServerEntity {
         self.currentStep = Step(rawValue: json.stringForKey("currentStep")) ?? .Unknown
         self.number = json.intForKey("number")
         self.successStreak = json.intForKey("success_streak")
+        self.expectedCompletionDate = json.optionalDateForKey("expectedCompletionDate")
         
         if let raw = json.optionalStringForKey("result") {
             self.result = Result(rawValue: raw)
