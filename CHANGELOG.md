@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.5.5](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.5) (2016-01-20)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.4...v0.5.5)
+
+**Merged pull requests:**
+
+- Expected Completion Date [\#130](https://github.com/czechboy0/XcodeServerSDK/pull/130) ([czechboy0](https://github.com/czechboy0))
+
+## [v0.5.4](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.4) (2016-01-14)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.3...v0.5.4)
+
 ## [v0.5.3](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.3) (2016-01-14)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.2...v0.5.3)
 
