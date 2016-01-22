@@ -45,7 +45,6 @@ public struct XcodeServerConfig : JSONSerializable {
         dict[Keys.Id] = self.id
         dict[Keys.Host] = self.host
         dict.optionallyAddValueForKey(self.user, key: Keys.User)
-        dict.optionallyAddValueForKey(self.password, key: Keys.Password)
         return dict
     }
     
@@ -87,10 +86,6 @@ public struct XcodeServerConfig : JSONSerializable {
             let errMsg = "Xcode Server generally uses https, please double check your hostname"
             Log.error(errMsg)
             throw ConfigurationErrors.InvalidSchemeProvided(errMsg)
-        }
-        
-        guard user?.isEmpty == password?.isEmpty else {
-            throw ConfigurationErrors.InvalidCredentialsProvided
         }
         
         // validate if host is a valid URL
