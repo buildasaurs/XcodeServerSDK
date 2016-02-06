@@ -1,26 +1,37 @@
 PODS:
-  - BuildaUtils (0.2.3)
+  - BuildaUtils (0.2.8):
+    - SwiftSafe (~> 0.1)
   - DVR (0.0.4-czechboy0)
-  - Nimble (3.0.0)
+  - Nimble (3.1.0)
+  - SwiftSafe (0.1)
 
 DEPENDENCIES:
   - BuildaUtils (~> 0.2.3)
   - DVR (from `https://github.com/czechboy0/DVR.git`, tag `v0.0.5-czechboy0`)
-  - Nimble (~> 3.0.0)
+  - Nimble (from `https://github.com/Quick/Nimble.git`, commit `b9256b0bdecc4ef1f659b7663dcd3aab6f43fb5f`)
 
 EXTERNAL SOURCES:
   DVR:
     :git: https://github.com/czechboy0/DVR.git
     :tag: v0.0.5-czechboy0
+  Nimble:
+    :commit: b9256b0bdecc4ef1f659b7663dcd3aab6f43fb5f
+    :git: https://github.com/Quick/Nimble.git
 
 CHECKOUT OPTIONS:
   DVR:
     :git: https://github.com/czechboy0/DVR.git
     :tag: v0.0.5-czechboy0
+  Nimble:
+    :commit: b9256b0bdecc4ef1f659b7663dcd3aab6f43fb5f
+    :git: https://github.com/Quick/Nimble.git
 
 SPEC CHECKSUMS:
-  BuildaUtils: ea53e9781ddd764d525b1c3bb98f68e22cc58170
+  BuildaUtils: 0974c128ace30916b9b9429e8585c1c6402593dd
   DVR: 386f347071f55f3f9105239db6764483009ec875
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Nimble: eb2a9b164b9a3f16df6581c692a0bfced7d072a4
+  SwiftSafe: 77ffd12b02678790bec1ef56a2d14ec5036f1fd6
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 67beeffd0d8e791afcfda6d3008101471799f0d9
+
+COCOAPODS: 1.0.0.beta.3

@@ -119,7 +119,7 @@ extension XCTestCase {
     - parameter line:    Line in which assertion happened
     - parameter block:   Block of code against which assertion should be matched
     */
-    func XCTempAssertThrowsError(message: String = "", file: String = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
+    func XCTempAssertThrowsError(message: String = "", file: StaticString = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
         do {
             try block()
             
@@ -137,7 +137,7 @@ extension XCTestCase {
     - parameter line:    Line in which assertion happened
     - parameter block:   Block of code against which assertion should be matched
     */
-    func XCTempAssertThrowsSpecificError(kind: ErrorType, _ message: String = "", file: String = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
+    func XCTempAssertThrowsSpecificError(kind: ErrorType, _ message: String = "", file: StaticString = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
         do {
             try block()
             
@@ -160,7 +160,7 @@ extension XCTestCase {
     - parameter line:    Line in which assertion happened
     - parameter block:   Block of code against which assertion should be matched
     */
-    func XCTempAssertNoThrowError(message: String = "", file: String = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
+    func XCTempAssertNoThrowError(message: String = "", file: StaticString = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
         do {
             try block()
         } catch {
@@ -178,7 +178,7 @@ extension XCTestCase {
     - parameter line:    Line in which assertion happened
     - parameter block:   Block of code against which assertion should be matched
     */
-    func XCTempAssertNoThrowSpecificError(kind: ErrorType, _ message: String = "", file: String = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
+    func XCTempAssertNoThrowSpecificError(kind: ErrorType, _ message: String = "", file: StaticString = __FILE__, line: UInt = __LINE__, _ block: () throws -> ()) {
         do {
             try block()
         } catch let error as NSError {

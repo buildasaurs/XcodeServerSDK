@@ -57,7 +57,7 @@ public struct SocketIOPacket {
         var initialColonsCount = 0
         for i in data.characters {
             if i == ":" {
-                initialColonsCount++
+                initialColonsCount += 1
             } else {
                 if initialColonsCount > 0 {
                     break

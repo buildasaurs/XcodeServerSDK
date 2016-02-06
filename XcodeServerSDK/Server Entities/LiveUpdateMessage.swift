@@ -57,7 +57,7 @@ public class LiveUpdateMessage: XcodeServerEntity {
         
         self.type = MessageType(rawValue: typeString) ?? .Unknown
         
-        let args = json["args"]?[0] as? NSDictionary
+        let args = (json["args"] as? NSArray)?[0] as? NSDictionary
         
         self.message = args?["message"] as? String
         self.progress = args?["percentage"] as? Double
