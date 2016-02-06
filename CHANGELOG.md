@@ -1,5 +1,20 @@
 # Change Log
 
+## [Unreleased](https://github.com/czechboy0/XcodeServerSDK/tree/HEAD)
+
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.7...HEAD)
+
+**Closed issues:**
+
+- Has API changed with latest OS X Server update? [\#126](https://github.com/czechboy0/XcodeServerSDK/issues/126)
+
+## [v0.5.7](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.7) (2016-02-06)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.6...v0.5.7)
+
+**Merged pull requests:**
+
+- Xcode 7.3 beta 2, Swift 2.2 fixes [\#131](https://github.com/czechboy0/XcodeServerSDK/pull/131) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.5.6](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.6) (2016-01-22)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.5...v0.5.6)
 
