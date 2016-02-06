@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XcodeServerSDK"
-  s.version      = "0.5.6"
+  s.version      = "0.5.7"
   s.summary      = "Access Xcode Server API with native Swift objects."
 
   s.homepage     = "https://github.com/czechboy0/XcodeServerSDK"
