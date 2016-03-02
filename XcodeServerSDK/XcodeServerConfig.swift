@@ -72,7 +72,9 @@ public struct XcodeServerConfig : JSONSerializable {
         - `InvalidHostProvided`: When the host provided doesn't produce a valid `URL`
         - `InvalidSchemeProvided`: When the provided scheme is not `HTTPS`
     */
-    public init(var host: String, user: String? = nil, password: String? = nil, id: RefType? = nil) throws {
+    public init(host _host: String, user: String? = nil, password: String? = nil, id: RefType? = nil) throws {
+        
+        var host = _host
         
         guard !host.isEmpty else {
             throw ConfigurationErrors.NoHostProvided
