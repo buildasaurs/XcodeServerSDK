@@ -139,6 +139,9 @@ Using hardware buttons to start integrations? Why not! The sky is the limit.
 # :ship: Building & Testing
 We use [CocoaPods](https://github.com/CocoaPods/CocoaPods) for dependency management. When you clone the repo, you'll need to run `pod install` to download the necessary dependencies.
 
+# :blue_heart: Code of Conduct
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
 # :pencil2: Contributing
 Create an issue or (preferably) send a pull request.
 Do you just want to get involved and help out? See the issues marked as [up-for-grabs](https://github.com/czechboy0/XcodeServerSDK/labels/up-for-grabs). These are the ones just waiting for some beautiful soul like you to build/fix it. We just don't have enough bandwidth and any help is welcome :) (You'll be in the contributors list of the release if you send a PR! :fireworks:)
