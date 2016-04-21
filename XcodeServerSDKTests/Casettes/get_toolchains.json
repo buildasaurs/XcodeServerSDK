@@ -1,0 +1,57 @@
+{
+    "interactions" : [
+                      {
+                      "recorded_at" : 1436788154.310033,
+                      "response" : {
+                      "body" : {
+                      "count" : 2,
+                      "results" : [
+                                   {
+                                   "_id":"ed7790b0905576627eda64fcf600ae9f",
+                                   "_rev":"3-bcc83acf9c184e22a5d1b66700d38dd9",
+                                   "path":"/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-12-a.xctoolchain",
+                                   "displayName":"Xcode Swift DEVELOPMENT Snapshot 2016-04-12 (a)",
+                                   "identifier":"org.swift.3020160412a",
+                                   "signatureVerified":true,
+                                   "doc_type":"toolchain",
+                                   "tinyID":"D759F95"
+                                   },
+                                   {
+                                   "_id":"ed7790b0905576627eda64fcf6036a67",
+                                   "_rev":"3-57e317f69d7decb33c706274c811ec9b",
+                                   "path":"/Library/Developer/Toolchains/swift-2.2.1-SNAPSHOT-2016-04-12-a.xctoolchain",
+                                   "displayName":"Xcode Swift 2.2.1 Snapshot 2016-04-12 (a)",
+                                   "identifier":"org.swift.22120160412a",
+                                   "signatureVerified":true,
+                                   "doc_type":"toolchain",
+                                   "tinyID":"48A44E8"
+                                   }
+                                   ]
+                      },
+                      "body_format" : "json",
+                      "status" : 200,
+                      "url" : "https:\/\/127.0.0.1:20343\/api\/toolchains",
+                      "headers" : {
+                      "X-XCSResultsList" : "true",
+                      "Content-Type" : "application\/json",
+                      "Connection" : "keep-alive",
+                      "Transfer-Encoding" : "Identity",
+                      "Date" : "Mon, 13 Jul 2015 11:49:14 GMT",
+                      "Content-Encoding" : "gzip",
+                      "X-XCSResponse-Status-Title" : "OK",
+                      "Keep-Alive" : "timeout=5; max=100",
+                      "X-XCSAPIVersion" : "6",
+                      "Vary" : "Accept-Encoding"
+                      }
+                      },
+                      "request" : {
+                      "method" : "GET",
+                      "url" : "https:\/\/127.0.0.1:20343\/api\/toolchains",
+                      "headers" : {
+                      "Authorization" : "Basic SUNhbkNyZWF0ZUJvdHM6c3VwZXJTZWNyM3Q="
+                      }
+                      }
+                      }
+                      ],
+    "name" : "get_toolchains"
+}

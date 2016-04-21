@@ -26,6 +26,8 @@ public class XcodeServerEndpoints {
         case Repositories
         case SCM_Branches
         case UserCanCreateBots
+        case Versions
+        case Toolchains
     }
     
     let serverConfig: XcodeServerConfig
@@ -144,6 +146,14 @@ public class XcodeServerEndpoints {
             
             let hostname = "\(base)/hostname"
             return hostname
+        
+        case .Versions:
+            let versions = "\(base)/versions"
+            return versions
+        
+        case .Toolchains:
+            let toolchains = "\(base)/toolchains"
+            return toolchains
         }
     }
     
