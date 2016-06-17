@@ -20,11 +20,11 @@ public class File: XcodeServerEntity {
         super.init()
     }
     
-    public required init(json: NSDictionary) {
-        self.filePath = json.stringForKey("filePath")
-        self.status = FileStatus(rawValue: json.intForKey("status")) ?? .Other
+    public required init(json: NSDictionary) throws {
+        self.filePath = try json.stringForKey("filePath")
+        self.status = FileStatus(rawValue: try json.intForKey("status")) ?? .Other
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public override func dictionarify() -> NSDictionary {

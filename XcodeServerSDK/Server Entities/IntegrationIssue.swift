@@ -39,18 +39,18 @@ public class IntegrationIssue: XcodeServerEntity {
     public let status: IssueStatus
     
     // MARK: Initialization
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         self.payload = json.copy() as? NSDictionary ?? NSDictionary()
         
         self.message = json.optionalStringForKey("message")
-        self.type = IssueType(rawValue: json.stringForKey("type"))!
-        self.issueType = json.stringForKey("issueType")
-        self.commits = json.arrayForKey("commits").map { Commit(json: $0) }
-        self.integrationID = json.stringForKey("integrationID")
-        self.age = json.intForKey("age")
-        self.status = IssueStatus(rawValue: json.intForKey("status"))!
+        self.type = try IssueType(rawValue: json.stringForKey("type"))!
+        self.issueType = try json.stringForKey("issueType")
+        self.commits = try json.arrayForKey("commits").map { try Commit(json: $0) }
+        self.integrationID = try json.stringForKey("integrationID")
+        self.age = try json.intForKey("age")
+        self.status = IssueStatus(rawValue: try json.intForKey("status"))!
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
 }

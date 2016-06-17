@@ -46,16 +46,16 @@ public class TriggerConditions : XcodeServerEntity {
         return dict
     }
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
         self.status = json.optionalIntForKey("status") ?? 2
-        self.onAnalyzerWarnings = json.boolForKey("onAnalyzerWarnings")
-        self.onBuildErrors = json.boolForKey("onBuildErrors")
-        self.onFailingTests = json.boolForKey("onFailingTests")
-        self.onInternalErrors = json.boolForKey("onInternalErrors")
-        self.onSuccess = json.boolForKey("onSuccess")
-        self.onWarnings = json.boolForKey("onWarnings")
+        self.onAnalyzerWarnings = try json.boolForKey("onAnalyzerWarnings")
+        self.onBuildErrors = try json.boolForKey("onBuildErrors")
+        self.onFailingTests = try json.boolForKey("onFailingTests")
+        self.onInternalErrors = try json.boolForKey("onInternalErrors")
+        self.onSuccess = try json.boolForKey("onSuccess")
+        self.onWarnings = try json.boolForKey("onWarnings")
         
-        super.init(json: json)
+        try super.init(json: json)
     }
 }

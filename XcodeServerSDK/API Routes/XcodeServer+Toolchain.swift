@@ -26,8 +26,10 @@ extension XcodeServer {
             }
           
             if let body = (body as? NSDictionary)?["results"] as? NSArray {
-                let toolchains: [Toolchain] = XcodeServerArray(body)
-                completion(toolchains: toolchains, error: nil)
+                let (result, error): ([Toolchain]?, NSError?) = unthrow { _ in
+                    return try XcodeServerArray(body)
+                }
+                completion(toolchains: result, error: error)
             } else {
                 completion(toolchains: nil, error: Error.withInfo("Wrong body \(body)"))
             }

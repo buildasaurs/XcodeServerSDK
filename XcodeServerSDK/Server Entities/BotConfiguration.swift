@@ -111,9 +111,9 @@ public class BotConfiguration : XcodeServerEntity {
     public let deviceSpecification: DeviceSpecification
     public let sourceControlBlueprint: SourceControlBlueprint
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.builtFromClean = CleaningPolicy(rawValue: json.intForKey("builtFromClean")) ?? .Never
+        self.builtFromClean = CleaningPolicy(rawValue: try json.intForKey("builtFromClean")) ?? .Never
         self.codeCoveragePreference = CodeCoveragePreference(rawValue: json.optionalIntForKey("codeCoveragePreference") ?? 0) ?? .UseSchemeSetting
         
         if let buildConfigOverride = json.optionalStringForKey("buildConfiguration") {
@@ -121,18 +121,18 @@ public class BotConfiguration : XcodeServerEntity {
         } else {
             self.buildConfiguration = .UseSchemeSetting
         }
-        self.analyze = json.boolForKey("performsAnalyzeAction")
-        self.archive = json.boolForKey("performsArchiveAction")
+        self.analyze = try json.boolForKey("performsAnalyzeAction")
+        self.archive = try json.boolForKey("performsArchiveAction")
         self.exportsProductFromArchive = json.optionalBoolForKey("exportsProductFromArchive") ?? false
-        self.test = json.boolForKey("performsTestAction")
-        self.schemeName = json.stringForKey("schemeName")
-        self.schedule = BotSchedule(json: json)
-        self.triggers = XcodeServerArray(json.arrayForKey("triggers"))
-        self.sourceControlBlueprint = SourceControlBlueprint(json: json.dictionaryForKey("sourceControlBlueprint"))
+        self.test = try json.boolForKey("performsTestAction")
+        self.schemeName = try json.stringForKey("schemeName")
+        self.schedule = try BotSchedule(json: json)
+        self.triggers = try XcodeServerArray(try json.arrayForKey("triggers"))
+        self.sourceControlBlueprint = try SourceControlBlueprint(json: try json.dictionaryForKey("sourceControlBlueprint"))
         
         //old bots (xcode 6) only have testingDeviceIds, try to parse those into the new format of DeviceSpecification (xcode 7)
         if let deviceSpecJSON = json.optionalDictionaryForKey("deviceSpecification") {
-            self.deviceSpecification = DeviceSpecification(json: deviceSpecJSON)
+            self.deviceSpecification = try DeviceSpecification(json: deviceSpecJSON)
         } else {
             if let testingDeviceIds = json.optionalArrayForKey("testingDeviceIDs") as? [String] {
                 self.deviceSpecification = DeviceSpecification(testingDeviceIDs: testingDeviceIds)
@@ -141,7 +141,7 @@ public class BotConfiguration : XcodeServerEntity {
             }
         }
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public init(

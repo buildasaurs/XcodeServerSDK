@@ -28,8 +28,10 @@ extension XcodeServer {
             }
             
             if let array = (body as? NSDictionary)?["results"] as? NSArray {
-                let platforms: [DevicePlatform] = XcodeServerArray(array)
-                completion(platforms: platforms, error: error)
+                let (result, error): ([DevicePlatform]?, NSError?) = unthrow {
+                    return try XcodeServerArray(array)
+                }
+                completion(platforms: result, error: error)
             } else {
                 completion(platforms: nil, error: Error.withInfo("Wrong body \(body)"))
             }

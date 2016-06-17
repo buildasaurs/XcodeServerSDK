@@ -14,13 +14,13 @@ public class Bot : XcodeServerEntity {
     public let configuration: BotConfiguration
     public let integrationsCount: Int
 
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.name = json.stringForKey("name")
-        self.configuration = BotConfiguration(json: json.dictionaryForKey("configuration"))
+        self.name = try json.stringForKey("name")
+        self.configuration = try BotConfiguration(json: try json.dictionaryForKey("configuration"))
         self.integrationsCount = json.optionalIntForKey("integration_counter") ?? 0
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     /**

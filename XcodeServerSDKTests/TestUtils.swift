@@ -89,20 +89,20 @@ extension XCTestCase {
         return NSDictionary()
     }
     
-    func botInCassetteWithName(name: String) -> Bot {
+    func botInCassetteWithName(name: String) throws -> Bot {
         let json = self.loadJSONResponseFromCassetteWithName(name)
-        let bot = Bot(json: json)
+        let bot = try Bot(json: json)
         return bot
     }
     
-    func botInFileWithName(name: String) -> Bot {
+    func botInFileWithName(name: String) throws -> Bot {
         let json = self.loadJSONWithName(name)
-        let bot = Bot(json: json)
+        let bot = try Bot(json: json)
         return bot
     }
     
-    func configurationFromBotWithName(name: String) -> BotConfiguration {
-        let bot = self.botInFileWithName(name)
+    func configurationFromBotWithName(name: String) throws -> BotConfiguration {
+        let bot = try self.botInFileWithName(name)
         let configuration = bot.configuration
         return configuration
     }

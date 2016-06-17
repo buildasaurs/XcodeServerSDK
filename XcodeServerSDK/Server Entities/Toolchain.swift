@@ -14,13 +14,12 @@ public class Toolchain: XcodeServerEntity {
     public let path: String
     public let signatureVerified: Bool
  
-    
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.displayName = json.stringForKey("displayName")
-        self.path = json.stringForKey("path")
-        self.signatureVerified = json.boolForKey("signatureVerified")
+        self.displayName = try json.stringForKey("displayName")
+        self.path = try json.stringForKey("path")
+        self.signatureVerified = try json.boolForKey("signatureVerified")
         
-        super.init(json: json)
+        try super.init(json: json)
     }
 }

@@ -31,8 +31,10 @@ extension XcodeServer {
                 return
             }
             
-            let repos: [Repository] = XcodeServerArray(repositoriesBody)
-            completion(repositories: repos, error: nil)
+            let (result, error): ([Repository]?, NSError?) = unthrow {
+                return try XcodeServerArray(repositoriesBody)
+            }
+            completion(repositories: result, error: error)
         }
     }
     
@@ -89,8 +91,14 @@ extension XcodeServer {
                 return
             }
             
-            let repository = Repository(json: repositoryBody)
-            completion(response: XcodeServer.CreateRepositoryResponse.Success(repository))
+            let (result, error): (Repository?, NSError?) = unthrow {
+                return try Repository(json: repositoryBody)
+            }
+            if let error = error {
+                completion(response: .Error(error))
+            } else {
+                completion(response: .Success(result!))
+            }
         }
     }
     

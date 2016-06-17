@@ -17,14 +17,14 @@ public class IntegrationCommits: XcodeServerEntity {
     public let commits: [String: [Commit]]
     public let endedTimeDate: NSDate?
     
-    public required init(json: NSDictionary) {
-        self.integration = json.stringForKey("integration")
-        self.botTinyID = json.stringForKey("botTinyID")
-        self.botID = json.stringForKey("botID")
-        self.commits = IntegrationCommits.populateCommits(json.dictionaryForKey("commits"))
-        self.endedTimeDate = IntegrationCommits.parseDate(json.arrayForKey("endedTimeDate"))
+    public required init(json: NSDictionary) throws {
+        self.integration = try json.stringForKey("integration")
+        self.botTinyID = try json.stringForKey("botTinyID")
+        self.botID = try json.stringForKey("botID")
+        self.commits = try IntegrationCommits.populateCommits(try json.dictionaryForKey("commits"))
+        self.endedTimeDate = IntegrationCommits.parseDate(try json.arrayForKey("endedTimeDate"))
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     /**
@@ -34,7 +34,7 @@ public class IntegrationCommits: XcodeServerEntity {
     
     - returns: Dictionary of parsed Commit objects.
     */
-    class func populateCommits(json: NSDictionary) -> [String: [Commit]] {
+    class func populateCommits(json: NSDictionary) throws -> [String: [Commit]] {
         var resultsDictionary: [String: [Commit]] = Dictionary()
         
         for (key, value) in json {
@@ -43,7 +43,7 @@ public class IntegrationCommits: XcodeServerEntity {
                 continue
             }
             
-            resultsDictionary[blueprintID] = commitsArray.map { Commit(json: $0) }
+            resultsDictionary[blueprintID] = try commitsArray.map { try Commit(json: $0) }
         }
         
         return resultsDictionary

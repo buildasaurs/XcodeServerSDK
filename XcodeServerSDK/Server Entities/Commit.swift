@@ -18,15 +18,15 @@ public class Commit: XcodeServerEntity {
     public let contributor: Contributor
     
     // MARK: Initializers
-    public required init(json: NSDictionary) {
-        self.hash = json.stringForKey("XCSCommitHash")
-        self.filePaths = json.arrayForKey("XCSCommitCommitChangeFilePaths").map { File(json: $0) }
+    public required init(json: NSDictionary) throws {
+        self.hash = try json.stringForKey("XCSCommitHash")
+        self.filePaths = try json.arrayForKey("XCSCommitCommitChangeFilePaths").map { try File(json: $0) }
         self.message = json.optionalStringForKey("XCSCommitMessage")
-        self.date = json.dateForKey("XCSCommitTimestamp")
-        self.repositoryID = json.stringForKey("XCSBlueprintRepositoryID")
-        self.contributor = Contributor(json: json.dictionaryForKey("XCSCommitContributor"))
+        self.date = try json.dateForKey("XCSCommitTimestamp")
+        self.repositoryID = try json.stringForKey("XCSBlueprintRepositoryID")
+        self.contributor = try Contributor(json: try json.dictionaryForKey("XCSCommitContributor"))
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
 }

@@ -107,11 +107,16 @@ extension XcodeServer {
         self.sendRequest(state, params: params) { [weak self] (message) -> () in
             
             let packets = SocketIOHelper.parsePackets(message)
-            self?.handlePackets(packets, state: state)
+            
+            do {
+                try self?.handlePackets(packets, state: state)
+            } catch {
+                state.error(error)
+            }
         }
     }
     
-    private func handlePackets(packets: [SocketIOPacket], state: LiveUpdateState) {
+    private func handlePackets(packets: [SocketIOPacket], state: LiveUpdateState) throws {
         
         //check for errors
         if let lastPacket = packets.last where lastPacket.type == .Error {
@@ -129,7 +134,7 @@ extension XcodeServer {
         //we good?
         let events = packets.filter { $0.type == .Event }
         let validEvents = events.filter { $0.jsonPayload != nil }
-        let messages = validEvents.map { LiveUpdateMessage(json: $0.jsonPayload!) }
+        let messages = try validEvents.map { try LiveUpdateMessage(json: $0.jsonPayload!) }
         if messages.count > 0 {
             state.messageHandler?(messages: messages)
         }

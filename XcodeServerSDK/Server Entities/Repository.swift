@@ -122,16 +122,16 @@ public class Repository: XcodeServerEntity {
     
     - returns: Initialized repository struct.
     */
-    public required init(json: NSDictionary) {
-        self.name = json.stringForKey("name")
+    public required init(json: NSDictionary) throws {
+        self.name = try json.stringForKey("name")
         
-        self.httpAccess = HTTPAccessType(rawValue: json.intForKey("httpAccessType"))!
-        self.sshAccess = SSHAccessType(rawValue: json.intForKey("posixPermissions"))!
+        self.httpAccess = HTTPAccessType(rawValue: try json.intForKey("httpAccessType"))!
+        self.sshAccess = SSHAccessType(rawValue: try json.intForKey("posixPermissions"))!
         
-        self.writeAccessExternalIds = json.arrayForKey("writeAccessExternalIDs")
-        self.readAccessExternalIds = json.arrayForKey("readAccessExternalIDs")
+        self.writeAccessExternalIds = try json.arrayForKey("writeAccessExternalIDs")
+        self.readAccessExternalIds = try json.arrayForKey("readAccessExternalIDs")
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     /**

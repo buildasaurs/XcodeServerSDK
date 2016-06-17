@@ -21,18 +21,42 @@ public class IntegrationIssues: XcodeServerEntity {
     
     // MARK: Initialization
     
-    public required init(json: NSDictionary) {
-        self.buildServiceErrors = json.arrayForKey("buildServiceErrors").map { IntegrationIssue(json: $0) }
-        self.buildServiceWarnings = json.arrayForKey("buildServiceWarnings").map { IntegrationIssue(json: $0) }
-        self.triggerErrors = json.arrayForKey("triggerErrors").map { IntegrationIssue(json: $0) }
+    public required init(json: NSDictionary) throws {
+        self.buildServiceErrors = try json.arrayForKey("buildServiceErrors").map { try IntegrationIssue(json: $0) }
+        self.buildServiceWarnings = try json.arrayForKey("buildServiceWarnings").map { try IntegrationIssue(json: $0) }
+        self.triggerErrors = try json.arrayForKey("triggerErrors").map { try IntegrationIssue(json: $0) }
         
         // Nested issues
-        self.errors = json.dictionaryForKey("errors").allValues.filter { $0.count != 0 }.flatMap { ($0 as! NSArray).map { IntegrationIssue(json: $0 as! NSDictionary) } }
-        self.warnings = json.dictionaryForKey("warnings").allValues.filter { $0.count != 0 }.flatMap { ($0 as! NSArray).map { IntegrationIssue(json: $0 as! NSDictionary) } }
-        self.testFailures = json.dictionaryForKey("testFailures").allValues.filter { $0.count != 0 }.flatMap { ($0 as! NSArray).map { IntegrationIssue(json: $0 as! NSDictionary) } }
-        self.analyzerWarnings = json.dictionaryForKey("analyzerWarnings").allValues.filter { $0.count != 0 }.flatMap { ($0 as! NSArray).map { IntegrationIssue(json: $0 as! NSDictionary) } }
+        self.errors = try json
+            .dictionaryForKey("errors")
+            .allValues
+            .filter { $0.count != 0 }
+            .flatMap {
+                try ($0 as! NSArray).map { try IntegrationIssue(json: $0 as! NSDictionary) }
+        }
+        self.warnings = try json
+            .dictionaryForKey("warnings")
+            .allValues
+            .filter { $0.count != 0 }
+            .flatMap {
+                try ($0 as! NSArray).map { try IntegrationIssue(json: $0 as! NSDictionary) }
+        }
+        self.testFailures = try json
+            .dictionaryForKey("testFailures")
+            .allValues
+            .filter { $0.count != 0 }
+            .flatMap {
+                try ($0 as! NSArray).map { try IntegrationIssue(json: $0 as! NSDictionary) }
+        }
+        self.analyzerWarnings = try json
+            .dictionaryForKey("analyzerWarnings")
+            .allValues
+            .filter { $0.count != 0 }
+            .flatMap {
+                try ($0 as! NSArray).map { try IntegrationIssue(json: $0 as! NSDictionary) }
+        }
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
 }
