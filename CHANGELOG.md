@@ -1,5 +1,21 @@
 # Change Log
 
+## [v0.6.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.6.0) (2016-06-17)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.8...v0.6.0)
+
+**Fixed bugs:**
+
+- Call to server.getIntegrations fails with 400 Error [\#127](https://github.com/czechboy0/XcodeServerSDK/issues/127)
+
+**Closed issues:**
+
+- Cancel API not working [\#134](https://github.com/czechboy0/XcodeServerSDK/issues/134)
+
+**Merged pull requests:**
+
+- Throwing parsers \(as opposed to trapping\) [\#135](https://github.com/czechboy0/XcodeServerSDK/pull/135) ([czechboy0](https://github.com/czechboy0))
+- add toolchain endpoint \(Xcode 7.3\) [\#133](https://github.com/czechboy0/XcodeServerSDK/pull/133) ([lgaches](https://github.com/lgaches))
+
 ## [v0.5.8](https://github.com/czechboy0/XcodeServerSDK/tree/v0.5.8) (2016-03-02)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.7...v0.5.8)
 
