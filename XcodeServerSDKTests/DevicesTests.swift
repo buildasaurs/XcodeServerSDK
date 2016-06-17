@@ -11,7 +11,7 @@ import XcodeServerSDK
 
 class DevicesTests: XCTestCase {
     
-    let macMini = Device(json: [
+    let macMini = try! Device(json: [
         "osVersion" : "10.11",
         "connected" : true,
         "simulator" : false,

@@ -51,7 +51,7 @@ public class LiveUpdateMessage: XcodeServerEntity {
     public let result: Integration.Result?
     public let currentStep: Integration.Step?
     
-    required public init(json: NSDictionary) {
+    required public init(json: NSDictionary) throws {
         
         let typeString = json.optionalStringForKey("name") ?? ""
         
@@ -79,7 +79,7 @@ public class LiveUpdateMessage: XcodeServerEntity {
             self.currentStep = nil
         }
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
 }

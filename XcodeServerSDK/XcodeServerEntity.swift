@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol XcodeRead {
-    init(json: NSDictionary)
+    init(json: NSDictionary) throws
 }
 
 public protocol XcodeWrite {
@@ -27,7 +27,7 @@ public class XcodeServerEntity : XcodeRead, XcodeWrite {
     public let originalJSON: NSDictionary?
     
     //initializer which takes a dictionary and fills in values for recognized keys
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
         self.id = json.optionalStringForKey("_id")
         self.rev = json.optionalStringForKey("_rev")
@@ -49,21 +49,20 @@ public class XcodeServerEntity : XcodeRead, XcodeWrite {
         return NSDictionary()
     }
     
-    public class func optional<T: XcodeRead>(json: NSDictionary?) -> T? {
+    public class func optional<T: XcodeRead>(json: NSDictionary?) throws -> T? {
         if let json = json {
-            return T(json: json)
+            return try T(json: json)
         }
         return nil
     }
 }
 
 //parse an array of dictionaries into an array of parsed entities
-public func XcodeServerArray<T where T:XcodeRead>(jsonArray: NSArray!) -> [T] {
+public func XcodeServerArray<T where T:XcodeRead>(jsonArray: NSArray) throws -> [T] {
     
-    let array = jsonArray as! [NSDictionary]!
-    let parsed = array.map {
-        (json: NSDictionary) -> (T) in
-        return T(json: json)
+    let array = jsonArray as! [NSDictionary]
+    let parsed = try array.map { (json: NSDictionary) -> (T) in
+        return try T(json: json)
     }
     return parsed
 }

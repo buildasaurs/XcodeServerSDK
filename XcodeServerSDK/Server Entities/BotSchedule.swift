@@ -52,14 +52,14 @@ public class BotSchedule : XcodeServerEntity {
     public let hours: Int!
     public let minutes: Int!
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        let schedule = Schedule(rawValue: json.intForKey("scheduleType"))!
+        let schedule = Schedule(rawValue: try json.intForKey("scheduleType"))!
         self.schedule = schedule
         
         if schedule == .Periodical {
             
-            let period = Period(rawValue: json.intForKey("periodicScheduleInterval"))!
+            let period = Period(rawValue: try json.intForKey("periodicScheduleInterval"))!
             self.period = period
             
             let minutes = json.optionalIntForKey("minutesAfterHourToIntegrate")
@@ -77,7 +77,7 @@ public class BotSchedule : XcodeServerEntity {
             case .Weekly:
                 self.minutes = minutes!
                 self.hours = hours!
-                self.day = Day(rawValue: json.intForKey("weeklyScheduleDay"))
+                self.day = Day(rawValue: try json.intForKey("weeklyScheduleDay"))
             }
         } else {
             self.period = nil
@@ -86,7 +86,7 @@ public class BotSchedule : XcodeServerEntity {
             self.day = nil
         }
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     private init(schedule: Schedule, period: Period?, day: Day?, hours: Int?, minutes: Int?) {

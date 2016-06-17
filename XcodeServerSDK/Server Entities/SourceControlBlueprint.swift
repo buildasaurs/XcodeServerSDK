@@ -30,30 +30,30 @@ public class SourceControlBlueprint : XcodeServerEntity {
     public let sshPassphrase: String?
     public var certificateFingerprint: String? = nil
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.wCCName = json.stringForKey(XcodeBlueprintNameKey)
+        self.wCCName = try json.stringForKey(XcodeBlueprintNameKey)
         
-        let primaryRepoId = json.stringForKey(XcodeBlueprintPrimaryRemoteRepositoryKey)
+        let primaryRepoId = try json.stringForKey(XcodeBlueprintPrimaryRemoteRepositoryKey)
         self.projectWCCIdentifier = primaryRepoId
 
-        let workingCopyPaths = json.dictionaryForKey(XcodeBlueprintWorkingCopyPathsKey)
-        self.projectName = workingCopyPaths.stringForKey(primaryRepoId)
+        let workingCopyPaths = try json.dictionaryForKey(XcodeBlueprintWorkingCopyPathsKey)
+        self.projectName = try workingCopyPaths.stringForKey(primaryRepoId)
 
-        let repos: [NSDictionary] = json.arrayForKey(XcodeBlueprintRemoteRepositoriesKey)
-        let primarys: [NSDictionary] = repos.filter {
+        let repos: [NSDictionary] = try json.arrayForKey(XcodeBlueprintRemoteRepositoriesKey)
+        let primarys: [NSDictionary] = try repos.filter {
             (item: NSDictionary) -> Bool in
-            return item.stringForKey(XcodeBlueprintRemoteRepositoryIdentifierKey) == primaryRepoId
+            return try item.stringForKey(XcodeBlueprintRemoteRepositoryIdentifierKey) == primaryRepoId
         }
         
-        self.projectPath = json.stringForKey(XcodeBlueprintRelativePathToProjectKey)
+        self.projectPath = try json.stringForKey(XcodeBlueprintRelativePathToProjectKey)
 
         let repo = primarys.first!
-        self.projectURL = repo.stringForKey(XcodeBlueprintRemoteRepositoryURLKey)
+        self.projectURL = try repo.stringForKey(XcodeBlueprintRemoteRepositoryURLKey)
         self.certificateFingerprint = repo.optionalStringForKey(XcodeBlueprintRemoteRepositoryCertFingerprintKey)
         
-        let locations = json.dictionaryForKey(XcodeBlueprintLocationsKey)
-        let location = locations.dictionaryForKey(primaryRepoId)
+        let locations = try json.dictionaryForKey(XcodeBlueprintLocationsKey)
+        let location = try locations.dictionaryForKey(primaryRepoId)
         self.branch = location.optionalStringForKey(XcodeBranchIdentifierKey) ?? ""
         self.commitSHA = location.optionalStringForKey(XcodeLocationRevisionKey)
         
@@ -63,7 +63,7 @@ public class SourceControlBlueprint : XcodeServerEntity {
         self.publicSSHKey = authenticationStrategy?.optionalStringForKey(XcodeRepoPublicKeyDataKey)
         self.sshPassphrase = authenticationStrategy?.optionalStringForKey(XcodeRepoPasswordKey)
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public init(branch: String, projectWCCIdentifier: String, wCCName: String, projectName: String,

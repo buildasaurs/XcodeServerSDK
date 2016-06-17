@@ -66,14 +66,14 @@ public class TestHierarchy : XcodeServerEntity {
     which is the aggregated status, so that you don't have to iterate through all tests to figure it out yourself. 1 if all are 1, 0 otherwise.
     */
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
         //TODO: come up with useful things to parse
         //TODO: add search capabilities, aggregate generation etc
 
         self.testData = TestHierarchy.pullData(json)
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     class func pullData(json: NSDictionary) -> TestData {

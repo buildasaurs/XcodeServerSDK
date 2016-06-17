@@ -23,8 +23,8 @@ class RepositoryTests: XCTestCase {
     ]
 
     // MARK: Initialization
-    func testInit() {
-        let repo = Repository(json: json)
+    func testInit() throws {
+        let repo = try Repository(json: json)
         
         XCTAssertEqual(repo.name, "Test")
         XCTAssertEqual(repo.httpAccess, Repository.HTTPAccessType.LoggedIn)

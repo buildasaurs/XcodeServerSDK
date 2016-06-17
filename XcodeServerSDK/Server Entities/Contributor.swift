@@ -19,12 +19,12 @@ public class Contributor: XcodeServerEntity {
     public let displayName: String
     public let emails: [String]
     
-    public required init(json: NSDictionary) {
-        self.name = json.stringForKey(kContributorName)
-        self.displayName = json.stringForKey(kContributorDisplayName)
-        self.emails = json.arrayForKey(kContributorEmails)
+    public required init(json: NSDictionary) throws {
+        self.name = try json.stringForKey(kContributorName)
+        self.displayName = try json.stringForKey(kContributorDisplayName)
+        self.emails = try json.arrayForKey(kContributorEmails)
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public override func dictionarify() -> NSDictionary {

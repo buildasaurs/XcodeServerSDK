@@ -63,16 +63,16 @@ public class Integration : XcodeServerEntity {
         case TriggerError = "trigger-error"
     }
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.queuedDate = json.dateForKey("queuedDate")
+        self.queuedDate = try json.dateForKey("queuedDate")
         self.startedDate = json.optionalDateForKey("startedTime")
         self.endedTime = json.optionalDateForKey("endedTime")
         self.duration = json.optionalDoubleForKey("duration")
-        self.shouldClean = json.boolForKey("shouldClean")
-        self.currentStep = Step(rawValue: json.stringForKey("currentStep")) ?? .Unknown
-        self.number = json.intForKey("number")
-        self.successStreak = json.intForKey("success_streak")
+        self.shouldClean = try json.boolForKey("shouldClean")
+        self.currentStep = Step(rawValue: try json.stringForKey("currentStep")) ?? .Unknown
+        self.number = try json.intForKey("number")
+        self.successStreak = try json.intForKey("success_streak")
         self.expectedCompletionDate = json.optionalDateForKey("expectedCompletionDate")
         
         if let raw = json.optionalStringForKey("result") {
@@ -82,19 +82,19 @@ public class Integration : XcodeServerEntity {
         }
         
         if let raw = json.optionalDictionaryForKey("buildResultSummary") {
-            self.buildResultSummary = BuildResultSummary(json: raw)
+            self.buildResultSummary = try BuildResultSummary(json: raw)
         } else {
             self.buildResultSummary = nil
         }
         
         if let testedDevices = json.optionalArrayForKey("testedDevices") {
-            self.testedDevices = XcodeServerArray(testedDevices)
+            self.testedDevices = try XcodeServerArray(testedDevices)
         } else {
             self.testedDevices = nil
         }
         
         if let testHierarchy = json.optionalDictionaryForKey("testHierarchy") where testHierarchy.count > 0 {
-            self.testHierarchy = TestHierarchy(json: testHierarchy)
+            self.testHierarchy = try TestHierarchy(json: testHierarchy)
         } else {
             self.testHierarchy = nil
         }
@@ -102,12 +102,12 @@ public class Integration : XcodeServerEntity {
         self.assets = json.optionalDictionaryForKey("assets")
         
         if let blueprint = json.optionalDictionaryForKey("revisionBlueprint") {
-            self.blueprint = SourceControlBlueprint(json: blueprint)
+            self.blueprint = try SourceControlBlueprint(json: blueprint)
         } else {
             self.blueprint = nil
         }
         
-        super.init(json: json)
+        try super.init(json: json)
     }
 }
 
@@ -128,24 +128,24 @@ public class BuildResultSummary : XcodeServerEntity {
     public let codeCoveragePercentage: Int
     public let codeCoveragePercentageDelta: Int
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.analyzerWarningCount = json.intForKey("analyzerWarningCount")
-        self.testFailureCount = json.intForKey("testFailureCount")
-        self.testsChange = json.intForKey("testsChange")
-        self.errorCount = json.intForKey("errorCount")
-        self.testsCount = json.intForKey("testsCount")
-        self.testFailureChange = json.intForKey("testFailureChange")
-        self.warningChange = json.intForKey("warningChange")
-        self.regressedPerfTestCount = json.intForKey("regressedPerfTestCount")
-        self.warningCount = json.intForKey("warningCount")
-        self.errorChange = json.intForKey("errorChange")
-        self.improvedPerfTestCount = json.intForKey("improvedPerfTestCount")
-        self.analyzerWarningChange = json.intForKey("analyzerWarningChange")
+        self.analyzerWarningCount = try json.intForKey("analyzerWarningCount")
+        self.testFailureCount = try json.intForKey("testFailureCount")
+        self.testsChange = try json.intForKey("testsChange")
+        self.errorCount = try json.intForKey("errorCount")
+        self.testsCount = try json.intForKey("testsCount")
+        self.testFailureChange = try json.intForKey("testFailureChange")
+        self.warningChange = try json.intForKey("warningChange")
+        self.regressedPerfTestCount = try json.intForKey("regressedPerfTestCount")
+        self.warningCount = try json.intForKey("warningCount")
+        self.errorChange = try json.intForKey("errorChange")
+        self.improvedPerfTestCount = try json.intForKey("improvedPerfTestCount")
+        self.analyzerWarningChange = try json.intForKey("analyzerWarningChange")
         self.codeCoveragePercentage = json.optionalIntForKey("codeCoveragePercentage") ?? 0
         self.codeCoveragePercentageDelta = json.optionalIntForKey("codeCoveragePercentageDelta") ?? 0
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
 }

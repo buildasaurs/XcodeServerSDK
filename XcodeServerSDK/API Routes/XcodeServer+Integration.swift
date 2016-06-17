@@ -40,8 +40,10 @@ extension XcodeServer {
             }
             
             if let body = (body as? NSDictionary)?["results"] as? NSArray {
-                let integrations: [Integration] = XcodeServerArray(body)
-                completion(integrations: integrations, error: nil)
+                let (result, error): ([Integration]?, NSError?) = unthrow {
+                    return try XcodeServerArray(body)
+                }
+                completion(integrations: result, error: error)
             } else {
                 completion(integrations: nil, error: Error.withInfo("Wrong body \(body)"))
             }
@@ -69,8 +71,10 @@ extension XcodeServer {
             }
             
             if let body = body as? NSDictionary {
-                let integration = Integration(json: body)
-                completion(integration: integration, error: nil)
+                let (result, error): (Integration?, NSError?) = unthrow {
+                    return try Integration(json: body)
+                }
+                completion(integration: result, error: error)
             } else {
                 completion(integration: nil, error: Error.withInfo("Wrong body \(body)"))
             }
@@ -100,8 +104,10 @@ extension XcodeServer {
                 return
             }
             
-            let integrations: [Integration] = XcodeServerArray(integrationsBody)
-            completion(integrations: integrations, error: nil)
+            let (result, error): ([Integration]?, NSError?) = unthrow {
+                return try XcodeServerArray(integrationsBody)
+            }
+            completion(integrations: result, error: error)
         }
     }
     
@@ -132,8 +138,10 @@ extension XcodeServer {
                 return
             }
             
-            let integration = Integration(json: integrationBody)
-            completion(integration: integration, error: nil)
+            let (result, error): (Integration?, NSError?) = unthrow {
+                return try Integration(json: integrationBody)
+            }
+            completion(integration: result, error: error)
         }
     }
     
@@ -186,9 +194,10 @@ extension XcodeServer {
                 return
             }
             
-            let integrationCommits = IntegrationCommits(json: integrationCommitsBody[0] as! NSDictionary)
-            completion(integrationCommits: integrationCommits, error: nil)
-            
+            let (result, error): (IntegrationCommits?, NSError?) = unthrow {
+                return try IntegrationCommits(json: integrationCommitsBody[0] as! NSDictionary)
+            }
+            completion(integrationCommits: result, error: error)
         }
         
     }
@@ -218,9 +227,10 @@ extension XcodeServer {
                 return
             }
             
-            let integrationIssues = IntegrationIssues(json: integrationIssuesBody)
-            completion(integrationIssues: integrationIssues, error: nil)
-            
+            let (result, error): (IntegrationIssues?, NSError?) = unthrow {
+                return try IntegrationIssues(json: integrationIssuesBody)
+            }
+            completion(integrationIssues: result, error: error)
         }
         
     }

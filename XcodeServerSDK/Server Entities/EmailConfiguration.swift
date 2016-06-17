@@ -37,13 +37,13 @@ public class EmailConfiguration : XcodeServerEntity {
         return dict
     }
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.emailCommitters = json.boolForKey("emailCommitters")
-        self.includeCommitMessages = json.boolForKey("includeCommitMessages")
-        self.includeIssueDetails = json.boolForKey("includeIssueDetails")
-        self.additionalRecipients = json.arrayForKey("additionalRecipients")
+        self.emailCommitters = try json.boolForKey("emailCommitters")
+        self.includeCommitMessages = try json.boolForKey("includeCommitMessages")
+        self.includeIssueDetails = try json.boolForKey("includeIssueDetails")
+        self.additionalRecipients = try json.arrayForKey("additionalRecipients")
         
-        super.init(json: json)
+        try super.init(json: json)
     }
 }

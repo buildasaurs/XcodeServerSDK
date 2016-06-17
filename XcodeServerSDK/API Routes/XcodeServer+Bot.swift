@@ -80,8 +80,10 @@ extension XcodeServer {
             }
             
             if let body = (body as? NSDictionary)?["results"] as? NSArray {
-                let bots: [Bot] = XcodeServerArray(body)
-                completion(bots: bots, error: nil)
+                let (result, error): ([Bot]?, NSError?) = unthrow {
+                    return try XcodeServerArray(body)
+                }
+                completion(bots: result, error: error)
             } else {
                 completion(bots: nil, error: Error.withInfo("Wrong data returned: \(body)"))
             }
@@ -109,8 +111,10 @@ extension XcodeServer {
             }
             
             if let body = body as? NSDictionary {
-                let bot = Bot(json: body)
-                completion(bot: bot, error: nil)
+                let (result, error): (Bot?, NSError?) = unthrow {
+                    return try Bot(json: body)
+                }
+                completion(bot: result, error: error)
             } else {
                 completion(bot: nil, error: Error.withInfo("Wrong body \(body)"))
             }
@@ -205,8 +209,14 @@ extension XcodeServer {
                 return
             }
             
-            let bot = Bot(json: dictBody)
-            completion(response: XcodeServer.CreateBotResponse.Success(bot: bot))
+            let (result, error): (Bot?, NSError?) = unthrow {
+                return try Bot(json: dictBody)
+            }
+            if let err = error {
+                completion(response: XcodeServer.CreateBotResponse.Error(error: err))
+            } else {
+                completion(response: XcodeServer.CreateBotResponse.Success(bot: result!))
+            }
         }
     }
 

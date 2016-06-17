@@ -33,14 +33,14 @@ public class DevicePlatform : XcodeServerEntity {
     public let type: PlatformType
     public let simulatorType: SimulatorType?
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.displayName = json.stringForKey("displayName")
-        self.version = json.stringForKey("version")
+        self.displayName = try json.stringForKey("displayName")
+        self.version = try json.stringForKey("version")
         self.type = PlatformType(rawValue: json.optionalStringForKey("identifier") ?? "") ?? .Unknown
         self.simulatorType = SimulatorType(rawValue: json.optionalStringForKey("simulatorIdentifier") ?? "")
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     //for just informing the intention - iOS or WatchOS or OS X - and we'll fetch the real ones and replace this placeholder with a fetched one.
@@ -150,13 +150,13 @@ public class DeviceFilter : XcodeServerEntity {
     
     public let architectureType: ArchitectureType //TODO: ditto, find out more.
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.platform = DevicePlatform(json: json.dictionaryForKey("platform"))
-        self.filterType = FilterType(rawValue: json.intForKey("filterType")) ?? .AllAvailableDevicesAndSimulators
+        self.platform = try DevicePlatform(json: try json.dictionaryForKey("platform"))
+        self.filterType = FilterType(rawValue: try json.intForKey("filterType")) ?? .AllAvailableDevicesAndSimulators
         self.architectureType = ArchitectureType(rawValue: json.optionalIntForKey("architectureType") ?? -1) ?? .Unknown
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public init(platform: DevicePlatform, filterType: FilterType, architectureType: ArchitectureType) {
@@ -182,12 +182,12 @@ public class DeviceSpecification : XcodeServerEntity {
     public let deviceIdentifiers: [String]
     public let filters: [DeviceFilter]
     
-    public required init(json: NSDictionary) {
+    public required init(json: NSDictionary) throws {
         
-        self.deviceIdentifiers = json.arrayForKey("deviceIdentifiers")
-        self.filters = XcodeServerArray(json.arrayForKey("filters"))
+        self.deviceIdentifiers = try json.arrayForKey("deviceIdentifiers")
+        self.filters = try XcodeServerArray(try json.arrayForKey("filters"))
         
-        super.init(json: json)
+        try super.init(json: json)
     }
     
     public init(filters: [DeviceFilter], deviceIdentifiers: [String]) {

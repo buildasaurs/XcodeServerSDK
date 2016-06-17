@@ -34,8 +34,8 @@ class ContributorTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        singleEmail = Contributor(json: singleEmailContributor)
-        multiEmail = Contributor(json: multiEmailContributor)
+        singleEmail = try! Contributor(json: singleEmailContributor)
+        multiEmail = try! Contributor(json: multiEmailContributor)
     }
     
     // MARK: Test cases

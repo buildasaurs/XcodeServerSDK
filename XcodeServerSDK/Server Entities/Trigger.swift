@@ -85,28 +85,28 @@ public struct TriggerConfig: XcodeRead, XcodeWrite {
             }
     }
     
-    public init(json: NSDictionary) {
+    public init(json: NSDictionary) throws {
         
-        let phase = Phase(rawValue: json.intForKey("phase"))!
+        let phase = Phase(rawValue: try json.intForKey("phase"))!
         self.phase = phase
         if let conditionsJSON = json.optionalDictionaryForKey("conditions") where phase == .Postbuild {
             //also parse conditions
-            self.conditions = TriggerConditions(json: conditionsJSON)
+            self.conditions = try TriggerConditions(json: conditionsJSON)
         } else {
             self.conditions = nil
         }
         
-        let kind = Kind(rawValue: json.intForKey("type"))!
+        let kind = Kind(rawValue: try json.intForKey("type"))!
         self.kind = kind
         if let configurationJSON = json.optionalDictionaryForKey("emailConfiguration") where kind == .EmailNotification {
             //also parse email config
-            self.emailConfiguration = EmailConfiguration(json: configurationJSON)
+            self.emailConfiguration = try EmailConfiguration(json: configurationJSON)
         } else {
             self.emailConfiguration = nil
         }
         
-        self.name = json.stringForKey("name")
-        self.scriptBody = json.stringForKey("scriptBody")
+        self.name = try json.stringForKey("name")
+        self.scriptBody = try json.stringForKey("scriptBody")
         
         self.id = json.optionalStringForKey("id") ?? Ref.new()
     }
@@ -136,10 +136,10 @@ public class Trigger : XcodeServerEntity {
         super.init()
     }
     
-    required public init(json: NSDictionary) {
+    required public init(json: NSDictionary) throws {
         
-        self.config = TriggerConfig(json: json)
-        super.init(json: json)
+        self.config = try TriggerConfig(json: json)
+        try super.init(json: json)
     }
     
     public override func dictionarify() -> NSDictionary {

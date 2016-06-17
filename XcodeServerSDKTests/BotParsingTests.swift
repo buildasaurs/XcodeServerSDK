@@ -26,9 +26,9 @@ class BotParsingTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
     
-    func testShared() {
+    func testShared() throws {
         
-        let bot = self.botInCassetteWithName("osx_bot")
+        let bot = try self.botInCassetteWithName("osx_bot")
         
         XCTAssertEqual(bot.id, "963bc95f1c1a56f69f3392b4aa03302f")
         XCTAssertEqual(bot.rev, "10-117b73f201ea103229a2e8cd26a01845")
