@@ -15,7 +15,7 @@ public class Device : XcodeServerEntity {
     public let connected: Bool
     public let simulator: Bool
     public let modelCode: String? // Enum?
-    public let deviceType: String // Enum?
+    public let deviceType: String? // Enum?
     public let modelName: String?
     public let deviceECID: String?
     public let modelUTI: String?
@@ -37,11 +37,11 @@ public class Device : XcodeServerEntity {
         self.connected = try json.boolForKey("connected")
         self.osVersion = try json.stringForKey("osVersion")
         self.simulator = try json.boolForKey("simulator")
-        self.modelCode = try json.optionalStringForKey("modelCode")
-        self.deviceType = try json.stringForKey("deviceType")
-        self.modelName = try json.optionalStringForKey("modelName")
+        self.modelCode = json.optionalStringForKey("modelCode")
+        self.deviceType = json.optionalStringForKey("deviceType")
+        self.modelName = json.optionalStringForKey("modelName")
         self.deviceECID = json.optionalStringForKey("deviceECID")
-        self.modelUTI = try json.optionalStringForKey("modelUTI")
+        self.modelUTI = json.optionalStringForKey("modelUTI")
         if let proxyDevice = json.optionalDictionaryForKey("activeProxiedDevice") {
             self.activeProxiedDevice = try Device(json: proxyDevice)
         } else {
