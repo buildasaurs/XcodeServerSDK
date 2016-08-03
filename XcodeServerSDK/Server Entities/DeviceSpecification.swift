@@ -113,7 +113,7 @@ public class DeviceFilter : XcodeServerEntity {
         public static func availableFiltersForPlatform(platformType: DevicePlatform.PlatformType) -> [FilterType] {
             
             switch platformType {
-            case .iOS:
+            case .iOS, .tvOS:
                 return [
                     .AllAvailableDevicesAndSimulators,
                     .AllDevices,
