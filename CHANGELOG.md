@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.7.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.7.0) (2016-08-03)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.6.0...v0.7.0)
+
+**Merged pull requests:**
+
+- Added .tvOS to available device filters [\#138](https://github.com/czechboy0/XcodeServerSDK/pull/138) ([ioveracker](https://github.com/ioveracker))
+- modelCode, modelName and modelUTI made optional in Device server entity [\#137](https://github.com/czechboy0/XcodeServerSDK/pull/137) ([explicitcall](https://github.com/explicitcall))
+
 ## [v0.6.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.6.0) (2016-06-17)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.5.8...v0.6.0)
 
