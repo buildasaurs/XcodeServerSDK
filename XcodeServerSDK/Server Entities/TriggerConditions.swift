@@ -52,7 +52,10 @@ public class TriggerConditions : XcodeServerEntity {
         self.onAnalyzerWarnings = try json.boolForKey("onAnalyzerWarnings")
         self.onBuildErrors = try json.boolForKey("onBuildErrors")
         self.onFailingTests = try json.boolForKey("onFailingTests")
-        self.onInternalErrors = try? json.boolForKey("onInternalErrors") ?? false
+        
+        //not present in Xcode 8 anymore, make it optional & default to false
+        let internalErrors = try? json.boolForKey("onInternalErrors")
+        self.onInternalErrors = internalErrors ?? false
         self.onSuccess = try json.boolForKey("onSuccess")
         self.onWarnings = try json.boolForKey("onWarnings")
         
