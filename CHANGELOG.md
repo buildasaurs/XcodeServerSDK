@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.7.1](https://github.com/czechboy0/XcodeServerSDK/tree/v0.7.1) (2016-08-17)
+[Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.7.0...v0.7.1)
+
+**Merged pull requests:**
+
+- Workaround for missing key trigger condition key [\#140](https://github.com/czechboy0/XcodeServerSDK/pull/140) ([flufff42](https://github.com/flufff42))
+
 ## [v0.7.0](https://github.com/czechboy0/XcodeServerSDK/tree/v0.7.0) (2016-08-03)
 [Full Changelog](https://github.com/czechboy0/XcodeServerSDK/compare/v0.6.0...v0.7.0)
 
