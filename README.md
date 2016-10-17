@@ -149,7 +149,7 @@ Do you just want to get involved and help out? See the issues marked as [up-for-
 # :speech_balloon: Get in touch
 
 For things like general problems/ideas please report an **issue**, so anyone can see them and relate to them in the future. It's realy important for Open Source projects like this!
-If your problem requires a deep discussion or you have a great idea and you really want to share it with someone before opening an issue you can join the official [Buildasaurs](https://github.com/buildasaurs) **Slack team**! (To do so, ping @czechboy0 on Twitter and have your e-mail address ready :e-mail:)
+If your problem requires a deep discussion or you have a great idea and you really want to share it with someone before opening an issue you can join the official [Buildasaurs](https://github.com/buildasaurs) **Slack team**! (To do so, go to this [website](https://buildasaurs.herokuapp.com) and have your e-mail address ready :e-mail:)
 
 # :santa: Origin Story
 This code has been pulled out of [Buildasaur](https://github.com/czechboy0/Buildasaur), bringing you integration of GitHub Pull Requests to Xcode Bots.
